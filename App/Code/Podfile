@@ -1,0 +1,206 @@
+### Configuration
+inhibit_all_warnings!
+use_frameworks!
+source 'https://github.com/CocoaPods/Specs.git'
+ENV['COCOAPODS_DISABLE_STATS'] = "true"
+
+platform :ios, '13.0'
+
+# Workspace and project definition
+workspace 'BaseSwiftUICombine'
+project 'Project/Project.xcodeproj'
+project 'SharedUtils/SharedUtils.xcodeproj'
+
+def log_pods
+    # Log System
+    pod 'Log',
+        :git => 'https://github.com/wundercar/log-ios.git',
+        :tag => '1.0.0'
+end
+
+def app_pods
+
+    # Version tracking
+    pod 'AppVersionMonitor', '1.4.0'
+
+    # Crash System
+    pod 'Firebase/Crashlytics', '6.24.0'
+    pod 'Firebase/Analytics', '6.24.0'
+
+    ## User Interface
+
+    # Async image + Caching
+    pod 'Kingfisher', '5.13.4'
+
+    # Keyboard Manager
+    pod 'IQKeyboardManager', '6.5.5'
+    pod 'IQDropDownTextField', '2.0'
+
+    ### Notifications
+
+    # Notifications Mocker
+    pod 'SimulatorRemoteNotifications', '0.0.3'
+
+    ### Auto-Generation
+    pod 'Sourcery', '0.18.0'
+    pod 'R.swift', '5.2.2'
+
+    ### Standard conventions
+    pod 'SwiftLint', '0.39.2'
+
+    ### Custom Frameworks
+    ## Environment
+    pod 'WUEnvironment',
+        :git => 'https://github.com/wundercar/environment-ios.git',
+        :branch => 'develop'
+        
+end
+
+def hud_pods
+    # Progress HUD
+    pod 'PKHUD'
+end
+
+### Main Application
+
+target 'Project' do
+    
+    project 'Project/Project.xcodeproj'
+    
+    app_pods
+    hud_pods
+    log_pods
+    
+    # Test Application
+    
+    target 'ProjectTests' do
+        inherit! :search_paths
+        # pod 'Firebase/Core' # Needed for tests. Thx Google
+        
+    end
+    
+    target 'ProjectUITests' do
+        inherit! :search_paths
+        
+    end
+
+end
+
+
+### Domain
+
+target 'Domain' do
+    
+    project 'Project/Project.xcodeproj'
+    
+    log_pods
+    
+    # Test Application
+    target 'DomainTests' do
+        inherit! :search_paths
+        
+    end
+    
+end
+	
+### Network
+
+target 'PlatformNetworkApi' do
+
+    project 'Project/Project.xcodeproj'
+    
+    pod 'Alamofire', '4.8.2'
+    
+    # Test Application
+    target 'PlatformNetworkApiTests' do
+        inherit! :search_paths
+        
+    end
+    
+end
+
+target 'PlatformNetworkStatic' do
+
+    project 'Project/Project.xcodeproj'
+
+    # Test Application
+    target 'PlatformNetworkStaticTests' do
+        inherit! :search_paths
+        
+    end
+    
+end
+
+### Shared Utils
+
+target 'SharedUtils' do
+    project 'SharedUtils/SharedUtils.xcodeproj'
+    
+    hud_pods
+    
+    # Test Application
+    target 'SharedUtilsTests' do
+        inherit! :search_paths
+        
+    end
+    
+end
+
+
+## Post actions
+
+post_install do |installer|
+    
+    puts "Setting Swift legacy for some Pods"
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            
+            config.build_settings['SWIFT_VERSION'] = '5.0'
+            
+            if [
+                #'Zip'
+                ].include?(target.name)
+                config.build_settings['SWIFT_VERSION'] = '4.1'
+            end
+        end
+        
+    end
+    
+    
+    target = installer.pods_project.targets.find{|t| t.to_s == "WUEnvironment"}
+    target.build_configurations.each do |config|
+        
+        puts "Setting Swift flags for configuration #{config.name}".green
+        
+        # Temporary store all current Swift Flags
+        s = config.build_settings['OTHER_SWIFT_FLAGS']
+        
+        if s == nil
+            s = [ '$(inherited)' ]
+        end
+        
+        if config.name == 'Debug'
+            s.push('-DCONFIGURATION_Debug')
+        end
+        
+        if config.name == 'Demo'
+            s.push('-DCONFIGURATION_Adhoc')
+        end
+        
+        if config.name == 'Release'
+            s.push('-DCONFIGURATION_Release')
+        end
+        
+        # Write back all previous Swift flags and the environment ones
+        config.build_settings['OTHER_SWIFT_FLAGS'] = s
+        
+        puts "Set flags: #{s}".yellow
+        
+    end
+    
+end
+
+
+
+
+

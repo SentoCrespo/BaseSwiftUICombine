@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <title>${DISPLAY_APPNAME} Download</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <img src="img/header.jpg" alt="Header Image">
+    </header>
+    <main>
+        <div class="container">
+            
+            
+
+
+            <section id="downloads">
+
+                <div class="download-wrapper">      
+                    <img class="icon">
+                    <h3>${DISPLAY_APPNAME}</h3>
+                    <a class="download-button" onclick="setTimeout(function(){ document.getElementById('install_message').style.display = 'block'},2000)" class="btn btn-success" href="itms-services://?action=download-manifest&url=${PUBLISH_PLIST_URL}">Install ${APP_VERSION} (build ${BUILD_NUMBER})</a>
+
+                    <div id="install_message" class="row fluid" style="display: none;">
+                        App should be installing now. Check your home screen to see the progress.
+                    </div>
+                    <div class="row fluid">
+                        <a ></a>
+                    </div>
+                    <div class="changelog">
+                        <b>Latest Changes:</b>
+                        <p>${CHANGES}</p>
+                        <b>Last modified:</b>
+                        <p>${CURRENT_TIMESTAMP}</p>
+                    </div>
+                </div>
+
+            </section>
+
+
+
+        </div>
+    </main>
+    <footer>
+        <p>${COMPANYNAME} ${CURRENT_YEAR} ©</p>
+    </footer>
+</body>
+</html>

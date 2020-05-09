@@ -1,0 +1,72 @@
+{
+  "data": {
+    "customers": [
+      {
+        "customer": "1",
+        "name": "Treenovum",
+        "contactPerson": "David Caurin",
+        "customerStreet2": "Avenida de Francia 44, 46023 Valencia, Spain",
+        "customerStreet3": "CNAF (despacho 2)",
+        "email": "david.caurin@treenovum.es",
+        "phone1": "666666666",
+        "orderBlock": "",
+        "seasonal": "TestSeasonal0",
+        "focusOutlet": "focus 1",
+        "tradeChannel": "category1,category2,category3,category4",
+        "ccaf": "TESTCCAF0",
+        "executionFocusCust": "#",
+        "budget": "TestBudget0",
+<<<<<<< HEAD
+        "bdTerritory": "TestDBTerritory0",
+=======
+        "bdTerritory": "TestBdTerritory0",
+>>>>>>> develop
+        "salesGroup": "TestSalesGroup0"
+      },
+      {
+        "customer": "2",
+        "name": "SwissSmartMedia",
+        "contactPerson": "Alex Sollberger",
+        "customerStreet2": "Parkweg 8, 2502 Biel, Switzerland",
+        "customerStreet3": "",
+        "email": "david.caurin@treenovum.es",
+        "phone1": "632222222",
+        "orderBlock": "#",
+        "seasonal": "TestSeasonal1",
+        "focusOutlet": "focus 1",
+        "tradeChannel": "category3,category4,category5,category6",
+        "ccaf": "TESTCCAF1",
+        "executionFocusCust": "#",
+        "budget": "TestBudget1",
+<<<<<<< HEAD
+        "bdTerritory": "TestDBTerritory2",
+=======
+        "bdTerritory": "TestBdTerritory2",
+>>>>>>> develop
+        "salesGroup": "TestSalesGroup1"
+      },
+      {
+        "customer": "3",
+        "name": "Coca-Cola",
+        "contactPerson": "Coca-Cola Boss",
+        "customerStreet2": "Stationsstrasse 33, 8306 Brüttisellen, Switzerland",
+        "customerStreet3": "",
+        "email": "david.caurin@treenovum.es",
+        "phone1": "452655555",
+        "orderBlock": "blocked",
+        "seasonal": "TestSeasonal2",
+        "focusOutlet": "focus 1",
+        "tradeChannel": "category2,category3",
+        "ccaf": "TESTCCAF2",
+        "executionFocusCust": "#",
+        "budget": "TestBudget2",
+<<<<<<< HEAD
+        "bdTerritory": "TestDBTerritory2",
+=======
+        "bdTerritory": "TestBdTerritory2",
+>>>>>>> develop
+        "salesGroup": "TestSalesGroup2"
+      }
+    ]
+  }
+}
