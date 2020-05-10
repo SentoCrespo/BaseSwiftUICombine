@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 public extension UICollectionView {
     /// Register a UICollectionViewCell for future reuse.

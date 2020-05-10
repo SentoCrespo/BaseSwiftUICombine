@@ -1,7 +1,7 @@
 import Domain
 import Foundation
 import Combine
-import SharedUtils
+import PRSharedUtils
 import UIKit
 
 class BaseViewController: UIViewController {

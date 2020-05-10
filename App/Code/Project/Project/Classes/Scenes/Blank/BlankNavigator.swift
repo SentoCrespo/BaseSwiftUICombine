@@ -1,7 +1,7 @@
 import Foundation
 
 import Domain
-import SharedUtils
+import PRSharedUtils
 import UIKit
 
 // MARK: - Navigator

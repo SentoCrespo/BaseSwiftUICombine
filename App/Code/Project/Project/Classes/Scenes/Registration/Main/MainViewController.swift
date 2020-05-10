@@ -2,7 +2,7 @@ import UIKit
 
 import Domain
 import Combine
-import SharedUtils
+import PRSharedUtils
 
 class MainViewController: BaseViewController {
     // MARK: - Properties

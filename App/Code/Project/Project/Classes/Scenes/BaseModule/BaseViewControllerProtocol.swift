@@ -1,5 +1,5 @@
 import Foundation
-import SharedUtils
+import PRSharedUtils
 
 protocol BaseViewControllerProtocol: LoadingHud {
     func show(error: Error)

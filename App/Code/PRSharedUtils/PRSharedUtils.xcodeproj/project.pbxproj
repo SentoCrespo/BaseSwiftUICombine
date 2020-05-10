@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D3FCEB4AEE93B16AC245729 /* Pods_SharedUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C22B223319D1687AEE92C2F /* Pods_SharedUtils.framework */; };
-		CF26A4522224017C00D0256C /* SharedUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF26A4482224017C00D0256C /* SharedUtils.framework */; };
+		0B1C3E4489303EF4234FFDDD /* Pods_PRSharedUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A3E5B3C401567DD9F81BB7 /* Pods_PRSharedUtils.framework */; };
+		4FDF205D0B86C573ECDE5ACB /* Pods_PRSharedUtilsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE4CD468C09F7029C4ABBEE /* Pods_PRSharedUtilsTests.framework */; };
+		CF26A4522224017C00D0256C /* PRSharedUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF26A4482224017C00D0256C /* PRSharedUtils.framework */; };
 		CF26A4572224017C00D0256C /* SharedUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26A4562224017C00D0256C /* SharedUtilsTests.swift */; };
 		CF26A4592224017C00D0256C /* SharedUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = CF26A44B2224017C00D0256C /* SharedUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CF26A46A222401B400D0256C /* String+NSAttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26A462222401B400D0256C /* String+NSAttributedText.swift */; };
@@ -47,7 +48,6 @@
 		CF26A4FC2224994200D0256C /* LoadingHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26A4FA2224994100D0256C /* LoadingHud.swift */; };
 		CF26A4FD2224994200D0256C /* LoadingHud+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26A4FB2224994100D0256C /* LoadingHud+Default.swift */; };
 		CFAE0A2E22EB35960004BE72 /* MessagesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAE0A2D22EB35960004BE72 /* MessagesProtocol.swift */; };
-		E97F2571E8DF0F9C090383A9 /* Pods_SharedUtilsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DBAB02BE05FC8AA3C10091 /* Pods_SharedUtilsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,15 +61,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		75DBAB02BE05FC8AA3C10091 /* Pods_SharedUtilsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedUtilsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		814C84BB51C409A1169E6FDC /* Pods-SharedUtilsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedUtilsTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-SharedUtilsTests/Pods-SharedUtilsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8C22B223319D1687AEE92C2F /* Pods_SharedUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B06DA1382B89E0125127A53C /* Pods-SharedUtils.demo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedUtils.demo.xcconfig"; path = "../Pods/Target Support Files/Pods-SharedUtils/Pods-SharedUtils.demo.xcconfig"; sourceTree = "<group>"; };
-		CD22FC4D6291F744E8C50123 /* Pods-SharedUtilsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedUtilsTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-SharedUtilsTests/Pods-SharedUtilsTests.release.xcconfig"; sourceTree = "<group>"; };
-		CF26A4482224017C00D0256C /* SharedUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharedUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DE4CD468C09F7029C4ABBEE /* Pods_PRSharedUtilsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PRSharedUtilsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41A3E5B3C401567DD9F81BB7 /* Pods_PRSharedUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PRSharedUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4541DA91F16660DB6D877159 /* Pods-SharedUtilsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedUtilsTests.release.xcconfig"; path = "Target Support Files/Pods-SharedUtilsTests/Pods-SharedUtilsTests.release.xcconfig"; sourceTree = "<group>"; };
+		4D32BA1F68B48C9905F674CF /* Pods-PRSharedUtilsTests.demo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PRSharedUtilsTests.demo.xcconfig"; path = "Target Support Files/Pods-PRSharedUtilsTests/Pods-PRSharedUtilsTests.demo.xcconfig"; sourceTree = "<group>"; };
+		52467837B31371C1528622B7 /* Pods-PRSharedUtilsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PRSharedUtilsTests.release.xcconfig"; path = "Target Support Files/Pods-PRSharedUtilsTests/Pods-PRSharedUtilsTests.release.xcconfig"; sourceTree = "<group>"; };
+		702B3087BE730CA1125422EA /* Pods-SharedUtilsTests.demo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedUtilsTests.demo.xcconfig"; path = "Target Support Files/Pods-SharedUtilsTests/Pods-SharedUtilsTests.demo.xcconfig"; sourceTree = "<group>"; };
+		82914254393A2F141F69EDAC /* Pods-PRSharedUtilsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PRSharedUtilsTests.debug.xcconfig"; path = "Target Support Files/Pods-PRSharedUtilsTests/Pods-PRSharedUtilsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		867170EC293A28AC22C63C69 /* Pods-SharedUtils.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedUtils.release.xcconfig"; path = "Target Support Files/Pods-SharedUtils/Pods-SharedUtils.release.xcconfig"; sourceTree = "<group>"; };
+		94E0AC64C42A86A06B1FBDBE /* Pods-SharedUtils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedUtils.debug.xcconfig"; path = "Target Support Files/Pods-SharedUtils/Pods-SharedUtils.debug.xcconfig"; sourceTree = "<group>"; };
+		CF26A4482224017C00D0256C /* PRSharedUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PRSharedUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF26A44B2224017C00D0256C /* SharedUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedUtils.h; sourceTree = "<group>"; };
 		CF26A44C2224017C00D0256C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CF26A4512224017C00D0256C /* SharedUtilsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedUtilsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF26A4512224017C00D0256C /* PRSharedUtilsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PRSharedUtilsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF26A4562224017C00D0256C /* SharedUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedUtilsTests.swift; sourceTree = "<group>"; };
 		CF26A4582224017C00D0256C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF26A462222401B400D0256C /* String+NSAttributedText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+NSAttributedText.swift"; sourceTree = "<group>"; };
@@ -108,9 +112,11 @@
 		CF26A4FA2224994100D0256C /* LoadingHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingHud.swift; sourceTree = "<group>"; };
 		CF26A4FB2224994100D0256C /* LoadingHud+Default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoadingHud+Default.swift"; sourceTree = "<group>"; };
 		CFAE0A2D22EB35960004BE72 /* MessagesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesProtocol.swift; sourceTree = "<group>"; };
-		E56F13AE9F858A03668558BE /* Pods-SharedUtils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedUtils.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-SharedUtils/Pods-SharedUtils.debug.xcconfig"; sourceTree = "<group>"; };
-		E83AD0D058224A06C5B58FDC /* Pods-SharedUtils.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedUtils.release.xcconfig"; path = "../Pods/Target Support Files/Pods-SharedUtils/Pods-SharedUtils.release.xcconfig"; sourceTree = "<group>"; };
-		FD50EC8A104081426AA1B5BA /* Pods-SharedUtilsTests.demo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedUtilsTests.demo.xcconfig"; path = "../Pods/Target Support Files/Pods-SharedUtilsTests/Pods-SharedUtilsTests.demo.xcconfig"; sourceTree = "<group>"; };
+		D86C363CF45E6A999A58E675 /* Pods-PRSharedUtils.demo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PRSharedUtils.demo.xcconfig"; path = "Target Support Files/Pods-PRSharedUtils/Pods-PRSharedUtils.demo.xcconfig"; sourceTree = "<group>"; };
+		DDDD340ECB8B2A9D6D39CCAA /* Pods-PRSharedUtils.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PRSharedUtils.release.xcconfig"; path = "Target Support Files/Pods-PRSharedUtils/Pods-PRSharedUtils.release.xcconfig"; sourceTree = "<group>"; };
+		E84F81316DCD89A80A421C4F /* Pods-PRSharedUtils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PRSharedUtils.debug.xcconfig"; path = "Target Support Files/Pods-PRSharedUtils/Pods-PRSharedUtils.debug.xcconfig"; sourceTree = "<group>"; };
+		EC4C3036BD8760A99C8524FC /* Pods-SharedUtils.demo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedUtils.demo.xcconfig"; path = "Target Support Files/Pods-SharedUtils/Pods-SharedUtils.demo.xcconfig"; sourceTree = "<group>"; };
+		F72954A3C5B37DA8966D64A7 /* Pods-SharedUtilsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedUtilsTests.debug.xcconfig"; path = "Target Support Files/Pods-SharedUtilsTests/Pods-SharedUtilsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D3FCEB4AEE93B16AC245729 /* Pods_SharedUtils.framework in Frameworks */,
+				0B1C3E4489303EF4234FFDDD /* Pods_PRSharedUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,48 +132,64 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF26A4522224017C00D0256C /* SharedUtils.framework in Frameworks */,
-				E97F2571E8DF0F9C090383A9 /* Pods_SharedUtilsTests.framework in Frameworks */,
+				CF26A4522224017C00D0256C /* PRSharedUtils.framework in Frameworks */,
+				4FDF205D0B86C573ECDE5ACB /* Pods_PRSharedUtilsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5A8B198027DBDE7458528EA9 /* Pods */ = {
+		66DDC5280286692FDDAFD8D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E56F13AE9F858A03668558BE /* Pods-SharedUtils.debug.xcconfig */,
-				E83AD0D058224A06C5B58FDC /* Pods-SharedUtils.release.xcconfig */,
-				B06DA1382B89E0125127A53C /* Pods-SharedUtils.demo.xcconfig */,
-				814C84BB51C409A1169E6FDC /* Pods-SharedUtilsTests.debug.xcconfig */,
-				CD22FC4D6291F744E8C50123 /* Pods-SharedUtilsTests.release.xcconfig */,
-				FD50EC8A104081426AA1B5BA /* Pods-SharedUtilsTests.demo.xcconfig */,
+				41A3E5B3C401567DD9F81BB7 /* Pods_PRSharedUtils.framework */,
+				2DE4CD468C09F7029C4ABBEE /* Pods_PRSharedUtilsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7611C434EAC5093BDD04FDA7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				94E0AC64C42A86A06B1FBDBE /* Pods-SharedUtils.debug.xcconfig */,
+				867170EC293A28AC22C63C69 /* Pods-SharedUtils.release.xcconfig */,
+				EC4C3036BD8760A99C8524FC /* Pods-SharedUtils.demo.xcconfig */,
+				F72954A3C5B37DA8966D64A7 /* Pods-SharedUtilsTests.debug.xcconfig */,
+				4541DA91F16660DB6D877159 /* Pods-SharedUtilsTests.release.xcconfig */,
+				702B3087BE730CA1125422EA /* Pods-SharedUtilsTests.demo.xcconfig */,
+				E84F81316DCD89A80A421C4F /* Pods-PRSharedUtils.debug.xcconfig */,
+				DDDD340ECB8B2A9D6D39CCAA /* Pods-PRSharedUtils.release.xcconfig */,
+				D86C363CF45E6A999A58E675 /* Pods-PRSharedUtils.demo.xcconfig */,
+				82914254393A2F141F69EDAC /* Pods-PRSharedUtilsTests.debug.xcconfig */,
+				52467837B31371C1528622B7 /* Pods-PRSharedUtilsTests.release.xcconfig */,
+				4D32BA1F68B48C9905F674CF /* Pods-PRSharedUtilsTests.demo.xcconfig */,
 			);
 			name = Pods;
+			path = ../Pods;
 			sourceTree = "<group>";
 		};
 		CF26A43E2224017C00D0256C = {
 			isa = PBXGroup;
 			children = (
-				CF26A44A2224017C00D0256C /* SharedUtils */,
-				CF26A4552224017C00D0256C /* SharedUtilsTests */,
+				CF26A44A2224017C00D0256C /* PRSharedUtils */,
+				CF26A4552224017C00D0256C /* PRSharedUtilsTests */,
 				CF26A4492224017C00D0256C /* Products */,
-				5A8B198027DBDE7458528EA9 /* Pods */,
-				D67D52BE2B6266ED2699B20A /* Frameworks */,
+				66DDC5280286692FDDAFD8D4 /* Frameworks */,
+				7611C434EAC5093BDD04FDA7 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		CF26A4492224017C00D0256C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CF26A4482224017C00D0256C /* SharedUtils.framework */,
-				CF26A4512224017C00D0256C /* SharedUtilsTests.xctest */,
+				CF26A4482224017C00D0256C /* PRSharedUtils.framework */,
+				CF26A4512224017C00D0256C /* PRSharedUtilsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CF26A44A2224017C00D0256C /* SharedUtils */ = {
+		CF26A44A2224017C00D0256C /* PRSharedUtils */ = {
 			isa = PBXGroup;
 			children = (
 				CF26A4B72224669900D0256C /* UIKit */,
@@ -175,17 +197,17 @@
 				CF26A44B2224017C00D0256C /* SharedUtils.h */,
 				CF26A44C2224017C00D0256C /* Info.plist */,
 			);
-			path = SharedUtils;
+			path = PRSharedUtils;
 			sourceTree = "<group>";
 		};
-		CF26A4552224017C00D0256C /* SharedUtilsTests */ = {
+		CF26A4552224017C00D0256C /* PRSharedUtilsTests */ = {
 			isa = PBXGroup;
 			children = (
 				CF26A470222401F100D0256C /* Colors */,
 				CF26A4562224017C00D0256C /* SharedUtilsTests.swift */,
 				CF26A4582224017C00D0256C /* Info.plist */,
 			);
-			path = SharedUtilsTests;
+			path = PRSharedUtilsTests;
 			sourceTree = "<group>";
 		};
 		CF26A464222401B400D0256C /* Random */ = {
@@ -301,15 +323,6 @@
 			path = Messages;
 			sourceTree = "<group>";
 		};
-		D67D52BE2B6266ED2699B20A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8C22B223319D1687AEE92C2F /* Pods_SharedUtils.framework */,
-				75DBAB02BE05FC8AA3C10091 /* Pods_SharedUtilsTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -324,11 +337,11 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		CF26A4472224017C00D0256C /* SharedUtils */ = {
+		CF26A4472224017C00D0256C /* PRSharedUtils */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF26A45C2224017C00D0256C /* Build configuration list for PBXNativeTarget "SharedUtils" */;
+			buildConfigurationList = CF26A45C2224017C00D0256C /* Build configuration list for PBXNativeTarget "PRSharedUtils" */;
 			buildPhases = (
-				5A42BA501901B6A55A1CFEDC /* [CP] Check Pods Manifest.lock */,
+				5D4ED12CF1E38418C27780B2 /* [CP] Check Pods Manifest.lock */,
 				CF2567D02225918000345BB5 /* Code AutoFormatting */,
 				CF26A4432224017C00D0256C /* Headers */,
 				CF26A4442224017C00D0256C /* Sources */,
@@ -339,14 +352,14 @@
 			);
 			dependencies = (
 			);
-			name = SharedUtils;
+			name = PRSharedUtils;
 			productName = SharedUtils;
-			productReference = CF26A4482224017C00D0256C /* SharedUtils.framework */;
+			productReference = CF26A4482224017C00D0256C /* PRSharedUtils.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CF26A4502224017C00D0256C /* SharedUtilsTests */ = {
+		CF26A4502224017C00D0256C /* PRSharedUtilsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF26A45F2224017C00D0256C /* Build configuration list for PBXNativeTarget "SharedUtilsTests" */;
+			buildConfigurationList = CF26A45F2224017C00D0256C /* Build configuration list for PBXNativeTarget "PRSharedUtilsTests" */;
 			buildPhases = (
 				E2435F2F5A810B3906BAF321 /* [CP] Check Pods Manifest.lock */,
 				CF26A44D2224017C00D0256C /* Sources */,
@@ -358,9 +371,9 @@
 			dependencies = (
 				CF26A4542224017C00D0256C /* PBXTargetDependency */,
 			);
-			name = SharedUtilsTests;
+			name = PRSharedUtilsTests;
 			productName = SharedUtilsTests;
-			productReference = CF26A4512224017C00D0256C /* SharedUtilsTests.xctest */;
+			productReference = CF26A4512224017C00D0256C /* PRSharedUtilsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -382,7 +395,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CF26A4422224017C00D0256C /* Build configuration list for PBXProject "SharedUtils" */;
+			buildConfigurationList = CF26A4422224017C00D0256C /* Build configuration list for PBXProject "PRSharedUtils" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -394,8 +407,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CF26A4472224017C00D0256C /* SharedUtils */,
-				CF26A4502224017C00D0256C /* SharedUtilsTests */,
+				CF26A4472224017C00D0256C /* PRSharedUtils */,
+				CF26A4502224017C00D0256C /* PRSharedUtilsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -418,7 +431,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5A42BA501901B6A55A1CFEDC /* [CP] Check Pods Manifest.lock */ = {
+		5D4ED12CF1E38418C27780B2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -433,7 +446,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SharedUtils-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-PRSharedUtils-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -473,7 +486,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SharedUtilsTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-PRSharedUtilsTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -539,7 +552,7 @@
 /* Begin PBXTargetDependency section */
 		CF26A4542224017C00D0256C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CF26A4472224017C00D0256C /* SharedUtils */;
+			target = CF26A4472224017C00D0256C /* PRSharedUtils */;
 			targetProxy = CF26A4532224017C00D0256C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -605,7 +618,7 @@
 		};
 		CF2567DD22268CE200345BB5 /* Demo */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B06DA1382B89E0125127A53C /* Pods-SharedUtils.demo.xcconfig */;
+			baseConfigurationReference = D86C363CF45E6A999A58E675 /* Pods-PRSharedUtils.demo.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -614,9 +627,9 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SharedUtils/Info.plist;
+				INFOPLIST_FILE = PRSharedUtils/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -632,11 +645,12 @@
 		};
 		CF2567DE22268CE200345BB5 /* Demo */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD50EC8A104081426AA1B5BA /* Pods-SharedUtilsTests.demo.xcconfig */;
+			baseConfigurationReference = 4D32BA1F68B48C9905F674CF /* Pods-PRSharedUtilsTests.demo.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SharedUtilsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -773,7 +787,7 @@
 		};
 		CF26A45D2224017C00D0256C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E56F13AE9F858A03668558BE /* Pods-SharedUtils.debug.xcconfig */;
+			baseConfigurationReference = E84F81316DCD89A80A421C4F /* Pods-PRSharedUtils.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -782,9 +796,9 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SharedUtils/Info.plist;
+				INFOPLIST_FILE = PRSharedUtils/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -801,7 +815,7 @@
 		};
 		CF26A45E2224017C00D0256C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E83AD0D058224A06C5B58FDC /* Pods-SharedUtils.release.xcconfig */;
+			baseConfigurationReference = DDDD340ECB8B2A9D6D39CCAA /* Pods-PRSharedUtils.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -810,9 +824,9 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SharedUtils/Info.plist;
+				INFOPLIST_FILE = PRSharedUtils/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -828,11 +842,12 @@
 		};
 		CF26A4602224017C00D0256C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 814C84BB51C409A1169E6FDC /* Pods-SharedUtilsTests.debug.xcconfig */;
+			baseConfigurationReference = 82914254393A2F141F69EDAC /* Pods-PRSharedUtilsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SharedUtilsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -847,11 +862,12 @@
 		};
 		CF26A4612224017C00D0256C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD22FC4D6291F744E8C50123 /* Pods-SharedUtilsTests.release.xcconfig */;
+			baseConfigurationReference = 52467837B31371C1528622B7 /* Pods-PRSharedUtilsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SharedUtilsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -867,7 +883,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CF26A4422224017C00D0256C /* Build configuration list for PBXProject "SharedUtils" */ = {
+		CF26A4422224017C00D0256C /* Build configuration list for PBXProject "PRSharedUtils" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF26A45A2224017C00D0256C /* Debug */,
@@ -877,7 +893,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF26A45C2224017C00D0256C /* Build configuration list for PBXNativeTarget "SharedUtils" */ = {
+		CF26A45C2224017C00D0256C /* Build configuration list for PBXNativeTarget "PRSharedUtils" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF26A45D2224017C00D0256C /* Debug */,
@@ -887,7 +903,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF26A45F2224017C00D0256C /* Build configuration list for PBXNativeTarget "SharedUtilsTests" */ = {
+		CF26A45F2224017C00D0256C /* Build configuration list for PBXNativeTarget "PRSharedUtilsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF26A4602224017C00D0256C /* Debug */,

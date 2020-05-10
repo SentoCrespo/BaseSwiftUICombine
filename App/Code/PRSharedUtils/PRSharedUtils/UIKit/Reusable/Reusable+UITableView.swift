@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 public extension UITableView {
     /// Register a UITableViewCell for future reuse.

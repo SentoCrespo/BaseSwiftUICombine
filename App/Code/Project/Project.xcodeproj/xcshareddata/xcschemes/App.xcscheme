@@ -71,16 +71,6 @@
             skipped = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AF6476F71F542877003E55D1"
-               BuildableName = "NetworkSpecificTests.xctest"
-               BlueprintName = "NetworkSpecificTests"
-               ReferencedContainer = "container:Project.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "AF6477B31F543523003E55D1"
                BuildableName = "PlatformNetworkStaticTests.xctest"
                BlueprintName = "PlatformNetworkStaticTests"
@@ -121,18 +111,6 @@
             ReferencedContainer = "container:Project.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <AdditionalOptions>
-         <AdditionalOption
-            key = "MallocStackLogging"
-            value = ""
-            isEnabled = "YES">
-         </AdditionalOption>
-         <AdditionalOption
-            key = "PrefersMallocStackLoggingLite"
-            value = ""
-            isEnabled = "YES">
-         </AdditionalOption>
-      </AdditionalOptions>
       <LocationScenarioReference
          identifier = "../Project/Project/Resources/Locations/Valencia.gpx"
          referenceType = "0">

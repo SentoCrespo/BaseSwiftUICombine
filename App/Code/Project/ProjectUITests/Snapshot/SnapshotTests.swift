@@ -10,7 +10,7 @@ class SnapshotTests: XCTestCase {
         
         let app = XCUIApplication()
         app.launchEnvironment = ["UITest": "1"]
-        setLanguage(app)
+        Snapshot.setLanguage(app)
         app.launch()
     }
     

@@ -1,7 +1,7 @@
 import Foundation
 
 import Domain
-import SharedUtils
+import PRSharedUtils
 import UIKit
 
 // MARK: - Navigator
@@ -34,7 +34,7 @@ extension MainNavigator {
 
     func toSignup() {
         let configurator = SignupConfigurator(
-            dataSource: Application.shared.dataSourceConfiguration
+            dataSource: AppDelegate.shared.datasource!
         )
         let navigator = SignupNavigator(
             configurator: configurator,

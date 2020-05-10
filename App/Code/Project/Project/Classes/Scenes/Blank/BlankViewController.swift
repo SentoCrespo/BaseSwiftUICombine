@@ -3,7 +3,7 @@ import UIKit
 import Domain
 import RxCocoa
 import RxSwift
-import SharedUtils
+import PRSharedUtils
 
 class BlankViewController: BaseViewController {
     // MARK: - Properties

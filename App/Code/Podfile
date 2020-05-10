@@ -133,13 +133,13 @@ end
 
 ### Shared Utils
 
-target 'SharedUtils' do
-    project 'SharedUtils/SharedUtils.xcodeproj'
+target 'PRSharedUtils' do
+    project 'PRSharedUtils/PRSharedUtils.xcodeproj'
     
-    hud_pods
-    
+#    hud_pods
+
     # Test Application
-    target 'SharedUtilsTests' do
+    target 'PRSharedUtilsTests' do
         inherit! :search_paths
         
     end

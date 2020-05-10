@@ -2,7 +2,7 @@ import UIKit
 
 import Domain
 import Combine
-import SharedUtils
+import PRSharedUtils
 
 class SignupViewController: BaseViewController {
     // MARK: - Properties

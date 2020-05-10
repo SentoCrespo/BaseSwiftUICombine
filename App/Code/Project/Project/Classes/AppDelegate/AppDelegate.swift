@@ -1,100 +1,123 @@
-import SharedUtils
+import PRSharedUtils
 import UIKit
 import WUEnvironment
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
+    
+    // MARK: - Properties
+    // swiftlint:disable:next weak_delegate
+    var appDelegate = AppDelegateFactory.makeDefault()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+        
         // Bypass for testing purposes
         if WUManagerEnvironment.isTestNoConfig == true {
-            return true
+            // Call the composite delegate
+            appDelegate = AppDelegateFactory.makeTest()
         }
         
-        Application.shared.configureMainInterface(in: window!)
+        // Call the composite delegate
+        let result = appDelegate.application?(
+            application,
+            didFinishLaunchingWithOptions: launchOptions
+        )
         
-        DeepLinksManager.process(with: launchOptions, window: window)
-        
-        //		for familyName in UIFont.familyNames {
-        //			print(familyName)
-        //
-        //			for fontName in UIFont.fontNames(forFamilyName: familyName) {
-        //				print("\tFont: \(fontName)")
-        //			}
-        //		}
-        
-        // Mock Notifications for developing
-        //        if Environment.isDebug {
-        //            if UIDevice.isSimulator {
-        //                UIApplication.shared.listenForRemoteNotifications()
-        //                UIApplication.shared.remoteNotificationsPort = 9930 // Default port
-        //            }
-        //        }
-        
-        Log.info("*****************************************")
-        Log.info("BUNDLE path: \(Bundle.main.bundlePath)")
-        Log.info("*****************************************")
-        
-        Log.info("\n\n ")
-        Log.info("*****************************************")
-        Log.info("DOCUMENTS path: \(PathUtils.documentsUrl()!) \n\n")
-        Log.info("*****************************************")
-        
-        return true
+        return result ?? false
+
     }
     
-    func applicationWillResignActive(_ application: UIApplication) {}
+    func applicationWillResignActive(_ application: UIApplication) {
+        // Call the composite delegate
+        appDelegate.applicationWillResignActive?(application)
+    }
     
-    func applicationDidEnterBackground(_ application: UIApplication) {}
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        // Call the composite delegate
+        appDelegate.applicationDidEnterBackground?(application)
+    }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
-        // ManagerPushNotifications.resetNotificationsCount()
+        // Call the composite delegate
+        appDelegate.applicationWillEnterForeground?(application)
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
-        // ManagerPushNotifications.resetNotificationsCount()
+        // Call the composite delegate
+        appDelegate.applicationDidBecomeActive?(application)
     }
     
-    func applicationWillTerminate(_ application: UIApplication) {}
-    
-    // MARK: URL Scheme
-    
+    func applicationWillTerminate(_ application: UIApplication) {
+        // Call the composite delegate
+        appDelegate.applicationWillTerminate?(application)
+    }
+
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-        return DeepLinksManager.process(url: url, window: window)
+        let result = appDelegate.application?(
+            app,
+            open: url,
+            options: options
+        )
+        return result ?? false
     }
-    
-    func openUrl(_ url: URL) {}
-    
-    // MARK: Remote notifications
-    
+
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        // ManagerPushNotifications.saveDeviceTokenFromData(deviceToken)
+        // Call the composite delegate
+        appDelegate.application?(
+            application,
+            didRegisterForRemoteNotificationsWithDeviceToken: deviceToken
+        )
     }
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        if UIDevice.isSimulator == true {
-            // ManagerPushNotifications.saveDeviceTokenFromString("c80902a30b01b1f27b029c5ec95aec53af3648469d0e74225df3fd7a78953253")
-            return
-        }
+        
+        // Call the composite delegate
+        appDelegate.application?(
+            application,
+            didFailToRegisterForRemoteNotificationsWithError: error
+        )
+
     }
     
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
-        // ManagerPushNotifications.handlePushNotificationReceived(userInfo)
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        // Call the composite delegate
+        appDelegate.application?(
+            application,
+            didReceiveRemoteNotification: userInfo,
+            fetchCompletionHandler: completionHandler
+        )
+        
     }
+    
 }
 
 // MARK: Global Variables
-
 import Log
 var Log: Logger {
-    return Application.shared.logger
+    let delegate = AppDelegate
+        .shared
+        .compositeDelegate?
+        .delegate(
+            type: AppDelegateThirdParty.self
+    )
+    return delegate?.logger ?? ConsoleLogger()
 }
 
 // MARK: Computed Variables
-
 extension AppDelegate {
+    
     static var shared: AppDelegate {
         return UIApplication.shared.delegate as? AppDelegate ?? AppDelegate()
     }
+    
+    var compositeDelegate: CompositeAppDelegate? {
+        return AppDelegate.shared.appDelegate as? CompositeAppDelegate
+    }
+
+    var datasource: DataSourceConfiguration? {
+        let delegate = compositeDelegate?.delegate(type: AppDelegateConfigurations.self)
+        return delegate?.dataSourceConfiguration
+    }
+    
 }
