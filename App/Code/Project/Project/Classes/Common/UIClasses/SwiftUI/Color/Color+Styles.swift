@@ -2,6 +2,7 @@ import Foundation
 import SwiftUI
 
 /// Dynamic color sets (Light & Dark Mode)
+/// Reference: https://airtable.com/shrHQdv9vQGz7UMQj/tblH3GqNwWSvZmrGX/viwKQnM5JrVAWzHIr
 extension Color {
     
     // Brand
