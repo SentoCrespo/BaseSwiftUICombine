@@ -41,9 +41,9 @@ public extension View {
         return self.modifier(ScaledFont(name: name, size: size))
     }
     
-    /// Applies the modifier for the font with a given enum
-    func scaledFont(name: Typography.fontFamily, size: Typography.fontSize) -> some View {
-        return self.modifier(ScaledFont(name: name.rawValue, size: size.rawValue))
+    /// Applies the modifier for the font with a specific size
+    func scaledFont(name: Typography.fontFamily, size: CGFloat) -> some View {
+        return self.modifier(ScaledFont(name: name.rawValue, size: size))
     }
     
 }

@@ -17,7 +17,9 @@ struct ButtonPrimaryStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration
             .label
-            .scaledFont(name: .helveticaNeue, size: .medium)
+            .scaledFont(
+                name: .helveticaNeue,
+                size: Typography.fontSize.button)
             .foregroundColor(configuration.isPressed ? Color.themePrimary : Color.themeSecondary)
             .padding()
             .background(configuration.isPressed ? Color.brandPrimary : Color.contrastPrimary)
@@ -31,7 +33,9 @@ struct ButtonSecondaryStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration
             .label
-            .scaledFont(name: .helveticaNeue, size: .medium)
+            .scaledFont(
+                name: .helveticaNeue,
+                size: Typography.fontSize.button)
             .foregroundColor(configuration.isPressed ? Color.themeSecondary : Color.themePrimary)
             .padding()
             .background(configuration.isPressed ? Color.brandPrimary : Color.contrastSecondary)
@@ -45,7 +49,9 @@ struct ButtonActionStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration
             .label
-            .scaledFont(name: .helveticaNeue, size: .medium)
+            .scaledFont(
+                name: .helveticaNeue,
+                size: Typography.fontSize.button)
             .foregroundColor(configuration.isPressed ? Color.themeSecondary : Color.themePrimary)
             .padding()
             .background(Color.clear)
@@ -59,7 +65,9 @@ struct ButtonRoundStyle: ButtonStyle {
         let size: CGFloat = 64.0
         return configuration
             .label
-            .scaledFont(name: .helveticaNeue, size: .medium)
+            .scaledFont(
+                name: .helveticaNeue,
+                size: Typography.fontSize.button)
             .foregroundColor(configuration.isPressed ? Color.contrastSecondary : Color.brandPrimary)
             .padding()
             .background(configuration.isPressed ? Color.brandPrimary : Color.contrastSecondary)
