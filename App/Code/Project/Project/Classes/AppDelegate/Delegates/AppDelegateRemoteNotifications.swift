@@ -12,7 +12,7 @@ class AppDelegateRemoteNotifications: AppDelegateType {
 
 extension AppDelegateRemoteNotifications {
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         // TODO: Check if app lauched via notification
         
         // Mock Notifications for developing
@@ -34,7 +34,7 @@ extension AppDelegateRemoteNotifications {
         // TODO: Handle case
     }
     
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         // TODO: Handle case
     }
     

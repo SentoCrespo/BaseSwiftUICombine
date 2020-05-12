@@ -121,7 +121,7 @@ extension AppDelegateTests {
         // Given
         let application = UIApplication.shared
         let url = URL(string: "https://my.test.com")!
-        let options: [UIApplication.OpenURLOptionsKey : Any] = [:]
+        let options: [UIApplication.OpenURLOptionsKey: Any] = [:]
             
         // When
         _ = delegate?.application(
