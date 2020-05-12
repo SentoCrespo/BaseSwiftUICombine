@@ -137,10 +137,10 @@
 		CFB4DC2B24677A93000DDB3C /* AppDelegateDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC2A24677A93000DDB3C /* AppDelegateDebug.swift */; };
 		CFB4DC332467F596000DDB3C /* MainUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC322467F595000DDB3C /* MainUIView.swift */; };
 		CFB4DC38246932E1000DDB3C /* ScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC37246932E1000DDB3C /* ScaledFont.swift */; };
-		CFB4DC3A246937E8000DDB3C /* Button+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC39246937E8000DDB3C /* Button+Types.swift */; };
+		CFB4DC3A246937E8000DDB3C /* Button+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC39246937E8000DDB3C /* Button+Styles.swift */; };
 		CFB4DC462469A643000DDB3C /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC452469A643000DDB3C /* Typography.swift */; };
-		CFB4DC482469A7EF000DDB3C /* Text+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC472469A7EF000DDB3C /* Text+Types.swift */; };
-		CFB4DC4B2469A9EF000DDB3C /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC4A2469A9EF000DDB3C /* ColorPalette.swift */; };
+		CFB4DC482469A7EF000DDB3C /* Text+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC472469A7EF000DDB3C /* Text+Styles.swift */; };
+		CFB4DC4B2469A9EF000DDB3C /* Color+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC4A2469A9EF000DDB3C /* Color+Styles.swift */; };
 		CFB4DC4E2469AA6D000DDB3C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB4DC4D2469AA6D000DDB3C /* Colors.xcassets */; };
 		CFB4DC50246A7BC0000DDB3C /* TextPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC4F246A7BC0000DDB3C /* TextPreview.swift */; };
 		CFB4DC52246A81C0000DDB3C /* ButtonPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC51246A81C0000DDB3C /* ButtonPreview.swift */; };
@@ -456,10 +456,10 @@
 		CFB4DC2A24677A93000DDB3C /* AppDelegateDebug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateDebug.swift; sourceTree = "<group>"; };
 		CFB4DC322467F595000DDB3C /* MainUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUIView.swift; sourceTree = "<group>"; };
 		CFB4DC37246932E1000DDB3C /* ScaledFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledFont.swift; sourceTree = "<group>"; };
-		CFB4DC39246937E8000DDB3C /* Button+Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Types.swift"; sourceTree = "<group>"; };
+		CFB4DC39246937E8000DDB3C /* Button+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Styles.swift"; sourceTree = "<group>"; };
 		CFB4DC452469A643000DDB3C /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
-		CFB4DC472469A7EF000DDB3C /* Text+Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Types.swift"; sourceTree = "<group>"; };
-		CFB4DC4A2469A9EF000DDB3C /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		CFB4DC472469A7EF000DDB3C /* Text+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Styles.swift"; sourceTree = "<group>"; };
+		CFB4DC4A2469A9EF000DDB3C /* Color+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Styles.swift"; sourceTree = "<group>"; };
 		CFB4DC4D2469AA6D000DDB3C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		CFB4DC4F246A7BC0000DDB3C /* TextPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPreview.swift; sourceTree = "<group>"; };
 		CFB4DC51246A81C0000DDB3C /* ButtonPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPreview.swift; sourceTree = "<group>"; };
@@ -1292,11 +1292,9 @@
 			isa = PBXGroup;
 			children = (
 				CFB4DC492469A988000DDB3C /* Font */,
-				CFB4DC472469A7EF000DDB3C /* Text+Types.swift */,
-				CFB4DC4F246A7BC0000DDB3C /* TextPreview.swift */,
-				CFB4DC39246937E8000DDB3C /* Button+Types.swift */,
-				CFB4DC51246A81C0000DDB3C /* ButtonPreview.swift */,
-				CFB4DC4A2469A9EF000DDB3C /* ColorPalette.swift */,
+				CFB4DC55246A963E000DDB3C /* Text */,
+				CFB4DC56246A9649000DDB3C /* Button */,
+				CFB4DC57246A9651000DDB3C /* Color */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -1304,8 +1302,8 @@
 		CFB4DC492469A988000DDB3C /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				CFB4DC452469A643000DDB3C /* Typography.swift */,
 				CFB4DC37246932E1000DDB3C /* ScaledFont.swift */,
+				CFB4DC452469A643000DDB3C /* Typography.swift */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -1316,6 +1314,32 @@
 				CFB4DC4D2469AA6D000DDB3C /* Colors.xcassets */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		CFB4DC55246A963E000DDB3C /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DC472469A7EF000DDB3C /* Text+Styles.swift */,
+				CFB4DC4F246A7BC0000DDB3C /* TextPreview.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		CFB4DC56246A9649000DDB3C /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DC39246937E8000DDB3C /* Button+Styles.swift */,
+				CFB4DC51246A81C0000DDB3C /* ButtonPreview.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		CFB4DC57246A9651000DDB3C /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DC4A2469A9EF000DDB3C /* Color+Styles.swift */,
+			);
+			path = Color;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2225,14 +2249,14 @@
 				CFAE0A2922EB02BB0004BE72 /* MainConfigurator.swift in Sources */,
 				AF19EA6A1F7BC913000533E9 /* Constants.swift in Sources */,
 				AF19EA701F7BC913000533E9 /* UILabel+Style.swift in Sources */,
-				CFB4DC3A246937E8000DDB3C /* Button+Types.swift in Sources */,
+				CFB4DC3A246937E8000DDB3C /* Button+Styles.swift in Sources */,
 				AF19EA711F7BC913000533E9 /* PRNavigationController.swift in Sources */,
 				CFB4DC27246776C8000DDB3C /* AppDelegateStartupConfiguration.swift in Sources */,
-				CFB4DC482469A7EF000DDB3C /* Text+Types.swift in Sources */,
+				CFB4DC482469A7EF000DDB3C /* Text+Styles.swift in Sources */,
 				CF5A8EED202331EC00732AD4 /* ProtocolsAutoGeneration.swift in Sources */,
 				CF4ACB5E222AF6ED00D7B8BA /* MainViewController.swift in Sources */,
 				CF4ACB93222D4AEB00D7B8BA /* BaseViewControllerProtocol.swift in Sources */,
-				CFB4DC4B2469A9EF000DDB3C /* ColorPalette.swift in Sources */,
+				CFB4DC4B2469A9EF000DDB3C /* Color+Styles.swift in Sources */,
 				AF19EA741F7BC913000533E9 /* BasePresenter.swift in Sources */,
 				CFB4DC50246A7BC0000DDB3C /* TextPreview.swift in Sources */,
 				CFB4DC132466E71F000DDB3C /* AppDelegateConfigurations.swift in Sources */,
