@@ -135,6 +135,15 @@
 		CFB4DC27246776C8000DDB3C /* AppDelegateStartupConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC26246776C8000DDB3C /* AppDelegateStartupConfiguration.swift */; };
 		CFB4DC2924677936000DDB3C /* AppDelegateRemoteNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC2824677936000DDB3C /* AppDelegateRemoteNotifications.swift */; };
 		CFB4DC2B24677A93000DDB3C /* AppDelegateDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC2A24677A93000DDB3C /* AppDelegateDebug.swift */; };
+		CFB4DC332467F596000DDB3C /* MainUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC322467F595000DDB3C /* MainUIView.swift */; };
+		CFB4DC38246932E1000DDB3C /* ScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC37246932E1000DDB3C /* ScaledFont.swift */; };
+		CFB4DC3A246937E8000DDB3C /* Button+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC39246937E8000DDB3C /* Button+Styles.swift */; };
+		CFB4DC462469A643000DDB3C /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC452469A643000DDB3C /* Typography.swift */; };
+		CFB4DC482469A7EF000DDB3C /* Text+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC472469A7EF000DDB3C /* Text+Styles.swift */; };
+		CFB4DC4B2469A9EF000DDB3C /* Color+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC4A2469A9EF000DDB3C /* Color+Styles.swift */; };
+		CFB4DC4E2469AA6D000DDB3C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB4DC4D2469AA6D000DDB3C /* Colors.xcassets */; };
+		CFB4DC50246A7BC0000DDB3C /* TextPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC4F246A7BC0000DDB3C /* TextPreview.swift */; };
+		CFB4DC52246A81C0000DDB3C /* ButtonPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC51246A81C0000DDB3C /* ButtonPreview.swift */; };
 		CFE99477210E3C44005E55C7 /* UIImage+Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE99476210E3C44005E55C7 /* UIImage+Render.swift */; };
 		E213EB87D53956D2E752B6CB /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35ED9D748EBB19AA5EE75FBD /* Pods_DomainTests.framework */; };
 /* End PBXBuildFile section */
@@ -445,6 +454,15 @@
 		CFB4DC26246776C8000DDB3C /* AppDelegateStartupConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateStartupConfiguration.swift; sourceTree = "<group>"; };
 		CFB4DC2824677936000DDB3C /* AppDelegateRemoteNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateRemoteNotifications.swift; sourceTree = "<group>"; };
 		CFB4DC2A24677A93000DDB3C /* AppDelegateDebug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateDebug.swift; sourceTree = "<group>"; };
+		CFB4DC322467F595000DDB3C /* MainUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUIView.swift; sourceTree = "<group>"; };
+		CFB4DC37246932E1000DDB3C /* ScaledFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledFont.swift; sourceTree = "<group>"; };
+		CFB4DC39246937E8000DDB3C /* Button+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Styles.swift"; sourceTree = "<group>"; };
+		CFB4DC452469A643000DDB3C /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		CFB4DC472469A7EF000DDB3C /* Text+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Styles.swift"; sourceTree = "<group>"; };
+		CFB4DC4A2469A9EF000DDB3C /* Color+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Styles.swift"; sourceTree = "<group>"; };
+		CFB4DC4D2469AA6D000DDB3C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		CFB4DC4F246A7BC0000DDB3C /* TextPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPreview.swift; sourceTree = "<group>"; };
+		CFB4DC51246A81C0000DDB3C /* ButtonPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPreview.swift; sourceTree = "<group>"; };
 		CFE99476210E3C44005E55C7 /* UIImage+Render.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Render.swift"; sourceTree = "<group>"; };
 		D2614C473D7555E4B3B8AFCE /* Pods_PlatformPersistenceStaticTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlatformPersistenceStaticTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D4BF15DA06E141420C2537 /* Pods_PlatformNetworkStaticTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlatformNetworkStaticTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -786,6 +804,7 @@
 		AF19EA101F7BC7D7000533E9 /* UIClasses */ = {
 			isa = PBXGroup;
 			children = (
+				CFB4DC36246932D5000DDB3C /* SwiftUI */,
 				CF4ACB58222AEF4800D7B8BA /* Style */,
 				AF19EA121F7BC7D7000533E9 /* UIButton */,
 				AF19EA151F7BC7D7000533E9 /* UILabel */,
@@ -864,6 +883,7 @@
 		AF19EA461F7BC7D7000533E9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CFB4DC4C2469AA5E000DDB3C /* Colors */,
 				CFA2040F2109F73B0041B3AD /* Locations */,
 				AF19EA471F7BC7D7000533E9 /* Fonts */,
 				AF19EA4A1F7BC7D7000533E9 /* LocalizableStrings */,
@@ -1191,6 +1211,7 @@
 				CF4ACB5D222AF6ED00D7B8BA /* MainPresenter.swift */,
 				CF4ACB5A222AF6ED00D7B8BA /* MainViewController.swift */,
 				CF4ACB5B222AF6ED00D7B8BA /* MainViewController.storyboard */,
+				CFB4DC322467F595000DDB3C /* MainUIView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1265,6 +1286,60 @@
 				CFB4DC2A24677A93000DDB3C /* AppDelegateDebug.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		CFB4DC36246932D5000DDB3C /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DC492469A988000DDB3C /* Font */,
+				CFB4DC55246A963E000DDB3C /* Text */,
+				CFB4DC56246A9649000DDB3C /* Button */,
+				CFB4DC57246A9651000DDB3C /* Color */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		CFB4DC492469A988000DDB3C /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DC37246932E1000DDB3C /* ScaledFont.swift */,
+				CFB4DC452469A643000DDB3C /* Typography.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		CFB4DC4C2469AA5E000DDB3C /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DC4D2469AA6D000DDB3C /* Colors.xcassets */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		CFB4DC55246A963E000DDB3C /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DC472469A7EF000DDB3C /* Text+Styles.swift */,
+				CFB4DC4F246A7BC0000DDB3C /* TextPreview.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		CFB4DC56246A9649000DDB3C /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DC39246937E8000DDB3C /* Button+Styles.swift */,
+				CFB4DC51246A81C0000DDB3C /* ButtonPreview.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		CFB4DC57246A9651000DDB3C /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DC4A2469A9EF000DDB3C /* Color+Styles.swift */,
+			);
+			path = Color;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1602,6 +1677,7 @@
 			files = (
 				CF19C74C222584F30039DB77 /* .swiftformat in Resources */,
 				AF19EA931F7BC95B000533E9 /* LaunchScreen.xib in Resources */,
+				CFB4DC4E2469AA6D000DDB3C /* Colors.xcassets in Resources */,
 				AF19EA901F7BC945000533E9 /* Images.xcassets in Resources */,
 				AF19EA941F7BC95B000533E9 /* Main.storyboard in Resources */,
 				AC2797621F84E9C000A3D1A3 /* Localizable.strings in Resources */,
@@ -1814,7 +1890,7 @@
 		};
 		AF0FD8131B64D03100F2E84A /* Fabric */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -1822,7 +1898,7 @@
 			name = Fabric;
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "# \"${PODS_ROOT}/Fabric/run\" 3bf16679e12e11973a46e69023ba67404befbe1a ef54346c5329132da375a4b37a4e1da1dc8d3ad54e3324ac56a82345caf0dba4\n";
 		};
@@ -1838,7 +1914,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"Build++ in ${PROJECT_DIR}/${INFOPLIST_FILE}\"\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${INFOPLIST_FILE}\")  \nbuildNumber=$(($buildNumber + 1))      \n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${INFOPLIST_FILE}\"\n";
+			shellScript = "# echo \"Build++ in ${PROJECT_DIR}/${INFOPLIST_FILE}\"\n# buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${INFOPLIST_FILE}\")  \n# buildNumber=$(($buildNumber + 1))      \n# /usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${INFOPLIST_FILE}\"\n";
 		};
 		AF6477E71F54355B003E55D1 /* Hihglight warnings */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2156,6 +2232,7 @@
 				AF19EA731F7BC913000533E9 /* BaseViewController.swift in Sources */,
 				CFB4DC0D24663178000DDB3C /* AppDelegateFactory.swift in Sources */,
 				CFAE0A2722E9AEC00004BE72 /* BlankConfigurator.swift in Sources */,
+				CFB4DC332467F596000DDB3C /* MainUIView.swift in Sources */,
 				CFB4DC0F246631BF000DDB3C /* CompositeAppDelegate.swift in Sources */,
 				CFAE0A2B22EB03A70004BE72 /* SignupConfigurator.swift in Sources */,
 				CFB4DC11246634CA000DDB3C /* AppDelegateThirdParty.swift in Sources */,
@@ -2172,16 +2249,22 @@
 				CFAE0A2922EB02BB0004BE72 /* MainConfigurator.swift in Sources */,
 				AF19EA6A1F7BC913000533E9 /* Constants.swift in Sources */,
 				AF19EA701F7BC913000533E9 /* UILabel+Style.swift in Sources */,
+				CFB4DC3A246937E8000DDB3C /* Button+Styles.swift in Sources */,
 				AF19EA711F7BC913000533E9 /* PRNavigationController.swift in Sources */,
 				CFB4DC27246776C8000DDB3C /* AppDelegateStartupConfiguration.swift in Sources */,
+				CFB4DC482469A7EF000DDB3C /* Text+Styles.swift in Sources */,
 				CF5A8EED202331EC00732AD4 /* ProtocolsAutoGeneration.swift in Sources */,
 				CF4ACB5E222AF6ED00D7B8BA /* MainViewController.swift in Sources */,
 				CF4ACB93222D4AEB00D7B8BA /* BaseViewControllerProtocol.swift in Sources */,
+				CFB4DC4B2469A9EF000DDB3C /* Color+Styles.swift in Sources */,
 				AF19EA741F7BC913000533E9 /* BasePresenter.swift in Sources */,
+				CFB4DC50246A7BC0000DDB3C /* TextPreview.swift in Sources */,
 				CFB4DC132466E71F000DDB3C /* AppDelegateConfigurations.swift in Sources */,
 				AF19EA6B1F7BC913000533E9 /* ConstantsWhiteLabel.swift in Sources */,
+				CFB4DC52246A81C0000DDB3C /* ButtonPreview.swift in Sources */,
 				CF5A8F01202331F800732AD4 /* AutoEquatable.generated.swift in Sources */,
 				CF26A50D2224A07800D0256C /* DataSourceConfiguration+Init.swift in Sources */,
+				CFB4DC38246932E1000DDB3C /* ScaledFont.swift in Sources */,
 				AC49473D1FAB6D3E00F4E543 /* BorderModel.swift in Sources */,
 				AF19EA6F1F7BC913000533E9 /* UIButtonBase.swift in Sources */,
 				CF4ACB9C222D5C4B00D7B8BA /* SignupNavigator.swift in Sources */,
@@ -2194,6 +2277,7 @@
 				AF19EA6E1F7BC913000533E9 /* ButtonAppearanceModel.swift in Sources */,
 				CFE99477210E3C44005E55C7 /* UIImage+Render.swift in Sources */,
 				CF4ACB61222AF6ED00D7B8BA /* MainPresenter.swift in Sources */,
+				CFB4DC462469A643000DDB3C /* Typography.swift in Sources */,
 				CFA18CF52310A14B00F82DF4 /* PRTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

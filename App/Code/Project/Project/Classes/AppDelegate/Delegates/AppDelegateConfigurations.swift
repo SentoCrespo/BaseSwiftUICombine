@@ -17,7 +17,7 @@ class AppDelegateConfigurations: AppDelegateType {
 
 extension AppDelegateConfigurations {
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         
         self.initApiEnvironment()
         self.initDatasourceConfiguration()
