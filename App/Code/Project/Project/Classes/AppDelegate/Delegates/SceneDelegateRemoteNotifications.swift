@@ -2,7 +2,7 @@ import Foundation
 import WUEnvironment
 
 /// Performs configuration & handles remote notifications
-class AppDelegateRemoteNotifications: AppDelegateType {
+class SceneDelegateRemoteNotifications: SceneDelegateType {
     
     // MARK: - Properties
     
@@ -10,7 +10,8 @@ class AppDelegateRemoteNotifications: AppDelegateType {
     
 }
 
-extension AppDelegateRemoteNotifications {
+// MARK: - App Delegate
+extension SceneDelegateRemoteNotifications {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         // TODO: Check if app lauched via notification
@@ -38,4 +39,9 @@ extension AppDelegateRemoteNotifications {
         // TODO: Handle case
     }
     
+}
+
+// MARK: - Scene Delegate
+extension SceneDelegateRemoteNotifications {
+    // TODO:
 }

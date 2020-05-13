@@ -29,6 +29,7 @@ struct TextPreview: View {
     
 }
 
+#if DEBUG
 struct TextPreview_Previews: PreviewProvider {
     static var previews: some View {
         Group {
@@ -40,3 +41,4 @@ struct TextPreview_Previews: PreviewProvider {
         }
     }
 }
+#endif

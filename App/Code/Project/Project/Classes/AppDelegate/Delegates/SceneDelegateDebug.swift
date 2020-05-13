@@ -1,7 +1,7 @@
 import Foundation
 
 /// Performs debugging info
-class AppDelegateDebug: AppDelegateType {
+class SceneDelegateDebug: SceneDelegateType {
 
     // MARK: - Properties
     
@@ -9,7 +9,8 @@ class AppDelegateDebug: AppDelegateType {
     
 }
 
-extension AppDelegateDebug {
+// MARK: - App Delegate
+extension SceneDelegateDebug {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         
@@ -21,8 +22,15 @@ extension AppDelegateDebug {
     
 }
 
+// MARK: - Scene Delegate
+extension SceneDelegateDebug {
+    // TODO:
+}
+
+// MARK: - Private Methods
 import PRSharedUtils
-private extension AppDelegateDebug {
+
+private extension SceneDelegateDebug {
     
     func printPathNames() {
         let bundlePath = Bundle.main.bundlePath

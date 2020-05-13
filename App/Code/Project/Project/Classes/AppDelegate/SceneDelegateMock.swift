@@ -1,6 +1,6 @@
 import Foundation
 
-class AppDelegateMock: AppDelegateType {
+class SceneDelegateMock: SceneDelegateType {
     
     // MARK: - Properties
     var methodCalled: [String: Bool] = [:]
@@ -10,7 +10,7 @@ class AppDelegateMock: AppDelegateType {
 }
 
 // MARK: - AppDelegate
-extension AppDelegateMock {
+extension SceneDelegateMock {
     
     @discardableResult
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -53,6 +53,35 @@ extension AppDelegateMock {
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         methodCalled["didReceiveRemoteNotification"] = true
+    }
+    
+}
+
+// MARK: - Scene Delegate
+extension SceneDelegateMock {
+    
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        methodCalled["sceneWillConnectToSessionWithConnectionOptions"] = true
+    }
+    
+    func sceneDidDisconnect(_ scene: UIScene) {
+        methodCalled["sceneDidDisconnect"] = true
+    }
+    
+    func sceneDidBecomeActive(_ scene: UIScene) {
+        methodCalled["sceneDidBecomeActive"] = true
+    }
+    
+    func sceneWillResignActive(_ scene: UIScene) {
+        methodCalled["sceneWillResignActive"] = true
+    }
+    
+    func sceneWillEnterForeground(_ scene: UIScene) {
+        methodCalled["sceneWillEnterForeground"] = true
+    }
+    
+    func sceneDidEnterBackground(_ scene: UIScene) {
+        methodCalled["sceneDidEnterBackground"] = true
     }
     
 }

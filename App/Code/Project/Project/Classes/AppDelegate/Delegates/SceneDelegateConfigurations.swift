@@ -5,7 +5,7 @@ import PlatformNetworkApi
 import WUEnvironment
 
 /// Perform data configurations, e.g. datasource, persistence, ...
-class AppDelegateConfigurations: AppDelegateType {
+class SceneDelegateConfigurations: SceneDelegateType {
     
     // MARK: - Properties
     var apiEnvironment: ApiEnvironment!
@@ -15,7 +15,8 @@ class AppDelegateConfigurations: AppDelegateType {
     
 }
 
-extension AppDelegateConfigurations {
+// MARK: - App Delegate
+extension SceneDelegateConfigurations {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         
@@ -27,7 +28,13 @@ extension AppDelegateConfigurations {
     
 }
 
-private extension AppDelegateConfigurations {
+// MARK: - Scene Delegate
+extension SceneDelegateConfigurations {
+    // TODO:
+}
+
+// MARK: - Private Methods
+private extension SceneDelegateConfigurations {
     
     func initApiEnvironment() {
         if WUManagerEnvironment.isDebugFlag {

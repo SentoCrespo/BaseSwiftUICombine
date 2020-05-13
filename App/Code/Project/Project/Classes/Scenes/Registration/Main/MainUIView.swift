@@ -28,6 +28,7 @@ struct MainUIView: View {
     
 }
 
+#if DEBUG
 struct MainUIView_Previews: PreviewProvider {
     static var previews: some View {
         MainUIView()
@@ -36,3 +37,4 @@ struct MainUIView_Previews: PreviewProvider {
 //            )
     }
 }
+#endif

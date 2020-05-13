@@ -2,7 +2,7 @@ import Foundation
 import Log
 
 /// Setup Third Party dependencies
-class AppDelegateThirdParty: AppDelegateType {
+class SceneDelegateThirdParty: SceneDelegateType {
     
     // MARK: - Properties
     var logger: Logger!
@@ -11,8 +11,8 @@ class AppDelegateThirdParty: AppDelegateType {
     
 }
 
-// MARK: - AppDelegate
-extension AppDelegateThirdParty {
+// MARK: - App Delegate
+extension SceneDelegateThirdParty {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
           
@@ -28,12 +28,17 @@ extension AppDelegateThirdParty {
     
 }
 
+// MARK: - Scene Delegate
+extension SceneDelegateThirdParty {
+    // TODO:
+}
+
 import AppVersionMonitor
 import IQKeyboardManager
 import PKHUD
 import WUEnvironment
 
-private extension AppDelegateThirdParty {
+private extension SceneDelegateThirdParty {
     
     func initLogger() {
         if WUManagerEnvironment.isReleaseFlag || WUManagerEnvironment.isAdhocFlag {
@@ -59,7 +64,7 @@ private extension AppDelegateThirdParty {
     
 }
 
-private extension AppDelegateThirdParty {
+private extension SceneDelegateThirdParty {
     
     func trackVersion() {
         AppVersionMonitor.sharedMonitor.startup()
@@ -73,17 +78,17 @@ private extension AppDelegateThirdParty {
         //        UINavigationBar.appearance().backIndicatorTransitionMaskImage = backArrowImage
         
         // Customize navigation bar
-        let fontColor = UIColor.fontPrimaryDark1
-        let backgroundColor = UIColor.barTintColor
-        
-        UINavigationBar.appearance().titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: fontColor
-        ]
-        
-        UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().tintColor = fontColor
-        UINavigationBar.appearance().barTintColor = backgroundColor
-        UINavigationBar.appearance().backgroundImage(for: .default)
+//        let fontColor = UIColor.fontPrimaryDark1
+//        let backgroundColor = UIColor.barTintColor
+//        
+//        UINavigationBar.appearance().titleTextAttributes = [
+//            NSAttributedString.Key.foregroundColor: fontColor
+//        ]
+//        
+//        UINavigationBar.appearance().isTranslucent = false
+//        UINavigationBar.appearance().tintColor = fontColor
+//        UINavigationBar.appearance().barTintColor = backgroundColor
+//        UINavigationBar.appearance().backgroundImage(for: .default)
         
         // Custom appearence
         
