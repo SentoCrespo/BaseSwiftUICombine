@@ -123,6 +123,9 @@
 		CFB4DC67246BEF93000DDB3C /* SceneDelegateDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC2A24677A93000DDB3C /* SceneDelegateDebug.swift */; };
 		CFB4DC68246BEFE9000DDB3C /* SceneDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC2424676EDC000DDB3C /* SceneDelegateMock.swift */; };
 		CFB4DC69246BF066000DDB3C /* SceneDelegate_SPEC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC2224676D0A000DDB3C /* SceneDelegate_SPEC.swift */; };
+		CFB4DC74246C59D1000DDB3C /* SceneDelegate+UIApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC73246C59D1000DDB3C /* SceneDelegate+UIApplicationDelegate.swift */; };
+		CFB4DC76246C5A44000DDB3C /* SceneDelegate+UIWindowSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC75246C5A44000DDB3C /* SceneDelegate+UIWindowSceneDelegate.swift */; };
+		CFB4DC78246C5A5C000DDB3C /* SceneDelegate+UISceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC77246C5A5C000DDB3C /* SceneDelegate+UISceneDelegate.swift */; };
 		CFE99477210E3C44005E55C7 /* UIImage+Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE99476210E3C44005E55C7 /* UIImage+Render.swift */; };
 		E213EB87D53956D2E752B6CB /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35ED9D748EBB19AA5EE75FBD /* Pods_DomainTests.framework */; };
 /* End PBXBuildFile section */
@@ -421,6 +424,9 @@
 		CFB4DC51246A81C0000DDB3C /* ButtonPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPreview.swift; sourceTree = "<group>"; };
 		CFB4DC5D246BE769000DDB3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CFB4DC5F246BEE0F000DDB3C /* SceneDelegateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegateType.swift; sourceTree = "<group>"; };
+		CFB4DC73246C59D1000DDB3C /* SceneDelegate+UIApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneDelegate+UIApplicationDelegate.swift"; sourceTree = "<group>"; };
+		CFB4DC75246C5A44000DDB3C /* SceneDelegate+UIWindowSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneDelegate+UIWindowSceneDelegate.swift"; sourceTree = "<group>"; };
+		CFB4DC77246C5A5C000DDB3C /* SceneDelegate+UISceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneDelegate+UISceneDelegate.swift"; sourceTree = "<group>"; };
 		CFE99476210E3C44005E55C7 /* UIImage+Render.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Render.swift"; sourceTree = "<group>"; };
 		D2614C473D7555E4B3B8AFCE /* Pods_PlatformPersistenceStaticTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlatformPersistenceStaticTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D4BF15DA06E141420C2537 /* Pods_PlatformNetworkStaticTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlatformNetworkStaticTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -708,6 +714,9 @@
 			isa = PBXGroup;
 			children = (
 				CFB4DC5D246BE769000DDB3C /* SceneDelegate.swift */,
+				CFB4DC77246C5A5C000DDB3C /* SceneDelegate+UISceneDelegate.swift */,
+				CFB4DC73246C59D1000DDB3C /* SceneDelegate+UIApplicationDelegate.swift */,
+				CFB4DC75246C5A44000DDB3C /* SceneDelegate+UIWindowSceneDelegate.swift */,
 				CFB4DC2C24677FA7000DDB3C /* Delegates */,
 				CFB4DC2424676EDC000DDB3C /* SceneDelegateMock.swift */,
 				CFB4DC2224676D0A000DDB3C /* SceneDelegate_SPEC.swift */,
@@ -2105,6 +2114,7 @@
 				CFB4DC5E246BE769000DDB3C /* SceneDelegate.swift in Sources */,
 				AF19EA601F7BC913000533E9 /* UIImage+Url.swift in Sources */,
 				CFAE0A2922EB02BB0004BE72 /* MainConfigurator.swift in Sources */,
+				CFB4DC74246C59D1000DDB3C /* SceneDelegate+UIApplicationDelegate.swift in Sources */,
 				AF19EA6A1F7BC913000533E9 /* Constants.swift in Sources */,
 				CFB4DC3A246937E8000DDB3C /* Button+Styles.swift in Sources */,
 				CFB4DC482469A7EF000DDB3C /* Text+Styles.swift in Sources */,
@@ -2114,9 +2124,11 @@
 				CFB4DC50246A7BC0000DDB3C /* TextPreview.swift in Sources */,
 				AF19EA6B1F7BC913000533E9 /* ConstantsWhiteLabel.swift in Sources */,
 				CFB4DC52246A81C0000DDB3C /* ButtonPreview.swift in Sources */,
+				CFB4DC78246C5A5C000DDB3C /* SceneDelegate+UISceneDelegate.swift in Sources */,
 				CF5A8F01202331F800732AD4 /* AutoEquatable.generated.swift in Sources */,
 				CF26A50D2224A07800D0256C /* DataSourceConfiguration+Init.swift in Sources */,
 				CFB4DC38246932E1000DDB3C /* ScaledFont.swift in Sources */,
+				CFB4DC76246C5A44000DDB3C /* SceneDelegate+UIWindowSceneDelegate.swift in Sources */,
 				CFB4DC67246BEF93000DDB3C /* SceneDelegateDebug.swift in Sources */,
 				CFB4DC61246BEE4C000DDB3C /* SceneDelegateFactory.swift in Sources */,
 				AC49473D1FAB6D3E00F4E543 /* BorderModel.swift in Sources */,
@@ -2483,7 +2495,7 @@
 				INFOPLIST_FILE = "$(PROJECT_DIR)/Project/OtherResources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DCONFIGURATION_${CONFIGURATION}\"";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DCONFIGURATION_${CONFIGURATION}\" -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vCrespo.HeyU;
 				PRODUCT_NAME = Project;
 				PROVISIONING_PROFILE = "c8bc05aa-24f1-4312-94f4-b66ce7c52c44";

@@ -12,21 +12,6 @@ class SceneDelegateStartup: SceneDelegateType {
     
 }
 
-// MARK: - App Delegate
-extension SceneDelegateStartup {
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
-        
-        window = UIWindow()
-        window?.makeKeyAndVisible()
-        
-        self.configureMainInterface(in: window!)
-        
-        return true
-    }
-    
-}
-
 // MARK: - Scene Delegate
 extension SceneDelegateStartup {
     
@@ -38,7 +23,7 @@ extension SceneDelegateStartup {
         
         // Create the main window
         self.window = UIWindow(windowScene: windowScene)
-        
+        self.configureMainInterface(in: self.window!)
     }
     
 }

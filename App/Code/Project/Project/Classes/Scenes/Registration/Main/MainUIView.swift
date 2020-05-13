@@ -32,9 +32,6 @@ struct MainUIView: View {
 struct MainUIView_Previews: PreviewProvider {
     static var previews: some View {
         MainUIView()
-//            .previewLayout(
-//                .fixed(width: 320, height: 70)
-//            )
     }
 }
 #endif
