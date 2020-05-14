@@ -1,0 +1,14 @@
+// swiftlint:disable all
+
+
+
+// MARK: - AutoEquatableEnumValues for Enums
+
+{% for type in types.implementing.AutoEquatableEnumValues|enum %}
+    // MARK: - {{ type.name }} AutoEquatableEnumValues
+    extension {{ type.name }}: Equatable {}
+    func == (lhs: {{ type.name }}, rhs: {{ type.name }}) -> Bool {
+        guard lhs.hashValue == rhs.hashValue else { return false }
+        return true
+    }
+{% endfor %}

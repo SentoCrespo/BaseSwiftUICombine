@@ -2,6 +2,10 @@ import SwiftUI
 
 struct MainUIView: View {
     
+    // MARK: - Properties
+//    @ObservedObject private(set) var model: MainModel.State
+//    let render: MainSceneRender?
+    
     var body: some View {
         NavigationView {
             ZStack {

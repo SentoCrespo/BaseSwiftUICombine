@@ -20,35 +20,38 @@ end
 
 def app_pods
 
-    # Version tracking
+    # System
+    ## Version tracking
     pod 'AppVersionMonitor', '1.4.0'
 
-    # Crash System
+    ## Crash System
     pod 'Firebase/Crashlytics', '6.24.0'
     pod 'Firebase/Analytics', '6.24.0'
 
-    ## User Interface
+    # User Interface
 
-    # Async image + Caching
+    ## Async image + Caching
     pod 'Kingfisher', '5.13.4'
 
-    # Keyboard Manager
+    ## Keyboard Manager
     pod 'IQKeyboardManager', '6.5.5'
     pod 'IQDropDownTextField', '2.0'
 
-    ### Notifications
+    # Code
+    
+    # Notifications
 
-    # Notifications Mocker
+    ## Notifications Mocker
     pod 'SimulatorRemoteNotifications', '0.0.3'
-
-    ### Auto-Generation
+    
+    # Auto-Generation
     pod 'Sourcery', '0.18.0'
     pod 'R.swift', '5.2.2'
 
-    ### Standard conventions
+    # Standard conventions
     pod 'SwiftLint', '0.39.2'
 
-    ### Custom Frameworks
+    # Custom Frameworks
     ## Environment
     pod 'WUEnvironment',
         :git => 'https://github.com/wundercar/environment-ios.git',
