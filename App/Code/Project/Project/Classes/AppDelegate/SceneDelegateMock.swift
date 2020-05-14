@@ -84,4 +84,29 @@ extension SceneDelegateMock {
         methodCalled["sceneDidEnterBackground"] = true
     }
     
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        methodCalled["openURLContexts"] = true
+    }
+
+    func stateRestorationActivity(for scene: UIScene) -> NSUserActivity? {
+        methodCalled["stateRestorationActivity"] = true
+        return nil
+    }
+
+    func scene(_ scene: UIScene, willContinueUserActivityWithType userActivityType: String) {
+        methodCalled["willContinueUserActivityWithType"] = true
+    }
+
+    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+        methodCalled["continueUserActivity"] = true
+    }
+
+    func scene(_ scene: UIScene, didFailToContinueUserActivityWithType userActivityType: String, error: Error) {
+        methodCalled["didFailToContinueUserActivityWithType"] = true
+    }
+    
+    func scene(_ scene: UIScene, didUpdate userActivity: NSUserActivity) {
+        methodCalled["didUpdateUserActivity"] = true
+    }
+    
 }

@@ -267,7 +267,7 @@ extension SceneDelegateTests {
         XCTAssertNotNil(mockDelegate!.methodCalled[method])
     }
 
-    func test_sceneDidEnterBackground(_ scene: UIScene) {
+    func test_sceneDidEnterBackground() {
         // Given
         let session = UIApplication.shared.openSessions.first!
         let scene = session.scene!
@@ -277,6 +277,92 @@ extension SceneDelegateTests {
 
         // Then
         let method = "sceneDidEnterBackground"
+        XCTAssertNotNil(mockDelegate!.methodCalled[method])
+    }
+
+    func test_SceneOpenURLContexts() {
+        // Given
+        let session = UIApplication.shared.openSessions.first!
+        let scene = session.scene!
+        let urlContexts: Set<UIOpenURLContext> = []
+
+        // When
+        delegate?.scene(scene, openURLContexts: urlContexts)
+
+        // Then
+        let method = "openURLContexts"
+        XCTAssertNotNil(mockDelegate!.methodCalled[method])
+    }
+
+    func test_stateRestorationActivity() {
+        // Given
+        let session = UIApplication.shared.openSessions.first!
+        let scene = session.scene!
+
+        // When
+        _ = delegate?.stateRestorationActivity(for: scene)
+
+        // Then
+        let method = "stateRestorationActivity"
+        XCTAssertNotNil(mockDelegate!.methodCalled[method])
+    }
+
+    func test_willContinueUserActivityWithType() {
+        // Given
+        let session = UIApplication.shared.openSessions.first!
+        let scene = session.scene!
+        let activityType: String = ""
+
+        // When
+        delegate?.scene(scene, willContinueUserActivityWithType: activityType)
+
+        // Then
+        let method = "willContinueUserActivityWithType"
+        XCTAssertNotNil(mockDelegate!.methodCalled[method])
+    }
+
+    func test_continueUserActivity() {
+        // Given
+        let session = UIApplication.shared.openSessions.first!
+        let scene = session.scene!
+        let bundleId = Bundle(for: SceneDelegateTests.self).bundleIdentifier!
+        let activityType: NSUserActivity = NSUserActivity(activityType: bundleId)
+
+        // When
+        delegate?.scene(scene, continue: activityType)
+
+        // Then
+        let method = "continueUserActivity"
+        XCTAssertNotNil(mockDelegate!.methodCalled[method])
+    }
+
+    func test_didFailToContinueUserActivityWithType() {
+        // Given
+        let session = UIApplication.shared.openSessions.first!
+        let scene = session.scene!
+        let activityType: String = ""
+        let error: Error = NSError(domain: "Could not run", code: 500, userInfo: [:])
+
+        // When
+        delegate?.scene(scene, didFailToContinueUserActivityWithType: activityType, error: error)
+
+        // Then
+        let method = "didFailToContinueUserActivityWithType"
+        XCTAssertNotNil(mockDelegate!.methodCalled[method])
+    }
+    
+    func test_didUpdateUserActivity() {
+        // Given
+        let session = UIApplication.shared.openSessions.first!
+        let scene = session.scene!
+        let bundleId = Bundle(for: SceneDelegateTests.self).bundleIdentifier!
+        let activityType: NSUserActivity = NSUserActivity(activityType: bundleId)
+
+        // When
+        delegate?.scene(scene, didUpdate: activityType)
+
+        // Then
+        let method = "didUpdateUserActivity"
         XCTAssertNotNil(mockDelegate!.methodCalled[method])
     }
     

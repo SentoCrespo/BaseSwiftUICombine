@@ -30,7 +30,7 @@ extension SceneDelegateThirdParty {
 
 // MARK: - Scene Delegate
 extension SceneDelegateThirdParty {
-    // TODO:
+   
 }
 
 import AppVersionMonitor

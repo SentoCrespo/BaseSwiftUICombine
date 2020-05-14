@@ -30,7 +30,7 @@ extension SceneDelegateConfigurations {
 
 // MARK: - Scene Delegate
 extension SceneDelegateConfigurations {
-    // TODO:
+    
 }
 
 // MARK: - Private Methods

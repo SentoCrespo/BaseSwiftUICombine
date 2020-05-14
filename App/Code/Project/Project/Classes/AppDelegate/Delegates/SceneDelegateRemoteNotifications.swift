@@ -43,5 +43,5 @@ extension SceneDelegateRemoteNotifications {
 
 // MARK: - Scene Delegate
 extension SceneDelegateRemoteNotifications {
-    // TODO:
+    
 }

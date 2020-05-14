@@ -17,6 +17,7 @@ extension SceneDelegateFactory {
                 SceneDelegateThirdParty(),
                 SceneDelegateDebug(),
                 SceneDelegateConfigurations(),
+                SceneDelegateDeeplinks(),
                 SceneDelegateRemoteNotifications(),
                 SceneDelegateStartup()
             ]

@@ -135,6 +135,47 @@ extension CompositeSceneDelegate {
         }
     }
     
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        sceneDelegates.forEach {
+            $0.scene?(scene, openURLContexts: URLContexts)
+        }
+    }
+
+    func stateRestorationActivity(for scene: UIScene) -> NSUserActivity? {
+        let allResults = sceneDelegates.compactMap { delegate in
+            return delegate.stateRestorationActivity?(for: scene)
+        }
+        // This returns the last activity found
+        let result = allResults.last
+        return result
+    }
+
+    func scene(_ scene: UIScene, willContinueUserActivityWithType userActivityType: String) {
+        sceneDelegates.forEach {
+            $0.scene?(scene, willContinueUserActivityWithType: userActivityType)
+        }
+    }
+
+    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+        sceneDelegates.forEach {
+            $0.scene?(scene, continue: userActivity)
+        }
+    }
+
+    func scene(_ scene: UIScene, didFailToContinueUserActivityWithType userActivityType: String, error: Error) {
+        sceneDelegates.forEach {
+            $0.scene?(scene,
+                      didFailToContinueUserActivityWithType: userActivityType,
+                      error: error)
+        }
+    }
+    
+    func scene(_ scene: UIScene, didUpdate userActivity: NSUserActivity) {
+        sceneDelegates.forEach {
+            $0.scene?(scene, didUpdate: userActivity)
+        }
+    }
+    
 }
 
 // MARK: - Public Methods
