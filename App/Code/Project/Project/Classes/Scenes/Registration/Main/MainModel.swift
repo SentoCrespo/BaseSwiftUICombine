@@ -4,6 +4,8 @@ import Foundation
 struct MainModel {
     
     // MARK: - Variables
+    
+    /// General purpose variables
     struct Context {
         
     }

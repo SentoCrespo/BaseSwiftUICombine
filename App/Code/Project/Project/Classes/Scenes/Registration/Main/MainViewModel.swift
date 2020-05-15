@@ -10,7 +10,7 @@ class MainViewModel: ObservableObject {
     
     // MARK: - Properties
     /// State that will be observed by the view
-    @Published private(set) var state: (State, Event)
+    @Published private(set) var state: State
     
     /// Actions comming from the view
     private let input: PassthroughSubject<Event, Never>
@@ -39,7 +39,7 @@ class MainViewModel: ObservableObject {
         // Initial values
         self.state = .idle
         self.bag = []
-        self.input = PassthroughSubject<Action, Never>()
+        self.input = PassthroughSubject<Event, Never>()
         self.output = PassthroughSubject<Effect, Never>()
         
         // Handle actions & effects
@@ -57,8 +57,8 @@ class MainViewModel: ObservableObject {
 extension MainViewModel {
     
     /// Method to publish incoming actions from the view
-    func send(action: Action) {
-        self.input.send(action)
+    func send(event: Event) {
+        self.input.send(event)
     }
     
 }
@@ -83,6 +83,8 @@ private extension MainViewModel {
                         self.state = .loading
                     case .onSelect(let item):
                         Log.debug("Process selected item: \(item)")
+                    default:
+                        break
                 }
             })
             .store(in: &bag)
@@ -99,12 +101,10 @@ private extension MainViewModel {
             case .idle:
                 return state
             case .loading:
-//                switch effect {
-//                case .onLoadingFailed(let error):
-//                    return .error(error)
-//                case .onLoadingSuccess(let movies):
-//                    return .loaded(movies)
-//                }
+                switch effect {
+                default:
+                    return state
+                }
             case .loaded:
                 return state
             case .error:
@@ -129,7 +129,7 @@ extension MainViewModel {
                 reduce: Self.reduce,
                 scheduler: RunLoop.main,
                 feedbacks: [
-                    Self.whenLoading()
+                    
                 ])
             .assign(to: \.state, on: self)
             .store(in: &bag)
@@ -140,15 +140,15 @@ extension MainViewModel {
 // MARK: - Concrete Effect handling
 private extension MainViewModel {
 
-    static func whenLoading() -> Feedback<State, Effect> {
-        Feedback { (state: State) -> AnyPublisher<Effect, Never> in
+    static func whenLoading() -> Feedback<State, Event> {
+        Feedback { (state: State) -> AnyPublisher<Event, Never> in
             // Check for the state we should be at
             guard case .loading = state else {
                 return Empty().eraseToAnyPublisher()
             }
             
             // Do operations and return effects
-            let result = Effect.onLoadingSuccess([])
+            let result = Event.onLoadingSuccess([])
             return Just(result)
                 .eraseToAnyPublisher()
             //              .catch { Just(Event.onLoadingFailed($0)) }
