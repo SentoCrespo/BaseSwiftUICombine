@@ -3,112 +3,157 @@ import Combine
 
 class MainViewModel: ObservableObject {
 
+    // MARK: - Typealias
+    typealias State = MainModel.State
+    typealias Event = MainModel.State.Event
+    typealias Effect = MainModel.State.Effect
+    
     // MARK: - Properties
-    @Published private(set) var state: MainModel.State = .idle
-    private var bag = Set<AnyCancellable>()
-    private let input = PassthroughSubject<MainModel.Event, Never>()
+    /// State that will be observed by the view
+    @Published private(set) var state: (State, Event)
+    
+    /// Actions comming from the view
+    private let input: PassthroughSubject<Event, Never>
+    private let output: PassthroughSubject<Effect, Never>
+    
+    /*
+     Maquina de estados se define como estados + transiciones
+     Estado inicial
+     Transición es (estado actual + event) -> (nextState, effect?)
+     Efectos son generados por eventos opcionalmente
+     
+     Sistema:
+     Maquina de estados
+     Recibe eventos => Puede disparar efectos
+    */
+    
+    /// Disposable bag
+    private var bag: Set<AnyCancellable>
+//    private let configurator: MainConfigurator
     
     // MARK: - Life Cycle
-    /// Connect Dependencies and start state machine
+    // TODO: Inject properties Configurator
     init() {
-//        Publishers.system(
-//            initial: state,
-//            reduce: Self.reduce,
-//            scheduler: RunLoop.main,
-//            feedbacks: [
-//                // 2.
-//                Self.whenLoading(),
-//                Self.userInput(input: input.eraseToAnyPublisher())
-//            ]
-//        )
-//        .assign(to: \.state, on: self)
-//        .store(in: &bag)
+//        self.configurator = configurator
+        
+        // Initial values
+        self.state = .idle
+        self.bag = []
+        self.input = PassthroughSubject<Action, Never>()
+        self.output = PassthroughSubject<Effect, Never>()
+        
+        // Handle actions & effects
+        self.handleActions(input: input)
+        self.handleEffects()
     }
     
     deinit {
         self.bag.removeAll()
     }
     
-    // TODO: WHY THIS?
-    func send(event: MainModel.Event) {
-        self.input.send(event)
+}
+
+// MARK: - Action handling
+extension MainViewModel {
+    
+    /// Method to publish incoming actions from the view
+    func send(action: Action) {
+        self.input.send(action)
     }
     
 }
-
-// MARK: - Define state-to-state transitions
-extension MainViewModel {
+   
+// MARK: - Private Action handling
+private extension MainViewModel {
     
-    typealias State = MainModel.State
-    typealias Event = MainModel.Event
-    static func reduce(_ state: State, _ event: Event) -> State {
-        switch state {
-        case .idle:
-            switch event {
-            case .onAppear:
-                return .loading
-            default:
-                return state
-            }
-        case .loading:
-            switch event {
-            case .onLoadingFailed(let error):
-                return .error(error)
-            case .onLoadingSuccess(let movies):
-                return .loaded(movies)
-            default:
-                return state
-            }
-        case .loaded:
-            return state
-        case .error:
-            return state
-        }
-    }
-    
-}
-
-// MARK: - Handle Events
-extension MainViewModel {
-    
-    typealias Effect = MainModel.Effect
-    static func userInput(input: AnyPublisher<State, Never>) -> Feedback<State, Event> {
-        Feedback { _ in input
+    /// Porcess incoming view actions
+    /// trigger state changes or navigation
+    func handleActions(input: PassthroughSubject<Event, Never>) {
+        
+        // Initial state value
+        // let state = CurrentValueSubject<State, Never>(.idle)
             
+        input
+            .receive(on: RunLoop.main)
+            .sink(receiveValue: { event in
+                switch event {
+                    case .onAppear:
+                        self.state = .loading
+                    case .onReload:
+                        self.state = .loading
+                    case .onSelect(let item):
+                        Log.debug("Process selected item: \(item)")
+                }
+            })
+            .store(in: &bag)
+    }
+    
+}
+    
+// MARK: - State handling
+private extension MainViewModel {
+
+    /// Define state-to-state transitions (state machine)
+    static func reduce(_ state: State, _ effect: Effect) -> State {
+        switch state {
+            case .idle:
+                return state
+            case .loading:
+//                switch effect {
+//                case .onLoadingFailed(let error):
+//                    return .error(error)
+//                case .onLoadingSuccess(let movies):
+//                    return .loaded(movies)
+//                }
+            case .loaded:
+                return state
+            case .error:
+                return state
         }
     }
     
 }
 
-
-// MARK: - Handle Effects
+// MARK: - Effects Handling
 extension MainViewModel {
     
-//    func observeViewEffect() {
-//        input.
-//            .asObservable()
-//            .subscribe(onNext: { [unowned self] viewEffect in
-//                switch viewEffect {
-//                case .confirmingDropoff:
-//                    self.state.set {
-//                        $0.dropoffButtonState = .loading
-//                    }
-//                    
-//                case let .confirmedDropoff(ride):
-//                    self.viewState.set {
-//                        $0.dropoffButtonState = .disabled
-//                    }
-//                    
-//                    self.coordinator?.dropOffPassenger(ride: ride)
-//                    
-//                case .confirmDropoffFailed:
-//                    self.viewState.set {
-//                        $0.dropoffButtonState = .default
-//                    }
-//                }
-//            })
-//            .disposed(by: disposeBag)
-//    }
+    /// Process state-to-state transitions
+    func handleEffects() {
     
+        // Initial state value
+        let state = self.state
+    
+        Publishers
+            .system(
+                initial: state,
+                reduce: Self.reduce,
+                scheduler: RunLoop.main,
+                feedbacks: [
+                    Self.whenLoading()
+                ])
+            .assign(to: \.state, on: self)
+            .store(in: &bag)
+    }
+
 }
 
+// MARK: - Concrete Effect handling
+private extension MainViewModel {
+
+    static func whenLoading() -> Feedback<State, Effect> {
+        Feedback { (state: State) -> AnyPublisher<Effect, Never> in
+            // Check for the state we should be at
+            guard case .loading = state else {
+                return Empty().eraseToAnyPublisher()
+            }
+            
+            // Do operations and return effects
+            let result = Effect.onLoadingSuccess([])
+            return Just(result)
+                .eraseToAnyPublisher()
+            //              .catch { Just(Event.onLoadingFailed($0)) }
+        }
+        
+    }
+    
+}

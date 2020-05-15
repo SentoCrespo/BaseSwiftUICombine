@@ -3,6 +3,11 @@ import Foundation
 /// Scene Model Definition
 struct MainModel {
     
+    // MARK: - Variables
+    struct Context {
+        
+    }
+    
     /// State machine for the scene
     /// https://www.vadimbulavin.com/assets/images/posts/mvvm/movies-list-state-machine.svg
     enum State {
@@ -10,22 +15,35 @@ struct MainModel {
         case loading
         case loaded([String])
         case error(Error)
-    }
-    
-    /// Anything triggered from the view
-    enum Effect {
-        case onSelect(String)
-    }
+        
+        /// Something happened
+        enum Event {
+            case onAppear
+            case onReload
+            case onSelect(String)
+            case onLoadingSuccess([String])
+            case onLoadingFailed(Error)
+        }
 
-    /// Anything a user does on a screen
-    enum Event {
-        case onAppear
-        case onLoadingSuccess([String])
-        case onLoadingFailed(Error)
+        /// Instructions to trigger logic
+        enum Effect {
+            case loadItems
+            case navigateToProfile
+        }
+        
     }
     
 }
 
 extension MainModel.State: AutoHashableEnumValues, AutoEquatableEnumValues {}
-extension MainModel.Effect: AutoHashableEnumValues, AutoEquatableEnumValues {}
-extension MainModel.Event: AutoHashableEnumValues, AutoEquatableEnumValues {}
+extension MainModel.State.Event: AutoHashableEnumValues, AutoEquatableEnumValues {}
+extension MainModel.State.Effect: AutoHashableEnumValues, AutoEquatableEnumValues {}
+
+/*
+ la transicion es algo asi :   event -> (newState, effect)
+
+ y los eventos y effects los separo cogiendo como event todo lo que se inicia por el usuario o sucede desde fuera, y como effect solo una descripcion de lo que se debe hacer a nivel logica (fetchX, saveToken, reloadX, openWebview, etc..)
+
+ transicion tipica:
+ viewDidLoad -> (loading, fetchProducts)
+ */

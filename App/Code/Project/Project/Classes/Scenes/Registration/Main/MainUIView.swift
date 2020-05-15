@@ -1,10 +1,16 @@
 import SwiftUI
+import Combine
 
 struct MainUIView: View {
     
     // MARK: - Properties
-//    @ObservedObject private(set) var model: MainModel.State
+    private let viewModel: MainViewModel
 //    let render: MainSceneRender?
+    
+    // TODO: Inject properties
+    init() {
+        self.viewModel = MainViewModel()
+    }
     
     var body: some View {
         NavigationView {
@@ -19,7 +25,7 @@ struct MainUIView: View {
                     
                     Button(
                         action: {
-                        print("Tapped")
+                            self.viewModel.send(action: .onSelect("Tapped"))
                     }, label: {
                         Text("Tap me")
                     })
@@ -27,6 +33,9 @@ struct MainUIView: View {
                 }
             }
             .navigationBarTitle("Messages")
+        }
+        .onAppear {
+            self.viewModel.send(action: .onAppear)
         }
     }
     
