@@ -1,0 +1,2 @@
+// MARK: - Effect
+protocol EffectType {}

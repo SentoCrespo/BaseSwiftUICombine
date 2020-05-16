@@ -135,6 +135,13 @@
 		CFB4DC9B246E7DC2000DDB3C /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC9A246E7DC2000DDB3C /* Feedback.swift */; };
 		CFB4DC9D246E7F37000DDB3C /* AnyNeverPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC9C246E7F37000DDB3C /* AnyNeverPublisher.swift */; };
 		CFB4DC9F246E8046000DDB3C /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DC9E246E8046000DDB3C /* System.swift */; };
+		CFB4DCA924701D3E000DDB3C /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DCA824701D3E000DDB3C /* StateMachine.swift */; };
+		CFB4DCAB247069E0000DDB3C /* StateMachineSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DCAA247069E0000DDB3C /* StateMachineSystem.swift */; };
+		CFB4DCAE24706A5D000DDB3C /* StateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DCAD24706A5D000DDB3C /* StateType.swift */; };
+		CFB4DCB024706A75000DDB3C /* EffectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DCAF24706A75000DDB3C /* EffectType.swift */; };
+		CFB4DCB224706A93000DDB3C /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DCB124706A93000DDB3C /* EventType.swift */; };
+		CFB4DCB424706AA2000DDB3C /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DCB324706AA2000DDB3C /* Transition.swift */; };
+		CFB4DCB624706ABF000DDB3C /* StateMachineError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DCB524706ABF000DDB3C /* StateMachineError.swift */; };
 		CFE99477210E3C44005E55C7 /* UIImage+Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE99476210E3C44005E55C7 /* UIImage+Render.swift */; };
 		E213EB87D53956D2E752B6CB /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35ED9D748EBB19AA5EE75FBD /* Pods_DomainTests.framework */; };
 /* End PBXBuildFile section */
@@ -448,6 +455,14 @@
 		CFB4DC9A246E7DC2000DDB3C /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		CFB4DC9C246E7F37000DDB3C /* AnyNeverPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyNeverPublisher.swift; sourceTree = "<group>"; };
 		CFB4DC9E246E8046000DDB3C /* System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
+		CFB4DCA7246FEC52000DDB3C /* Templates */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Templates; path = ../../Pods/Sourcery/Templates; sourceTree = "<group>"; };
+		CFB4DCA824701D3E000DDB3C /* StateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachine.swift; sourceTree = "<group>"; };
+		CFB4DCAA247069E0000DDB3C /* StateMachineSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachineSystem.swift; sourceTree = "<group>"; };
+		CFB4DCAD24706A5D000DDB3C /* StateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateType.swift; sourceTree = "<group>"; };
+		CFB4DCAF24706A75000DDB3C /* EffectType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectType.swift; sourceTree = "<group>"; };
+		CFB4DCB124706A93000DDB3C /* EventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventType.swift; sourceTree = "<group>"; };
+		CFB4DCB324706AA2000DDB3C /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
+		CFB4DCB524706ABF000DDB3C /* StateMachineError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachineError.swift; sourceTree = "<group>"; };
 		CFE99476210E3C44005E55C7 /* UIImage+Render.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Render.swift"; sourceTree = "<group>"; };
 		D2614C473D7555E4B3B8AFCE /* Pods_PlatformPersistenceStaticTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlatformPersistenceStaticTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D4BF15DA06E141420C2537 /* Pods_PlatformNetworkStaticTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlatformNetworkStaticTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1130,6 +1145,7 @@
 				CFAE0A2822EB02BB0004BE72 /* MainConfigurator.swift */,
 				CFB4DC7F246D37C0000DDB3C /* MainSceneRender.swift */,
 				CFB4DC81246D3DCD000DDB3C /* MainModel.swift */,
+				CFB4DCAC24706A4D000DDB3C /* StateMachine */,
 				CFB4DC85246D4152000DDB3C /* MainViewModel.swift */,
 				CFB4DC322467F595000DDB3C /* MainUIView.swift */,
 			);
@@ -1257,6 +1273,7 @@
 		CFB4DC87246D68BE000DDB3C /* AutogenerationTemplates */ = {
 			isa = PBXGroup;
 			children = (
+				CFB4DCA7246FEC52000DDB3C /* Templates */,
 				CFB4DC88246D68BE000DDB3C /* Templates */,
 			);
 			path = AutogenerationTemplates;
@@ -1279,6 +1296,20 @@
 				CFB4DC9E246E8046000DDB3C /* System.swift */,
 			);
 			path = Combine;
+			sourceTree = "<group>";
+		};
+		CFB4DCAC24706A4D000DDB3C /* StateMachine */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DCAD24706A5D000DDB3C /* StateType.swift */,
+				CFB4DCAF24706A75000DDB3C /* EffectType.swift */,
+				CFB4DCB124706A93000DDB3C /* EventType.swift */,
+				CFB4DCB324706AA2000DDB3C /* Transition.swift */,
+				CFB4DCA824701D3E000DDB3C /* StateMachine.swift */,
+				CFB4DCB524706ABF000DDB3C /* StateMachineError.swift */,
+				CFB4DCAA247069E0000DDB3C /* StateMachineSystem.swift */,
+			);
+			path = StateMachine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2163,6 +2194,7 @@
 				CF4ACB122229719B00D7B8BA /* AccessibilityId.swift in Sources */,
 				CF45046D1FDEC0F000AA623B /* String+Version.swift in Sources */,
 				CFB4DC94246D6A87000DDB3C /* AutoHashableEnumValues.generated.swift in Sources */,
+				CFB4DCAE24706A5D000DDB3C /* StateType.swift in Sources */,
 				CFB4DC66246BEF93000DDB3C /* SceneDelegateStartupConfiguration.swift in Sources */,
 				CFAE0A2722E9AEC00004BE72 /* BlankConfigurator.swift in Sources */,
 				CFB4DC332467F596000DDB3C /* MainUIView.swift in Sources */,
@@ -2171,7 +2203,9 @@
 				CF5A8EFF202331F800732AD4 /* AutoCases.generated.swift in Sources */,
 				CFB4DC5E246BE769000DDB3C /* SceneDelegate.swift in Sources */,
 				AF19EA601F7BC913000533E9 /* UIImage+Url.swift in Sources */,
+				CFB4DCB224706A93000DDB3C /* EventType.swift in Sources */,
 				CFAE0A2922EB02BB0004BE72 /* MainConfigurator.swift in Sources */,
+				CFB4DCB024706A75000DDB3C /* EffectType.swift in Sources */,
 				CFB4DC74246C59D1000DDB3C /* SceneDelegate+UIApplicationDelegate.swift in Sources */,
 				AF19EA6A1F7BC913000533E9 /* Constants.swift in Sources */,
 				CFB4DC3A246937E8000DDB3C /* Button+Styles.swift in Sources */,
@@ -2188,6 +2222,7 @@
 				CFB4DC80246D37C0000DDB3C /* MainSceneRender.swift in Sources */,
 				CFB4DC52246A81C0000DDB3C /* ButtonPreview.swift in Sources */,
 				CFB4DC78246C5A5C000DDB3C /* SceneDelegate+UISceneDelegate.swift in Sources */,
+				CFB4DCB424706AA2000DDB3C /* Transition.swift in Sources */,
 				CF5A8F01202331F800732AD4 /* AutoEquatable.generated.swift in Sources */,
 				CF26A50D2224A07800D0256C /* DataSourceConfiguration+Init.swift in Sources */,
 				CFB4DC86246D4152000DDB3C /* MainViewModel.swift in Sources */,
@@ -2200,11 +2235,14 @@
 				CF4ACB77222AFB5800D7B8BA /* R.generated.swift in Sources */,
 				CFB4DC60246BEE0F000DDB3C /* SceneDelegateType.swift in Sources */,
 				CFB4DC62246BEF93000DDB3C /* CompositeSceneDelegate.swift in Sources */,
+				CFB4DCAB247069E0000DDB3C /* StateMachineSystem.swift in Sources */,
 				AC4947411FAB6EF600F4E543 /* ViewStyle.swift in Sources */,
+				CFB4DCB624706ABF000DDB3C /* StateMachineError.swift in Sources */,
 				CFB4DC63246BEF93000DDB3C /* SceneDelegateThirdParty.swift in Sources */,
 				CFB4DC68246BEFE9000DDB3C /* SceneDelegateMock.swift in Sources */,
 				CFB4DC9D246E7F37000DDB3C /* AnyNeverPublisher.swift in Sources */,
 				CF5A8F00202331F800732AD4 /* AutoMockable.generated.swift in Sources */,
+				CFB4DCA924701D3E000DDB3C /* StateMachine.swift in Sources */,
 				CF26A503222499F700D0256C /* DataSourceConfiguration.swift in Sources */,
 				CF5A8EFA202331F800732AD4 /* AutoHashable.generated.swift in Sources */,
 				CFE99477210E3C44005E55C7 /* UIImage+Render.swift in Sources */,

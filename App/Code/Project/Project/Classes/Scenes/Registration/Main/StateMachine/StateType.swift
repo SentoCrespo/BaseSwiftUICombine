@@ -1,0 +1,2 @@
+// MARK: - State
+protocol StateType {}

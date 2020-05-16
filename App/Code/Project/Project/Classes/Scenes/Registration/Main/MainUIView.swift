@@ -25,7 +25,7 @@ struct MainUIView: View {
                     
                     Button(
                         action: {
-                            self.viewModel.send(event: .onSelect("Tapped"))
+                            self.viewModel.apply(event: .onSelect("Tapped"))
                     }, label: {
                         Text("Tap me")
                     })
@@ -35,7 +35,7 @@ struct MainUIView: View {
             .navigationBarTitle("Messages")
         }
         .onAppear {
-            self.viewModel.send(event: .onAppear)
+            self.viewModel.apply(event: .onAppear)
         }
     }
     
