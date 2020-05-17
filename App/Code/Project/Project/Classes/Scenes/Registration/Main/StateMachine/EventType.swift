@@ -1,2 +1,0 @@
-// MARK: - Event
-protocol EventType {}

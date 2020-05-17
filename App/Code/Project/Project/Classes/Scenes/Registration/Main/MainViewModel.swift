@@ -12,17 +12,6 @@ class MainViewModel: ObservableObject {
     /// State that will be observed by the view
     @Published private(set) var stateMachine: StateMachineSystem<State, Event, Effect>
     
-    /*
-     Maquina de estados se define como estados + transiciones
-     Estado inicial
-     Transición es (estado actual + event) -> (nextState, effect?)
-     Efectos son generados por eventos opcionalmente
-     
-     Sistema:
-     Maquina de estados
-     Recibe eventos => Puede disparar efectos
-    */
-    
     /// Disposable bag
     private var bag: Set<AnyCancellable>
 //    private let configurator: MainConfigurator
@@ -41,12 +30,18 @@ class MainViewModel: ObservableObject {
                 transitions: MainModel.createTransitions()
             )
         )
-        self.stateMachine.system
+        
+        // Listen for effects
+        self.stateMachine
+            .system
             .receive(on: RunLoop.main)
-            .sink(receiveValue: { stateMachineOutput in
-                Log.debug("New State: \(stateMachineOutput)")
-            })
             // .assign(to: \.stateMachine, on: self)
+            .sink(receiveValue: { [weak self] stateMachineOutput in
+                guard let effect = stateMachineOutput.effect else {
+                    return
+                }
+                self?.handleEffect(effect)
+            })
             .store(in: &bag)
         
     }
@@ -57,12 +52,29 @@ class MainViewModel: ObservableObject {
     
 }
 
-// MARK: - Action handling
+// MARK: - Events handling
 extension MainViewModel {
     
     /// Method to publish incoming actions from the view
     func apply(event: Event) {
         self.stateMachine.apply(event: event)
+    }
+    
+}
+
+// MARK: - Effects handling
+extension MainViewModel {
+    
+    func handleEffect(_ effect: Effect) {
+        Log.debug("Processing effect: \(effect)")
+        switch effect {
+        case .loadItems:
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.apply(event: .onLoadingSuccess(["Result"]))
+            }
+        case .navigateToProfile:
+            Log.debug("Navigate to profile effect")
+        }
     }
     
 }

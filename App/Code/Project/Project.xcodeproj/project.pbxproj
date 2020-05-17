@@ -765,6 +765,7 @@
 		AF19E9F51F7BC7D7000533E9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CFB4DCAC24706A4D000DDB3C /* StateMachine */,
 				CFB4DC99246E7DB5000DDB3C /* Combine */,
 				AF19E9F61F7BC7D7000533E9 /* Extensions */,
 				AF19EA031F7BC7D7000533E9 /* ExtensionsSpecific */,
@@ -1145,7 +1146,6 @@
 				CFAE0A2822EB02BB0004BE72 /* MainConfigurator.swift */,
 				CFB4DC7F246D37C0000DDB3C /* MainSceneRender.swift */,
 				CFB4DC81246D3DCD000DDB3C /* MainModel.swift */,
-				CFB4DCAC24706A4D000DDB3C /* StateMachine */,
 				CFB4DC85246D4152000DDB3C /* MainViewModel.swift */,
 				CFB4DC322467F595000DDB3C /* MainUIView.swift */,
 			);
@@ -1302,11 +1302,11 @@
 			isa = PBXGroup;
 			children = (
 				CFB4DCAD24706A5D000DDB3C /* StateType.swift */,
-				CFB4DCAF24706A75000DDB3C /* EffectType.swift */,
 				CFB4DCB124706A93000DDB3C /* EventType.swift */,
+				CFB4DCAF24706A75000DDB3C /* EffectType.swift */,
 				CFB4DCB324706AA2000DDB3C /* Transition.swift */,
-				CFB4DCA824701D3E000DDB3C /* StateMachine.swift */,
 				CFB4DCB524706ABF000DDB3C /* StateMachineError.swift */,
+				CFB4DCA824701D3E000DDB3C /* StateMachine.swift */,
 				CFB4DCAA247069E0000DDB3C /* StateMachineSystem.swift */,
 			);
 			path = StateMachine;
