@@ -4,17 +4,18 @@ import Foundation
 /// - States
 /// - Events
 /// - Effects
-/// - Transition (State1 --event--> (State2 + Effect?)
+/// - Transition (currentState --event--> (nextState + Effect?)
 public struct StateMachine<State: StateType, Event: EventType, Effect: EffectType> {
     
     // MARK: - Properties
     public typealias StateTransition = Transition<State, Event, Effect>
+    public typealias StateTransitionResult = TransitionResult<State, Event, Effect>
     public var initialState: State
     public var state: State
-    public var transitions: Set<StateTransition>
+    public var transitions: StateTransition
     
     // MARK: - Life Cycle
-    init(initialState: State, transitions: Set<StateTransition>) {
+    init(initialState: State, transitions: @escaping StateTransition) {
         self.initialState = initialState
         self.state = initialState
         self.transitions = transitions
@@ -25,14 +26,14 @@ public struct StateMachine<State: StateType, Event: EventType, Effect: EffectTyp
 // MARK: - Public Methods
 public extension StateMachine {
     
-    mutating func apply(event: Event) -> Result<StateTransition, StateMachineError> {
+    mutating func apply(event: Event) -> Result<StateTransitionResult, StateMachineError> {
         // Get current State
         let fromState = self.state
         // Apply transition
         let transitionResult = self.apply(from: fromState, event: event)
         // In case it succeeded, change current state to the new one
-        if case let .success(output) = transitionResult {
-            self.state = output.to
+        if case let .success(result) = transitionResult {
+            self.state = result.to
         }
         // Return result for external use
         return transitionResult
@@ -46,24 +47,17 @@ public extension StateMachine {
 
 private extension StateMachine {
     
-    func apply(from: State, event: Event) -> Result<StateTransition, StateMachineError> {
+    func apply(from: State, event: Event) -> Result<StateTransitionResult, StateMachineError> {
         
-        let transitionsFiltered: [StateTransition] = transitions
-            .filter { $0.from == from }
-            .filter { $0.event == event }
+        let output = self.transitions(from, event)
+        let result = StateTransitionResult(
+            from: from,
+            event: event,
+            to: output.nextState,
+            effect: output.effect
+        )
         
-        // If no transitions have been found, it's invalid
-        guard transitionsFiltered.isEmpty == false else {
-            return .failure(StateMachineError.invalidTransition)
-        }
-        
-        // If there's more than one transition, it's not finite
-        guard transitionsFiltered.count == 1 else {
-            return .failure(StateMachineError.ambiguousTransition)
-        }
-        
-        // Valid transition found
-        return .success(transitionsFiltered.first!)
+        return .success(result)
     }
     
 }

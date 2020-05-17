@@ -6,7 +6,7 @@ public class StateMachineSystem<State: StateType, Event: EventType, Effect: Effe
     
     // MARK: - Properties
     public var stateMachine: StateMachine<State, Event, Effect>
-    public var system = PassthroughSubject<Transition<State, Event, Effect>, Never>()
+    public var system = PassthroughSubject<TransitionResult<State, Event, Effect>, Never>()
     
     // MARK: - Life Cycle
     init(stateMachine: StateMachine<State, Event, Effect>) {
@@ -25,7 +25,11 @@ extension StateMachineSystem {
         case .failure(let error):
             Log.error("\n\(error) - (\(self.stateMachine.state) --> \(event)")
         case .success(let result):
-            Log.debug("\n\(result.from) --\(result.event)--> \(result.to)")
+            var debugString = "\n\(result.from) --\(result.event)--> \(result.to)"
+            if let effect = result.effect {
+                debugString.append(" + \(effect)")
+            }
+            Log.debug(debugString)
             system.send(result)
         }
         

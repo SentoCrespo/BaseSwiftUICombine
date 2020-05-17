@@ -46,18 +46,25 @@ extension MainModel.Effect: AutoHashableEnumValues, AutoEquatableEnumValues {}
 // MARK: - Transitions
 extension MainModel {
     
-    static func createTransitions() -> Set<ModuleTransition> {
-        let result: Set<ModuleTransition> = [
-            ModuleTransition(
-                from: .idle, event: .onAppear, to: .loading, effect: .loadItems
-            ),
-            ModuleTransition(
-                from: .loading, event: .onLoadingSuccess(["Result"]), to: .loaded(["Result"]), effect: nil
-            )
-//            ModuleTransition(
-//                from: .loading, event: .onLoadingFailed, to: .error, effect: nil
-//            )
-        ]
+    static func createTransitions() -> ModuleTransition {
+        let result: ModuleTransition = { state, event in
+            switch (state, event) {
+                
+            case (.idle, .onAppear):
+                return (nextState: .loading, effect: .loadItems)
+            case (.loading, .onLoadingFailed(let error)):
+                return (nextState: .error(error), effect: nil)
+            case (.loading, .onLoadingSuccess(let data)):
+                return (nextState: .loaded(data), effect: nil)
+            case (.loaded, .onReload):
+                return (nextState: .loading, effect: .loadItems)
+            default:
+                // TODO: Deal with this, not handled!
+                return (nextState: state, effect: nil)
+            }
+            
+        }
+            
         return result
     }
     

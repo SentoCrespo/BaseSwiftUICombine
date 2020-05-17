@@ -1,10 +1,15 @@
 import Foundation
 
-/// Defines a transition in the state machine
-public struct Transition<State: StateType, Event: EventType, Effect: EffectType> {
-    public var from: State
-    public var event: Event
-    public var to: State
-    public var effect: Effect?
+/// Defines transitions in the state machine
+public typealias Transition<State: StateType, Event: EventType, Effect: EffectType> =
+    (_ currentState: State, _ event: Event) -> (nextState: State, effect: Effect?)
+
+public struct TransitionResult<State: StateType, Event: EventType, Effect: EffectType> {
+    
+    // MARK: - Variables
+    var from: State
+    var event: Event
+    var to: State
+    var effect: Effect?
+    
 }
-extension Transition: AutoEquatable, AutoHashable {}
