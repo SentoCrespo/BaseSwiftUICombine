@@ -142,6 +142,7 @@
 		CFB4DCB224706A93000DDB3C /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DCB124706A93000DDB3C /* EventType.swift */; };
 		CFB4DCB424706AA2000DDB3C /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DCB324706AA2000DDB3C /* Transition.swift */; };
 		CFB4DCB624706ABF000DDB3C /* StateMachineError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DCB524706ABF000DDB3C /* StateMachineError.swift */; };
+		CFB4DCB824715CDA000DDB3C /* TransitionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DCB724715CDA000DDB3C /* TransitionResult.swift */; };
 		CFE99477210E3C44005E55C7 /* UIImage+Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE99476210E3C44005E55C7 /* UIImage+Render.swift */; };
 		E213EB87D53956D2E752B6CB /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35ED9D748EBB19AA5EE75FBD /* Pods_DomainTests.framework */; };
 /* End PBXBuildFile section */
@@ -463,6 +464,7 @@
 		CFB4DCB124706A93000DDB3C /* EventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventType.swift; sourceTree = "<group>"; };
 		CFB4DCB324706AA2000DDB3C /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		CFB4DCB524706ABF000DDB3C /* StateMachineError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachineError.swift; sourceTree = "<group>"; };
+		CFB4DCB724715CDA000DDB3C /* TransitionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionResult.swift; sourceTree = "<group>"; };
 		CFE99476210E3C44005E55C7 /* UIImage+Render.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Render.swift"; sourceTree = "<group>"; };
 		D2614C473D7555E4B3B8AFCE /* Pods_PlatformPersistenceStaticTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlatformPersistenceStaticTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D4BF15DA06E141420C2537 /* Pods_PlatformNetworkStaticTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlatformNetworkStaticTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1305,6 +1307,7 @@
 				CFB4DCB124706A93000DDB3C /* EventType.swift */,
 				CFB4DCAF24706A75000DDB3C /* EffectType.swift */,
 				CFB4DCB324706AA2000DDB3C /* Transition.swift */,
+				CFB4DCB724715CDA000DDB3C /* TransitionResult.swift */,
 				CFB4DCB524706ABF000DDB3C /* StateMachineError.swift */,
 				CFB4DCA824701D3E000DDB3C /* StateMachine.swift */,
 				CFB4DCAA247069E0000DDB3C /* StateMachineSystem.swift */,
@@ -2224,6 +2227,7 @@
 				CFB4DC78246C5A5C000DDB3C /* SceneDelegate+UISceneDelegate.swift in Sources */,
 				CFB4DCB424706AA2000DDB3C /* Transition.swift in Sources */,
 				CF5A8F01202331F800732AD4 /* AutoEquatable.generated.swift in Sources */,
+				CFB4DCB824715CDA000DDB3C /* TransitionResult.swift in Sources */,
 				CF26A50D2224A07800D0256C /* DataSourceConfiguration+Init.swift in Sources */,
 				CFB4DC86246D4152000DDB3C /* MainViewModel.swift in Sources */,
 				CFB4DC38246932E1000DDB3C /* ScaledFont.swift in Sources */,

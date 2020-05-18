@@ -58,8 +58,10 @@ extension MainModel {
                 return (nextState: .loaded(data), effect: nil)
             case (.loaded, .onReload):
                 return (nextState: .loading, effect: .loadItems)
+            case (_, .onSelect):
+                return (nextState: state, effect: .navigateToProfile)
             default:
-                // TODO: Deal with this, not handled!
+                assertionFailure("Invalid transition from '\(state)' with '\(event)'")
                 return (nextState: state, effect: nil)
             }
             

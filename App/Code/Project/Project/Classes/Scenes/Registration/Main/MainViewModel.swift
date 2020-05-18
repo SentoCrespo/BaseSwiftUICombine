@@ -10,7 +10,7 @@ class MainViewModel: ObservableObject {
     
     // MARK: - Properties
     /// State that will be observed by the view
-    @Published private(set) var stateMachine: StateMachineSystem<State, Event, Effect>
+    @Published private(set) var stateMachineSystem: StateMachineSystem<State, Event, Effect>
     
     /// Disposable bag
     private var bag: Set<AnyCancellable>
@@ -24,7 +24,7 @@ class MainViewModel: ObservableObject {
         // Initial values
         self.bag = []
         
-        self.stateMachine = StateMachineSystem(
+        self.stateMachineSystem = StateMachineSystem(
             stateMachine: StateMachine(
                 initialState: .idle,
                 transitions: MainModel.createTransitions()
@@ -32,7 +32,7 @@ class MainViewModel: ObservableObject {
         )
         
         // Listen for effects
-        self.stateMachine
+        self.stateMachineSystem
             .system
             .receive(on: RunLoop.main)
             // .assign(to: \.stateMachine, on: self)
@@ -57,7 +57,7 @@ extension MainViewModel {
     
     /// Method to publish incoming actions from the view
     func apply(event: Event) {
-        self.stateMachine.apply(event: event)
+        self.stateMachineSystem.apply(event: event)
     }
     
 }
