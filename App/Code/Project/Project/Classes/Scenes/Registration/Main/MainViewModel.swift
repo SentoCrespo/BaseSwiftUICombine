@@ -7,11 +7,15 @@ class MainViewModel: ObservableObject {
     typealias State = MainModel.State
     typealias Event = MainModel.Event
     typealias Effect = MainModel.Effect
+    typealias TransitionOutput = TransitionResult<State, Event, Effect>
+    // MARK: - Published Properties
+    /// State transitions that will be observed by the view
+    @Published var output: TransitionOutput
     
     // MARK: - Properties
-    /// State that will be observed by the view
-    @Published private(set) var stateMachineSystem: StateMachineSystem<State, Event, Effect>
-    
+    /// State machine
+    let initialState: State = .idle
+    private var stateMachineSystem: StateMachineSystem<State, Event, Effect>
     /// Disposable bag
     private var bag: Set<AnyCancellable>
 //    private let configurator: MainConfigurator
@@ -26,22 +30,31 @@ class MainViewModel: ObservableObject {
         
         self.stateMachineSystem = StateMachineSystem(
             stateMachine: StateMachine(
-                initialState: .idle,
+                initialState: initialState,
                 transitions: MainModel.createTransitions()
             )
+        )
+        
+        // Publish initial state?
+        self.output = TransitionOutput(
+            from: initialState,
+            event: .none,
+            to: initialState
         )
         
         // Listen for effects
         self.stateMachineSystem
             .system
             .receive(on: RunLoop.main)
-            // .assign(to: \.stateMachine, on: self)
-            .sink(receiveValue: { [weak self] stateMachineOutput in
-                guard let effect = stateMachineOutput.effect else {
-                    return
+            // Handle effects on every change
+            .map { [weak self] output -> TransitionOutput in
+                if let effect = output.effect {
+                    self?.handleEffect(effect)
                 }
-                self?.handleEffect(effect)
-            })
+                return output
+            }
+            // Propagate the changes to published var
+            .assign(to: \.output, on: self)
             .store(in: &bag)
         
     }

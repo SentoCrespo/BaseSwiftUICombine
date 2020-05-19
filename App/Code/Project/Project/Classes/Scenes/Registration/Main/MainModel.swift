@@ -20,8 +20,9 @@ struct MainModel {
         case error(Error)
     }
     
-    /// Something happened
+    /// An action happened
     enum Event: EventType {
+        case none // Used for initial state
         case onAppear
         case onReload
         case onSelect(String)
@@ -29,6 +30,7 @@ struct MainModel {
         case onLoadingFailed(Error)
     }
 
+    // Transition from one state to another
     typealias ModuleTransition = Transition<MainModel.State, MainModel.Event, MainModel.Effect>
     
     /// Instructions to trigger logic
@@ -46,6 +48,7 @@ extension MainModel.Effect: AutoHashableEnumValues, AutoEquatableEnumValues {}
 // MARK: - Transitions
 extension MainModel {
     
+    // Finite State Machine definition
     static func createTransitions() -> ModuleTransition {
         let result: ModuleTransition = { state, event in
             switch (state, event) {

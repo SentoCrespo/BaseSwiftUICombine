@@ -13,72 +13,69 @@ struct MainUIView: View {
     init() {
         self.bag = []
         self.viewModel = MainViewModel()
-        
-        self.handleStateChanges()
     }
-    
-    func handleStateChanges() {
-        self.viewModel.stateMachineSystem
-            .system
-            .receive(on: RunLoop.main)
-            .sink(receiveValue: { stateMachineOutput in
-                // Ignore transitions if the state doesn't change
-                guard stateMachineOutput.to != stateMachineOutput.from else {
-                    return
-                }
-                switch (stateMachineOutput.to, stateMachineOutput.event) {
-                case (.idle, _):
-                    print(".Idle")
-                case (.loading, _):
-                    
-                }
-            })
-            .store(in: &bag)
-    }
-    
+
     var body: some View {
+        
         NavigationView {
-            ZStack {
-                Color
-                    .purple
-                    .edgesIgnoringSafeArea(.all)
-                VStack {
-                    Text("Hey there")
-                        .font(.title)
-                        .foregroundColor(.primary)
-                    
-                    Button(
-                        action: {
-                            self.viewModel.apply(event: .onSelect("Tapped"))
-                    }, label: {
-                        Text("Tap me")
-                    })
-                    .buttonStyle(ButtonPrimaryStyle())
-                }
-            }
-            .navigationBarTitle("Messages")
+          VStack(spacing: 0) {
+            self.content
+            Spacer()
+          }
         }
         .onAppear {
-            self.viewModel.apply(event: .onAppear)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.viewModel.apply(event: .onAppear)
+            }
         }
+//        NavigationView {
+//            ZStack {
+//                Color
+//                    .purple
+//                    .edgesIgnoringSafeArea(.all)
+//                VStack {
+//                    Text("Hey there")
+//                        .font(.title)
+//                        .foregroundColor(.primary)
+//
+//                    Button(
+//                        action: {
+//                            self.viewModel.apply(event: .onSelect("Tapped"))
+//                    }, label: {
+//                        Text("Tap me")
+//                    })
+//                    .buttonStyle(ButtonPrimaryStyle())
+//                }
+//            }
+//            .navigationBarTitle("Messages")
+//        }
+//        .onAppear {
+//            self.viewModel.apply(event: .onAppear)
+//        }
     }
     
 }
 
 private extension MainUIView {
     
-//    private var content: some View {
-//        switch self.viewModel.stateMachineSystem.state {
-//        case .idle:
-//            return Color.clear.eraseToAnyView()
-//        case .loading:
-//            return spinner.eraseToAnyView()
-//        case .error(let error):
-//            return Text(error.localizedDescription).eraseToAnyView()
-//        case .loaded(let movie):
-//            return self.movie(movie).eraseToAnyView()
+    private var content: some View {
+        let oldState = self.viewModel.output.from
+        let newState = self.viewModel.output.to
+//        guard newState != oldState else {
+//            return AnyView(self)
 //        }
-//    }
+        let event = self.viewModel.output.event
+        switch (newState, event) {
+        case (.idle, _):
+            return AnyView(Text("Idle"))
+        case (.loading, _):
+            return AnyView(Text("Loading..."))
+        case (.loaded(let data), _):
+            return AnyView(Text("Loaded: \(data.joined())"))
+        default:
+            return AnyView(Text("Something"))
+        }
+    }
     
 }
 
