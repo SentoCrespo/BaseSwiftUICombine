@@ -1,6 +1,7 @@
 import Foundation
 import Combine
 
+/// Binding between UI and business logic
 class MainViewModel: ObservableObject {
 
     // MARK: - Typealias
@@ -8,6 +9,7 @@ class MainViewModel: ObservableObject {
     typealias Event = MainModel.Event
     typealias Effect = MainModel.Effect
     typealias TransitionOutput = TransitionResult<State, Event, Effect>
+    
     // MARK: - Published Properties
     /// State transitions that will be observed by the view
     @Published var output: TransitionOutput
@@ -17,17 +19,14 @@ class MainViewModel: ObservableObject {
     let initialState: State = .idle
     private var stateMachineSystem: StateMachineSystem<State, Event, Effect>
     /// Disposable bag
-    private var bag: Set<AnyCancellable>
-//    private let configurator: MainConfigurator
+    private var bag: Set<AnyCancellable> = []
+    private let configurator: MainConfigurator
     
     // MARK: - Life Cycle
-    // TODO: Inject properties Configurator
-    init() {
-//        self.configurator = configurator
+    init(configurator: MainConfigurator) {
+        self.configurator = configurator
         
         // Initial values
-        self.bag = []
-        
         self.stateMachineSystem = StateMachineSystem(
             stateMachine: StateMachine(
                 initialState: initialState,
@@ -35,7 +34,7 @@ class MainViewModel: ObservableObject {
             )
         )
         
-        // Publish initial state?
+        // Publish initial state
         self.output = TransitionOutput(
             from: initialState,
             event: .none,
@@ -49,7 +48,7 @@ class MainViewModel: ObservableObject {
             // Handle effects on every change
             .map { [weak self] output -> TransitionOutput in
                 if let effect = output.effect {
-                    self?.handleEffect(effect)
+                    self?.handle(effect: effect)
                 }
                 return output
             }
@@ -78,7 +77,7 @@ extension MainViewModel {
 // MARK: - Effects handling
 extension MainViewModel {
     
-    func handleEffect(_ effect: Effect) {
+    func handle(effect: Effect) {
         Log.debug("Processing effect: \(effect)")
         switch effect {
         case .loadItems:

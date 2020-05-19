@@ -1,22 +1,24 @@
 import SwiftUI
 import Combine
 
+/// UI layer to display the scene
 struct MainUIView: View {
     
     // MARK: - Properties
     @ObservedObject private var viewModel: MainViewModel
-//    let render: MainSceneRender?
-    /// Disposable bag
-    private var bag: Set<AnyCancellable>
+    let render: MainSceneRender?
     
-    // TODO: Inject properties
-    init() {
-        self.bag = []
-        self.viewModel = MainViewModel()
+    // MARK: Life Cycle
+    init(render: MainSceneRender, viewModel: MainViewModel) {
+        self.render = render
+        self.viewModel = viewModel
     }
 
+}
+
+// MARK: - UI definition
+extension MainUIView {
     var body: some View {
-        
         NavigationView {
           VStack(spacing: 0) {
             self.content
@@ -81,8 +83,13 @@ private extension MainUIView {
 
 #if DEBUG
 struct MainUIView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        MainUIView()
+        let datasource = DataSourceConfiguration()
+        let configurator = MainConfigurator(datasource: datasource)
+        let render = MainSceneRender(configurator: configurator)
+        return render.view()
     }
+    
 }
 #endif

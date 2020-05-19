@@ -1,14 +1,14 @@
 import Foundation
 
-// MARK: - Configurator
+/// Container with explicit dependencies for the scene
 struct MainConfigurator {
     
     // MARK: - Properties
-    let dataSource: DataSourceConfiguration
+    let datasource: DataSourceConfiguration
     
     // MARK: - Life Cycle
-    init(dataSource: DataSourceConfiguration) {
-        self.dataSource = dataSource
+    init(datasource: DataSourceConfiguration) {
+        self.datasource = datasource
     }
     
 }

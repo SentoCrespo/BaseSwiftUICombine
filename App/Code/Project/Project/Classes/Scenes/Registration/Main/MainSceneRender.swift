@@ -1,11 +1,8 @@
 import Foundation
 import SwiftUI
 
-/// The composer used to construct views for the scene.
-protocol RenderType {}
-
 /// Scene constructor with dependencies and View<>ViewModel binding
-struct MainSceneRender: RenderType {
+struct MainSceneRender {
     
     // MARK: - Properties
     private let configurator: MainConfigurator
@@ -20,6 +17,7 @@ struct MainSceneRender: RenderType {
 extension MainSceneRender {
      
     func view() -> some View {
-        MainUIView()
+        let viewModel = MainViewModel(configurator: self.configurator)
+        return MainUIView(render: self, viewModel: viewModel)
     }
 }

@@ -1,7 +1,7 @@
 import Foundation
 import Combine
 
-/// Scene Model Definition
+/// Domain definition for the scene
 struct MainModel {
     
     // MARK: - Variables

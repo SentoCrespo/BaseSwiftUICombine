@@ -37,7 +37,10 @@ private extension SceneDelegateStartup {
     
     func showMain(in window: UIWindow) {
         // Instantiate SwiftUI Container with root View
-        let initialView = MainUIView()
+        let datasource = SceneDelegate.shared.datasource!
+        let configurator = MainConfigurator(datasource: datasource)
+        let render = MainSceneRender(configurator: configurator)
+        let initialView = render.view()
         let vc = UIHostingController(rootView: initialView)
         window.rootViewController = vc
         
