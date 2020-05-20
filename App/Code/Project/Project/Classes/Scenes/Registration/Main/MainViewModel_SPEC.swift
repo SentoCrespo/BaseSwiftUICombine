@@ -37,10 +37,30 @@ extension MainViewModelTests {
         let viewModel = MainViewModel(configurator: configurator)
         
         // When
-        // viewModel.output
+        /// Initial state
+        XCTAssertEqual(viewModel.output.to, .idle)
+        
+        // Transition with 'none'
+        let output1 = viewModel.applyBlocking(event: .none)
+        XCTAssertEqual(output1.to, .idle)
+        
+        // Transition with ''
+        let output2 = viewModel.applyBlocking(event: .onAppear)
+        XCTAssertEqual(output2.to, .loading)
         
         // Then
         XCTAssert(true)
+    }
+    
+}
+
+private extension MainViewModel {
+ 
+    func applyBlocking(event: MainViewModel.Event) -> MainViewModel.TransitionOutput {
+        self.apply(event: event)
+        // Run one cycle to get the output as it's asynchronous
+        RunLoop.main.run(mode: .default, before: .distantPast)
+        return self.output
     }
     
 }
@@ -67,5 +87,3 @@ private extension MainViewModelTests {
     }
     
 }
-
-// MARK: - Mocks

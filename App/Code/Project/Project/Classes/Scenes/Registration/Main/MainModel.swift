@@ -52,7 +52,6 @@ extension MainModel {
     static func createTransitions() -> ModuleTransition {
         let result: ModuleTransition = { state, event in
             switch (state, event) {
-                
             case (.idle, .onAppear):
                 return (nextState: .loading, effect: .loadItems)
             case (.loading, .onLoadingFailed(let error)):
@@ -63,6 +62,8 @@ extension MainModel {
                 return (nextState: .loading, effect: .loadItems)
             case (_, .onSelect):
                 return (nextState: state, effect: .navigateToProfile)
+            case (_, .none):
+                return (nextState: state, effect: nil)
             default:
                 assertionFailure("Invalid transition from '\(state)' with '\(event)'")
                 return (nextState: state, effect: nil)
