@@ -27,7 +27,8 @@ extension SceneDelegateFactory {
     static func makeTest() -> SceneDelegateType {
         return CompositeSceneDelegate(
             sceneDelegates: [
-                SceneDelegateMock()
+                SceneDelegateMock(),
+                SceneDelegateConfigurations()
             ]
         )
     }

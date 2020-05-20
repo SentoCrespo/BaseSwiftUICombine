@@ -16,7 +16,6 @@ class MainViewModel: ObservableObject {
     
     // MARK: - Properties
     /// State machine
-    let initialState: State = .idle
     private var stateMachineSystem: StateMachineSystem<State, Event, Effect>
     /// Disposable bag
     private var bag: Set<AnyCancellable> = []
@@ -26,7 +25,9 @@ class MainViewModel: ObservableObject {
     init(configurator: MainConfigurator) {
         self.configurator = configurator
         
-        // Initial values
+        // Initialize state machine
+        let initialState: State = .idle
+        
         self.stateMachineSystem = StateMachineSystem(
             stateMachine: StateMachine(
                 initialState: initialState,
@@ -62,6 +63,11 @@ class MainViewModel: ObservableObject {
         self.bag.removeAll()
     }
     
+}
+
+// MARK: - Public Methods
+extension MainViewModel {
+
 }
 
 // MARK: - Events handling

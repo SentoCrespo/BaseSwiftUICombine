@@ -20,4 +20,5 @@ extension MainSceneRender {
         let viewModel = MainViewModel(configurator: self.configurator)
         return MainUIView(render: self, viewModel: viewModel)
     }
+    
 }
