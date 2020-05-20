@@ -142,6 +142,12 @@
 		CFB4DCB624706ABF000DDB3C /* StateMachineError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DCB524706ABF000DDB3C /* StateMachineError.swift */; };
 		CFB4DCB824715CDA000DDB3C /* TransitionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DCB724715CDA000DDB3C /* TransitionResult.swift */; };
 		CFB4DCBC24751C60000DDB3C /* MainViewModel_SPEC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DCBB24751C60000DDB3C /* MainViewModel_SPEC.swift */; };
+		CFB4DCBF2475316C000DDB3C /* AutoEquatableEnumValues.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DCBD2475316C000DDB3C /* AutoEquatableEnumValues.generated.swift */; };
+		CFB4DCC02475316C000DDB3C /* AutoHashableEnumValues.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DCBE2475316C000DDB3C /* AutoHashableEnumValues.generated.swift */; };
+		CFB4DCC324753184000DDB3C /* AutoEquatableEnumValues.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DCC124753184000DDB3C /* AutoEquatableEnumValues.generated.swift */; };
+		CFB4DCC424753184000DDB3C /* AutoHashableEnumValues.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DCC224753184000DDB3C /* AutoHashableEnumValues.generated.swift */; };
+		CFB4DCC724753199000DDB3C /* AutoEquatableEnumValues.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DCC524753199000DDB3C /* AutoEquatableEnumValues.generated.swift */; };
+		CFB4DCC824753199000DDB3C /* AutoHashableEnumValues.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DCC624753199000DDB3C /* AutoHashableEnumValues.generated.swift */; };
 		CFE99477210E3C44005E55C7 /* UIImage+Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE99476210E3C44005E55C7 /* UIImage+Render.swift */; };
 		E213EB87D53956D2E752B6CB /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35ED9D748EBB19AA5EE75FBD /* Pods_DomainTests.framework */; };
 /* End PBXBuildFile section */
@@ -463,6 +469,12 @@
 		CFB4DCB524706ABF000DDB3C /* StateMachineError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachineError.swift; sourceTree = "<group>"; };
 		CFB4DCB724715CDA000DDB3C /* TransitionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionResult.swift; sourceTree = "<group>"; };
 		CFB4DCBB24751C60000DDB3C /* MainViewModel_SPEC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel_SPEC.swift; sourceTree = "<group>"; };
+		CFB4DCBD2475316C000DDB3C /* AutoEquatableEnumValues.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoEquatableEnumValues.generated.swift; sourceTree = "<group>"; };
+		CFB4DCBE2475316C000DDB3C /* AutoHashableEnumValues.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoHashableEnumValues.generated.swift; sourceTree = "<group>"; };
+		CFB4DCC124753184000DDB3C /* AutoEquatableEnumValues.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoEquatableEnumValues.generated.swift; sourceTree = "<group>"; };
+		CFB4DCC224753184000DDB3C /* AutoHashableEnumValues.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoHashableEnumValues.generated.swift; sourceTree = "<group>"; };
+		CFB4DCC524753199000DDB3C /* AutoEquatableEnumValues.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoEquatableEnumValues.generated.swift; sourceTree = "<group>"; };
+		CFB4DCC624753199000DDB3C /* AutoHashableEnumValues.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoHashableEnumValues.generated.swift; sourceTree = "<group>"; };
 		CFE99476210E3C44005E55C7 /* UIImage+Render.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Render.swift"; sourceTree = "<group>"; };
 		D2614C473D7555E4B3B8AFCE /* Pods_PlatformPersistenceStaticTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlatformPersistenceStaticTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D4BF15DA06E141420C2537 /* Pods_PlatformNetworkStaticTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlatformNetworkStaticTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -719,6 +731,8 @@
 				AF19A7AF1F308D6E00BD9CCA /* AutoHashable.generated.swift */,
 				AF19A7B41F308D6E00BD9CCA /* AutoMockable.generated.swift */,
 				CF2568502226BBBC00345BB5 /* AutoEquatableCustom.generated.swift */,
+				CFB4DCC524753199000DDB3C /* AutoEquatableEnumValues.generated.swift */,
+				CFB4DCC624753199000DDB3C /* AutoHashableEnumValues.generated.swift */,
 			);
 			path = AutoGenerated;
 			sourceTree = "<group>";
@@ -902,6 +916,8 @@
 				AF6477D21F543541003E55D1 /* AutoLenses.generated.swift */,
 				AF6477D31F543541003E55D1 /* AutoMapper.generated.swift */,
 				AF6477D41F543541003E55D1 /* AutoMockable.generated.swift */,
+				CFB4DCBD2475316C000DDB3C /* AutoEquatableEnumValues.generated.swift */,
+				CFB4DCBE2475316C000DDB3C /* AutoHashableEnumValues.generated.swift */,
 			);
 			path = AutoGenerated;
 			sourceTree = "<group>";
@@ -963,6 +979,8 @@
 				AF6478171F5435D0003E55D1 /* AutoLenses.generated.swift */,
 				AF6478181F5435D0003E55D1 /* AutoMapper.generated.swift */,
 				AF6478191F5435D0003E55D1 /* AutoMockable.generated.swift */,
+				CFB4DCC124753184000DDB3C /* AutoEquatableEnumValues.generated.swift */,
+				CFB4DCC224753184000DDB3C /* AutoHashableEnumValues.generated.swift */,
 			);
 			path = AutoGenerated;
 			sourceTree = "<group>";
@@ -2267,12 +2285,14 @@
 				AF6477E11F543541003E55D1 /* AutoMapper.generated.swift in Sources */,
 				AF1D175C1F6289AC005C16DC /* ResponseType.swift in Sources */,
 				CF26A4AA2224578900D0256C /* BaseUseCaseDataSource.swift in Sources */,
+				CFB4DCC02475316C000DDB3C /* AutoHashableEnumValues.generated.swift in Sources */,
 				AF6477DD1F543541003E55D1 /* AutoHashable.generated.swift in Sources */,
 				CF4ACB89222D241900D7B8BA /* UseCasesUsersDataSource+Signup.swift in Sources */,
 				AF6477DB1F543541003E55D1 /* AutoEquatable.generated.swift in Sources */,
 				AF6477E01F543541003E55D1 /* AutoLenses.generated.swift in Sources */,
 				AF1D17641F62927F005C16DC /* UseCasesUsersDataSource.swift in Sources */,
 				AF6477E21F543541003E55D1 /* AutoMockable.generated.swift in Sources */,
+				CFB4DCBF2475316C000DDB3C /* AutoEquatableEnumValues.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2293,11 +2313,13 @@
 				AF64782D1F5435D0003E55D1 /* AutoMockable.generated.swift in Sources */,
 				AC18508B20F7A27900B047A9 /* UseCasesUsersDataSource.swift in Sources */,
 				AF6478331F5435D0003E55D1 /* BaseUseCaseDataSource.swift in Sources */,
+				CFB4DCC324753184000DDB3C /* AutoEquatableEnumValues.generated.swift in Sources */,
 				AF6478281F5435D0003E55D1 /* AutoHashable.generated.swift in Sources */,
 				AF6478341F5435D0003E55D1 /* ProtocolsAutoGeneration.swift in Sources */,
 				AF6478311F5435D0003E55D1 /* ApiUtils.swift in Sources */,
 				AF64782C1F5435D0003E55D1 /* AutoMapper.generated.swift in Sources */,
 				AF64782B1F5435D0003E55D1 /* AutoLenses.generated.swift in Sources */,
+				CFB4DCC424753184000DDB3C /* AutoHashableEnumValues.generated.swift in Sources */,
 				CF4ACB8F222D249500D7B8BA /* UseCasesUsersDataSource+Signup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2307,6 +2329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF19A7B71F308D6E00BD9CCA /* AutoEquatable.generated.swift in Sources */,
+				CFB4DCC724753199000DDB3C /* AutoEquatableEnumValues.generated.swift in Sources */,
 				AF168A5E1F618F33000524F1 /* Errors.swift in Sources */,
 				AF19EA9C1F7CE2DD000533E9 /* User.swift in Sources */,
 				CFA203FA2109B82F0041B3AD /* ErrorResponse.swift in Sources */,
@@ -2319,6 +2342,7 @@
 				AF19A7BE1F308D6E00BD9CCA /* AutoMockable.generated.swift in Sources */,
 				CF26A49E2224466900D0256C /* Users.swift in Sources */,
 				AF19EA9A1F7CE2C6000533E9 /* SuccessResponse.swift in Sources */,
+				CFB4DCC824753199000DDB3C /* AutoHashableEnumValues.generated.swift in Sources */,
 				AF19A7AA1F308C9000BD9CCA /* ProtocolsAutoGeneration.swift in Sources */,
 				AFFD48971F8661F6000F3177 /* UserType.swift in Sources */,
 			);
