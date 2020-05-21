@@ -4,9 +4,6 @@ import Combine
 protocol SceneViewModel {
     
     // MARK: - Associated Types & Typealias
-    associatedtype State: StateType
-    associatedtype Event: EventType
-    associatedtype Effect: EffectType
     associatedtype Model: SceneModel
     typealias TransitionOutput = TransitionResult<Model.State, Model.Event, Model.Effect>
     
@@ -15,7 +12,7 @@ protocol SceneViewModel {
     var output: TransitionOutput { get set }
     
     // MARK: - Properties
-    var stateMachineSystem: StateMachineSystem<State, Event, Effect> { get }
+    var stateMachineSystem: StateMachineSystem<Model.State, Model.Event, Model.Effect> { get }
     var disposeBag: Set<AnyCancellable> { get set }
     var configurator: SceneConfigurator { get }
     
@@ -24,14 +21,14 @@ protocol SceneViewModel {
     
     // MARK: - Public Methods
     /// Method to publish incoming actions from the view
-    func apply(event: Event)
-    func handle(effect: Effect)
+    func apply(event: Model.Event)
+    func handle(effect: Model.Effect)
     
 }
 
 extension SceneViewModel {
     
-    func apply(event: Event) {
+    func apply(event: Model.Event) {
         self.stateMachineSystem.apply(event: event)
     }
 
