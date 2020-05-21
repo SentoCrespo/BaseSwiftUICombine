@@ -1,7 +1,7 @@
 import Foundation
 
 /// Container with explicit dependencies for the scene
-struct MainConfigurator {
+struct MainConfigurator: SceneConfigurator {
     
     // MARK: - Properties
     let datasource: DataSourceConfiguration

@@ -6,10 +6,10 @@ struct MainUIView: View {
     
     // MARK: - Properties
     @ObservedObject private var viewModel: MainViewModel
-    let render: MainSceneRender?
+    let render: MainRender?
     
     // MARK: Life Cycle
-    init(render: MainSceneRender, viewModel: MainViewModel) {
+    init(render: MainRender, viewModel: MainViewModel) {
         self.render = render
         self.viewModel = viewModel
     }
@@ -73,7 +73,7 @@ private extension MainUIView {
         case (.loading, _):
             return AnyView(Text("Loading..."))
         case (.loaded(let data), _):
-            return AnyView(Text("Loaded: \(data.joined())"))
+            return AnyView(Text("Loaded: \(data)"))
         default:
             return AnyView(Text("Something"))
         }
@@ -87,7 +87,7 @@ struct MainUIView_Previews: PreviewProvider {
     static var previews: some View {
         let datasource = DataSourceConfiguration()
         let configurator = MainConfigurator(datasource: datasource)
-        let render = MainSceneRender(configurator: configurator)
+        let render = MainRender(configurator: configurator)
         return render.view()
     }
     

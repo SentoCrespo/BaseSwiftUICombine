@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 
 /// Scene constructor with dependencies and View<>ViewModel binding
-struct MainSceneRender {
+struct MainRender: SceneRender {
     
     // MARK: - Properties
     private let configurator: MainConfigurator
@@ -14,7 +14,7 @@ struct MainSceneRender {
     
 }
  
-extension MainSceneRender {
+extension MainRender {
      
     func view() -> some View {
         let viewModel = MainViewModel(configurator: self.configurator)

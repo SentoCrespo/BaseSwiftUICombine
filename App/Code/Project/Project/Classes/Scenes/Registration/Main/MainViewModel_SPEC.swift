@@ -7,7 +7,7 @@ class MainViewModelTests: BaseTest {
     
     // MARK: - Properties
     private var configurator: MainConfigurator?
-    private var render: MainSceneRender?
+    private var render: MainRender?
     private var view: MainUIView?
     private var viewModel: MainViewModel?
     
@@ -41,12 +41,22 @@ extension MainViewModelTests {
         XCTAssertEqual(viewModel.output.to, .idle)
         
         // Transition with 'none'
-        let output1 = viewModel.applyBlocking(event: .none)
+        let output1 = viewModel.applyBlocking(event: .start)
         XCTAssertEqual(output1.to, .idle)
         
-        // Transition with ''
+        // Transition with 'onAppear'
         let output2 = viewModel.applyBlocking(event: .onAppear)
         XCTAssertEqual(output2.to, .loading)
+        
+        // Transition with 'onLoadingSuccess'
+        let resultOnLoad = "Result"
+        let output3 = viewModel.applyBlocking(event: .onLoadingSuccess(resultOnLoad))
+        XCTAssertEqual(output3.to, .loaded(resultOnLoad))
+        
+        // Transition with 'onSelect'
+        let resultOnSuccess = "Select"
+        let output4 = viewModel.applyBlocking(event: .onSelect(resultOnSuccess))
+        XCTAssertEqual(output4.to, .loaded(resultOnLoad))
         
         // Then
         XCTAssert(true)
@@ -82,7 +92,7 @@ private extension MainViewModelTests {
     
     func setupScene(configurator: MainConfigurator) {
         self.configurator = configurator
-        self.render = MainSceneRender(configurator: configurator)
+        self.render = MainRender(configurator: configurator)
         _ = self.render?.view()
     }
     

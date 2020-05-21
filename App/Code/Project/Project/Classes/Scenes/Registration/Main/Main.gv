@@ -1,0 +1,21 @@
+// https://dreampuf.github.io/GraphvizOnline/
+
+digraph {
+    graph [rankdir=LR]
+
+    // States
+    0 [label="", shape=plaintext]
+    1 [label="idle", peripheries=2]
+    2 [label="loading"]
+    3 [label="loaded(String)"]
+    4 [label="error(Error)"]
+    
+    // Transitions
+    0 -> 1 [label="init"] [style=dotted]
+    1 -> 2 [label="onAppear >> loadItems"]
+    2 -> 4 [label="onLoadingFailed(Error)"]
+    2 -> 3 [label="onLoadingSuccess(String)"]
+    3 -> 2 [label="onReload"]
+    3 -> 3 [label="onSelect(String) >> navigateToProfile"]
+    
+}

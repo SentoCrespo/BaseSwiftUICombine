@@ -2,7 +2,7 @@ import Foundation
 import Combine
 
 /// Domain definition for the scene
-struct MainModel {
+struct MainModel: SceneModel {
     
     // MARK: - Variables
     
@@ -12,26 +12,27 @@ struct MainModel {
     }
     
     /// State machine for the scene
-    /// https://www.vadimbulavin.com/assets/images/posts/mvvm/movies-list-state-machine.svg
     enum State: StateType {
         case idle
         case loading
-        case loaded([String])
+        case loaded(String)
         case error(Error)
     }
     
+    static let initialState: State = .idle
+    
     /// An action happened
     enum Event: EventType {
-        case none // Used for initial state
+        case start // Used for initial state
         case onAppear
         case onReload
         case onSelect(String)
-        case onLoadingSuccess([String])
+        case onLoadingSuccess(String)
         case onLoadingFailed(Error)
     }
-
+    static let initialEvent: Event = .start
+    
     // Transition from one state to another
-    typealias ModuleTransition = Transition<MainModel.State, MainModel.Event, MainModel.Effect>
     
     /// Instructions to trigger logic
     enum Effect: EffectType {
@@ -52,6 +53,9 @@ extension MainModel {
     static func createTransitions() -> ModuleTransition {
         let result: ModuleTransition = { state, event in
             switch (state, event) {
+            // Initial state
+            case (_, .start):
+                return (nextState: state, effect: nil)
             case (.idle, .onAppear):
                 return (nextState: .loading, effect: .loadItems)
             case (.loading, .onLoadingFailed(let error)):
@@ -62,8 +66,6 @@ extension MainModel {
                 return (nextState: .loading, effect: .loadItems)
             case (_, .onSelect):
                 return (nextState: state, effect: .navigateToProfile)
-            case (_, .none):
-                return (nextState: state, effect: nil)
             default:
                 assertionFailure("Invalid transition from '\(state)' with '\(event)'")
                 return (nextState: state, effect: nil)
