@@ -3,10 +3,6 @@ import Combine
 
 /// Binding between UI and business logic
 class MainViewModel: BaseViewModel<MainModel>, ObservableObject {
-    typealias State = MainModel.State
-    typealias Event = MainModel.Event
-    typealias Effect = MainModel.Effect
-    typealias TransitionOutput = TransitionResult<State, Event, Effect>
     
     required init(configurator: SceneConfigurator) {
         super.init(configurator: configurator)
