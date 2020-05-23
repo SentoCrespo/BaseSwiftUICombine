@@ -1,190 +1,53 @@
 PODS:
-  - Alamofire (4.8.2)
   - AppVersionMonitor (1.4.0)
-  - Firebase/Analytics (6.24.0):
-    - Firebase/Core
-  - Firebase/Core (6.24.0):
-    - Firebase/CoreOnly
-    - FirebaseAnalytics (= 6.5.0)
-  - Firebase/CoreOnly (6.24.0):
-    - FirebaseCore (= 6.7.0)
-  - Firebase/Crashlytics (6.24.0):
-    - Firebase/CoreOnly
-    - FirebaseCrashlytics (~> 4.1.0)
-  - FirebaseAnalytics (6.5.0):
-    - FirebaseCore (~> 6.7)
-    - FirebaseInstallations (~> 1.2)
-    - GoogleAppMeasurement (= 6.5.0)
-    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
-    - GoogleUtilities/MethodSwizzler (~> 6.0)
-    - GoogleUtilities/Network (~> 6.0)
-    - "GoogleUtilities/NSData+zlib (~> 6.0)"
-    - nanopb (~> 1.30905.0)
-  - FirebaseAnalyticsInterop (1.5.0)
-  - FirebaseCore (6.7.0):
-    - FirebaseCoreDiagnostics (~> 1.3)
-    - FirebaseCoreDiagnosticsInterop (~> 1.2)
-    - GoogleUtilities/Environment (~> 6.5)
-    - GoogleUtilities/Logger (~> 6.5)
-  - FirebaseCoreDiagnostics (1.3.0):
-    - FirebaseCoreDiagnosticsInterop (~> 1.2)
-    - GoogleDataTransportCCTSupport (~> 3.1)
-    - GoogleUtilities/Environment (~> 6.5)
-    - GoogleUtilities/Logger (~> 6.5)
-    - nanopb (~> 1.30905.0)
-  - FirebaseCoreDiagnosticsInterop (1.2.0)
-  - FirebaseCrashlytics (4.1.0):
-    - FirebaseAnalyticsInterop (~> 1.2)
-    - FirebaseCore (~> 6.6)
-    - FirebaseInstallations (~> 1.1)
-    - GoogleDataTransport (~> 6.1)
-    - GoogleDataTransportCCTSupport (~> 3.1)
-    - nanopb (~> 1.30905.0)
-    - PromisesObjC (~> 1.2)
-  - FirebaseInstallations (1.2.0):
-    - FirebaseCore (~> 6.6)
-    - GoogleUtilities/Environment (~> 6.6)
-    - GoogleUtilities/UserDefaults (~> 6.6)
-    - PromisesObjC (~> 1.2)
-  - GoogleAppMeasurement (6.5.0):
-    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
-    - GoogleUtilities/MethodSwizzler (~> 6.0)
-    - GoogleUtilities/Network (~> 6.0)
-    - "GoogleUtilities/NSData+zlib (~> 6.0)"
-    - nanopb (~> 1.30905.0)
-  - GoogleDataTransport (6.1.0)
-  - GoogleDataTransportCCTSupport (3.1.0):
-    - GoogleDataTransport (~> 6.1)
-    - nanopb (~> 1.30905.0)
-  - GoogleUtilities/AppDelegateSwizzler (6.6.0):
-    - GoogleUtilities/Environment
-    - GoogleUtilities/Logger
-    - GoogleUtilities/Network
-  - GoogleUtilities/Environment (6.6.0):
-    - PromisesObjC (~> 1.2)
-  - GoogleUtilities/Logger (6.6.0):
-    - GoogleUtilities/Environment
-  - GoogleUtilities/MethodSwizzler (6.6.0):
-    - GoogleUtilities/Logger
-  - GoogleUtilities/Network (6.6.0):
-    - GoogleUtilities/Logger
-    - "GoogleUtilities/NSData+zlib"
-    - GoogleUtilities/Reachability
-  - "GoogleUtilities/NSData+zlib (6.6.0)"
-  - GoogleUtilities/Reachability (6.6.0):
-    - GoogleUtilities/Logger
-  - GoogleUtilities/UserDefaults (6.6.0):
-    - GoogleUtilities/Logger
   - IQDropDownTextField (2.0)
-  - IQKeyboardManager (6.5.5)
-  - Kingfisher (5.13.4):
-    - Kingfisher/Core (= 5.13.4)
-  - Kingfisher/Core (5.13.4)
-  - Log (1.0.0)
-  - nanopb (1.30905.0):
-    - nanopb/decode (= 1.30905.0)
-    - nanopb/encode (= 1.30905.0)
-  - nanopb/decode (1.30905.0)
-  - nanopb/encode (1.30905.0)
   - PKHUD (5.3.0)
-  - PromisesObjC (1.2.8)
   - R.swift (5.2.2):
     - R.swift.Library (~> 5.2.0)
   - R.swift.Library (5.2.0)
-  - SimulatorRemoteNotifications (0.0.3)
   - Sourcery (0.18.0)
   - SwiftLint (0.39.2)
   - WUEnvironment (1.0.0)
 
 DEPENDENCIES:
-  - Alamofire (= 4.8.2)
   - AppVersionMonitor (= 1.4.0)
-  - Firebase/Analytics (= 6.24.0)
-  - Firebase/Crashlytics (= 6.24.0)
   - IQDropDownTextField (= 2.0)
-  - IQKeyboardManager (= 6.5.5)
-  - Kingfisher (= 5.13.4)
-  - Log (from `https://github.com/wundercar/log-ios.git`, tag `1.0.0`)
   - PKHUD
   - R.swift (= 5.2.2)
-  - SimulatorRemoteNotifications (= 0.0.3)
   - Sourcery (= 0.18.0)
   - SwiftLint (= 0.39.2)
   - WUEnvironment (from `https://github.com/wundercar/environment-ios.git`, branch `develop`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - Alamofire
     - AppVersionMonitor
-    - Firebase
-    - FirebaseAnalytics
-    - FirebaseAnalyticsInterop
-    - FirebaseCore
-    - FirebaseCoreDiagnostics
-    - FirebaseCoreDiagnosticsInterop
-    - FirebaseCrashlytics
-    - FirebaseInstallations
-    - GoogleAppMeasurement
-    - GoogleDataTransport
-    - GoogleDataTransportCCTSupport
-    - GoogleUtilities
     - IQDropDownTextField
-    - IQKeyboardManager
-    - Kingfisher
-    - nanopb
     - PKHUD
-    - PromisesObjC
     - R.swift
     - R.swift.Library
-    - SimulatorRemoteNotifications
     - Sourcery
     - SwiftLint
 
 EXTERNAL SOURCES:
-  Log:
-    :git: https://github.com/wundercar/log-ios.git
-    :tag: 1.0.0
   WUEnvironment:
     :branch: develop
     :git: https://github.com/wundercar/environment-ios.git
 
 CHECKOUT OPTIONS:
-  Log:
-    :git: https://github.com/wundercar/log-ios.git
-    :tag: 1.0.0
   WUEnvironment:
     :commit: 1ab1a33d8a506a25097b8a32a48c43436dac772f
     :git: https://github.com/wundercar/environment-ios.git
 
 SPEC CHECKSUMS:
-  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   AppVersionMonitor: 0227cbd70c78b787190afd5e959c0280718bac8e
-  Firebase: b28e55c60efd98963cd9011fe2fac5a10c2ba124
-  FirebaseAnalytics: 7386fc2176e3f93ad8ef34b5b1f2b33a891e4962
-  FirebaseAnalyticsInterop: 3f86269c38ae41f47afeb43ebf32a001f58fcdae
-  FirebaseCore: e610482f64097b0e9f056cd97bc6b33dfabcbb6a
-  FirebaseCoreDiagnostics: 4a773a47bd83bbd5a9b1ccf1ce7caa8b2d535e67
-  FirebaseCoreDiagnosticsInterop: 296e2c5f5314500a850ad0b83e9e7c10b011a850
-  FirebaseCrashlytics: fff345f16a07f0b23cb342d8de5a42cec6de3492
-  FirebaseInstallations: 2119fb3e46b0a88bfdbf12562f855ee3252462fa
-  GoogleAppMeasurement: 4c644d86835d827bab30ab6aabb9ecaf1f500735
-  GoogleDataTransport: f6f8eba931df03ebd2232ff4645aa85f8f47b5ab
-  GoogleDataTransportCCTSupport: d70a561f7d236af529fee598835caad5e25f6d3d
-  GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
   IQDropDownTextField: 79293d19042b6f2ee6f02decf4a0e68e59e4f327
-  IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
-  Kingfisher: d2279a7abece3c7f25a80cd2b7f363ca5cf3f44c
-  Log: 83c4d71f8f490a1d2257c4f9aa9c22e3b8293763
-  nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
-  PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
   R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
-  SimulatorRemoteNotifications: 1610643e0582b2af67bc254b071ace4077e8ef86
   Sourcery: e0e8658a1ce6d9f475156ad3ffce4c68f1261b3e
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
   WUEnvironment: cde7b59a20972a84f313bfc007cfb5f4133ed8c9
 
-PODFILE CHECKSUM: 7b60bf9a326423c6fbb46db8925260f7cbc8a1ec
+PODFILE CHECKSUM: 82be77eed3490ae059a8cd86ed03d3bab3fa240d
 
 COCOAPODS: 1.8.4

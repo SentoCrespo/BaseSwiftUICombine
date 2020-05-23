@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 /// Performs debugging info
 class SceneDelegateDebug: SceneDelegateType {
