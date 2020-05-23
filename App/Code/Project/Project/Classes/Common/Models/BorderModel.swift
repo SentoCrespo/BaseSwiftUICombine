@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 public struct BorderModel {
     public var color: UIColor = .lightGray

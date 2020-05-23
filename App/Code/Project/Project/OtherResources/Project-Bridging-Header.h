@@ -14,12 +14,10 @@
 //
 
 #import <IQDropDownTextField/IQDropDownTextField.h>
-#import <SimulatorRemoteNotifications/UIApplication+SimulatorRemoteNotifications.h>
+
 //
 // Project classes
 //
 
-
-#import <CommonCrypto/CommonCrypto.h>
 
 #endif

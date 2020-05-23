@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 /// Handle Deeplinks
 class SceneDelegateDeeplinks: SceneDelegateType {

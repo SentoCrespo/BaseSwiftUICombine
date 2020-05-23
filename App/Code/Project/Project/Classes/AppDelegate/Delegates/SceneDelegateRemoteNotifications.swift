@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 import WUEnvironment
 
 /// Performs configuration & handles remote notifications
@@ -19,8 +20,8 @@ extension SceneDelegateRemoteNotifications {
         // Mock Notifications for developing
         if WUManagerEnvironment.isDebugFlag {
             if UIDevice.isSimulator {
-                UIApplication.shared.listenForRemoteNotifications()
-                UIApplication.shared.remoteNotificationsPort = 9930 // Default port
+//                UIApplication.shared.listenForRemoteNotifications()
+//                UIApplication.shared.remoteNotificationsPort = 9930 // Default port
             }
         }
         

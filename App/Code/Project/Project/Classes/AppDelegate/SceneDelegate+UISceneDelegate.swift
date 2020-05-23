@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 // MARK: - UISceneDelegate
 extension SceneDelegate: UISceneDelegate {

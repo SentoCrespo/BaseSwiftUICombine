@@ -11,13 +11,6 @@ workspace 'BaseSwiftUICombine'
 project 'Project/Project.xcodeproj'
 project 'SharedUtils/SharedUtils.xcodeproj'
 
-def log_pods
-    # Log System
-    pod 'Log',
-        :git => 'https://github.com/wundercar/log-ios.git',
-        :tag => '1.0.0'
-end
-
 def app_pods
 
     # System
@@ -25,24 +18,15 @@ def app_pods
     pod 'AppVersionMonitor', '1.4.0'
 
     ## Crash System
-    pod 'Firebase/Crashlytics', '6.24.0'
-    pod 'Firebase/Analytics', '6.24.0'
+    # pod 'Firebase/Crashlytics', '6.24.0'
+    # pod 'Firebase/Analytics', '6.24.0'
 
     # User Interface
 
-    ## Async image + Caching
-    pod 'Kingfisher', '5.13.4'
-
     ## Keyboard Manager
-    pod 'IQKeyboardManager', '6.5.5'
     pod 'IQDropDownTextField', '2.0'
 
     # Code
-    
-    # Notifications
-
-    ## Notifications Mocker
-    pod 'SimulatorRemoteNotifications', '0.0.3'
     
     # Auto-Generation
     pod 'Sourcery', '0.18.0'
@@ -72,7 +56,6 @@ target 'Project' do
     
     app_pods
     hud_pods
-    log_pods
     
     # Test Application
     
@@ -96,8 +79,6 @@ target 'Domain' do
     
     project 'Project/Project.xcodeproj'
     
-    log_pods
-    
     # Test Application
     target 'DomainTests' do
         inherit! :search_paths
@@ -111,8 +92,6 @@ end
 target 'PlatformNetworkApi' do
 
     project 'Project/Project.xcodeproj'
-    
-    pod 'Alamofire', '4.8.2'
     
     # Test Application
     target 'PlatformNetworkApiTests' do

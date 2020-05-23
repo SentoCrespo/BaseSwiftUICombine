@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 public struct ShadowModel {
     public var color: UIColor = UIColor.darkGray
