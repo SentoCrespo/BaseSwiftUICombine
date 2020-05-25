@@ -7,11 +7,11 @@ digraph {
     0 [label="", shape=plaintext]
     1 [label="idle", peripheries=2]
     2 [label="loading"]
-    3 [label="loaded(String)"]
-    4 [label="error(Error)"]
+    3 [label="loaded"]
+    4 [label="error"]
     
     // Transitions
-    0 -> 1 [label="init"] [style=dotted]
+    0 -> 1 [label="start"] [style=dotted]
     1 -> 2 [label="onAppear >> loadItems"]
     2 -> 4 [label="onLoadingFailed(Error)"]
     2 -> 3 [label="onLoadingSuccess(String)"]
