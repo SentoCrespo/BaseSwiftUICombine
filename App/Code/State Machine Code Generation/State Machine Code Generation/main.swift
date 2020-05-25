@@ -270,6 +270,8 @@ func generateModel(states: [State], events: [String], effects: [String], transit
     
     var result: [String] = []
     
+    result.append("// swiftlint:disable all")
+    
     result.append("extension MainModel {")
     
     // States
