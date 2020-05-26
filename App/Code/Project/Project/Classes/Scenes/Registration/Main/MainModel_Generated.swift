@@ -1,4 +1,4 @@
-
+// swiftlint:disable all
 extension MainModel {
     /// State machine for the scene
     enum State: StateType {
@@ -48,7 +48,6 @@ extension MainModel {
         return result
     }
 }
-
 extension MainModel.State: AutoHashableEnumValues, AutoEquatableEnumValues {}
 extension MainModel.Event: AutoHashableEnumValues, AutoEquatableEnumValues {}
 extension MainModel.Effect: AutoHashableEnumValues, AutoEquatableEnumValues {}

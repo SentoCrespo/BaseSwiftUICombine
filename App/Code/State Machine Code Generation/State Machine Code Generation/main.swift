@@ -30,7 +30,8 @@ print("File(s) found: \(filesDot)")
 //        return processDot(lines: $0)
 //    }
 
-let file = filesDot.first!
+let file: URL = filesDot.first!
+let fileName = file.deletingLastPathComponent().lastPathComponent
 let content = readContent(path: file)!
 let lines = content
     .split(separator: "\n")
@@ -45,7 +46,8 @@ let generatedCode = generateModel(
     transitions: processedDot.3
 )
 
-let generatedPath = URL(fileURLWithPath: "/Volumes/Storage/Projects/BaseProject/SwiftUICombine/App/Code/Project/Project/Classes/Scenes/Registration/Main/MainModelGenerated.swift")
+let generatedFilename = fileName + "Model_Generated.swift"
+let generatedPath = URL(fileURLWithPath: "/Volumes/Storage/Projects/BaseProject/SwiftUICombine/App/Code/Project/Project/Classes/Scenes/Registration/Main/" + generatedFilename)
 store(content: generatedCode, path: generatedPath)
 
 
