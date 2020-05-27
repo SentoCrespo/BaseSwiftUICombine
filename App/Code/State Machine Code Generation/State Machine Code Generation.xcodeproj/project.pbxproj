@@ -16,6 +16,8 @@
 		CF586614247E6B0C00C5E717 /* Squence+Unique.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF586613247E6B0C00C5E717 /* Squence+Unique.swift */; };
 		CF586616247E6B3600C5E717 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF586615247E6B3600C5E717 /* String+Utils.swift */; };
 		CF586618247E707500C5E717 /* ProcessDotResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF586617247E707500C5E717 /* ProcessDotResult.swift */; };
+		CF58661D247E856300C5E717 /* AutoStateMachineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58661A247E755F00C5E717 /* AutoStateMachineModel.swift */; };
+		CF58661F247E863300C5E717 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58661E247E863300C5E717 /* Constants.swift */; };
 		CFF39A3A2479BA5100761024 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF39A392479BA5100761024 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +43,8 @@
 		CF586613247E6B0C00C5E717 /* Squence+Unique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Squence+Unique.swift"; sourceTree = "<group>"; };
 		CF586615247E6B3600C5E717 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		CF586617247E707500C5E717 /* ProcessDotResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessDotResult.swift; sourceTree = "<group>"; };
-		CF58661A247E755F00C5E717 /* AutoStateMachineModel.templ */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoStateMachineModel.templ; sourceTree = "<group>"; };
+		CF58661A247E755F00C5E717 /* AutoStateMachineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoStateMachineModel.swift; sourceTree = "<group>"; };
+		CF58661E247E863300C5E717 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CFF39A362479BA5100761024 /* State Machine Code Generation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "State Machine Code Generation"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF39A392479BA5100761024 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,7 +65,7 @@
 			children = (
 				CF586605247E5F1500C5E717 /* FileOperations.swift */,
 				CF586607247E628700C5E717 /* DotOperations.swift */,
-				CF58661A247E755F00C5E717 /* AutoStateMachineModel.templ */,
+				CF58661A247E755F00C5E717 /* AutoStateMachineModel.swift */,
 			);
 			path = FileSystem;
 			sourceTree = "<group>";
@@ -70,6 +73,7 @@
 		CF586609247E63BC00C5E717 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CF58661E247E863300C5E717 /* Constants.swift */,
 				CF58660A247E63C600C5E717 /* Empty.swift */,
 				CF58660C247E644800C5E717 /* State.swift */,
 				CF58660E247E645100C5E717 /* Transition.swift */,
@@ -180,9 +184,11 @@
 				CF586606247E5F1500C5E717 /* FileOperations.swift in Sources */,
 				CF586616247E6B3600C5E717 /* String+Utils.swift in Sources */,
 				CF586614247E6B0C00C5E717 /* Squence+Unique.swift in Sources */,
+				CF58661D247E856300C5E717 /* AutoStateMachineModel.swift in Sources */,
 				CF58660D247E644800C5E717 /* State.swift in Sources */,
 				CF586618247E707500C5E717 /* ProcessDotResult.swift in Sources */,
 				CF586608247E628700C5E717 /* DotOperations.swift in Sources */,
+				CF58661F247E863300C5E717 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +312,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -315,6 +322,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};

@@ -10,7 +10,6 @@ print("""
     \(bundlePath)
 """)
 
-
 let basePathString = "/Volumes/Storage/Projects/BaseProject/SwiftUICombine/App/Code/Project/Project/Classes"
 let rootPath = URL(string: basePathString)!
 
@@ -44,10 +43,8 @@ files.forEach { filepath in
         
         // Generate the code
         let generatedCode = dotOperations.generateModel(
-            states: processedDot.states,
-            events: processedDot.events,
-            effects: processedDot.effects,
-            transitions: processedDot.transitions
+            name: filename + "Model",
+            processDot: processedDot
         )
         
         // Store the generated code in a file

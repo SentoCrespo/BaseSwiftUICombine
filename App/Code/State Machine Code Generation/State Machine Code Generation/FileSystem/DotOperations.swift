@@ -72,71 +72,77 @@ extension DotOperations {
         return result
     }
     
-    func generateModel(states: [State], events: [String], effects: [String], transitions: [Transition]) -> String {
+    func generateModel(name: String, processDot: ProcessDotResult) -> String {
         
-        var result: [String] = []
+        // Read template content
+        var generatedCode = autoStateMachineModelTemplate
         
+        // Version
+        generatedCode = generatedCode.replacingOccurrences(
+            of: "{{VERSION}}",
+            with: Constants.version
+        )
         
-        // Generated using Sourcery 0.18.0 — https://github.com/krzysztofzablocki/Sourcery
-        // DO NOT EDIT
-
-        // swiftlint:disable all
-
+        // Model Name
+        generatedCode = generatedCode.replacingOccurrences(
+            of: "{{MODEL_NAME}}",
+            with: name
+        )
         
-        
-        result.append("// swiftlint:disable all")
-        
-        result.append("extension MainModel {")
-        
-        // States
-        result.append("/// State machine for the scene")
-        result.append("enum State: StateType {")
-        
-        let statesFormatted = states.map { "case \($0.label)" }
-        
-        result.append(contentsOf: statesFormatted)
-        result.append("}")
-        
+        // State values
+        let statesFormatted = processDot.states
+            .map { "case \($0.label)" }
+            .joined(separator: "\n\t\t")
+        generatedCode = generatedCode.replacingOccurrences(
+            of: "{{STATE_CASES}}",
+            with: statesFormatted
+        )
         // Initial State
-        let initialState = states.first(where: { $0.isInitial })!
-        result.append("static let initialState: State = .\(initialState.label)")
-
+        let initialState = processDot.states
+            .first(where: { $0.isInitial })
+            .map { $0.label }!
+        generatedCode = generatedCode.replacingOccurrences(
+            of: "{{STATE_INITIAL}}",
+            with: initialState
+        )
+        
         // Events
-        result.append("/// An action happened")
-        result.append("enum Event: EventType {")
-        let eventsFormatted = events
+        let eventsFormatted = processDot.events
             .map { "case \($0)" }
-        result.append(contentsOf: eventsFormatted)
-        result.append("}")
+            .joined(separator: "\n\t\t")
+        generatedCode = generatedCode.replacingOccurrences(
+            of: "{{EVENT_CASES}}",
+            with: eventsFormatted
+        )
         
         // Initial Event
-        let initialEvent = transitions.first(where: { $0.from == 0 && $0.to == 1 })!
-        result.append("static let initialEvent: Event = .\(initialEvent.event)")
+        let initialEvent = processDot.transitions
+            .first(where: { $0.from == 0 && $0.to == 1 })
+            .map { $0.event }!
+        generatedCode = generatedCode.replacingOccurrences(
+            of: "{{EVENT_INITIAL}}",
+            with: initialEvent
+        )
         
         // Effects
-        result.append("/// Instructions to trigger logic")
-        result.append("enum Effect: EffectType {")
-        let effectsFormatted = effects.map { "case \($0)" }
-        result.append(contentsOf: effectsFormatted)
-        result.append("}")
+        let effectsFormatted = processDot.effects
+            .map { "case \($0)" }
+            .joined(separator: "\n\t\t")
+        generatedCode = generatedCode.replacingOccurrences(
+            of: "{{EFFECT_CASES}}",
+            with: effectsFormatted
+        )
         
         // Transitions
-        
-        result.append("// MARK: - Transitions")
-        result.append("// Finite State Machine definition")
-        result.append("static func createTransitions() -> ModuleTransition {")
-        result.append("let result: ModuleTransition = { state, event in")
-        result.append("switch (state, event) {")
-            
-        let transitionsFormatted: [String] = transitions.map { transition in
+        let transitions: [String] = processDot.transitions.map { transition in
             // State from
-            let stateFrom = states.first(where: { state in
+            let stateFrom = processDot.states.first(where: { state in
                 return state.index == transition.from
             })
             let stateFromFormatted = stateFrom != nil ? ".\(stateFrom!.label)" : "_"
             
             // State to
-            let stateTo = states.first(where: { state in
+            let stateTo = processDot.states.first(where: { state in
                 return state.index == transition.to
             })!
             
@@ -149,41 +155,29 @@ extension DotOperations {
                         .replacingOccurrences(
                             of: eventValues,
                             with: eventValues.loweringFirstLetter()
-                        )
+                    )
                         .replacingOccurrences(
                             of: "(",
                             with: "(let "
-                        )
+                    )
                 }
-                
-                // TODO: ^Just lower case first letter of value
             }
             let effect: String = transition.effect != nil ? ".\(transition.effect!)" : "nil"
             let transitionFormatted: [String] = [
                 "case (\(stateFromFormatted), .\(eventFromFormatted)):",
                 "return (nextState: .\(stateTo.label), effect: \(effect))"
-                ]
-            return transitionFormatted.joined(separator: "\n")
+            ]
+            return transitionFormatted.joined(separator: "\n\t\t\t\t")
         }
         
-        result.append(contentsOf: transitionsFormatted)
-        result.append("default:")
-        result.append("assertionFailure(\"Invalid transition from '\\(state)' with '\\(event)'\")")
-        result.append("return (nextState: state, effect: nil)")
-        result.append("}")
-        result.append("}")
-        result.append("return result")
-        result.append("}")
-        result.append("}")
+        let transitionsFormatted = transitions.joined(separator: "\n\t\t\t")
+        generatedCode = generatedCode.replacingOccurrences(
+            of: "{{TRANSITION_CASES}}",
+            with: transitionsFormatted
+        )
         
-        // TODO: Get main name MainModel ~> SceneModel
-        result.append("extension MainModel.State: AutoHashableEnumValues, AutoEquatableEnumValues {}")
-        result.append("extension MainModel.Event: AutoHashableEnumValues, AutoEquatableEnumValues {}")
-        result.append("extension MainModel.Effect: AutoHashableEnumValues, AutoEquatableEnumValues {}")
-
+        return generatedCode
         
-        return result.joined(separator: "\n")
-
     }
     
 }
