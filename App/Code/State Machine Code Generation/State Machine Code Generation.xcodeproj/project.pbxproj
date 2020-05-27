@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF586606247E5F1500C5E717 /* FileOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF586605247E5F1500C5E717 /* FileOperations.swift */; };
+		CF586608247E628700C5E717 /* DotOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF586607247E628700C5E717 /* DotOperations.swift */; };
+		CF58660B247E63C600C5E717 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58660A247E63C600C5E717 /* Empty.swift */; };
+		CF58660D247E644800C5E717 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58660C247E644800C5E717 /* State.swift */; };
+		CF58660F247E645100C5E717 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58660E247E645100C5E717 /* Transition.swift */; };
+		CF586611247E645F00C5E717 /* DotProcessingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF586610247E645F00C5E717 /* DotProcessingState.swift */; };
+		CF586614247E6B0C00C5E717 /* Squence+Unique.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF586613247E6B0C00C5E717 /* Squence+Unique.swift */; };
+		CF586616247E6B3600C5E717 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF586615247E6B3600C5E717 /* String+Utils.swift */; };
+		CF586618247E707500C5E717 /* ProcessDotResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF586617247E707500C5E717 /* ProcessDotResult.swift */; };
 		CFF39A3A2479BA5100761024 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF39A392479BA5100761024 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +32,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CF586605247E5F1500C5E717 /* FileOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileOperations.swift; sourceTree = "<group>"; };
+		CF586607247E628700C5E717 /* DotOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotOperations.swift; sourceTree = "<group>"; };
+		CF58660A247E63C600C5E717 /* Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
+		CF58660C247E644800C5E717 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		CF58660E247E645100C5E717 /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
+		CF586610247E645F00C5E717 /* DotProcessingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotProcessingState.swift; sourceTree = "<group>"; };
+		CF586613247E6B0C00C5E717 /* Squence+Unique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Squence+Unique.swift"; sourceTree = "<group>"; };
+		CF586615247E6B3600C5E717 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		CF586617247E707500C5E717 /* ProcessDotResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessDotResult.swift; sourceTree = "<group>"; };
+		CF58661A247E755F00C5E717 /* AutoStateMachineModel.templ */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoStateMachineModel.templ; sourceTree = "<group>"; };
 		CFF39A362479BA5100761024 /* State Machine Code Generation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "State Machine Code Generation"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF39A392479BA5100761024 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,6 +57,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF586604247E5EEF00C5E717 /* FileSystem */ = {
+			isa = PBXGroup;
+			children = (
+				CF586605247E5F1500C5E717 /* FileOperations.swift */,
+				CF586607247E628700C5E717 /* DotOperations.swift */,
+				CF58661A247E755F00C5E717 /* AutoStateMachineModel.templ */,
+			);
+			path = FileSystem;
+			sourceTree = "<group>";
+		};
+		CF586609247E63BC00C5E717 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CF58660A247E63C600C5E717 /* Empty.swift */,
+				CF58660C247E644800C5E717 /* State.swift */,
+				CF58660E247E645100C5E717 /* Transition.swift */,
+				CF586610247E645F00C5E717 /* DotProcessingState.swift */,
+				CF586617247E707500C5E717 /* ProcessDotResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CF586612247E6B0200C5E717 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CF586613247E6B0C00C5E717 /* Squence+Unique.swift */,
+				CF586615247E6B3600C5E717 /* String+Utils.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CFF39A2D2479BA5100761024 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +108,9 @@
 			isa = PBXGroup;
 			children = (
 				CFF39A392479BA5100761024 /* main.swift */,
+				CF586612247E6B0200C5E717 /* Extensions */,
+				CF586609247E63BC00C5E717 /* Models */,
+				CF586604247E5EEF00C5E717 /* FileSystem */,
 			);
 			path = "State Machine Code Generation";
 			sourceTree = "<group>";
@@ -120,7 +173,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF58660F247E645100C5E717 /* Transition.swift in Sources */,
 				CFF39A3A2479BA5100761024 /* main.swift in Sources */,
+				CF586611247E645F00C5E717 /* DotProcessingState.swift in Sources */,
+				CF58660B247E63C600C5E717 /* Empty.swift in Sources */,
+				CF586606247E5F1500C5E717 /* FileOperations.swift in Sources */,
+				CF586616247E6B3600C5E717 /* String+Utils.swift in Sources */,
+				CF586614247E6B0C00C5E717 /* Squence+Unique.swift in Sources */,
+				CF58660D247E644800C5E717 /* State.swift in Sources */,
+				CF586618247E707500C5E717 /* ProcessDotResult.swift in Sources */,
+				CF586608247E628700C5E717 /* DotOperations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
