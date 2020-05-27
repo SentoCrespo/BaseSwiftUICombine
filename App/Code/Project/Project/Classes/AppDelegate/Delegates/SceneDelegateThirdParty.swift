@@ -34,7 +34,7 @@ extension SceneDelegateThirdParty {
 }
 
 import AppVersionMonitor
-import IQKeyboardManager
+//import IQKeyboardManager
 import PKHUD
 import WUEnvironment
 
@@ -49,7 +49,7 @@ private extension SceneDelegateThirdParty {
     }
     
     func initKeyboardManager() {
-        IQKeyboardManager.shared().isEnabled = true
+//        IQKeyboardManager.shared().isEnabled = true
     }
     
     func initCrashlytics() {

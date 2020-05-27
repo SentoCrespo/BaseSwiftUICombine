@@ -72,7 +72,7 @@ private extension MainUIView {
             return AnyView(Text("Idle"))
         case (.loading, _):
             return AnyView(Text("Loading..."))
-        case (.loaded(let data), _):
+        case (.loaded, .onLoadingSuccess(let data)):
             return AnyView(Text("Loaded: \(data)"))
         default:
             return AnyView(Text("Something"))

@@ -157,6 +157,7 @@
 		CFF39A0C24799B2700761024 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CFF39A0B24799B2700761024 /* KingfisherSwiftUI */; };
 		CFF39A0F24799B7500761024 /* Log in Frameworks */ = {isa = PBXBuildFile; productRef = CFF39A0E24799B7500761024 /* Log */; };
 		CFF39A122479AD8000761024 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CFF39A112479AD8000761024 /* IQKeyboardManagerSwift */; };
+		CFF39AC4247BEFC100761024 /* MainModel_Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF39AC3247BEFC000761024 /* MainModel_Generated.swift */; };
 		E213EB87D53956D2E752B6CB /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35ED9D748EBB19AA5EE75FBD /* Pods_DomainTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -427,6 +428,11 @@
 		CF4ACB88222D241900D7B8BA /* UseCasesUsersDataSource+Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UseCasesUsersDataSource+Signup.swift"; sourceTree = "<group>"; };
 		CF4ACB8C222D247A00D7B8BA /* Signup.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Signup.json; sourceTree = "<group>"; };
 		CF4ACB8E222D249500D7B8BA /* UseCasesUsersDataSource+Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UseCasesUsersDataSource+Signup.swift"; sourceTree = "<group>"; };
+		CF5865BF247D40D600C5E717 /* Templates */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Templates; sourceTree = "<group>"; };
+		CF586600247D5C0400C5E717 /* .sourcery.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .sourcery.yml; sourceTree = "<group>"; };
+		CF586601247D5C3700C5E717 /* .sourcery.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .sourcery.yml; sourceTree = "<group>"; };
+		CF586602247D5C5200C5E717 /* .sourcery.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .sourcery.yml; sourceTree = "<group>"; };
+		CF586603247D5C9A00C5E717 /* .sourcery.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .sourcery.yml; sourceTree = "<group>"; };
 		CF5A8EEC202331EB00732AD4 /* ProtocolsAutoGeneration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolsAutoGeneration.swift; sourceTree = "<group>"; };
 		CF5A8EEF202331F800732AD4 /* AutoHashable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoHashable.generated.swift; sourceTree = "<group>"; };
 		CF5A8EF4202331F800732AD4 /* AutoCases.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCases.generated.swift; sourceTree = "<group>"; };
@@ -468,10 +474,8 @@
 		CFB4DC7F246D37C0000DDB3C /* MainRender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRender.swift; sourceTree = "<group>"; };
 		CFB4DC81246D3DCD000DDB3C /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		CFB4DC85246D4152000DDB3C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		CFB4DC90246D698D000DDB3C /* AutoHashableEnumValues.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoHashableEnumValues.stencil; sourceTree = "<group>"; };
 		CFB4DC91246D6A86000DDB3C /* AutoEquatableEnumValues.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoEquatableEnumValues.generated.swift; sourceTree = "<group>"; };
 		CFB4DC92246D6A87000DDB3C /* AutoHashableEnumValues.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoHashableEnumValues.generated.swift; sourceTree = "<group>"; };
-		CFB4DC95246D6A97000DDB3C /* AutoEquatableEnumValues.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoEquatableEnumValues.stencil; sourceTree = "<group>"; };
 		CFB4DC9C246E7F37000DDB3C /* AnyNeverPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyNeverPublisher.swift; sourceTree = "<group>"; };
 		CFB4DCA7246FEC52000DDB3C /* Templates */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Templates; path = ../../Pods/Sourcery/Templates; sourceTree = "<group>"; };
 		CFB4DCA824701D3E000DDB3C /* StateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachine.swift; sourceTree = "<group>"; };
@@ -490,6 +494,7 @@
 		CFB4DCC524753199000DDB3C /* AutoEquatableEnumValues.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoEquatableEnumValues.generated.swift; sourceTree = "<group>"; };
 		CFB4DCC624753199000DDB3C /* AutoHashableEnumValues.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoHashableEnumValues.generated.swift; sourceTree = "<group>"; };
 		CFE99476210E3C44005E55C7 /* UIImage+Render.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Render.swift"; sourceTree = "<group>"; };
+		CFF39AC3247BEFC000761024 /* MainModel_Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModel_Generated.swift; sourceTree = "<group>"; };
 		D2614C473D7555E4B3B8AFCE /* Pods_PlatformPersistenceStaticTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlatformPersistenceStaticTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D4BF15DA06E141420C2537 /* Pods_PlatformNetworkStaticTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlatformNetworkStaticTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9733868E7D305444D54ED9 /* Pods_PlatformPersistenceStatic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlatformPersistenceStatic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -756,6 +761,7 @@
 		AF19E9EF1F7BC7D7000533E9 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				CF586603247D5C9A00C5E717 /* .sourcery.yml */,
 				CF5A8EEC202331EB00732AD4 /* ProtocolsAutoGeneration.swift */,
 				CF5A8EEE202331F800732AD4 /* AutoGenerated */,
 				CF4ACB76222AFB5800D7B8BA /* R.generated.swift */,
@@ -906,6 +912,7 @@
 		AF6477AD1F543523003E55D1 /* PlatformNetworkStatic */ = {
 			isa = PBXGroup;
 			children = (
+				CF586601247D5C3700C5E717 /* .sourcery.yml */,
 				AF6477D91F543541003E55D1 /* ProtocolsAutoGeneration.swift */,
 				AF6477CB1F543541003E55D1 /* AutoGenerated */,
 				AF1D175B1F6289AC005C16DC /* ResponseType.swift */,
@@ -951,6 +958,7 @@
 		AF6477EF1F5435A5003E55D1 /* PlatformNetworkApi */ = {
 			isa = PBXGroup;
 			children = (
+				CF586602247D5C5200C5E717 /* .sourcery.yml */,
 				AF6478231F5435D0003E55D1 /* ProtocolsAutoGeneration.swift */,
 				AF6478101F5435D0003E55D1 /* AutoGenerated */,
 				AF64781B1F5435D0003E55D1 /* Manager */,
@@ -1030,6 +1038,7 @@
 		AF6B806B1F2F7B5300F6525B /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				CF586600247D5C0400C5E717 /* .sourcery.yml */,
 				AF19A7A91F308C9000BD9CCA /* ProtocolsAutoGeneration.swift */,
 				AF19A7AB1F308D6E00BD9CCA /* AutoGenerated */,
 				AF6B808A1F2F7BA300F6525B /* Models */,
@@ -1202,6 +1211,7 @@
 				CFAE0A2822EB02BB0004BE72 /* MainConfigurator.swift */,
 				CFB4DC7F246D37C0000DDB3C /* MainRender.swift */,
 				CFB4DC81246D3DCD000DDB3C /* MainModel.swift */,
+				CFF39AC3247BEFC000761024 /* MainModel_Generated.swift */,
 				CFB4DC85246D4152000DDB3C /* MainViewModel.swift */,
 				CFB4DC322467F595000DDB3C /* MainUIView.swift */,
 				CFB4DCBB24751C60000DDB3C /* MainViewModel_SPEC.swift */,
@@ -1331,19 +1341,10 @@
 		CFB4DC87246D68BE000DDB3C /* AutogenerationTemplates */ = {
 			isa = PBXGroup;
 			children = (
+				CF5865BF247D40D600C5E717 /* Templates */,
 				CFB4DCA7246FEC52000DDB3C /* Templates */,
-				CFB4DC88246D68BE000DDB3C /* Templates */,
 			);
 			path = AutogenerationTemplates;
-			sourceTree = "<group>";
-		};
-		CFB4DC88246D68BE000DDB3C /* Templates */ = {
-			isa = PBXGroup;
-			children = (
-				CFB4DC95246D6A97000DDB3C /* AutoEquatableEnumValues.stencil */,
-				CFB4DC90246D698D000DDB3C /* AutoHashableEnumValues.stencil */,
-			);
-			path = Templates;
 			sourceTree = "<group>";
 		};
 		CFB4DC99246E7DB5000DDB3C /* Combine */ = {
@@ -1953,7 +1954,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo 'Generating predefined templates'\n\n\"${SRCROOT}\"/autoGenerateCode.py --sourceryBin '${SRCROOT}/../Pods/Sourcery/bin/sourcery' --autoGeneratedPath 'PlatformNetworkStatic/AutoGenerated/' --projectPath 'PlatformNetworkStatic'\n";
+			shellScript = "echo 'Generating templates'\n   \n\"${SRCROOT}\"/../Pods/Sourcery/bin/sourcery --config $\"${SRCROOT}\"/PlatformNetworkStatic/.sourcery.yml \n";
 		};
 		AF6478351F5435E2003E55D1 /* Code Autogeneration */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1967,7 +1968,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo 'Generating predefined templates'\n\n\"${SRCROOT}\"/autoGenerateCode.py --sourceryBin '${SRCROOT}/../Pods/Sourcery/bin/sourcery' --autoGeneratedPath 'PlatformNetworkApi/AutoGenerated/' --projectPath 'PlatformNetworkApi'\n";
+			shellScript = "echo 'Generating templates'\n   \n\"${SRCROOT}\"/../Pods/Sourcery/bin/sourcery --config $\"${SRCROOT}\"/PlatformNetworkApi/.sourcery.yml \n";
 		};
 		AF6478361F5435F1003E55D1 /* HIhglight Warnings */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2009,7 +2010,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo 'Generating templates'\n\n\"${SRCROOT}\"/autoGenerateCode.py --sourceryBin '${SRCROOT}/../Pods/Sourcery/bin/sourcery' --autoGeneratedPath 'Domain/AutoGenerated/' --projectPath 'Domain'\n";
+			shellScript = "echo 'Generating templates'\n   \n\"${SRCROOT}\"/../Pods/Sourcery/bin/sourcery --config $\"${SRCROOT}\"/Domain/.sourcery.yml \n";
 		};
 		AFECE46E1C10588C00DD0984 /* Swift Lint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2169,7 +2170,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo 'Generating predefined templates'\n\n\"${SRCROOT}\"/autoGenerateCode.py --sourceryBin '${SRCROOT}/../Pods/Sourcery/bin/sourcery' --autoGeneratedPath 'Project/AutoGenerated/' --projectPath 'Project' --customTemplates 'AutogenerationTemplates/Templates'\n";
+			shellScript = "echo 'Generating templates'\n   \n\"${SRCROOT}\"/../Pods/Sourcery/bin/sourcery --config $\"${SRCROOT}\"/Project/.sourcery.yml \n";
 		};
 		E8CE7DF6BEDAE66E73DBBB0E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2264,6 +2265,7 @@
 				CFB4DC82246D3DCD000DDB3C /* MainModel.swift in Sources */,
 				CFB4DC80246D37C0000DDB3C /* MainRender.swift in Sources */,
 				CF41C8A924769064000EAC0F /* SceneConfigurator.swift in Sources */,
+				CFF39AC4247BEFC100761024 /* MainModel_Generated.swift in Sources */,
 				CFB4DC52246A81C0000DDB3C /* ButtonPreview.swift in Sources */,
 				CFB4DC78246C5A5C000DDB3C /* SceneDelegate+UISceneDelegate.swift in Sources */,
 				CFB4DCB424706AA2000DDB3C /* Transition.swift in Sources */,
