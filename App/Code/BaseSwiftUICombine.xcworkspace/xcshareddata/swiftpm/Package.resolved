@@ -21,10 +21,19 @@
       },
       {
         "package": "Log",
-        "repositoryURL": "https://github.com/wundercar/log-ios",
+        "repositoryURL": "https://github.com/vCrespoP/log-ios",
         "state": {
           "branch": null,
-          "revision": "57f2a356ae0ce4cb5c852529d8924f3cea6b445b",
+          "revision": "06b60932a4f04d5b9ff6f6e54ad4c80c726ce064",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "VCNetworkKit",
+        "repositoryURL": "https://github.com/vCrespoP/VCNetworkKit.git",
+        "state": {
+          "branch": null,
+          "revision": "082117189607400db638809992282ff4b43bd4e2",
           "version": "1.0.0"
         }
       }
