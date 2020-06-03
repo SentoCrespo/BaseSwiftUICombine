@@ -4,7 +4,7 @@ import VCNetworkKit
 // MARK: - URL Request
 public extension Request {
 
-    typealias UrlRequestResult = Result<URLRequest, NetworkServiceUrlSessionError>
+    typealias UrlRequestResult = Result<URLRequest, UrlSessionError>
     /// Transforms a request into a UrlRequest
     func urlRequest(baseUrl: URL?) -> UrlRequestResult {
         

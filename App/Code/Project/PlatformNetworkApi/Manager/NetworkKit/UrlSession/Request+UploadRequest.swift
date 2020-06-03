@@ -4,7 +4,7 @@ import VCNetworkKit
 // MARK: - Multipart Upload
 public extension Request {
     
-    typealias UploadRequestResult = Result<NetworkServiceMultipartRequest, NetworkServiceUrlSessionError>
+    typealias UploadRequestResult = Result<MultipartUrlRequest, UrlSessionError>
     /// Transforms a request into a uploadRequest
     func uploadRequest(baseUrl: URL?) -> UploadRequestResult {
         
@@ -44,7 +44,7 @@ public extension Request {
                     return .failure(.multipartEncoding)
             }
             
-            let result = NetworkServiceMultipartRequest(
+            let result = MultipartUrlRequest(
                 urlRequest: urlRequest,
                 bodyData: bodyData
             )
