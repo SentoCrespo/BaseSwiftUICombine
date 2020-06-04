@@ -1,5 +1,7 @@
 import Domain
 import Foundation
+import VCNetworkKit
+import PRSharedUtils
 
 public enum ApiEnvironment: String {
     case debug = "Debug"
@@ -9,13 +11,11 @@ public enum ApiEnvironment: String {
 }
 
 public class BaseUseCaseDataSource {
-    // MARK: - Properties
     
-    // TODO:
-//    private let networkService: NetworkService
+    // MARK: - Properties
+    private let networkService: NetworkServiceCombine
     
     // MARK: - Life Cycle
-    
     public init(environment: ApiEnvironment) {
         let baseUrl: URL
         switch environment {
@@ -29,7 +29,11 @@ public class BaseUseCaseDataSource {
             baseUrl = URL(string: "https://nube000.muving.com/RestAPI/RestServices")!
         }
         
-        // TODO:
-//        self.networkService = AlamofireService(baseUrl: baseUrl)
+        self.networkService = NetworkServiceCombine(
+            baseUrl: baseUrl,
+            session: URLSession.shared,
+            isDebugMode: UIDevice.isSimulator
+        )
+        
     }
 }

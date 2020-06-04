@@ -150,17 +150,21 @@ extension DotOperations {
             let eventFromWithValues: Bool = event.contains("(")
             var eventFromFormatted: String = event
             if eventFromWithValues {
-                if let eventValues = event.slice(from: "(", to: ")") {
-                    eventFromFormatted = event
-                        .replacingOccurrences(
-                            of: eventValues,
-                            with: eventValues.loweringFirstLetter()
-                    )
-                        .replacingOccurrences(
-                            of: "(",
-                            with: "(let "
-                    )
-                }
+//                if let eventValues = event.slice(from: "(", to: ")") {
+//                    eventFromFormatted = event
+//                        .replacingOccurrences(
+//                            of: eventValues,
+//                            with: eventValues.loweringFirstLetter()
+//                    )
+//                        .replacingOccurrences(
+//                            of: "(",
+//                            with: "(let "
+//                    )
+//                }
+                eventFromFormatted = event
+                    .split(separator: "(")
+                    .map { String($0) }
+                    .first ?? ""
             }
             let effect: String = transition.effect != nil ? ".\(transition.effect!)" : "nil"
             let transitionFormatted: [String] = [

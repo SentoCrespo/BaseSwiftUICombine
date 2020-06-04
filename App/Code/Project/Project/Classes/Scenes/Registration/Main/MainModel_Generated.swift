@@ -44,13 +44,13 @@ extension MainModel {
 				return (nextState: .idle, effect: nil)
 			case (.idle, .onAppear):
 				return (nextState: .loading, effect: .loadItems)
-			case (.loading, .onLoadingFailed(let error)):
+			case (.loading, .onLoadingFailed):
 				return (nextState: .error, effect: nil)
-			case (.loading, .onLoadingSuccess(let string)):
+			case (.loading, .onLoadingSuccess):
 				return (nextState: .loaded, effect: nil)
 			case (.loaded, .onReload):
 				return (nextState: .loading, effect: nil)
-			case (.loaded, .onSelect(let string)):
+			case (.loaded, .onSelect):
 				return (nextState: .loaded, effect: .navigateToProfile)
             default:
                 assertionFailure("Invalid transition from '\(state)' with '\(event)'")

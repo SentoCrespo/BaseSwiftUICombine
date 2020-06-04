@@ -2,6 +2,7 @@ import Foundation
 import UIKit
 
 public extension UIColor {
+    
     convenience init(red: Int, green: Int, blue: Int) {
         assert(red >= 0 && red <= 255, "Invalid red component")
         assert(green >= 0 && green <= 255, "Invalid green component")
@@ -47,6 +48,7 @@ public extension UIColor {
 }
 
 public extension UIColor {
+    
     func hexString(withAlpha: Bool = false) -> String? {
         guard let components = self.cgColor.components, components.count >= 3 else {
             return nil
@@ -71,14 +73,22 @@ public extension UIColor {
 }
 
 private extension UIColor {
-    static func intFromHexString(hexStr: String) -> UInt32 {
-        var hexInt: UInt32 = 0
-        // Create scanner
-        let scanner: Scanner = Scanner(string: hexStr.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines))
-        // Tell scanner to skip the # character
-        scanner.charactersToBeSkipped = CharacterSet(charactersIn: "#")
+    
+    static func intFromHexString(hexStr: String) -> UInt64 {
+        // Sanitize string
+        var hexFormatted: String = hexStr
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+            .uppercased()
+        
+        // Skip the # character
+        if hexFormatted.hasPrefix("#") {
+            hexFormatted = String(hexFormatted.dropFirst())
+        }
+        
         // Scan hex value
-        scanner.scanHexInt32(&hexInt)
-        return hexInt
+        var rgbValue: UInt64 = 0
+        Scanner(string: hexFormatted).scanHexInt64(&rgbValue)
+        return rgbValue
     }
+    
 }
