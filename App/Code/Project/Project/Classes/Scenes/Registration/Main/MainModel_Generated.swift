@@ -6,6 +6,7 @@
 extension MainModel {
     // MARK: - States
     /// State machine for the scene
+    // sourcery:AutoEquatable,AutoHashable
     enum State: StateType {
         case idle
 		case loading
@@ -17,6 +18,7 @@ extension MainModel {
 
     // MARK: - Events
     /// An action happened
+    // sourcery:AutoEquatable,AutoHashable
     enum Event: EventType {
         case start
 		case onAppear
@@ -30,6 +32,7 @@ extension MainModel {
 
     // MARK: - Effects
     /// Instructions to trigger logic
+    // sourcery:AutoEquatable,AutoHashable
     enum Effect: EffectType {
         case loadItems
 		case navigateToProfile

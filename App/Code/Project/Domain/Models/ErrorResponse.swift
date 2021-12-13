@@ -1,5 +1,6 @@
 import Foundation
 
+// sourcery:AutoHashable,AutoEquatable
 public struct ErrorResponse: Error, Codable {
     
     // MARK: - Properties
@@ -11,5 +12,3 @@ public struct ErrorResponse: Error, Codable {
     }
     
 }
-
-extension ErrorResponse: AutoEquatable, AutoHashable {}

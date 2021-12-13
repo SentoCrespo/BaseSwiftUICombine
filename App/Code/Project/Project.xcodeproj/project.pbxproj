@@ -133,9 +133,6 @@
 		CFC5929B24879DF700A7BE00 /* PRSharedUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC5929A24879DF700A7BE00 /* PRSharedUtils.framework */; };
 		CFC5929C24879DF700A7BE00 /* PRSharedUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CFC5929A24879DF700A7BE00 /* PRSharedUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CFE035E22767506E00B4F873 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CFE035E12767506E00B4F873 /* Kingfisher */; };
-		CFE035E827675A9100B4F873 /* ProtocolsAutoGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE035E727675A6C00B4F873 /* ProtocolsAutoGeneration.swift */; };
-		CFE035EA27675A9300B4F873 /* ProtocolsAutoGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE035E727675A6C00B4F873 /* ProtocolsAutoGeneration.swift */; };
-		CFE035EB27675A9300B4F873 /* ProtocolsAutoGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE035E727675A6C00B4F873 /* ProtocolsAutoGeneration.swift */; };
 		CFE035F227675D9200B4F873 /* AutoHashable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE035EF27675D9100B4F873 /* AutoHashable.generated.swift */; };
 		CFE035F327675D9200B4F873 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE035F027675D9100B4F873 /* AutoMockable.generated.swift */; };
 		CFE035F427675D9200B4F873 /* AutoEquatable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE035F127675D9200B4F873 /* AutoEquatable.generated.swift */; };
@@ -148,7 +145,6 @@
 		CFE03608276762DF00B4F873 /* AutoHashable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE03605276762DF00B4F873 /* AutoHashable.generated.swift */; };
 		CFE03609276762DF00B4F873 /* AutoEquatable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE03606276762DF00B4F873 /* AutoEquatable.generated.swift */; };
 		CFE0360A276762DF00B4F873 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE03607276762DF00B4F873 /* AutoMockable.generated.swift */; };
-		CFE0361F27677FE500B4F873 /* ProtocolsAutoGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE035E727675A6C00B4F873 /* ProtocolsAutoGeneration.swift */; };
 		CFE99477210E3C44005E55C7 /* UIImage+Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE99476210E3C44005E55C7 /* UIImage+Render.swift */; };
 		CFF39A122479AD8000761024 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CFF39A112479AD8000761024 /* IQKeyboardManagerSwift */; };
 		CFF39AC4247BEFC100761024 /* MainModel_Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF39AC3247BEFC000761024 /* MainModel_Generated.swift */; };
@@ -452,9 +448,6 @@
 		CFC592932487814400A7BE00 /* NetworkResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseError.swift; sourceTree = "<group>"; };
 		CFC592972487863A00A7BE00 /* HttpResponse+HttpUrlResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HttpResponse+HttpUrlResponse.swift"; sourceTree = "<group>"; };
 		CFC5929A24879DF700A7BE00 /* PRSharedUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PRSharedUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFE035E527675A6C00B4F873 /* autoGenerateCodeConfig.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = autoGenerateCodeConfig.py; sourceTree = "<group>"; };
-		CFE035E627675A6C00B4F873 /* ProtocolsAutoGenerationCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsAutoGenerationCustom.swift; sourceTree = "<group>"; };
-		CFE035E727675A6C00B4F873 /* ProtocolsAutoGeneration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsAutoGeneration.swift; sourceTree = "<group>"; };
 		CFE035EC27675AAC00B4F873 /* Autogeneration.config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Autogeneration.config; sourceTree = "<group>"; };
 		CFE035EE27675C4900B4F873 /* Autogeneration.config */ = {isa = PBXFileReference; lastKnownFileType = text; path = Autogeneration.config; sourceTree = "<group>"; };
 		CFE035EF27675D9100B4F873 /* AutoHashable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoHashable.generated.swift; sourceTree = "<group>"; };
@@ -471,15 +464,8 @@
 		CFE03605276762DF00B4F873 /* AutoHashable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoHashable.generated.swift; sourceTree = "<group>"; };
 		CFE03606276762DF00B4F873 /* AutoEquatable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoEquatable.generated.swift; sourceTree = "<group>"; };
 		CFE03607276762DF00B4F873 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
-		CFE036172767767A00B4F873 /* AutoMockable.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoMockable.stencil; sourceTree = "<group>"; };
-		CFE036182767767A00B4F873 /* AutoHashable.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoHashable.stencil; sourceTree = "<group>"; };
-		CFE036192767767A00B4F873 /* AutoCases.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoCases.stencil; sourceTree = "<group>"; };
-		CFE0361A2767767A00B4F873 /* AutoCodable.swifttemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoCodable.swifttemplate; sourceTree = "<group>"; };
-		CFE0361B2767767A00B4F873 /* AutoEquatable.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoEquatable.stencil; sourceTree = "<group>"; };
-		CFE0361C2767767A00B4F873 /* LinuxMain.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = LinuxMain.stencil; sourceTree = "<group>"; };
-		CFE0361D2767767A00B4F873 /* AutoLenses.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoLenses.stencil; sourceTree = "<group>"; };
-		CFE0361E2767767A00B4F873 /* Decorator.swifttemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = Decorator.swifttemplate; sourceTree = "<group>"; };
-		CFE03621276787ED00B4F873 /* AutoInit.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoInit.stencil; sourceTree = "<group>"; };
+		CFE0363F2767A30700B4F873 /* AutoInit.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoInit.stencil; sourceTree = "<group>"; };
+		CFE036402767A30700B4F873 /* autoGenerateCodeConfig.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = autoGenerateCodeConfig.py; sourceTree = "<group>"; };
 		CFE99476210E3C44005E55C7 /* UIImage+Render.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Render.swift"; sourceTree = "<group>"; };
 		CFF39AC3247BEFC000761024 /* MainModel_Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModel_Generated.swift; sourceTree = "<group>"; };
 		D2614C473D7555E4B3B8AFCE /* Pods_PlatformPersistenceStaticTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlatformPersistenceStaticTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -682,7 +668,7 @@
 				AF3F854A1F2F4FC30051E528 /* Podfile */,
 				AF52240D1F754B55006984A9 /* .swiftlint.yml */,
 				CF19C74B222584F30039DB77 /* .swiftformat */,
-				CFE035E327675A6C00B4F873 /* Autogenerated */,
+				CFE0363D2767A30700B4F873 /* Autogenerated */,
 				AF19E9EF1F7BC7D7000533E9 /* Project */,
 				CF0494EE1BF66DE000BCA9DA /* ProjectTests */,
 				0607A38E1C05D19E0016397C /* ProjectUITests */,
@@ -1338,39 +1324,20 @@
 			path = UrlSession;
 			sourceTree = "<group>";
 		};
-		CFE035E327675A6C00B4F873 /* Autogenerated */ = {
+		CFE0363D2767A30700B4F873 /* Autogenerated */ = {
 			isa = PBXGroup;
 			children = (
-				CFE035E527675A6C00B4F873 /* autoGenerateCodeConfig.py */,
-				CFE035E627675A6C00B4F873 /* ProtocolsAutoGenerationCustom.swift */,
-				CFE035E727675A6C00B4F873 /* ProtocolsAutoGeneration.swift */,
-				CFE03620276787EC00B4F873 /* CustomTemplates */,
-				CFE036162767767A00B4F873 /* Templates */,
+				CFE0363E2767A30700B4F873 /* CustomTemplates */,
+				CFE036402767A30700B4F873 /* autoGenerateCodeConfig.py */,
 			);
 			name = Autogenerated;
 			path = ../../Scripts/Autogenerated;
 			sourceTree = "<group>";
 		};
-		CFE036162767767A00B4F873 /* Templates */ = {
+		CFE0363E2767A30700B4F873 /* CustomTemplates */ = {
 			isa = PBXGroup;
 			children = (
-				CFE036172767767A00B4F873 /* AutoMockable.stencil */,
-				CFE036182767767A00B4F873 /* AutoHashable.stencil */,
-				CFE036192767767A00B4F873 /* AutoCases.stencil */,
-				CFE0361A2767767A00B4F873 /* AutoCodable.swifttemplate */,
-				CFE0361B2767767A00B4F873 /* AutoEquatable.stencil */,
-				CFE0361C2767767A00B4F873 /* LinuxMain.stencil */,
-				CFE0361D2767767A00B4F873 /* AutoLenses.stencil */,
-				CFE0361E2767767A00B4F873 /* Decorator.swifttemplate */,
-			);
-			name = Templates;
-			path = ../../Code/Pods/Sourcery/Templates;
-			sourceTree = "<group>";
-		};
-		CFE03620276787EC00B4F873 /* CustomTemplates */ = {
-			isa = PBXGroup;
-			children = (
-				CFE03621276787ED00B4F873 /* AutoInit.stencil */,
+				CFE0363F2767A30700B4F873 /* AutoInit.stencil */,
 			);
 			path = CustomTemplates;
 			sourceTree = "<group>";
@@ -2025,7 +1992,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo 'Generating templates'\n\n\"${SRCROOT}\"/../../Scripts/Autogenerated/autoGenerateCodeConfig.py \\\n    --sourceryBin '../Pods/Sourcery/bin/sourcery' \\\n    --config './Domain/Autogenerated/Autogeneration.config'\n";
+			shellScript = "echo 'Generating templates'\n\ntargetName=\"Domain\"\nscriptsPath=\"${SRCROOT}\"/../../Scripts\n\n$scriptsPath/Autogenerated/autoGenerateCodeConfig.py \\\n    --sourceryBin '../Pods/Sourcery/bin/sourcery' \\\n    --config './'$targetName'/Autogenerated/Autogeneration.config'\n";
 		};
 		AFECE46E1C10588C00DD0984 /* Swift Lint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2282,7 +2249,6 @@
 				CFF39AC4247BEFC100761024 /* MainModel_Generated.swift in Sources */,
 				CFE03609276762DF00B4F873 /* AutoEquatable.generated.swift in Sources */,
 				CFB4DC52246A81C0000DDB3C /* ButtonPreview.swift in Sources */,
-				CFE035E827675A9100B4F873 /* ProtocolsAutoGeneration.swift in Sources */,
 				CFB4DC78246C5A5C000DDB3C /* SceneDelegate+UISceneDelegate.swift in Sources */,
 				CFB4DCB424706AA2000DDB3C /* Transition.swift in Sources */,
 				CFB4DCB824715CDA000DDB3C /* TransitionResult.swift in Sources */,
@@ -2328,7 +2294,6 @@
 			files = (
 				CFE036012767627300B4F873 /* AutoEquatable.generated.swift in Sources */,
 				CFE036022767627300B4F873 /* AutoMockable.generated.swift in Sources */,
-				CFE035EA27675A9300B4F873 /* ProtocolsAutoGeneration.swift in Sources */,
 				AF1D175C1F6289AC005C16DC /* ResponseType.swift in Sources */,
 				CF26A4AA2224578900D0256C /* BaseUseCaseDataSource.swift in Sources */,
 				CFE036032767627300B4F873 /* AutoHashable.generated.swift in Sources */,
@@ -2359,7 +2324,6 @@
 				CF93B0922485AEF900178AB6 /* UrlSessionError.swift in Sources */,
 				AF6478331F5435D0003E55D1 /* BaseUseCaseDataSource.swift in Sources */,
 				CF93B0962485B01800178AB6 /* Request+UploadRequest.swift in Sources */,
-				CFE035EB27675A9300B4F873 /* ProtocolsAutoGeneration.swift in Sources */,
 				CFE035FB276761B200B4F873 /* AutoMockable.generated.swift in Sources */,
 				CFC59299248798F900A7BE00 /* HttpResponse+HttpUrlResponse.swift in Sources */,
 				AF6478311F5435D0003E55D1 /* NetworkServiceCombine.swift in Sources */,
@@ -2384,7 +2348,6 @@
 				CFE035F227675D9200B4F873 /* AutoHashable.generated.swift in Sources */,
 				AF19EA9A1F7CE2C6000533E9 /* SuccessResponse.swift in Sources */,
 				CFE035F427675D9200B4F873 /* AutoEquatable.generated.swift in Sources */,
-				CFE0361F27677FE500B4F873 /* ProtocolsAutoGeneration.swift in Sources */,
 				AFFD48971F8661F6000F3177 /* UserType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,6 @@
 import Foundation
 
+// sourcery:AutoHashable,AutoEquatable
 public struct User: Codable {
     
     // MARK: Properties
@@ -14,5 +15,3 @@ public struct User: Codable {
     }
 
 }
-
-extension User: AutoEquatable, AutoHashable {}
