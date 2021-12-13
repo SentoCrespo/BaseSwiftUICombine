@@ -5,6 +5,9 @@
       location = "group:Project/Project.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:State Machine Code Generation/State Machine Code Generation.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:PRSharedUtils/PRSharedUtils.xcodeproj">
    </FileRef>
    <FileRef

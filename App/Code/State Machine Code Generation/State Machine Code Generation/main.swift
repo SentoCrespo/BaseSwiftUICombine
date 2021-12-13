@@ -10,7 +10,7 @@ print("""
     \(bundlePath)
 """)
 
-let basePathString = "/Volumes/Storage/Projects/BaseProject/SwiftUICombine/App/Code/Project/Project/Classes"
+let basePathString = "/Volumes/Storage/Projects/Sento/SwiftUICombine/App/Code/Project/Project/Classes"
 let rootPath = URL(string: basePathString)!
 
 /// Find .gv files

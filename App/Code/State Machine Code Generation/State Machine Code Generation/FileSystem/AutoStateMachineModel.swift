@@ -8,6 +8,7 @@ let autoStateMachineModelTemplate = """
 
 extension {{MODEL_NAME}} {
     // MARK: - States
+    // sourcery: AutoEquatableEnumValues, AutoHashableEnumValues
     /// State machine for the scene
     enum State: StateType {
         {{STATE_CASES}}
@@ -16,6 +17,7 @@ extension {{MODEL_NAME}} {
     static let initialState: State = .{{STATE_INITIAL}}
 
     // MARK: - Events
+    // sourcery: AutoEquatableEnumValues, AutoHashableEnumValues
     /// An action happened
     enum Event: EventType {
         {{EVENT_CASES}}
@@ -24,6 +26,7 @@ extension {{MODEL_NAME}} {
     static let initialEvent: Event = .{{EVENT_INITIAL}}
 
     // MARK: - Effects
+    // sourcery: AutoEquatableEnumValues, AutoHashableEnumValues
     /// Instructions to trigger logic
     enum Effect: EffectType {
         {{EFFECT_CASES}}
@@ -45,7 +48,4 @@ extension {{MODEL_NAME}} {
     
 }
 
-extension {{MODEL_NAME}}.State: AutoHashableEnumValues, AutoEquatableEnumValues {}
-extension {{MODEL_NAME}}.Event: AutoHashableEnumValues, AutoEquatableEnumValues {}
-extension {{MODEL_NAME}}.Effect: AutoHashableEnumValues, AutoEquatableEnumValues {}
 """

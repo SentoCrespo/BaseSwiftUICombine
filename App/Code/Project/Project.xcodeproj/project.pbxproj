@@ -145,6 +145,14 @@
 		CFE03608276762DF00B4F873 /* AutoHashable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE03605276762DF00B4F873 /* AutoHashable.generated.swift */; };
 		CFE03609276762DF00B4F873 /* AutoEquatable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE03606276762DF00B4F873 /* AutoEquatable.generated.swift */; };
 		CFE0360A276762DF00B4F873 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE03607276762DF00B4F873 /* AutoMockable.generated.swift */; };
+		CFE0364F2767ABC400B4F873 /* ProtocolsAutoGenerationCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0364E2767ABAB00B4F873 /* ProtocolsAutoGenerationCustom.swift */; };
+		CFE036512767AC8D00B4F873 /* ProtocolsAutoGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE036502767AC8D00B4F873 /* ProtocolsAutoGeneration.swift */; };
+		CFE036522767AC9F00B4F873 /* ProtocolsAutoGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE036502767AC8D00B4F873 /* ProtocolsAutoGeneration.swift */; };
+		CFE036532767AC9F00B4F873 /* ProtocolsAutoGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE036502767AC8D00B4F873 /* ProtocolsAutoGeneration.swift */; };
+		CFE036542767ACA000B4F873 /* ProtocolsAutoGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE036502767AC8D00B4F873 /* ProtocolsAutoGeneration.swift */; };
+		CFE0365A2767AF1C00B4F873 /* AutoEquatableEnumValues.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE036572767AF1C00B4F873 /* AutoEquatableEnumValues.generated.swift */; };
+		CFE0365B2767AF1C00B4F873 /* AutoHashableEnumValues.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE036582767AF1C00B4F873 /* AutoHashableEnumValues.generated.swift */; };
+		CFE0365C2767AF1C00B4F873 /* AutoInit.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE036592767AF1C00B4F873 /* AutoInit.generated.swift */; };
 		CFE99477210E3C44005E55C7 /* UIImage+Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE99476210E3C44005E55C7 /* UIImage+Render.swift */; };
 		CFF39A122479AD8000761024 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CFF39A112479AD8000761024 /* IQKeyboardManagerSwift */; };
 		CFF39AC4247BEFC100761024 /* MainModel_Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF39AC3247BEFC000761024 /* MainModel_Generated.swift */; };
@@ -466,6 +474,13 @@
 		CFE03607276762DF00B4F873 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		CFE0363F2767A30700B4F873 /* AutoInit.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoInit.stencil; sourceTree = "<group>"; };
 		CFE036402767A30700B4F873 /* autoGenerateCodeConfig.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = autoGenerateCodeConfig.py; sourceTree = "<group>"; };
+		CFE0364C2767AB5A00B4F873 /* AutoEquatableEnumValues.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoEquatableEnumValues.stencil; sourceTree = "<group>"; };
+		CFE0364D2767AB5B00B4F873 /* AutoHashableEnumValues.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoHashableEnumValues.stencil; sourceTree = "<group>"; };
+		CFE0364E2767ABAB00B4F873 /* ProtocolsAutoGenerationCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsAutoGenerationCustom.swift; sourceTree = "<group>"; };
+		CFE036502767AC8D00B4F873 /* ProtocolsAutoGeneration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsAutoGeneration.swift; sourceTree = "<group>"; };
+		CFE036572767AF1C00B4F873 /* AutoEquatableEnumValues.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoEquatableEnumValues.generated.swift; sourceTree = "<group>"; };
+		CFE036582767AF1C00B4F873 /* AutoHashableEnumValues.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoHashableEnumValues.generated.swift; sourceTree = "<group>"; };
+		CFE036592767AF1C00B4F873 /* AutoInit.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoInit.generated.swift; sourceTree = "<group>"; };
 		CFE99476210E3C44005E55C7 /* UIImage+Render.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Render.swift"; sourceTree = "<group>"; };
 		CFF39AC3247BEFC000761024 /* MainModel_Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModel_Generated.swift; sourceTree = "<group>"; };
 		D2614C473D7555E4B3B8AFCE /* Pods_PlatformPersistenceStaticTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlatformPersistenceStaticTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1180,6 +1195,9 @@
 				CFE03606276762DF00B4F873 /* AutoEquatable.generated.swift */,
 				CFE03605276762DF00B4F873 /* AutoHashable.generated.swift */,
 				CFE03607276762DF00B4F873 /* AutoMockable.generated.swift */,
+				CFE036572767AF1C00B4F873 /* AutoEquatableEnumValues.generated.swift */,
+				CFE036582767AF1C00B4F873 /* AutoHashableEnumValues.generated.swift */,
+				CFE036592767AF1C00B4F873 /* AutoInit.generated.swift */,
 			);
 			path = AutoGenerated;
 			sourceTree = "<group>";
@@ -1329,6 +1347,8 @@
 			children = (
 				CFE0363E2767A30700B4F873 /* CustomTemplates */,
 				CFE036402767A30700B4F873 /* autoGenerateCodeConfig.py */,
+				CFE0364E2767ABAB00B4F873 /* ProtocolsAutoGenerationCustom.swift */,
+				CFE036502767AC8D00B4F873 /* ProtocolsAutoGeneration.swift */,
 			);
 			name = Autogenerated;
 			path = ../../Scripts/Autogenerated;
@@ -1338,6 +1358,8 @@
 			isa = PBXGroup;
 			children = (
 				CFE0363F2767A30700B4F873 /* AutoInit.stencil */,
+				CFE0364C2767AB5A00B4F873 /* AutoEquatableEnumValues.stencil */,
+				CFE0364D2767AB5B00B4F873 /* AutoHashableEnumValues.stencil */,
 			);
 			path = CustomTemplates;
 			sourceTree = "<group>";
@@ -2246,13 +2268,16 @@
 				CFE03608276762DF00B4F873 /* AutoHashable.generated.swift in Sources */,
 				CFB4DC80246D37C0000DDB3C /* MainRender.swift in Sources */,
 				CF41C8A924769064000EAC0F /* SceneConfigurator.swift in Sources */,
+				CFE0364F2767ABC400B4F873 /* ProtocolsAutoGenerationCustom.swift in Sources */,
 				CFF39AC4247BEFC100761024 /* MainModel_Generated.swift in Sources */,
+				CFE036512767AC8D00B4F873 /* ProtocolsAutoGeneration.swift in Sources */,
 				CFE03609276762DF00B4F873 /* AutoEquatable.generated.swift in Sources */,
 				CFB4DC52246A81C0000DDB3C /* ButtonPreview.swift in Sources */,
 				CFB4DC78246C5A5C000DDB3C /* SceneDelegate+UISceneDelegate.swift in Sources */,
 				CFB4DCB424706AA2000DDB3C /* Transition.swift in Sources */,
 				CFB4DCB824715CDA000DDB3C /* TransitionResult.swift in Sources */,
 				CF26A50D2224A07800D0256C /* DataSourceConfiguration+Init.swift in Sources */,
+				CFE0365B2767AF1C00B4F873 /* AutoHashableEnumValues.generated.swift in Sources */,
 				CFB4DC86246D4152000DDB3C /* MainViewModel.swift in Sources */,
 				CFB4DC38246932E1000DDB3C /* ScaledFont.swift in Sources */,
 				CFB4DC76246C5A44000DDB3C /* SceneDelegate+UIWindowSceneDelegate.swift in Sources */,
@@ -2266,12 +2291,14 @@
 				CFB4DCAB247069E0000DDB3C /* StateMachineSystem.swift in Sources */,
 				AC4947411FAB6EF600F4E543 /* ViewStyle.swift in Sources */,
 				CFB4DCB624706ABF000DDB3C /* StateMachineError.swift in Sources */,
+				CFE0365A2767AF1C00B4F873 /* AutoEquatableEnumValues.generated.swift in Sources */,
 				CFB4DC63246BEF93000DDB3C /* SceneDelegateThirdParty.swift in Sources */,
 				CFB4DC68246BEFE9000DDB3C /* SceneDelegateMock.swift in Sources */,
 				CFB4DC9D246E7F37000DDB3C /* AnyNeverPublisher.swift in Sources */,
 				CFB4DCA924701D3E000DDB3C /* StateMachine.swift in Sources */,
 				CF26A503222499F700D0256C /* DataSourceConfiguration.swift in Sources */,
 				CFE99477210E3C44005E55C7 /* UIImage+Render.swift in Sources */,
+				CFE0365C2767AF1C00B4F873 /* AutoInit.generated.swift in Sources */,
 				CFB4DC462469A643000DDB3C /* Typography.swift in Sources */,
 				CF41C8AB247690A4000EAC0F /* SceneRender.swift in Sources */,
 			);
@@ -2294,6 +2321,7 @@
 			files = (
 				CFE036012767627300B4F873 /* AutoEquatable.generated.swift in Sources */,
 				CFE036022767627300B4F873 /* AutoMockable.generated.swift in Sources */,
+				CFE036532767AC9F00B4F873 /* ProtocolsAutoGeneration.swift in Sources */,
 				AF1D175C1F6289AC005C16DC /* ResponseType.swift in Sources */,
 				CF26A4AA2224578900D0256C /* BaseUseCaseDataSource.swift in Sources */,
 				CFE036032767627300B4F873 /* AutoHashable.generated.swift in Sources */,
@@ -2316,6 +2344,7 @@
 			files = (
 				CFE035FA276761B200B4F873 /* AutoEquatable.generated.swift in Sources */,
 				CF72120A2484F0A50037CAA9 /* Request+UrlRequest.swift in Sources */,
+				CFE036542767ACA000B4F873 /* ProtocolsAutoGeneration.swift in Sources */,
 				AF91FF181F98E25600408979 /* LoginRequest.swift in Sources */,
 				AC18508B20F7A27900B047A9 /* UseCasesUsersDataSource.swift in Sources */,
 				CFC59292248780DD00A7BE00 /* NetworkResponseSuccess.swift in Sources */,
@@ -2348,6 +2377,7 @@
 				CFE035F227675D9200B4F873 /* AutoHashable.generated.swift in Sources */,
 				AF19EA9A1F7CE2C6000533E9 /* SuccessResponse.swift in Sources */,
 				CFE035F427675D9200B4F873 /* AutoEquatable.generated.swift in Sources */,
+				CFE036522767AC9F00B4F873 /* ProtocolsAutoGeneration.swift in Sources */,
 				AFFD48971F8661F6000F3177 /* UserType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -5,8 +5,8 @@
 
 extension MainModel {
     // MARK: - States
+    // sourcery: AutoEquatableEnumValues, AutoHashableEnumValues
     /// State machine for the scene
-    // sourcery:AutoEquatable,AutoHashable
     enum State: StateType {
         case idle
 		case loading
@@ -17,8 +17,8 @@ extension MainModel {
     static let initialState: State = .idle
 
     // MARK: - Events
+    // sourcery: AutoEquatableEnumValues, AutoHashableEnumValues
     /// An action happened
-    // sourcery:AutoEquatable,AutoHashable
     enum Event: EventType {
         case start
 		case onAppear
@@ -31,8 +31,8 @@ extension MainModel {
     static let initialEvent: Event = .start
 
     // MARK: - Effects
+    // sourcery: AutoEquatableEnumValues, AutoHashableEnumValues
     /// Instructions to trigger logic
-    // sourcery:AutoEquatable,AutoHashable
     enum Effect: EffectType {
         case loadItems
 		case navigateToProfile
@@ -64,7 +64,3 @@ extension MainModel {
     }
     
 }
-
-extension MainModel.State: AutoHashableEnumValues, AutoEquatableEnumValues {}
-extension MainModel.Event: AutoHashableEnumValues, AutoEquatableEnumValues {}
-extension MainModel.Effect: AutoHashableEnumValues, AutoEquatableEnumValues {}

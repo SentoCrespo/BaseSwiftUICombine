@@ -25,7 +25,7 @@ def app_pods
     # Code
     
     # Auto-Generation
-    pod 'Sourcery', '1.6.1'
+    pod 'Sourcery', '1.6.0'
     pod 'R.swift', '5.4.0'
 
     # Standard conventions
