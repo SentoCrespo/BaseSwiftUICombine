@@ -12,7 +12,7 @@ public struct User: Codable {
     public init(id: String) {
         self.id = id
     }
-    
+
 }
 
 extension User: AutoEquatable, AutoHashable {}

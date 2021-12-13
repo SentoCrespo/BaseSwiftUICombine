@@ -8,7 +8,7 @@ class MainViewModel: BaseViewModel<MainModel>, ObservableObject {
         super.init(configurator: configurator)
         
     }
-    
+     
     // MARK: - Handle effect
     override func handle(effect: MainModel.Effect) {
         Log.debug("Processing effect: \(effect)")

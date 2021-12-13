@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/hackiftekhar/IQKeyboardManager",
         "state": {
           "branch": null,
-          "revision": "b0f0a127cca6bb39378447baa2afff74123abd09",
-          "version": "6.5.5"
+          "revision": "474f849accae40fe61b5302d9b057dd48ee073ba",
+          "version": "6.5.9"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/onevcat/Kingfisher",
         "state": {
           "branch": null,
-          "revision": "910d808ade2a576e1a292ceb458a6fa43f67f594",
-          "version": "5.14.0"
+          "revision": "0c02c46cfdc0656ce74fd0963a75e5000a0b7f23",
+          "version": "7.1.2"
         }
       },
       {

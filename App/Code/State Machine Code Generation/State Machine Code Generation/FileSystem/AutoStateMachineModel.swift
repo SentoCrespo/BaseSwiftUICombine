@@ -49,4 +49,3 @@ extension {{MODEL_NAME}}.State: AutoHashableEnumValues, AutoEquatableEnumValues 
 extension {{MODEL_NAME}}.Event: AutoHashableEnumValues, AutoEquatableEnumValues {}
 extension {{MODEL_NAME}}.Effect: AutoHashableEnumValues, AutoEquatableEnumValues {}
 """
-

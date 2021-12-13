@@ -5,12 +5,9 @@
       location = "group:Project/Project.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Pods/Pods.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:PRSharedUtils/PRSharedUtils.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Project/../State Machine Code Generation/State Machine Code Generation.xcodeproj">
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

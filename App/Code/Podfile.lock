@@ -2,10 +2,12 @@ PODS:
   - AppVersionMonitor (1.4.0)
   - IQDropDownTextField (2.0)
   - PKHUD (5.3.0)
-  - R.swift (5.2.2):
-    - R.swift.Library (~> 5.2.0)
-  - R.swift.Library (5.2.0)
-  - Sourcery (0.18.0)
+  - R.swift (5.4.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
+  - Sourcery (1.6.1):
+    - Sourcery/CLI-Only (= 1.6.1)
+  - Sourcery/CLI-Only (1.6.1)
   - SwiftLint (0.39.2)
   - WUEnvironment (1.0.0)
 
@@ -13,8 +15,8 @@ DEPENDENCIES:
   - AppVersionMonitor (= 1.4.0)
   - IQDropDownTextField (= 2.0)
   - PKHUD
-  - R.swift (= 5.2.2)
-  - Sourcery (= 0.18.0)
+  - R.swift (= 5.4.0)
+  - Sourcery (= 1.6.1)
   - SwiftLint (= 0.39.2)
   - WUEnvironment (from `https://github.com/wundercar/environment-ios.git`, branch `develop`)
 
@@ -42,12 +44,12 @@ SPEC CHECKSUMS:
   AppVersionMonitor: 0227cbd70c78b787190afd5e959c0280718bac8e
   IQDropDownTextField: 79293d19042b6f2ee6f02decf4a0e68e59e4f327
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
-  R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
-  R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
-  Sourcery: e0e8658a1ce6d9f475156ad3ffce4c68f1261b3e
+  R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  Sourcery: f3759f803bd0739f74fc92a4341eed0473ce61ac
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
   WUEnvironment: cde7b59a20972a84f313bfc007cfb5f4133ed8c9
 
-PODFILE CHECKSUM: 82be77eed3490ae059a8cd86ed03d3bab3fa240d
+PODFILE CHECKSUM: 222d1ef473187ad69926b2cb92dcac254aa30392
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.11.2
