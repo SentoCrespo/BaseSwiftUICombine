@@ -51,12 +51,12 @@ extension MainViewModelTests {
         // Transition with 'onLoadingSuccess'
         let resultOnLoad = "Result"
         let output3 = viewModel.applyBlocking(event: .onLoadingSuccess(resultOnLoad))
-        XCTAssertEqual(output3.to, .loaded(resultOnLoad))
+        XCTAssertEqual(output3.to, .loaded)
         
         // Transition with 'onSelect'
         let resultOnSuccess = "Select"
         let output4 = viewModel.applyBlocking(event: .onSelect(resultOnSuccess))
-        XCTAssertEqual(output4.to, .loaded(resultOnLoad))
+        XCTAssertEqual(output4.to, .loaded)
         
         // Then
         XCTAssert(true)
@@ -66,7 +66,7 @@ extension MainViewModelTests {
 
 private extension MainViewModel {
  
-    func applyBlocking(event: MainViewModel.Event) -> MainViewModel.TransitionOutput {
+    func applyBlocking(event: MainModel.Event) -> MainViewModel.TransitionOutput {
         self.apply(event: event)
         // Run one cycle to get the output as it's asynchronous
         RunLoop.main.run(mode: .default, before: .distantPast)
