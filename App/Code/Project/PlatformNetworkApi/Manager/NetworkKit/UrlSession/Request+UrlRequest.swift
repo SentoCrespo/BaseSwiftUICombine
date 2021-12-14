@@ -1,4 +1,3 @@
-import Foundation
 import VCNetworkKit
 
 // MARK: - URL Request

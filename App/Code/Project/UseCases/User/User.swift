@@ -1,7 +1,4 @@
-import Foundation
-import Combine
-
-public enum UseCasesUser {
+public enum User {
     
     // MARK: - Properties
     public enum ErrorUseCasesUser: Error {
@@ -16,13 +13,13 @@ public enum UseCasesUser {
     
 }
 
-public extension UseCasesUser {
+public extension User {
     
-    typealias SignupResult = AnyPublisher<SuccessResponse<User>, ErrorUseCasesUser>
+    typealias SignupResult = AnyPublisher<SuccessResponse<Domain.User>, ErrorUseCasesUser>
     static func signup(username: String,
                        password: String,
                        repeatPassword: String,
-                       dataSource: UseCasesUsersDataSource) -> SignupResult {
+                       dataSource: UserDataSource) -> SignupResult {
         // TODO: Preconditions + Unit testing
         return dataSource
             .signup(username: username, password: password)

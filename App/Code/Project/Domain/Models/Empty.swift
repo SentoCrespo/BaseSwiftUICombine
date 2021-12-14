@@ -1,5 +1,3 @@
-import Foundation
-
 // sourcery:AutoHashable,AutoEquatable
 public struct Empty: Codable {
     // MARK: - Properties

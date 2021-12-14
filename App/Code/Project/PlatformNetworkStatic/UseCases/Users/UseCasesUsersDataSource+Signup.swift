@@ -1,11 +1,8 @@
-import Domain
-import Foundation
-import Combine
 import PRSharedUtils
 
 public extension UseCasesUsersDataSource {
     
-    func signup(username: String, password: String) -> PublisherDataSourceType<User> {
+    func signup(username: String, password: String) -> PublisherDataSourceType<Domain.User> {
         switch self.responseType {
         case .success(let statusCode):
             let result = successResponse(statusCode: statusCode)
@@ -23,10 +20,10 @@ public extension UseCasesUsersDataSource {
 
 extension UseCasesUsersDataSource {
     
-    private func successResponse(statusCode: Int) -> PublisherDataSourceType<User> {
+    private func successResponse(statusCode: Int) -> PublisherDataSourceType<Domain.User> {
         let jsonName = "Signup"
         let json = JsonUtils.readDictionaryData(resourceName: jsonName, bundle: Bundle(for: type(of: self)))
-        let data: User = User.parse(from: json?["user"])!
+        let data: Domain.User = Domain.User.parse(from: json?["user"])!
         let result = opSuccessResponse(statusCode: statusCode, data: data)
         return result
     }

@@ -1,5 +1,3 @@
-import Foundation
-
 // sourcery:AutoEquatable,AutoHashable
 public enum PRError: Error {
     case invalidUsername

@@ -1,11 +1,12 @@
 import Domain
 import Foundation
+import UseCases
 
 /// Possibilities for different datasource types
 struct DataSourceConfiguration {
     
     // MARK: Properties
-    var user: Domain.UseCasesUsersDataSource
+    var user: UseCases.UserDataSource
     
     // MARK: Life Cycle
     init() {

@@ -1,5 +1,3 @@
-import Foundation
-
 public enum UrlSessionError: Error {
     case noBaseUrl
     case badRequestType

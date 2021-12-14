@@ -2,12 +2,13 @@ import Domain
 import Foundation
 import PlatformNetworkApi
 import PlatformNetworkStatic
+import UseCases
 
 // MARK: User
 
 extension DataSourceConfiguration {
     
-    static func userApi(environment: ApiEnvironment) -> Domain.UseCasesUsersDataSource {
+    static func userApi(environment: ApiEnvironment) -> UseCases.UserDataSource {
         return PlatformNetworkApi.UseCasesUsersDataSource(environment: environment)
     }
     
