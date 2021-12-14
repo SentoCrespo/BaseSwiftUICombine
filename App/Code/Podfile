@@ -6,58 +6,47 @@ ENV['COCOAPODS_DISABLE_STATS'] = "true"
 
 platform :ios, '13.0'
 
-# Workspace and project definition
+# Workspace definition
 workspace 'BaseSwiftUICombine'
-project 'Project/Project.xcodeproj'
-project 'SharedUtils/SharedUtils.xcodeproj'
-
-def app_pods
-
-    # System
-    ## Version tracking
-    pod 'AppVersionMonitor', '1.4.0'
-
-    # User Interface
-
-    ## Keyboard Manager
-    pod 'IQDropDownTextField', '2.0'
-
-    # Code
-    
-    # Auto-Generation
-    pod 'Sourcery', '1.6.0'
-    pod 'R.swift', '5.4.0'
-
-    # Standard conventions
-    pod 'SwiftLint', '0.39.2'
-
-    # Custom Frameworks
-    ## Environment
-    pod 'WUEnvironment',
-        :git => 'https://github.com/wundercar/environment-ios.git',
-        :branch => 'develop'
-        
-end
-
-def hud_pods
-    # Progress HUD
-    pod 'PKHUD'
-end
 
 ### Main Application
 
 target 'Project' do
     
+    # Project definition
     project 'Project/Project.xcodeproj'
     
-    app_pods
-    hud_pods
+    # System
+    ## Version tracking
+    pod 'AppVersionMonitor', '1.4.0'
+    
+    # User Interface
+    
+    ## Keyboard Manager
+    pod 'IQDropDownTextField', '2.0'
+    
+    ## Progress HUD
+    pod 'PKHUD'
+    
+    # Code
+    
+    ## Auto-Generation
+    pod 'Sourcery', '1.6.0'
+    pod 'R.swift', '5.4.0'
+    
+    ## Standard conventions
+    pod 'SwiftLint', '0.39.2'
+    
+    # Custom Frameworks
+    ## Environment
+    pod 'WUEnvironment',
+        :git => 'https://github.com/wundercar/environment-ios.git',
+        :branch => 'develop'
     
     # Test Application
     
     target 'ProjectTests' do
         inherit! :search_paths
-        # pod 'Firebase/Core' # Needed for tests. Thx Google
         
     end
     
@@ -67,63 +56,6 @@ target 'Project' do
     end
 
 end
-
-
-### Domain
-
-target 'Domain' do
-    
-    project 'Project/Project.xcodeproj'
-    
-    # Test Application
-    target 'DomainTests' do
-        inherit! :search_paths
-        
-    end
-    
-end
-	
-### Network
-
-target 'PlatformNetworkApi' do
-
-    project 'Project/Project.xcodeproj'
-    
-    # Test Application
-    target 'PlatformNetworkApiTests' do
-        inherit! :search_paths
-        
-    end
-    
-end
-
-target 'PlatformNetworkStatic' do
-
-    project 'Project/Project.xcodeproj'
-
-    # Test Application
-    target 'PlatformNetworkStaticTests' do
-        inherit! :search_paths
-        
-    end
-    
-end
-
-### Shared Utils
-
-target 'PRSharedUtils' do
-    project 'PRSharedUtils/PRSharedUtils.xcodeproj'
-    
-#    hud_pods
-
-    # Test Application
-    target 'PRSharedUtilsTests' do
-        inherit! :search_paths
-        
-    end
-    
-end
-
 
 ## Post actions
 
@@ -142,7 +74,7 @@ post_install do |installer|
             end
             
             ## Fix latest Swift version
-            config.build_settings['SWIFT_VERSION'] = '5.2'
+            config.build_settings['SWIFT_VERSION'] = '5.5'
             
             if [
                 #'Zip'
@@ -186,8 +118,3 @@ post_install do |installer|
     end
     
 end
-
-
-
-
-
