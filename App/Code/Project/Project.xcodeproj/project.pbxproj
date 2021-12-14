@@ -153,15 +153,15 @@
 		CFE036882768902F00B4F873 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE036862768902F00B4F873 /* Errors.swift */; };
 		CFE036892768902F00B4F873 /* ManagerValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE036872768902F00B4F873 /* ManagerValidation.swift */; };
 		CFE0368A2768908E00B4F873 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6B806A1F2F7B5300F6525B /* Domain.framework */; };
-		CFE0368B2768908E00B4F873 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF6B806A1F2F7B5300F6525B /* Domain.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CFE0368B2768908E00B4F873 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF6B806A1F2F7B5300F6525B /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CFE0368F2768910A00B4F873 /* UseCases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE036632768900100B4F873 /* UseCases.framework */; };
-		CFE036902768910A00B4F873 /* UseCases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CFE036632768900100B4F873 /* UseCases.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CFE036902768910A00B4F873 /* UseCases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CFE036632768900100B4F873 /* UseCases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CFE036942768910C00B4F873 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6B806A1F2F7B5300F6525B /* Domain.framework */; };
-		CFE036952768910C00B4F873 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF6B806A1F2F7B5300F6525B /* Domain.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CFE036952768910C00B4F873 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF6B806A1F2F7B5300F6525B /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CFE036982768919000B4F873 /* UseCases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE036632768900100B4F873 /* UseCases.framework */; };
-		CFE036992768919000B4F873 /* UseCases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CFE036632768900100B4F873 /* UseCases.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CFE036992768919000B4F873 /* UseCases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CFE036632768900100B4F873 /* UseCases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CFE0369D2768919200B4F873 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6B806A1F2F7B5300F6525B /* Domain.framework */; };
-		CFE0369E2768919200B4F873 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF6B806A1F2F7B5300F6525B /* Domain.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CFE0369E2768919200B4F873 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF6B806A1F2F7B5300F6525B /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CFE036A12768920D00B4F873 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE036842768902F00B4F873 /* User.swift */; };
 		CFE036A22768921000B4F873 /* UseCasesUserDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE036852768902F00B4F873 /* UseCasesUserDataSource.swift */; };
 		CFE036A6276893DC00B4F873 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE036A5276893DC00B4F873 /* main.swift */; };
@@ -1748,7 +1748,7 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1310;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					0607A38C1C05D19E0016397C = {
@@ -2677,6 +2677,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -2701,7 +2702,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -2733,6 +2734,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -2750,7 +2752,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -3343,6 +3345,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -3360,7 +3363,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3511,7 +3514,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -3556,7 +3559,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
@@ -3600,7 +3603,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
