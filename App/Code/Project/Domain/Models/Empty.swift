@@ -1,8 +1,10 @@
-// sourcery:AutoHashable,AutoEquatable
+// sourcery:AutoHashable,AutoEquatable,AutoInit
 public struct Empty: Codable {
     // MARK: - Properties
-    
-    // MARK: - Life Cycle
-    public init() {}
-    
+
+    // sourcery:inline:auto:Empty.AutoInit
+        // MARK: - Life Cycle
+        public init() {
+    	}
+    // sourcery:end
 }
