@@ -16,7 +16,7 @@ public class StateMachineSystem<State: StateType, Event: EventType, Effect: Effe
 }
 
 // MARK: - Public Methods
-extension StateMachineSystem {
+public extension StateMachineSystem {
     
     func apply(event: Event) {
         let transitionResult = stateMachine.apply(event: event)
