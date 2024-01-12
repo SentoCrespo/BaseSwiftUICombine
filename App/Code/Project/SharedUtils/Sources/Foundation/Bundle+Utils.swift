@@ -3,7 +3,6 @@ import Foundation
 public extension Bundle {
     
     var versionNumber: String? {
-        // TODO: Do it
         return self.infoDictionary?["CFBundleShortVersionString"] as? String
     }
     

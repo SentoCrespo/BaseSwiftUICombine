@@ -12,7 +12,11 @@ packages:
    R.swift.Library:
       url: https://github.com/mac-cain13/R.swift.Library
       exactVersion: 5.4.0
-      
+   
+   Log:
+      url: https://github.com/wundercar/log-ios.git
+      exactVersion: 1.1.0
+
    ReSwift:
       url: https://github.com/ReSwift/ReSwift
       exactVersion: 6.1.0

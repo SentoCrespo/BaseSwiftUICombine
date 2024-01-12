@@ -1,6 +1,7 @@
 // swiftlint:disable line_length
 import Foundation
 import UIKit
+import OSLog
 
 /// Performs debugging info
 class SceneDelegateDebug: SceneDelegateType {
@@ -26,7 +27,7 @@ extension SceneDelegateDebug {
 
 // MARK: - Scene Delegate
 extension SceneDelegateDebug {
-    // TODO:
+    
 }
 
 // MARK: - Private Methods
@@ -42,24 +43,13 @@ private extension SceneDelegateDebug {
             .first!
             .absoluteString
             .replacingOccurrences(of: "file://", with: "")
-        let components = [
-            "",
-            "*****************************************",
-            "BUNDLE path:",
-            "\(bundlePath)",
-            "DOCUMENTS path: ",
-            "\(documentsPath)",
-            "*****************************************"
-        ]
-        let debugInfo = components.joined(separator: "\n")
-        // TODO: Replace with Logger
-        print(debugInfo)
+        Logger.shared.debug("Bundle path: \(bundlePath)")
+        Logger.shared.debug("Documents path: \(documentsPath)")
     }
     
     func printAvailableFonts() {
         UIFont.familyNames.forEach { familyName in
-            // TODO: Replace with Logger
-            print(familyName)
+            Logger.shared.debug(familyName)
             
             UIFont.fontNames(forFamilyName: familyName).forEach { fontName in
                 print("\tFont: \(fontName)")

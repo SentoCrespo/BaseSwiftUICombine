@@ -153,7 +153,7 @@ targets:
                 ${SRCROOT}/../../Scripts/CodeLinting/swiftlint-0.44.0 \
                   --config ${SRCROOT}/.swiftlint.yml
         basedOnDependencyAnalysis: false
-        
+    
     ## Post-build scripts phase
     postBuildScripts:
 
@@ -190,7 +190,9 @@ targets:
       # - target: PlatformPersistenceDisk
       # - target: OneSignalNotificationServiceExtension
 
-      ### Swift Package Manager 
+      ### Swift Package Manager
+      - package: Log
+      
       - package: Kingfisher
 
       - package: R.swift.Library

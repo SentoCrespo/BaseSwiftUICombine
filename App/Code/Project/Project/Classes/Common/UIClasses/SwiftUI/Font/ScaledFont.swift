@@ -42,7 +42,7 @@ public extension View {
     }
     
     /// Applies the modifier for the font with a specific size
-    func scaledFont(name: Typography.fontFamily, size: CGFloat) -> some View {
+    func scaledFont(name: Typography.FontFamily, size: CGFloat) -> some View {
         return self.modifier(ScaledFont(name: name.rawValue, size: size))
     }
     

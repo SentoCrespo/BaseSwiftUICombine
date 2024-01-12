@@ -15,21 +15,21 @@ class SceneDelegateRemoteNotifications: SceneDelegateType {
 extension SceneDelegateRemoteNotifications {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
-        // TODO: Check if app lauched via notification
+        // Check if app lauched via notification
         
         return true
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        // TODO: Decode & Store & Handle token changes
+        // Decode & Store & Handle token changes
     }
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        // TODO: Handle case
+        // Handle case
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        // TODO: Handle case
+        // Handle case
     }
     
 }

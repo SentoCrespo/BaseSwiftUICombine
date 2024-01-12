@@ -11,25 +11,21 @@ class MainViewModel: BaseViewModel<MainModel>, ObservableObject {
      
     // MARK: - Handle effect
     override func handle(effect: MainModel.Effect) {
-        // TODO: Replace with Logger
-        print("Processing effect: \(effect)")
+        Logger.shared.debug("Processing effect: \(effect)")
         switch effect {
         case .loadItems:
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.apply(event: .onLoadingSuccess("Result"))
             }
         case .removeItem:
-            // TODO: Replace with Logger
-            print("Remove Item")
+            Logger.shared.debug("Remove Item")
         case .navigateToProfile:
-            // TODO: Replace with Logger
-            print("Navigate to profile effect")
+            Logger.shared.debug("Navigate to profile effect")
         }
     }
     
     override func handle(event: MainModel.Event) {
-        // TODO: Replace with Logger
-        print("Processing event: \(event)")
+        Logger.shared.debug("Processing event: \(event)")
 //        switch event {
 //            case .onAppear:
 //                break

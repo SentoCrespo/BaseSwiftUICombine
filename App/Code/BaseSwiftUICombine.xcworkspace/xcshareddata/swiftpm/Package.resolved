@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "log-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/wundercar/log-ios.git",
+      "state" : {
+        "revision" : "186e99b84cd62944f6c1ad34a69ff6713aa4d5a0",
+        "version" : "1.1.0"
+      }
+    },
+    {
       "identity" : "r.swift.library",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/mac-cain13/R.swift.Library",

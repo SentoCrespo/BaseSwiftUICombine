@@ -39,8 +39,8 @@ public extension ReduxStore {
             reducer(&state, action)
         }
         
-        self.middlewares.forEach { mw in
-            let middleware = mw(state, action)
+        self.middlewares.forEach {
+            let middleware = $0(state, action)
             middleware
                 .receive(on: DispatchQueue.main)
                 .sink(receiveValue: dispatch)

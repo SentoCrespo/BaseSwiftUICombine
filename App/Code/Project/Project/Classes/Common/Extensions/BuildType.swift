@@ -1,8 +1,8 @@
 import Foundation
 
-extension SceneDelegate {
+struct BuildType {
     
-    class var isTestNoConfig: Bool {
+    static var isTest: Bool {
         if ProcessInfo.processInfo.processName == "xctest" {
             return true
         }
@@ -12,6 +12,14 @@ extension SceneDelegate {
             }
         }
         return NSClassFromString("XCTest") != nil
+    }
+    
+    static var isDebug: Bool {
+        #if DEBUG
+            return true
+        #else
+            return false
+        #endif
     }
     
 }

@@ -3,7 +3,7 @@ import SwiftUI
 
 public struct Typography {
 
-    public struct fontSize {
+    public struct FontSize {
         static let largeTitle: CGFloat = 34.0
         static let title1: CGFloat = 28.0
         static let title2: CGFloat = 22.0
@@ -19,7 +19,7 @@ public struct Typography {
         static let button: CGFloat = 20.0
     }
     
-    public enum fontFamily: String {
+    public enum FontFamily: String {
         case helveticaNeue = "HelveticaNeue"
         case helveticaNeueSemiBold = "HelveticaNeue-SemiBold"
         case helveticaNeueBold = "HelveticaNeue-Bold"

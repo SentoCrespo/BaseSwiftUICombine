@@ -1,4 +1,4 @@
-// swiftlint:disable line_length
+// swiftlint:disable all
 
 //  SnapshotHelper.swift
 //  Example

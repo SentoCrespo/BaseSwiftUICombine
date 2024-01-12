@@ -19,7 +19,7 @@ struct ButtonPrimaryStyle: ButtonStyle {
             .label
             .scaledFont(
                 name: .helveticaNeue,
-                size: Typography.fontSize.button)
+                size: Typography.FontSize.button)
             .foregroundColor(configuration.isPressed ? Color.themePrimary : Color.themeSecondary)
             .padding()
             .background(configuration.isPressed ? Color.brandPrimary : Color.contrastPrimary)
@@ -35,7 +35,7 @@ struct ButtonSecondaryStyle: ButtonStyle {
             .label
             .scaledFont(
                 name: .helveticaNeue,
-                size: Typography.fontSize.button)
+                size: Typography.FontSize.button)
             .foregroundColor(configuration.isPressed ? Color.themeSecondary : Color.themePrimary)
             .padding()
             .background(configuration.isPressed ? Color.brandPrimary : Color.contrastSecondary)
@@ -51,7 +51,7 @@ struct ButtonActionStyle: ButtonStyle {
             .label
             .scaledFont(
                 name: .helveticaNeue,
-                size: Typography.fontSize.button)
+                size: Typography.FontSize.button)
             .foregroundColor(configuration.isPressed ? Color.themeSecondary : Color.themePrimary)
             .padding()
             .background(Color.clear)
@@ -67,7 +67,7 @@ struct ButtonRoundStyle: ButtonStyle {
             .label
             .scaledFont(
                 name: .helveticaNeue,
-                size: Typography.fontSize.button)
+                size: Typography.FontSize.button)
             .foregroundColor(configuration.isPressed ? Color.contrastSecondary : Color.brandPrimary)
             .padding()
             .background(configuration.isPressed ? Color.brandPrimary : Color.contrastSecondary)

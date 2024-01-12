@@ -1,10 +1,3 @@
-//
-//  AppDelegate_SPEC.swift
-//  ProjectTests
-//
-//  Created by Sento Crespo on 10/05/2020.
-//
-
 @testable import Project
 import Foundation
 import XCTest
@@ -194,23 +187,6 @@ extension SceneDelegateTests {
 // MARK: - Scene Delegate
 extension SceneDelegateTests {
     
-//    func test_sceneWillConnectToSessionWithConnectionOptions() {
-//        
-//        // Given
-//        let session = UIApplication.shared.openSessions.first!
-//        let scene = session.scene!
-//        let options = SceneDelegate.shared.connectionOptions!
-//        
-//        // When
-//        delegate?.scene(scene, willConnectTo: session, options: options)
-//        
-//        // Then
-//        let method = "sceneWillConnectToSessionWithConnectionOptions"
-//        let result = mockDelegate!.methodCalled[method]!
-//        XCTAssertTrue(result)
-//        
-//    }
-
     func test_sceneDidDisconnect() {
 
         // Given

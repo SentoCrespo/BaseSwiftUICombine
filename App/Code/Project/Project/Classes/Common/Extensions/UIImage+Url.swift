@@ -8,8 +8,7 @@ extension UIImageView {
     
     func setImage(with urlString: String?, completion: ImageHandler? = nil) {
         // Set indicator type
-        var kf = self.kf
-        kf.indicatorType = .activity
+        self.kf.indicatorType = .activity
         
         // Check for a valid URL
         guard let url = urlString else {

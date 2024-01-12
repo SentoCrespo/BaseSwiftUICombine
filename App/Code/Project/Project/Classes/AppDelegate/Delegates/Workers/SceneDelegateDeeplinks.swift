@@ -1,3 +1,4 @@
+// swiftlint:disable line_length
 import Foundation
 import UIKit
 
@@ -28,9 +29,9 @@ extension SceneDelegateConfigurations {
                 
             }),
             let webpageURL = userActivity.webpageURL {
-            // TODO: Replace with Logger
-            print("Deeplink: \(webpageURL.absoluteString)")
-            // TODO: Handle Deeplink
+            Logger.shared.debug("Deeplink: \(webpageURL.absoluteString)")
+            
+            // Handle Deeplink
         }
         
     }
@@ -42,9 +43,8 @@ extension SceneDelegateConfigurations {
         guard let webpageURL = userActivity.webpageURL else {
             return
         }
-        // TODO: Replace with Logger
-        print("Deeplink: \(webpageURL.absoluteString)")
-        // TODO: Handle Deeplink
+        Logger.shared.debug("Deeplink: \(webpageURL.absoluteString)")
+        // Handle Deeplink
     }
     
 }

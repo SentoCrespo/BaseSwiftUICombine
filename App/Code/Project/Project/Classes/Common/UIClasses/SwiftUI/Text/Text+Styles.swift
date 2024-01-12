@@ -7,7 +7,7 @@ extension Text {
         let result = Text(text)
             .scaledFont(
                 name: .helveticaNeue,
-                size: Typography.fontSize.largeTitle)
+                size: Typography.FontSize.largeTitle)
             .foregroundColor(Color.themePrimary)
         return result
     }
@@ -16,7 +16,7 @@ extension Text {
         let result = Text(text)
             .scaledFont(
                 name: .helveticaNeue,
-                size: Typography.fontSize.title1)
+                size: Typography.FontSize.title1)
             .foregroundColor(Color.themePrimary)
         return result
     }
@@ -25,7 +25,7 @@ extension Text {
         let result = Text(text)
             .scaledFont(
                 name: .helveticaNeue,
-                size: Typography.fontSize.title2)
+                size: Typography.FontSize.title2)
             .foregroundColor(Color.themePrimary)
         return result
     }
@@ -34,7 +34,7 @@ extension Text {
         let result = Text(text)
             .scaledFont(
                 name: .helveticaNeue,
-                size: Typography.fontSize.title3)
+                size: Typography.FontSize.title3)
             .foregroundColor(Color.themePrimary)
         return result
     }
@@ -43,7 +43,7 @@ extension Text {
         let result = Text(text)
             .scaledFont(
                 name: .helveticaNeue,
-                size: Typography.fontSize.headline)
+                size: Typography.FontSize.headline)
             .foregroundColor(Color.themePrimary)
         return result
     }
@@ -52,7 +52,7 @@ extension Text {
         let result = Text(text)
             .scaledFont(
                 name: .helveticaNeue,
-                size: Typography.fontSize.body)
+                size: Typography.FontSize.body)
             .foregroundColor(Color.themePrimary)
         return result
     }
@@ -61,7 +61,7 @@ extension Text {
         let result = Text(text)
             .scaledFont(
                 name: .helveticaNeueSemiBold,
-                size: Typography.fontSize.subhead)
+                size: Typography.FontSize.subhead)
             .foregroundColor(Color.themePrimary)
         return result
     }
@@ -70,7 +70,7 @@ extension Text {
         let result = Text(text)
             .scaledFont(
                 name: .helveticaNeue,
-                size: Typography.fontSize.callout)
+                size: Typography.FontSize.callout)
             .foregroundColor(Color.themePrimary)
         return result
     }
@@ -79,7 +79,7 @@ extension Text {
         let result = Text(text)
             .scaledFont(
                 name: .helveticaNeue,
-                size: Typography.fontSize.callout)
+                size: Typography.FontSize.callout)
             .foregroundColor(Color.themePrimary)
         return result
     }
@@ -88,7 +88,7 @@ extension Text {
         let result = Text(text)
             .scaledFont(
                 name: .helveticaNeue,
-                size: Typography.fontSize.caption1)
+                size: Typography.FontSize.caption1)
             .foregroundColor(Color.themePrimary)
         return result
     }
@@ -97,10 +97,9 @@ extension Text {
         let result = Text(text)
             .scaledFont(
                 name: .helveticaNeue,
-                size: Typography.fontSize.caption2)
+                size: Typography.FontSize.caption2)
             .foregroundColor(Color.themePrimary)
         return result
     }
 
 }
-

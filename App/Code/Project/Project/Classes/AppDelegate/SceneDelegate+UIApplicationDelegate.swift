@@ -1,14 +1,14 @@
+// swiftlint:disable line_length
 import Foundation
 import UIKit
 
 // MARK: - UIApplicationDelegate
 extension SceneDelegate: UIApplicationDelegate {
     
-    // swiftlint:disable:next line_length
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         
         // Bypass for testing purposes
-        if SceneDelegate.isTestNoConfig == true {
+        if BuildType.isTest {
             // Call the composite delegate
             sceneDelegate = SceneDelegateFactory.makeTest()
         }

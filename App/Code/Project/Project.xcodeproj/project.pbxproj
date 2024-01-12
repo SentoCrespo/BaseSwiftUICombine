@@ -10,6 +10,7 @@
 		00A23DB6B0F5D11FDA20992B /* Autogeneration.config in Resources */ = {isa = PBXBuildFile; fileRef = 7418DD4D0F7C9DA4700A11E8 /* Autogeneration.config */; };
 		00C3028E764FC25E0C79A0C8 /* CompositeSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE97327A464FF1D4FC832F3 /* CompositeSceneDelegate.swift */; };
 		01FDCAE988506B3BACA46804 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4365F6B4CC7A3D0825AF0066 /* Colors.xcassets */; };
+		022A57F374853E12BAB721E7 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D9B5C18A10057B8ED62454B4 /* ReSwift */; };
 		027737807ADF47C2D783DD8C /* PathUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1401439FE0AFFF8B56278AA7 /* PathUtils.swift */; };
 		02963DA3E0724D711E80C992 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE49EA766275A91FE876168 /* Foundation.framework */; };
 		0447192BCEF91C2330DE5507 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062BFA6775663526E4EC3E1 /* Empty.swift */; };
@@ -55,7 +56,7 @@
 		2820416B42FFE342A42E07E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE49EA766275A91FE876168 /* Foundation.framework */; };
 		289DBBA921D91316174FB315 /* StateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591456AB5C92E589D1253D2A /* StateType.swift */; };
 		28AECAEA2D098367999AF48C /* SceneDelegateDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CAA8CCDC6770A35F2E67D /* SceneDelegateDebug.swift */; };
-		29D6858F0E0F860D2177E4F9 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 945130D29E9CC25B1D56C1C6 /* Rswift */; };
+		29D6858F0E0F860D2177E4F9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 87635E357410C7E33CE290BB /* Kingfisher */; };
 		2C21F5770EB49AA928B584A6 /* AccessibilityId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC83D67D071A0DD5A05A124 /* AccessibilityId.swift */; };
 		2D1205AD6C6BF0892CA0B510 /* SceneDelegateConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E1A2061D063670CAF87D08 /* SceneDelegateConfigurations.swift */; };
 		2DC0AC525DC8EBC20E4C0F0F /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF7034A6E4722437C88DFE3 /* MainModel.swift */; };
@@ -72,7 +73,7 @@
 		3C714D5A5BC4B9D877415354 /* AutoHashable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805BFAACB46715C9A7C95872 /* AutoHashable.generated.swift */; };
 		3D608A8B4625CE00D2A7D772 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07726517FD09941F34BA4783 /* R.generated.swift */; };
 		3E025935F10CBA51D0BE7DFE /* MainConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB148E6C03061E6A3919E81 /* MainConfigurator.swift */; };
-		409518DC4A8742293A4FEE13 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D9B5C18A10057B8ED62454B4 /* ReSwift */; };
+		409518DC4A8742293A4FEE13 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 945130D29E9CC25B1D56C1C6 /* Rswift */; };
 		424F5C4D5060FA038B8AFDF3 /* Main.gv in Resources */ = {isa = PBXBuildFile; fileRef = 2CE25225609D9E53AB229EF7 /* Main.gv */; };
 		45952A29EE4D388E83C6CCE2 /* ButtonPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49E8ECAEA44CF4F7DF1DD2A /* ButtonPreview.swift */; };
 		46103E06F43D68E5860DBB4F /* AnyNeverPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459F8929DF840BA11C35B27 /* AnyNeverPublisher.swift */; };
@@ -217,7 +218,8 @@
 		CCAFE97906BF58675A43F3E7 /* MainRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E740CE407898306FD7755A3 /* MainRender.swift */; };
 		CEF5842D74CE4E5B2D320E45 /* UINavigationController+Pop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2700D6A27B75F19119B093BC /* UINavigationController+Pop.swift */; };
 		CF0E9021A9C0BDC827AC33B1 /* Decodable+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F189998E65E6D7D31292E4C0 /* Decodable+Utils.swift */; };
-		CF7D30D92B518A6F0034B1B7 /* SceneDelegate+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D30D82B518A6F0034B1B7 /* SceneDelegate+Test.swift */; };
+		CF7D30DD2B51FDC30034B1B7 /* BuildType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D30DB2B51FD940034B1B7 /* BuildType.swift */; };
+		CF7D30DE2B51FDC30034B1B7 /* BuildType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D30DB2B51FD940034B1B7 /* BuildType.swift */; };
 		CFEA1D1AEF73CEE5542FAB3E /* UIBarButtonItem+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A760F83A7D21F39F8AF8F /* UIBarButtonItem+Creation.swift */; };
 		D04DAD1218D674F09C0DC485 /* UIImage+Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFBCFDB4DA85C53E33C02F6 /* UIImage+Render.swift */; };
 		D05F5D67196C4D1C8BCD22B7 /* StateMachineError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34F65B53EC2FDBAA1AE429 /* StateMachineError.swift */; };
@@ -242,7 +244,7 @@
 		E353DA24F71160BE8DC1E60F /* SceneDelegateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA03CBBBBAACE5B8AF9FBE /* SceneDelegateFactory.swift */; };
 		E4C7D1DDEAC1C9190B03C5EB /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC17107056E0441E5C6A9D /* Users.swift */; };
 		E4FE1340D96D0FCE7ACE5526 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88DC02B33F48825336F599F /* BaseTest.swift */; };
-		E69AB4BA4A2996185DA28927 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 87635E357410C7E33CE290BB /* Kingfisher */; };
+		E69AB4BA4A2996185DA28927 /* Log in Frameworks */ = {isa = PBXBuildFile; productRef = 1AA10E77A6F622F88ED06317 /* Log */; };
 		E932E423B923DFE17FAF0386 /* SceneDelegate+UIApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CF2BF8E6847273E32E82D /* SceneDelegate+UIApplicationDelegate.swift */; };
 		E9A5D220FF0E52C3A5B2A346 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084BD9D6A99133E59B7703ED /* AutoMockable.generated.swift */; };
 		EAFC189349C8910182CB33EC /* SceneDelegateTEMPLATE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F61AAA8DBE221B075EF0B44 /* SceneDelegateTEMPLATE.swift */; };
@@ -466,7 +468,7 @@
 		CAE97327A464FF1D4FC832F3 /* CompositeSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeSceneDelegate.swift; sourceTree = "<group>"; };
 		CD1FABCB5D0000B6E86863A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CDA5E749B5D006E43DF22C1E /* AutoEquatable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoEquatable.generated.swift; sourceTree = "<group>"; };
-		CF7D30D82B518A6F0034B1B7 /* SceneDelegate+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneDelegate+Test.swift"; sourceTree = "<group>"; };
+		CF7D30DB2B51FD940034B1B7 /* BuildType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildType.swift; sourceTree = "<group>"; };
 		D06C67D011BDDF45BDB5C89C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D1316B61992F7C40BE828635 /* UIViewController+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationBar.swift"; sourceTree = "<group>"; };
 		D2659E52B2AA40DE139D3AF4 /* Valencia.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Valencia.gpx; sourceTree = "<group>"; };
@@ -511,9 +513,10 @@
 				5C5499299C26593CF86C06E2 /* UIKit.framework in Frameworks */,
 				C1114C20FB3FDCD759E234A5 /* Domain.framework in Frameworks */,
 				80579B699A8600E6B304CBA2 /* SharedUtils.framework in Frameworks */,
-				E69AB4BA4A2996185DA28927 /* Kingfisher in Frameworks */,
-				29D6858F0E0F860D2177E4F9 /* Rswift in Frameworks */,
-				409518DC4A8742293A4FEE13 /* ReSwift in Frameworks */,
+				E69AB4BA4A2996185DA28927 /* Log in Frameworks */,
+				29D6858F0E0F860D2177E4F9 /* Kingfisher in Frameworks */,
+				409518DC4A8742293A4FEE13 /* Rswift in Frameworks */,
+				022A57F374853E12BAB721E7 /* ReSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,7 +595,6 @@
 				B466F033B9C3D7105C80944D /* SceneDelegate_SPEC.swift */,
 				CD1FABCB5D0000B6E86863A3 /* SceneDelegate.swift */,
 				8F7CF2BF8E6847273E32E82D /* SceneDelegate+UIApplicationDelegate.swift */,
-				CF7D30D82B518A6F0034B1B7 /* SceneDelegate+Test.swift */,
 				439643BA3D42636C4BB89E66 /* SceneDelegate+UISceneDelegate.swift */,
 				FE1ABA1FAAD0AF01B018BBB4 /* SceneDelegate+UIWindowSceneDelegate.swift */,
 				E435BFC73EF1E9521311626F /* SceneDelegateMock.swift */,
@@ -679,6 +681,7 @@
 		3F173C4026904FA7F50B3070 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CF7D30DB2B51FD940034B1B7 /* BuildType.swift */,
 				7ED1B747844570ECCC699E88 /* Logger.swift */,
 				7A131BF2F1A1368CA0CD5EB5 /* String+Version.swift */,
 				409A7E15BAB04F006BEAB69B /* UIImage+Url.swift */,
@@ -1337,6 +1340,7 @@
 			);
 			name = Project;
 			packageProductDependencies = (
+				1AA10E77A6F622F88ED06317 /* Log */,
 				87635E357410C7E33CE290BB /* Kingfisher */,
 				945130D29E9CC25B1D56C1C6 /* Rswift */,
 				D9B5C18A10057B8ED62454B4 /* ReSwift */,
@@ -1426,6 +1430,7 @@
 			mainGroup = 293D0FF827366B513839236A;
 			packageReferences = (
 				ED963C3D43CE43A78E0477CC /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				33634BDFBF7E6ED867837092 /* XCRemoteSwiftPackageReference "log-ios" */,
 				81CB75A22FE410C26CA3C408 /* XCRemoteSwiftPackageReference "R.swift" */,
 				D9D2456023659741BA828A84 /* XCRemoteSwiftPackageReference "ReSwift" */,
 			);
@@ -1677,7 +1682,6 @@
 				0819A4EBDA6853A3E07A9B89 /* DateFormat+Project.swift in Sources */,
 				B17A27AA43144B7BAC5031DC /* EffectType.swift in Sources */,
 				2498B5AE7D0F32A0706B37BE /* EventType.swift in Sources */,
-				CF7D30D92B518A6F0034B1B7 /* SceneDelegate+Test.swift in Sources */,
 				7E20D43345F7A3FC0215EA77 /* LogMiddleware.swift in Sources */,
 				6F0119E0D63711106297D9DB /* Logger.swift in Sources */,
 				9EC07D4E8C641D06BB0DCEE5 /* MainConfigurator.swift in Sources */,
@@ -1695,6 +1699,7 @@
 				E932E423B923DFE17FAF0386 /* SceneDelegate+UIApplicationDelegate.swift in Sources */,
 				47ED26B6D68CF67F3B1F43B9 /* SceneDelegate+UISceneDelegate.swift in Sources */,
 				B53143652F08925A91DBD767 /* SceneDelegate+UIWindowSceneDelegate.swift in Sources */,
+				CF7D30DD2B51FDC30034B1B7 /* BuildType.swift in Sources */,
 				D3E490E0C8667639BBD9AC20 /* SceneDelegate.swift in Sources */,
 				2D1205AD6C6BF0892CA0B510 /* SceneDelegateConfigurations.swift in Sources */,
 				28AECAEA2D098367999AF48C /* SceneDelegateDebug.swift in Sources */,
@@ -1855,6 +1860,7 @@
 				1D8144D00D2B191FA294DA1A /* SceneModel.swift in Sources */,
 				F589CBA47B4F339C4D5FC11B /* SceneRender.swift in Sources */,
 				303313132E70BEFAF8A28B15 /* SceneViewModel.swift in Sources */,
+				CF7D30DE2B51FDC30034B1B7 /* BuildType.swift in Sources */,
 				C4F70509A57622883EE4E8BC /* ShadowModel.swift in Sources */,
 				7C8E073BCAF853FD51A1B223 /* State.swift in Sources */,
 				F0D9DE06C49922B8FABEDFD1 /* StateMachine.swift in Sources */,
@@ -2327,6 +2333,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		33634BDFBF7E6ED867837092 /* XCRemoteSwiftPackageReference "log-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/wundercar/log-ios.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.1.0;
+			};
+		};
 		81CB75A22FE410C26CA3C408 /* XCRemoteSwiftPackageReference "R.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
@@ -2354,6 +2368,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1AA10E77A6F622F88ED06317 /* Log */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 33634BDFBF7E6ED867837092 /* XCRemoteSwiftPackageReference "log-ios" */;
+			productName = Log;
+		};
 		87635E357410C7E33CE290BB /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = ED963C3D43CE43A78E0477CC /* XCRemoteSwiftPackageReference "Kingfisher" */;
