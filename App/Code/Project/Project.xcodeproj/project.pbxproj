@@ -1235,14 +1235,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		"TEMP_B74168A7-1E7E-4CB4-A3BE-91C34F409E8B" /* SharedUtils */ = {
+		"TEMP_0EF29D6F-27D6-402C-9E3A-70F091D7E401" /* SharedUtils */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = SharedUtils;
 			sourceTree = "<group>";
 		};
-		"TEMP_D0414B96-97FF-4778-B935-2B0246CF0362" /* Tests */ = {
+		"TEMP_EADDBD89-11B4-484A-B1AE-559035E978D5" /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -2249,7 +2249,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Debug";
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
