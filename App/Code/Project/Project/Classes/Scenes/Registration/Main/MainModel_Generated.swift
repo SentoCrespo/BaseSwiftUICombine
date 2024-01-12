@@ -1,4 +1,4 @@
-// Generated using State Machine Code Generation 0.1 — https://github.com/vCrespoP
+// Generated using State Machine Code Generation 0.1 — https://github.com/SentoCrespo
 // DO NOT EDIT
 
 // swiftlint:disable all
@@ -32,7 +32,7 @@ extension MainModel {
     static let initialEvent: Event = .start
 
     // MARK: - Effects
-    // sourcery: AutoEquatableEnumValues, AutoHashableEnumValues
+    // sourcery: AutoEquatable, AutoHashable
     /// Instructions to trigger logic
     enum Effect: EffectType {
         case loadItems

@@ -1220,18 +1220,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		"TEMP_C5DD9681-6912-42A3-9F77-FA9E6F9FF9FC" /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		"TEMP_ECF2C3FB-41B9-4A42-AB57-014C0CC0889B" /* SharedUtils */ = {
+		"TEMP_5434BEF0-FE37-48AC-A66F-A5ED30C63D83" /* SharedUtils */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = SharedUtils;
+			sourceTree = "<group>";
+		};
+		"TEMP_9C0CCBEE-7C76-4EFA-AFD4-BDC5109EE7A9" /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
