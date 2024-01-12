@@ -17,5 +17,6 @@ digraph {
     2 -> 3 [label="onLoadingSuccess(String)"]
     3 -> 2 [label="onReload"]
     3 -> 3 [label="onSelect(String) >> navigateToProfile"]
+    3 -> 3 [label="onSwipe(String) >> removeItem"]
     
 }

@@ -17,9 +17,19 @@ class MainViewModel: BaseViewModel<MainModel>, ObservableObject {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.apply(event: .onLoadingSuccess("Result"))
             }
+        case .removeItem:
+            Log.debug("Remove Item")
         case .navigateToProfile:
             Log.debug("Navigate to profile effect")
         }
+    }
+    
+    override func handle(event: MainModel.Event) {
+        Log.debug("Processing event: \(event)")
+//        switch event {
+//            case .onAppear:
+//                break
+//        }
     }
     
 }

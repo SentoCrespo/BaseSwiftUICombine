@@ -26,6 +26,7 @@ extension MainModel {
 		case onLoadingSuccess(String)
 		case onReload
 		case onSelect(String)
+		case onSwipe(String)
     }
 
     static let initialEvent: Event = .start
@@ -36,6 +37,7 @@ extension MainModel {
     enum Effect: EffectType {
         case loadItems
 		case navigateToProfile
+		case removeItem
     }
 
     // MARK: - Transitions
@@ -55,6 +57,8 @@ extension MainModel {
 				return (nextState: .loading, effect: nil)
 			case (.loaded, .onSelect):
 				return (nextState: .loaded, effect: .navigateToProfile)
+			case (.loaded, .onSwipe):
+				return (nextState: .loaded, effect: .removeItem)
             default:
                 assertionFailure("Invalid transition from '\(state)' with '\(event)'")
                 return (nextState: state, effect: nil)

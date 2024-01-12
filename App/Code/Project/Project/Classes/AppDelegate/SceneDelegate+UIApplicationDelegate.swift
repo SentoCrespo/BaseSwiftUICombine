@@ -1,16 +1,16 @@
 import Foundation
-import WUEnvironment
+import UIKit // TODO: Remove?
 
 // MARK: - UIApplicationDelegate
 extension SceneDelegate: UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         
-        // Bypass for testing purposes
-        if WUManagerEnvironment.isTestNoConfig == true {
-            // Call the composite delegate
-            sceneDelegate = SceneDelegateFactory.makeTest()
-        }
+        // TODO: Bypass for testing purposes
+//        if WUManagerEnvironment.isTestNoConfig == true {
+//            // Call the composite delegate
+//            sceneDelegate = SceneDelegateFactory.makeTest()
+//        }
         
         // Call the composite delegate
         let result = sceneDelegate.application?(

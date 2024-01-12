@@ -1,6 +1,5 @@
 PODS:
   - AppVersionMonitor (1.4.0)
-  - IQDropDownTextField (2.0)
   - PKHUD (5.3.0)
   - R.swift (5.4.0):
     - R.swift.Library (~> 5.3.0)
@@ -11,7 +10,6 @@ PODS:
 
 DEPENDENCIES:
   - AppVersionMonitor (= 1.4.0)
-  - IQDropDownTextField (= 2.0)
   - PKHUD
   - R.swift (= 5.4.0)
   - Sourcery (= 1.6.0)
@@ -21,7 +19,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AppVersionMonitor
-    - IQDropDownTextField
     - PKHUD
     - R.swift
     - R.swift.Library
@@ -40,7 +37,6 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AppVersionMonitor: 0227cbd70c78b787190afd5e959c0280718bac8e
-  IQDropDownTextField: 79293d19042b6f2ee6f02decf4a0e68e59e4f327
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
@@ -48,6 +44,6 @@ SPEC CHECKSUMS:
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
   WUEnvironment: cde7b59a20972a84f313bfc007cfb5f4133ed8c9
 
-PODFILE CHECKSUM: 84c4d86fbdfab438870bcdee2368089fd0fda5bf
+PODFILE CHECKSUM: 3b178585590d86162819acd8f1a11d720eacb1e1
 
 COCOAPODS: 1.11.2
