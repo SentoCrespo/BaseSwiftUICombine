@@ -1235,20 +1235,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		"TEMP_0EF29D6F-27D6-402C-9E3A-70F091D7E401" /* SharedUtils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SharedUtils;
-			sourceTree = "<group>";
-		};
-		"TEMP_EADDBD89-11B4-484A-B1AE-559035E978D5" /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
