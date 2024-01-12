@@ -49,3 +49,44 @@ public extension ReduxStore {
     }
     
 }
+
+import SwiftUI
+extension ReduxStore {
+        
+    typealias Extractor<T: Equatable> = (ReduxState) -> T
+    typealias ExtractorOptional<T: Equatable> = (ReduxState) -> T?
+    func getValue<T: Equatable>(_ extractor: @escaping Extractor<T>) -> T {
+        return extractor(self.state)
+    }
+    
+    func getOptionalValue<T: Equatable>(_ extractor: @escaping ExtractorOptional<T>) -> T? {
+        return extractor(self.state)
+    }
+    
+    func getChanges<T: Equatable>(whenThisElementChanges: @escaping Extractor<T>) -> AnyPublisher<T, Never> {
+        return self.$state
+            .map { whenThisElementChanges($0) }
+            .removeDuplicates()
+            .eraseToAnyPublisher()
+    }
+    
+    func getUpdates<T: Equatable>(whenThisElementUpdates: @escaping Extractor<T>) -> AnyPublisher<T, Never> {
+        return self.$state
+            .map { whenThisElementUpdates($0) }
+            .eraseToAnyPublisher()
+    }
+    
+}
+
+extension Publisher {
+    
+    func getChanges() -> AnyPublisher<Output, Failure> where Output: Equatable {
+        return debounce(
+            for: .milliseconds(300),
+            scheduler: DispatchQueue.main
+        )
+        .removeDuplicates()
+        .eraseToAnyPublisher()
+    }
+    
+}

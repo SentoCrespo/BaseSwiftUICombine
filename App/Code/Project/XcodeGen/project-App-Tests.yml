@@ -25,6 +25,10 @@
        - path: Project
          includes:
            - "**/*_SPEC*.swift"
+           
+       - path: ProjectTests
+         includes:
+           - "**/*.swift"
        
        - path: Project
          excludes:

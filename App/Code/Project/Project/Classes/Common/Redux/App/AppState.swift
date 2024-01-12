@@ -7,6 +7,8 @@ public struct AppReduxState: ReduxState {
     
 }
 
+extension AppReduxState: Equatable, Hashable {}
+
 public extension AppReduxState {
     
     static var initial: AppReduxState {

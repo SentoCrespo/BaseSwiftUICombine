@@ -6,3 +6,5 @@ struct SubState1: ReduxState {
     var myGlobalVar: String
     
 }
+
+extension SubState1: Equatable, Hashable {}
