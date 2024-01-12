@@ -54,6 +54,8 @@ settings:
     TARGETED_DEVICE_FAMILY: 1
     ALWAYS_SEARCH_USER_PATHS: NO
     SDKROOT: iphoneos
+    CLANG_ENABLE_OBJC_WEAK: YES
+    
   ### Specific settings
   configs:
     Debug:
