@@ -1,17 +1,17 @@
-// swiftlint:disable line_length
 import Foundation
-import UIKit // TODO: Remove?
+import UIKit
 
 // MARK: - UIApplicationDelegate
 extension SceneDelegate: UIApplicationDelegate {
     
+    // swiftlint:disable:next line_length
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         
-        // TODO: Bypass for testing purposes
-//        if WUManagerEnvironment.isTestNoConfig == true {
-//            // Call the composite delegate
-//            sceneDelegate = SceneDelegateFactory.makeTest()
-//        }
+        // Bypass for testing purposes
+        if SceneDelegate.isTestNoConfig == true {
+            // Call the composite delegate
+            sceneDelegate = SceneDelegateFactory.makeTest()
+        }
         
         // Call the composite delegate
         let result = sceneDelegate.application?(
@@ -20,7 +20,7 @@ extension SceneDelegate: UIApplicationDelegate {
         )
         
         return result ?? false
-
+        
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
@@ -47,7 +47,7 @@ extension SceneDelegate: UIApplicationDelegate {
         // Call the composite delegate
         sceneDelegate.applicationWillTerminate?(application)
     }
-
+    
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
         let result = sceneDelegate.application?(
             app,
@@ -56,7 +56,7 @@ extension SceneDelegate: UIApplicationDelegate {
         )
         return result ?? false
     }
-
+    
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         // Call the composite delegate
         sceneDelegate.application?(
@@ -72,9 +72,10 @@ extension SceneDelegate: UIApplicationDelegate {
             application,
             didFailToRegisterForRemoteNotificationsWithError: error
         )
-
+        
     }
     
+    // swiftlint:disable:next line_length
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         
         // Call the composite delegate
