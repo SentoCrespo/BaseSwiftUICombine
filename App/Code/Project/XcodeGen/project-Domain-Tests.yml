@@ -18,24 +18,18 @@ targets:
         includes:
           - Tests
           - "**/*_SPEC*.swift"
-        excludes: 
-          - Models/Reservation/Reservation+Merge_SPEC.swift
-          # TODO: Fix tests for Reservation+Merge_SPEC
-          # TODO: Remove from excludes too
-      - path: Domain/Models/Reservation
-        includes: 
-          - Reservation+Merge_SPEC.swift
-        buildPhase: none
-
+        excludes:
+          - Info.plist
+      
     ## Settings
     settings:
       base:
         SDKROOT: iphoneos
         INFOPLIST_FILE: $(SRCROOT)/Domain/Info.plist
-        PRODUCT_BUNDLE_IDENTIFIER: com.wunderfleet.domain.tests
-        USER_HEADER_SEARCH_PATHS: ../CarSharingSpecialisation/ExternSource
+        PRODUCT_BUNDLE_IDENTIFIER: com.sento.project.domain.tests
+        USER_HEADER_SEARCH_PATHS: ../ProjectSpecialisation/ExternSource
         PRODUCT_NAME: DomainTests
-        USER_HEADER_SEARCH_PATHS: ../CarSharingSpecialisation/ExternSource
+        USER_HEADER_SEARCH_PATHS: ../ProjectSpecialisation/ExternSource
         SKIP_INSTALL: YES
 
     ## Dependencies

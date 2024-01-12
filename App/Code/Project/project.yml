@@ -19,12 +19,12 @@ include:
   - path: XcodeGen/project-Packages.yml
     relativePaths: false
 
-  # ### Domain
-  # - path: XcodeGen/project-Domain.yml
-  #   relativePaths: false  
+  ### Domain
+  - path: XcodeGen/project-Domain.yml
+    relativePaths: false
       
-  # - path: XcodeGen/project-Domain-Tests.yml
-  #   relativePaths: false 
+  - path: XcodeGen/project-Domain-Tests.yml
+    relativePaths: false 
 
   ### Platforms
   # - path: XcodeGen/project-Platform-NetworkLayerSpecific.yml
