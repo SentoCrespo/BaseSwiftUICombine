@@ -1,0 +1,74 @@
+// Created by Vicente Crespo - 2020
+// swiftlint:disable all
+
+// ## DOCS
+// ### Non-optional property
+//         1) No default value
+//             ```try container.anyCodable(forKey: .key)```
+//         2) Default value
+//             ``` container.anyCodableIfPresent(forKey: .key) ?? {defaultValue} ```
+
+{% for type in types.implementing.AutoInitUndefinedDecodable %}
+// sourcery:inline:{{ type.name }}.AutoInitUndefinedDecodable
+
+// MARK: - {{ type.name }} Decodable
+{##}
+{# ---- METHOD SIGNATURE ----- #}
+{{ type.accessLevel }} init(from decoder: Decoder) throws {
+
+{# ---- IMPLEMENTATION ----- #}
+{{ spacing }}   let container = try decoder.container(keyedBy: CodingKeys.self)
+ 
+{% for variable in type.variables|stored %}
+    {% if not variable.annotations.skipDecodable %}
+
+        {% if variable.typeName.generic.name == 'Domain.Undefined' %}
+            {# ---- OPTIONAL PROPERTY ---- #}
+            {# ---- ENUM TYPE ---- #}
+            {% if variable.annotations.autoDecodableEnum %}
+{{ spacing }}   if let rawValue: {{ variable.annotations.autoDecodableEnum }} = container
+{{ spacing }}       .anyCodableIfPresent(forKey: .{{ variable.name }})?
+{{ spacing }}       .undefinedValue().value,
+{{ spacing }}   let {{ variable.name }} = {{ variable.typeName.generic.typeParameters.first.typeName }}(rawValue: rawValue) {
+{{ spacing }}       self.{{ variable.name }} = .defined({{ variable.name }})
+{{ spacing }}   }
+            {% else %}
+            {# ---- BASIC TYPES ---- #}
+{{ spacing }}   self.{{ variable.name }} = container
+{{ spacing }}       .anyCodableIfPresent(forKey: .{{ variable.name }})?
+{{ spacing }}       .undefinedValue() ?? .undefined
+            {% endif %}
+        {% else %}
+        {# ---- NON OPTIONAL PROPERTY ---- #}
+         
+            {# ---- WITH DEFAULT VALUE ---- #}
+            {% if variable.defaultValue != null %}
+{{ spacing }}   if let {{ variable.name }} = try? container
+{{ spacing }}       .decodeIfPresent({{ variable.typeName }}.self, forKey: .{{ variable.name }}) {
+{{ spacing }}           self.{{ variable.name }} = {{ variable.name }}
+{{ spacing }}       }
+            {# ---- WITHOUT DEFAULT VALUE ---- #}
+            {% else %}
+{{ spacing }}       self.{{ variable.name }} = try container
+{{ spacing }}         .anyCodable(forKey: .{{ variable.name }})
+                {% if variable.typeName.unwrappedTypeName == "String" %}
+{{ spacing }}         .toString()
+                {% elif variable.typeName.unwrappedTypeName == "Int" %}
+{{ spacing }}          .toInt()
+                {% elif variable.typeName.unwrappedTypeName == "Double" %}
+{{ spacing }}          .toDouble()
+                {% elif variable.typeName.unwrappedTypeName == "Date" %}
+{{ spacing }}          .toDate()
+                {% elif variable.typeName.unwrappedTypeName == "Bool" %}
+{{ spacing }}          .toBool()
+                {% endif %}
+            {% endif %}
+        {# ---- END NON OPTIONAL PROPERTY ---- #}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+}
+
+// sourcery:end
+{% endfor %}

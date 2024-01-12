@@ -5,7 +5,6 @@
 // Pods
 //
 
-#import <IQDropDownTextField/IQDropDownTextField.h>
 
 //
 // Project classes

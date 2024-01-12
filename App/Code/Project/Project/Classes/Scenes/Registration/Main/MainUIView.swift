@@ -85,8 +85,7 @@ private extension MainUIView {
 struct MainUIView_Previews: PreviewProvider {
     
     static var previews: some View {
-        let datasource = DataSourceConfiguration()
-        let configurator = MainConfigurator(datasource: datasource)
+        let configurator = MainConfigurator()
         let render = MainRender(configurator: configurator)
         return render.view()
     }

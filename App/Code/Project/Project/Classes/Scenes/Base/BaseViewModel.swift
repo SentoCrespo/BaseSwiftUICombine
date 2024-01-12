@@ -40,6 +40,11 @@ class BaseViewModel<Model: SceneModel>: SceneViewModel {
                 }
                 return output
             }
+            // Handle events on every change
+            .map { [weak self] (output) -> TransitionOutput in
+                self?.handle(event: output.event)
+                return output
+            }
             // Propagate the changes to published var
             .assign(to: \.output, on: self)
             .store(in: &disposeBag)
@@ -51,6 +56,10 @@ class BaseViewModel<Model: SceneModel>: SceneViewModel {
     }
     
     func handle(effect: Model.Effect) {
+        assertionFailure("Implement in subclass")
+    }
+    
+    func handle(event: Model.Event) {
         assertionFailure("Implement in subclass")
     }
             

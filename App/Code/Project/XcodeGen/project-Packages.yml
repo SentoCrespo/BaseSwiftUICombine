@@ -1,0 +1,18 @@
+# ---------------------------------
+# Swift Packages
+# ---------------------------------
+
+packages:
+
+   ### Third Party 
+   Kingfisher:
+      url: https://github.com/onevcat/Kingfisher
+      exactVersion: 7.6.2
+     
+   R.swift.Library:
+      url: https://github.com/mac-cain13/R.swift.Library
+      exactVersion: 5.4.0
+      
+   ReSwift:
+      url: https://github.com/ReSwift/ReSwift
+      exactVersion: 6.1.0

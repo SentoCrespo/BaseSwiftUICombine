@@ -28,4 +28,10 @@ extension UIImageView {
             }
         }
     }
+    
+    /// Cancels active image download from url
+    func cancelRemoteImage() {
+        self.kf.cancelDownloadTask()
+    }
+    
 }

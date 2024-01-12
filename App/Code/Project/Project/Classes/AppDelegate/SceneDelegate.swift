@@ -12,16 +12,6 @@ class SceneDelegate: UIResponder {
 }
 
 // MARK: Global Variables
-import Log
-var Log: Logger {
-    let delegate = SceneDelegate
-        .shared
-        .compositeDelegate?
-        .delegate(
-            type: SceneDelegateThirdParty.self
-    )
-    return delegate?.logger ?? ConsoleLogger()
-}
 
 // MARK: Computed Variables
 extension SceneDelegate {
@@ -34,9 +24,4 @@ extension SceneDelegate {
         return SceneDelegate.shared.sceneDelegate as? CompositeSceneDelegate
     }
 
-    var datasource: DataSourceConfiguration? {
-        let delegate = compositeDelegate?.delegate(type: SceneDelegateConfigurations.self)
-        return delegate?.dataSourceConfiguration
-    }
-    
 }

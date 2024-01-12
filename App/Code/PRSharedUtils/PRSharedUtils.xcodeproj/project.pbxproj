@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B1C3E4489303EF4234FFDDD /* Pods_PRSharedUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A3E5B3C401567DD9F81BB7 /* Pods_PRSharedUtils.framework */; };
-		4FDF205D0B86C573ECDE5ACB /* Pods_PRSharedUtilsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE4CD468C09F7029C4ABBEE /* Pods_PRSharedUtilsTests.framework */; };
 		CF26A4522224017C00D0256C /* PRSharedUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF26A4482224017C00D0256C /* PRSharedUtils.framework */; };
 		CF26A4572224017C00D0256C /* SharedUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26A4562224017C00D0256C /* SharedUtilsTests.swift */; };
 		CF26A4592224017C00D0256C /* SharedUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = CF26A44B2224017C00D0256C /* SharedUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -61,8 +59,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2DE4CD468C09F7029C4ABBEE /* Pods_PRSharedUtilsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PRSharedUtilsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		41A3E5B3C401567DD9F81BB7 /* Pods_PRSharedUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PRSharedUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF26A4482224017C00D0256C /* PRSharedUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PRSharedUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF26A44B2224017C00D0256C /* SharedUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedUtils.h; sourceTree = "<group>"; };
 		CF26A44C2224017C00D0256C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,7 +108,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B1C3E4489303EF4234FFDDD /* Pods_PRSharedUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +116,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF26A4522224017C00D0256C /* PRSharedUtils.framework in Frameworks */,
-				4FDF205D0B86C573ECDE5ACB /* Pods_PRSharedUtilsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,8 +125,6 @@
 		66DDC5280286692FDDAFD8D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				41A3E5B3C401567DD9F81BB7 /* Pods_PRSharedUtils.framework */,
-				2DE4CD468C09F7029C4ABBEE /* Pods_PRSharedUtilsTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -565,7 +557,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -734,7 +725,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -761,7 +751,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;

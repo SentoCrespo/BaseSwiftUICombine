@@ -1,6 +1,6 @@
 import Foundation
 
-func appReducer(state: inout AppReduxState, action: AppReduxAction) -> Void {
+func appReducer(state: inout AppReduxState, action: AppReduxAction) {
     
     switch(action) {
         case .subState1(let action1):
