@@ -1,0 +1,50 @@
+# ---------------------------------
+# Domain Test target
+# ---------------------------------
+
+targets: 
+  DomainTests:
+
+    ## Properties
+    platform: iOS
+    type: bundle.unit-test
+    gatherCoverageData: false 
+
+    ## Sources
+    sources: 
+
+      ### Target files
+      - path: Domain
+        includes:
+          - Tests
+          - "**/*_SPEC*.swift"
+        excludes: 
+          - Models/Reservation/Reservation+Merge_SPEC.swift
+          # TODO: Fix tests for Reservation+Merge_SPEC
+          # TODO: Remove from excludes too
+      - path: Domain/Models/Reservation
+        includes: 
+          - Reservation+Merge_SPEC.swift
+        buildPhase: none
+
+    ## Settings
+    settings:
+      base:
+        SDKROOT: iphoneos
+        INFOPLIST_FILE: $(SRCROOT)/Domain/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.wunderfleet.domain.tests
+        USER_HEADER_SEARCH_PATHS: ../CarSharingSpecialisation/ExternSource
+        PRODUCT_NAME: DomainTests
+        USER_HEADER_SEARCH_PATHS: ../CarSharingSpecialisation/ExternSource
+        SKIP_INSTALL: YES
+
+    ## Dependencies
+    dependencies:
+
+      ### iOS SDKs
+      - sdk: Foundation.framework
+      - sdk: XCTest.framework
+
+      ### Other targets
+      - target: Domain
+        embed: false

@@ -1,0 +1,142 @@
+# ---------------------------------
+# Main XcodeGen project file
+# ---------------------------------
+
+## Include XcodeGen project files
+include: 
+   
+  ### Main Target
+  - path: XcodeGen/project-App.yml
+    relativePaths: false
+
+  - path: XcodeGen/project-App-Tests.yml
+    relativePaths: false
+
+  - path: XcodeGen/project-App-UITests.yml
+    relativePaths: false   
+
+  ### Dependencies
+  - path: XcodeGen/project-Packages.yml
+    relativePaths: false
+
+  # ### Domain
+  # - path: XcodeGen/project-Domain.yml
+  #   relativePaths: false  
+      
+  # - path: XcodeGen/project-Domain-Tests.yml
+  #   relativePaths: false 
+
+  ### Platforms
+  # - path: XcodeGen/project-Platform-NetworkLayerSpecific.yml
+  #   relativePaths: false  
+      
+  # - path: XcodeGen/project-Platform-NetworkLayerSpecific-Tests.yml
+  #   relativePaths: false 
+
+  # - path: XcodeGen/project-Platform-PersistenceSecure.yml
+  #   relativePaths: false  
+      
+  # - path: XcodeGen/project-Platform-PersistenceSecure-Tests.yml
+  #   relativePaths: false 
+
+  # - path: XcodeGen/project-Platform-PersistenceSecure-Keychain.yml
+  #   relativePaths: false  
+      
+  # - path: XcodeGen/project-Platform-PersistenceSecure-Keychain-Tests.yml
+  #   relativePaths: false 
+
+  # - path: XcodeGen/project-Platform-Persistence-Realm.yml
+  #   relativePaths: false  
+      
+  # - path: XcodeGen/project-Platform-Persistence-Realm-Tests.yml
+  #   relativePaths: false
+
+  # - path: XcodeGen/project-Platform-Persistence.yml
+  #   relativePaths: false  
+      
+  # - path: XcodeGen/project-Platform-Persistence-Tests.yml
+  #   relativePaths: false
+
+  # - path: XcodeGen/project-Platform-Persistence-Disk.yml
+  #   relativePaths: false  
+      
+  # - path: XcodeGen/project-Platform-Persistence-Disk-Tests.yml
+  #   relativePaths: false
+
+  # - path: XcodeGen/project-Platform-Persistence-Preferences.yml
+  #   relativePaths: false
+
+  # - path: XcodeGen/project-Platform-Persistence-Preferences-Tests.yml
+  #   relativePaths: false
+
+  # - path: XcodeGen/project-Platform-Persistence-Preferences-UserDefaults.yml
+  #   relativePaths: false
+
+  # - path: XcodeGen/project-Platform-Persistence-Preferences-UserDefaults-Tests.yml
+  #   relativePaths: false
+      
+  # - path: XcodeGen/project-Platform-DataSourceApi.yml
+  #   relativePaths: false
+
+  # - path: XcodeGen/project-Platform-DataSourceApi-Tests.yml
+  #   relativePaths: false
+ 
+  # ### Use Cases
+  # - path: XcodeGen/project-UseCases.yml
+  #   relativePaths: false   
+
+  # - path: XcodeGen/project-UseCases-Tests.yml
+  #   relativePaths: false   
+
+  # ### Mocks
+  # - path: XcodeGen/project-Mocks.yml
+  #   relativePaths: false   
+
+  # ### One Signal
+  # - path: XcodeGen/project-OneSignal-Extension.yml
+  #   relativePaths: false
+
+  # ### Shared Utils
+  # - path: XcodeGen/project-SharedUtils.yml
+  #   relativePaths: false
+
+  # - path: XcodeGen/project-SharedUtils-Tests.yml
+  #   relativePaths: false
+
+  # ### Network Layer Rx
+  # - path: XcodeGen/project-NetworkLayerRx.yml
+  #   relativePaths: false
+
+  # - path: XcodeGen/project-NetworkLayerRx-Tests.yml
+  #   relativePaths: false
+   
+## Global project definition 
+name: Project
+options:
+  usesTabs: false
+  indentWidth: 4
+  deploymentTarget:
+    iOS: 16.0
+  groupSortPosition: bottom
+  generateEmptyDirectories: false
+
+## Global settings 
+settings:
+  base:
+    CODE_SIGN_STYLE: Manual
+    SWIFT_VERSION: 5.5
+    SUPPORTS_MACCATALYST: NO
+    SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: NO
+    SUPPORTED_PLATFORMS: "iphoneos iphonesimulator"
+    TARGETED_DEVICE_FAMILY: 1
+    ALWAYS_SEARCH_USER_PATHS: NO
+    SDKROOT: iphoneos
+  ### Specific settings
+  configs:
+    Debug:
+      ONLY_ACTIVE_ARCH: YES
+      GCC_OPTIMIZATION_LEVEL: 0
+      SWIFT_OPTIMIZATION_LEVEL: -Onone
+    Release:
+      ONLY_ACTIVE_ARCH: NO
+

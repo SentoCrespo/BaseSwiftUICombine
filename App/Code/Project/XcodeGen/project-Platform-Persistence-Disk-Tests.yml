@@ -1,0 +1,41 @@
+# ---------------------------------
+# Domain Test target
+# ---------------------------------
+
+targets: 
+  PlatformPersistenceDiskTests:
+
+    ## Properties
+    platform: iOS
+    type: bundle.unit-test
+    gatherCoverageData: false 
+
+    ## Sources
+    sources: 
+
+      ### Target files
+      - path: PlatformPersistenceDisk
+        includes:
+          - Tests
+          - "**/*_SPEC*.swift"
+      
+    ## Settings
+    settings:
+      base:
+        SDKROOT: iphoneos
+        INFOPLIST_FILE: $(SRCROOT)/PlatformPersistenceDisk/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.wunderfleet.platform.persistence.disk.tests
+        USER_HEADER_SEARCH_PATHS: ../CarSharingSpecialisation/ExternSource
+        PRODUCT_NAME: PlatformPersistenceDiskTests
+        SKIP_INSTALL: YES
+
+    ## Dependencies
+    dependencies:
+
+      ### iOS SDKs
+      - sdk: Foundation.framework
+      - sdk: XCTest.framework
+      
+      ### Other targets
+#      - target: PlatformPersistenceDisk
+#        embed: false

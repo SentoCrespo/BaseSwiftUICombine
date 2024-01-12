@@ -1,0 +1,41 @@
+// Created by Joshua Wood - 2021
+// swiftlint:disable all
+
+{% for type in types.implementing.AutoInitAnyCodableDecodable %}
+// sourcery:inline:{{ type.name }}.AutoInitAnyCodableDecodable
+
+// MARK: - {{ type.name }} Decodable
+{##}
+{# ---- METHOD SIGNATURE ----- #}
+{{ type.accessLevel }} init(from decoder: Decoder) throws {
+
+{# ---- IMPLEMENTATION ----- #}
+{{ spacing }}    let container = try decoder.container(keyedBy: CodingKeys.self)
+ 
+{% for variable in type.variables|stored %}
+    {% if not variable.annotations.skipAnyCodable %}
+
+{{ spacing }}    self.{{ variable.name }} = try{% if variable.isOptional %}?{% endif %} container
+{{ spacing }}        .anyCodable{% if variable.isOptional %}IfPresent{% endif %}(forKey: .{{ variable.name }}){% if variable.isOptional %}?{% endif %}
+                {% if variable.typeName.unwrappedTypeName == "String" %}
+{{ spacing }}        .toString(){% if variable.defaultValue != null %} ?? {{ variable.defaultValue  }}{% endif %}
+                {% elif variable.typeName.unwrappedTypeName == "Int" %}
+{{ spacing }}        .toInt(){% if variable.defaultValue != null %} ?? {{ variable.defaultValue  }}{% endif %}
+                {% elif variable.typeName.unwrappedTypeName == "Double" %}
+{{ spacing }}        .toDouble(){% if variable.defaultValue != null %} ?? {{ variable.defaultValue  }}{% endif %}
+                {% elif variable.typeName.unwrappedTypeName == "Date" %}
+{{ spacing }}        .toDate(){% if variable.defaultValue != null %} ?? {{ variable.defaultValue  }}{% endif %}
+                {% elif variable.typeName.unwrappedTypeName == "Bool" %}
+{{ spacing }}        .toBool(){% if variable.defaultValue != null %} ?? {{ variable.defaultValue  }}{% endif %}
+                {% endif %}
+        {% else %}
+
+{{ spacing }}    self.{{ variable.name }} = try container
+{{ spacing }}        .decode{% if variable.isOptional %}IfPresent{% endif %}({{ variable.unwrappedTypeName }}.self, forKey: .{{ variable.name }})
+    {% endif %}
+{% endfor %}
+}
+
+// sourcery:end
+{% endfor %}
+

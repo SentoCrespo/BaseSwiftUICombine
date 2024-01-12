@@ -1,0 +1,53 @@
+# ---------------------------------
+# Domain Test target
+# ---------------------------------
+
+targets: 
+  PlatformDataSourceApiTests:
+
+    ## Properties
+    platform: iOS
+    type: bundle.unit-test
+    gatherCoverageData: false 
+
+    ## Sources
+    sources: 
+
+      ### Target files
+      - path: PlatformDataSourceApi
+        includes:
+          - Tests
+          - "**/*_SPEC*.swift"
+
+    ## Settings
+    settings:
+      base:
+        SDKROOT: iphoneos
+        INFOPLIST_FILE: $(SRCROOT)/PlatformDataSourceApi/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.wunderfleet.platform.datasource.api.tests
+        USER_HEADER_SEARCH_PATHS: ../CarSharingSpecialisation/ExternSource
+        PRODUCT_NAME: PlatformDataSourceApiTests
+        SKIP_INSTALL: YES
+
+    ## Dependencies
+    dependencies:
+
+      ### iOS SDKs
+      - sdk: Foundation.framework
+      - sdk: XCTest.framework
+      
+      ### Other targets
+      - target: SharedUtils
+      - target: NetworkLayerRx
+      
+      ### Local Swift Packages
+      - package: NetworkLayer
+        product: NetworkLayer
+      - package: NetworkLayer
+        product: NetworkLayerURLSession
+      - package: NetworkLayer
+        product: NetworkLayerURLSessionTest
+      
+      ### Other targets
+      - target: PlatformDataSourceApi
+        embed: false

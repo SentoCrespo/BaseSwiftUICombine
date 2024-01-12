@@ -1,30 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "iqkeyboardmanager",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/hackiftekhar/IQKeyboardManager",
-      "state" : {
-        "revision" : "474f849accae40fe61b5302d9b057dd48ee073ba",
-        "version" : "6.5.9"
-      }
-    },
-    {
       "identity" : "kingfisher",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/onevcat/Kingfisher",
       "state" : {
         "revision" : "af4be924ad984cf4d16f4ae4df424e79a443d435",
         "version" : "7.6.2"
-      }
-    },
-    {
-      "identity" : "log-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/vCrespoP/log-ios",
-      "state" : {
-        "revision" : "06b60932a4f04d5b9ff6f6e54ad4c80c726ce064",
-        "version" : "1.0.0"
       }
     },
     {
@@ -37,12 +19,12 @@
       }
     },
     {
-      "identity" : "vcnetworkkit",
+      "identity" : "reswift",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/vCrespoP/VCNetworkKit.git",
+      "location" : "https://github.com/ReSwift/ReSwift",
       "state" : {
-        "revision" : "082117189607400db638809992282ff4b43bd4e2",
-        "version" : "1.0.0"
+        "revision" : "96146a29f394ae4c79be025fcec194e5b0d9c3b6",
+        "version" : "6.1.0"
       }
     }
   ],

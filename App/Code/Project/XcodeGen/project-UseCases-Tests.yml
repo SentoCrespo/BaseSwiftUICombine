@@ -1,0 +1,46 @@
+# ---------------------------------
+# Use Cases Test target
+# ---------------------------------
+
+targets: 
+  UseCasesTests:
+
+    ## Properties
+    platform: iOS
+    type: bundle.unit-test
+    
+    ## Sources
+    sources: 
+
+      ### Target files
+      - path: UseCases
+        includes:
+          - Tests
+          - "**/*_SPEC*.swift"
+    
+    ## Settings
+    settings:
+      base:
+        SDKROOT: iphoneos
+        PRODUCT_NAME: UseCasesTests
+        INFOPLIST_FILE: $(SRCROOT)/UseCases/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.wunderfleet.usecases.tests
+        CLANG_ENABLE_MODULES: YES
+        USER_HEADER_SEARCH_PATHS: ../CarSharingSpecialisation/ExternSource
+        SKIP_INSTALL: YES
+        
+    ## Dependencies
+    dependencies:
+
+      ### iOS SDKs
+      - sdk: Foundation.framework
+      - sdk: MapKit.framework
+      - sdk: XCTest.framework
+
+      ### Other targets
+      - target: Mocks
+        embed: false
+      - target: PlatformPersistenceSecureTests
+        embed: false
+      - target: UseCases
+        embed: false
