@@ -1,6 +1,6 @@
+// swiftlint:disable line_length
 import Foundation
 import UIKit
-import Log
 
 /// Setup Third Party dependencies
 class SceneDelegateThirdParty: SceneDelegateType {

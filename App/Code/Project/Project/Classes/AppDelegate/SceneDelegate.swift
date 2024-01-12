@@ -12,16 +12,6 @@ class SceneDelegate: UIResponder {
 }
 
 // MARK: Global Variables
-import Log
-var Log: Logger {
-    let delegate = SceneDelegate
-        .shared
-        .compositeDelegate?
-        .delegate(
-            type: SceneDelegateThirdParty.self
-    )
-    return delegate?.logger ?? ConsoleLogger()
-}
 
 // MARK: Computed Variables
 extension SceneDelegate {

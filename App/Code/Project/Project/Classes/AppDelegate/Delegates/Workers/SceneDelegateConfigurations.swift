@@ -1,7 +1,7 @@
+// swiftlint:disable line_length
 import Foundation
 import UIKit
 import Domain
-import PlatformNetworkApi
 
 /// Perform data configurations, e.g. datasource, persistence, ...
 class SceneDelegateConfigurations: SceneDelegateType {

@@ -1,4 +1,5 @@
-//
+// swiftlint:disable line_length
+
 //  SnapshotHelper.swift
 //  Example
 //
@@ -136,7 +137,14 @@ open class Snapshot: NSObject {
         do {
             let launchArguments = try String(contentsOf: path, encoding: String.Encoding.utf8)
             let regex = try NSRegularExpression(pattern: "(\\\".+?\\\"|\\S+)", options: [])
-            let matches = regex.matches(in: launchArguments, options: [], range: NSRange(location: 0, length: launchArguments.count))
+            let matches = regex.matches(
+                in: launchArguments,
+                options: [],
+                range: NSRange(
+                    location: 0,
+                    length: launchArguments.count
+                )
+            )
             let results = matches.map { result -> String in
                 (launchArguments as NSString).substring(with: result.range)
             }
@@ -151,7 +159,8 @@ open class Snapshot: NSObject {
             waitForLoadingIndicatorToDisappear(within: timeout)
         }
 
-        NSLog("snapshot: \(name)") // more information about this, check out https://docs.fastlane.tools/actions/snapshot/#how-does-it-work
+        NSLog("snapshot: \(name)") 
+        // more information about this, check out https://docs.fastlane.tools/actions/snapshot/#how-does-it-work
         if Snapshot.waitForAnimations {
             sleep(1) // Waiting for the animation to be finished (kind of)
         }

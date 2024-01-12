@@ -3,7 +3,6 @@ public struct ErrorResponse: Error, Codable {
     
     // MARK: - Properties
     public var statusCode: Int = 9999
-    
 
 // sourcery:inline:auto:ErrorResponse.AutoInit
 

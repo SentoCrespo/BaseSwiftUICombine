@@ -180,7 +180,7 @@ targets:
       - target: Domain
       # - target: UseCases
       # - target: NetworkLayerRx
-      # - target: SharedUtils
+      - target: SharedUtils
       # - target: PlatformDataSourceApi
       # - target: PlatformNetworkLayerSpecific
       # - target: PlatformPersistenceSecure

@@ -37,7 +37,7 @@ extension MainViewModelTests {
         let viewModel = MainViewModel(configurator: configurator)
         
         // When
-        /// Initial state
+        // Initial state
         XCTAssertEqual(viewModel.output.to, .idle)
         
         // Transition with 'none'
@@ -76,7 +76,6 @@ private extension MainViewModel {
 }
 
 // MARK: - Private
-import PlatformNetworkStatic
 private extension MainViewModelTests {
     
     static var mockConfigurator: MainConfigurator {

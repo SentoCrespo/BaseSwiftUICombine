@@ -1,5 +1,5 @@
 import Foundation
-import PRSharedUtils
+import SharedUtils
 
 extension String {
     static var version: String {

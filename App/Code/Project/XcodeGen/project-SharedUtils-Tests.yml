@@ -24,8 +24,8 @@ targets:
       base:
         SDKROOT: iphoneos
         INFOPLIST_FILE: $(SRCROOT)/SharedUtils/Info.plist
-        PRODUCT_BUNDLE_IDENTIFIER: com.wunderfleet.sharedUtils.tests
-        USER_HEADER_SEARCH_PATHS: ../CarSharingSpecialisation/ExternSource
+        PRODUCT_BUNDLE_IDENTIFIER: com.sento.project.sharedUtils.tests
+        USER_HEADER_SEARCH_PATHS: ../ProjectSpecialisation/ExternSource
         PRODUCT_NAME: SharedUtilsTests
         SKIP_INSTALL: YES
 

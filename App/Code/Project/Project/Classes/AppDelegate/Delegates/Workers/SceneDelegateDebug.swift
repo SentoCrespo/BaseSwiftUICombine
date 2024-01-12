@@ -1,3 +1,4 @@
+// swiftlint:disable line_length
 import Foundation
 import UIKit
 
@@ -29,14 +30,16 @@ extension SceneDelegateDebug {
 }
 
 // MARK: - Private Methods
-import PRSharedUtils
-
 private extension SceneDelegateDebug {
     
     func printPathNames() {
         let bundlePath = Bundle.main.bundlePath
-        let documentsPath = PathUtils
-            .documentsUrl()!
+        let documentsPath = FileManager
+            .default
+            .urls(
+                for: .documentDirectory,
+                in: .userDomainMask)
+            .first!
             .absoluteString
             .replacingOccurrences(of: "file://", with: "")
         let components = [
