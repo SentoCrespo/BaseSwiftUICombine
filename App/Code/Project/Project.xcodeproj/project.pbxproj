@@ -1235,14 +1235,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		"TEMP_512256FD-780F-4F90-963C-3C460DDDC7F6" /* SharedUtils */ = {
+		"TEMP_B74168A7-1E7E-4CB4-A3BE-91C34F409E8B" /* SharedUtils */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = SharedUtils;
 			sourceTree = "<group>";
 		};
-		"TEMP_A923C1DE-8E0E-460C-800C-EDE2C778C6F4" /* Tests */ = {
+		"TEMP_D0414B96-97FF-4778-B935-2B0246CF0362" /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -1958,6 +1958,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -2138,6 +2139,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
