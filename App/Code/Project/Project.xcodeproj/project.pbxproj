@@ -1235,18 +1235,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		"TEMP_BB942DEC-B602-4275-9DF7-70A2CD451E7F" /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		"TEMP_D7410307-8FD1-4067-9355-62DC0880822D" /* SharedUtils */ = {
+		"TEMP_155170A4-4802-4DF2-8788-289F1F4D666E" /* SharedUtils */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = SharedUtils;
+			sourceTree = "<group>";
+		};
+		"TEMP_D20EFBE8-C574-4DFC-99C7-E9996CF3D857" /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1992,6 +1992,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_VERSION = 5.5;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
