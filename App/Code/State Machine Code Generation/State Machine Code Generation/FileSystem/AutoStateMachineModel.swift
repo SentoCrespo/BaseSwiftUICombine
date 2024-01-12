@@ -1,7 +1,7 @@
 import Foundation
 
 let autoStateMachineModelTemplate = """
-// Generated using State Machine Code Generation {{VERSION}} — https://github.com/vCrespoP
+// Generated using State Machine Code Generation {{VERSION}} — https://github.com/SentoCrespo
 // DO NOT EDIT
 
 // swiftlint:disable all
