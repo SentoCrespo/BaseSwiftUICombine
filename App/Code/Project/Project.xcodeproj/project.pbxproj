@@ -1235,14 +1235,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		"TEMP_155170A4-4802-4DF2-8788-289F1F4D666E" /* SharedUtils */ = {
+		"TEMP_512256FD-780F-4F90-963C-3C460DDDC7F6" /* SharedUtils */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = SharedUtils;
 			sourceTree = "<group>";
 		};
-		"TEMP_D20EFBE8-C574-4DFC-99C7-E9996CF3D857" /* Tests */ = {
+		"TEMP_A923C1DE-8E0E-460C-800C-EDE2C778C6F4" /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -2159,6 +2159,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Manual;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

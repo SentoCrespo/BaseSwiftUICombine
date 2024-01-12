@@ -89,6 +89,8 @@ settings:
       ONLY_ACTIVE_ARCH: YES
       GCC_OPTIMIZATION_LEVEL: 0
       SWIFT_OPTIMIZATION_LEVEL: -Onone
+      ENABLE_TESTABILITY: YES
+      
     Release:
       ONLY_ACTIVE_ARCH: NO
       SWIFT_COMPILATION_MODE: wholemodule
