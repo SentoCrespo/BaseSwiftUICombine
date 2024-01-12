@@ -52,15 +52,17 @@ private extension SceneDelegateDebug {
             "*****************************************"
         ]
         let debugInfo = components.joined(separator: "\n")
-        Log.debug(debugInfo)
+        // TODO: Replace with Logger
+        print(debugInfo)
     }
     
     func printAvailableFonts() {
         UIFont.familyNames.forEach { familyName in
-            Log.debug(familyName)
+            // TODO: Replace with Logger
+            print(familyName)
             
             UIFont.fontNames(forFamilyName: familyName).forEach { fontName in
-                Log.debug("\tFont: \(fontName)")
+                print("\tFont: \(fontName)")
             }
         }
     }

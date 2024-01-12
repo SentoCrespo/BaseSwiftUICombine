@@ -1,11 +1,11 @@
 import UIKit
 
 public extension UIView {
-    func applyArrowDialogAppearanceWithOrientation(arrowOrientation: UIImageOrientation) {
+    func applyArrowDialogAppearanceWithOrientation(arrowOrientation: UIImage.Orientation) {
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = dialogBezierPathWithFrame(self.frame, arrowOrientation: arrowOrientation).cgPath
         shapeLayer.fillColor = UIColor.white.cgColor
-        shapeLayer.fillRule = kCAFillRuleEvenOdd
+        shapeLayer.fillRule = .evenOdd
         self.layer.mask = shapeLayer
     }
 }
@@ -20,7 +20,7 @@ private extension UIView {
     }
     
     // swiftlint:disable:next line_length
-    private func dialogBezierPathWithFrame(_ frame: CGRect, arrowOrientation orientation: UIImageOrientation, arrowLength: CGFloat = 20.0) -> UIBezierPath {
+    private func dialogBezierPathWithFrame(_ frame: CGRect, arrowOrientation orientation: UIImage.Orientation, arrowLength: CGFloat = 20.0) -> UIBezierPath {
         // Translate frame to neutral coordinate system & transpose it to fit the orientation.
         var transposedFrame = CGRect.zero
         switch orientation {
@@ -38,6 +38,8 @@ private extension UIView {
                 width: frame.size.height - frame.origin.y,
                 height: frame.size.width - frame.origin.x
             )
+            @unknown default:
+                <#fatalError()#>
         }
         
         // We need 7 points for our Bezier path
@@ -74,6 +76,8 @@ private extension UIView {
         case .right, .rightMirrored:
             path.apply(CGAffineTransform(rotationAngle: degreesToRadians(90.0)))
             path.apply(CGAffineTransform(translationX: transposedFrame.size.height, y: 0))
+            @unknown default:
+                <#fatalError()#>
         }
         
         return path

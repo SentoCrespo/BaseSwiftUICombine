@@ -25,6 +25,8 @@
        - path: Project
          includes:
            - "**/*_SPEC*.swift"
+       
+       - path: Project
          excludes:
            - OtherResources/Info.plist
            

@@ -24,9 +24,4 @@ extension SceneDelegate {
         return SceneDelegate.shared.sceneDelegate as? CompositeSceneDelegate
     }
 
-    var datasource: DataSourceConfiguration? {
-        let delegate = compositeDelegate?.delegate(type: SceneDelegateConfigurations.self)
-        return delegate?.dataSourceConfiguration
-    }
-    
 }

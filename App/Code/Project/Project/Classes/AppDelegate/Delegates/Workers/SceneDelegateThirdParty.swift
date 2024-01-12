@@ -6,7 +6,6 @@ import UIKit
 class SceneDelegateThirdParty: SceneDelegateType {
     
     // MARK: - Properties
-    var logger: Logger!
     
     // MARK: - Life Cycle
     

@@ -7,8 +7,6 @@ import Domain
 class SceneDelegateConfigurations: SceneDelegateType {
     
     // MARK: - Properties
-    var apiEnvironment: ApiEnvironment!
-    var dataSourceConfiguration: DataSourceConfiguration!
     
     // MARK: - Life Cycle
     
@@ -45,11 +43,11 @@ private extension SceneDelegateConfigurations {
 //        } else {
 //            self.apiEnvironment = .production
 //        }
-        self.apiEnvironment = .production
+//        self.apiEnvironment = .production
     }
     
     func initDatasourceConfiguration() {
-        self.dataSourceConfiguration = DataSourceConfiguration()
+//        self.dataSourceConfiguration = DataSourceConfiguration()
     }
     
 }

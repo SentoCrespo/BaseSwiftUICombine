@@ -23,13 +23,15 @@ public extension StateMachineSystem {
         
         switch transitionResult {
         case .failure(let error):
-            Log.error("\n\(error) - (\(self.stateMachine.state) --> \(event)")
+                // TODO: Replace with Logger
+                print("\n\(error) - (\(self.stateMachine.state) --> \(event)")
         case .success(let result):
             var debugString = "\n\(result.from) --\(result.event)--> \(result.to)"
             if let effect = result.effect {
                 debugString.append(" + \(effect)")
             }
-            Log.debug(debugString)
+                // TODO: Replace with Logger
+                print(debugString)
             system.send(result)
         }
         

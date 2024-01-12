@@ -4,11 +4,8 @@ import Foundation
 struct MainConfigurator: SceneConfigurator {
     
     // MARK: - Properties
-    let datasource: DataSourceConfiguration
     
     // MARK: - Life Cycle
-    init(datasource: DataSourceConfiguration) {
-        self.datasource = datasource
-    }
+    init() {}
     
 }
