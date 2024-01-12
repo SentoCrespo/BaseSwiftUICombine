@@ -62,10 +62,14 @@ targets:
         USER_HEADER_SEARCH_PATHS: ../ProjectSpecialisation/ExternSource
         SKIP_INSTALL: YES
         DYLIB_INSTALL_NAME_BASE: '@rpath'
+
       ### Specific settings
       configs:
         Debug:
           ENABLE_TESTABILITY: YES
+          CODE_SIGN_IDENTITY: ""
+        Release:
+          CODE_SIGN_IDENTITY: ""
 
     ## Pre-build scripts phase
     preBuildScripts:

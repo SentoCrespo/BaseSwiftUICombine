@@ -39,7 +39,7 @@ private extension UIView {
                 height: frame.size.width - frame.origin.x
             )
             @unknown default:
-                <#fatalError()#>
+                fatalError()
         }
         
         // We need 7 points for our Bezier path
@@ -77,7 +77,7 @@ private extension UIView {
             path.apply(CGAffineTransform(rotationAngle: degreesToRadians(90.0)))
             path.apply(CGAffineTransform(translationX: transposedFrame.size.height, y: 0))
             @unknown default:
-                <#fatalError()#>
+                fatalError()
         }
         
         return path
