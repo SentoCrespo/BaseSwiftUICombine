@@ -1235,14 +1235,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		"TEMP_22A21BA5-D491-4941-9E2F-020B00F2B881" /* SharedUtils */ = {
+		"TEMP_0F10BDAB-B6EA-4FFB-ADCA-A9AC545D587C" /* SharedUtils */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = SharedUtils;
 			sourceTree = "<group>";
 		};
-		"TEMP_895C581A-9ABC-4236-8BA2-519A9CFC57A2" /* Tests */ = {
+		"TEMP_B24F428C-2066-42F9-969A-F6696C8315A2" /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -1979,7 +1979,10 @@
 				DEFINES_MODULE = YES;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
+				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Domain/Info.plist";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sento.project.domain;
 				PRODUCT_NAME = Domain;
 				SDKROOT = iphoneos;
@@ -2173,8 +2176,11 @@
 				DEFINES_MODULE = YES;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
+				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Domain/Info.plist";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sento.project.domain;
 				PRODUCT_NAME = Domain;
 				SDKROOT = iphoneos;
