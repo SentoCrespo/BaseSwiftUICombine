@@ -5,7 +5,7 @@ import Combine
 struct MainUIView: View {
     
     // MARK: - Properties
-    @ObservedObject private var viewModel: MainViewModel
+    @ObservedObject var viewModel: MainViewModel
     
     // MARK: Life Cycle
     init(viewModel: MainViewModel) {
@@ -28,30 +28,6 @@ extension MainUIView {
                 self.viewModel.apply(event: .onAppear)
             }
         }
-//        NavigationView {
-//            ZStack {
-//                Color
-//                    .purple
-//                    .edgesIgnoringSafeArea(.all)
-//                VStack {
-//                    Text("Hey there")
-//                        .font(.title)
-//                        .foregroundColor(.primary)
-//
-//                    Button(
-//                        action: {
-//                            self.viewModel.apply(event: .onSelect("Tapped"))
-//                    }, label: {
-//                        Text("Tap me")
-//                    })
-//                    .buttonStyle(ButtonPrimaryStyle())
-//                }
-//            }
-//            .navigationBarTitle("Messages")
-//        }
-//        .onAppear {
-//            self.viewModel.apply(event: .onAppear)
-//        }
     }
     
 }

@@ -35,10 +35,22 @@ class MainViewModel: BaseViewModel<MainConfigurator, MainModel, MainRender>, Obs
     
     override func handle(event: MainModel.Event) {
         Logger.shared.debug("Processing event: \(event)")
-//        switch event {
-//            case .onAppear:
-//                break
-//        }
+        switch event {
+            case .start:
+                break
+            case .onAppear:
+                break
+            case .onLoadingFailed(_):
+                break
+            case .onLoadingSuccess(_):
+                break
+            case .onReload:
+                break
+            case .onSelect(_):
+                break
+            case .onSwipe(_):
+                break
+        }
     }
     
 }
