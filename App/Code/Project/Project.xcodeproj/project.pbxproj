@@ -11,7 +11,6 @@
 		009B80109166FFD5481F04EE /* SubState1Reducer_SPEC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D354A7A0556CF561687200D7 /* SubState1Reducer_SPEC.swift */; };
 		00A23DB6B0F5D11FDA20992B /* Autogeneration.config in Resources */ = {isa = PBXBuildFile; fileRef = 7418DD4D0F7C9DA4700A11E8 /* Autogeneration.config */; };
 		01FDCAE988506B3BACA46804 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4365F6B4CC7A3D0825AF0066 /* Colors.xcassets */; };
-		022A57F374853E12BAB721E7 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D9B5C18A10057B8ED62454B4 /* ReSwift */; };
 		027737807ADF47C2D783DD8C /* PathUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1401439FE0AFFF8B56278AA7 /* PathUtils.swift */; };
 		02963DA3E0724D711E80C992 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE49EA766275A91FE876168 /* Foundation.framework */; };
 		0447192BCEF91C2330DE5507 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062BFA6775663526E4EC3E1 /* Empty.swift */; };
@@ -444,7 +443,6 @@
 				E69AB4BA4A2996185DA28927 /* Log in Frameworks */,
 				29D6858F0E0F860D2177E4F9 /* Kingfisher in Frameworks */,
 				409518DC4A8742293A4FEE13 /* Rswift in Frameworks */,
-				022A57F374853E12BAB721E7 /* ReSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1167,18 +1165,18 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
-		"TEMP_F125C881-C965-4EA7-912F-BF4451501616" /* SharedUtils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SharedUtils;
-			sourceTree = "<group>";
-		};
-		"TEMP_F7EC2572-B89F-4019-9B89-DF664CDA024E" /* Tests */ = {
+		"TEMP_19110F34-C613-405A-A80C-E557453DAB80" /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		"TEMP_68749870-3FB9-4813-96D6-3C18028E0A6F" /* SharedUtils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SharedUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1298,7 +1296,6 @@
 				1AA10E77A6F622F88ED06317 /* Log */,
 				87635E357410C7E33CE290BB /* Kingfisher */,
 				945130D29E9CC25B1D56C1C6 /* Rswift */,
-				D9B5C18A10057B8ED62454B4 /* ReSwift */,
 			);
 			productName = Project;
 			productReference = 372547DE6EBC4C348EA5B814 /* Project.app */;
@@ -1386,7 +1383,6 @@
 				ED963C3D43CE43A78E0477CC /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				33634BDFBF7E6ED867837092 /* XCRemoteSwiftPackageReference "log-ios" */,
 				81CB75A22FE410C26CA3C408 /* XCRemoteSwiftPackageReference "R.swift.Library" */,
-				D9D2456023659741BA828A84 /* XCRemoteSwiftPackageReference "ReSwift" */,
 			);
 			projectDirPath = "";
 			projectRoot = "";
@@ -2216,14 +2212,6 @@
 				version = 5.4.0;
 			};
 		};
-		D9D2456023659741BA828A84 /* XCRemoteSwiftPackageReference "ReSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReSwift/ReSwift";
-			requirement = {
-				kind = exactVersion;
-				version = 6.1.0;
-			};
-		};
 		ED963C3D43CE43A78E0477CC /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -2249,11 +2237,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 81CB75A22FE410C26CA3C408 /* XCRemoteSwiftPackageReference "R.swift.Library" */;
 			productName = Rswift;
-		};
-		D9B5C18A10057B8ED62454B4 /* ReSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D9D2456023659741BA828A84 /* XCRemoteSwiftPackageReference "ReSwift" */;
-			productName = ReSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

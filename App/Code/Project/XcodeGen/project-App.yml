@@ -199,6 +199,4 @@ targets:
 
       - package: R.swift.Library
         product: Rswift
-        # product: RswiftDynamic
-         
-      - package: ReSwift
+        # product: RswiftDynamic         
