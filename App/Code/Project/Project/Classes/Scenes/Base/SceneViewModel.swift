@@ -5,6 +5,8 @@ protocol SceneViewModel {
     
     // MARK: - Associated Types & Typealias
     associatedtype Model: SceneModel
+    associatedtype Configurator: SceneConfigurator
+    associatedtype Render: SceneRender
     typealias TransitionOutput = TransitionResult<Model.State, Model.Event, Model.Effect>
     
     // MARK: - Variables
@@ -17,7 +19,7 @@ protocol SceneViewModel {
     var configurator: SceneConfigurator { get }
     
     // MARK: - Life Cycle
-    init(configurator: SceneConfigurator)
+    init(render: Render, configurator: Configurator)
     
     // MARK: - Public Methods
     /// Method to publish incoming actions from the view

@@ -5,12 +5,10 @@ import Combine
 struct MainUIView: View {
     
     // MARK: - Properties
-    @ObservedObject private var viewModel: MainViewModel
-    let render: MainRender?
+    @ObservedObject var viewModel: MainViewModel
     
     // MARK: Life Cycle
-    init(render: MainRender, viewModel: MainViewModel) {
-        self.render = render
+    init(viewModel: MainViewModel) {
         self.viewModel = viewModel
     }
 
@@ -30,30 +28,6 @@ extension MainUIView {
                 self.viewModel.apply(event: .onAppear)
             }
         }
-//        NavigationView {
-//            ZStack {
-//                Color
-//                    .purple
-//                    .edgesIgnoringSafeArea(.all)
-//                VStack {
-//                    Text("Hey there")
-//                        .font(.title)
-//                        .foregroundColor(.primary)
-//
-//                    Button(
-//                        action: {
-//                            self.viewModel.apply(event: .onSelect("Tapped"))
-//                    }, label: {
-//                        Text("Tap me")
-//                    })
-//                    .buttonStyle(ButtonPrimaryStyle())
-//                }
-//            }
-//            .navigationBarTitle("Messages")
-//        }
-//        .onAppear {
-//            self.viewModel.apply(event: .onAppear)
-//        }
     }
     
 }
@@ -61,7 +35,7 @@ extension MainUIView {
 private extension MainUIView {
     
     private var content: some View {
-        let oldState = self.viewModel.output.from
+//        let oldState = self.viewModel.output.from
         let newState = self.viewModel.output.to
 //        guard newState != oldState else {
 //            return AnyView(self)
@@ -85,9 +59,7 @@ private extension MainUIView {
 struct MainUIView_Previews: PreviewProvider {
     
     static var previews: some View {
-        let configurator = MainConfigurator()
-        let render = MainRender(configurator: configurator)
-        return render.view()
+        self.createPreview()
     }
     
 }

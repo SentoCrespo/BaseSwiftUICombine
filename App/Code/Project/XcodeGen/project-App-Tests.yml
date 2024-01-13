@@ -10,17 +10,7 @@
      type: bundle.unit-test
      
      ## Sources
-     sources: 
-
-       ### Don't link info.plist
-       - path: Project
-         excludes:
-           - OtherResources/Info.plist
-       - path: ProjectTests
-         includes:
-           - OtherResources/Info.plist
-         buildPhase: none
-
+     sources:
        ### Target files
        - path: Project
          includes:
@@ -30,9 +20,15 @@
          includes:
            - "**/*.swift"
        
-       - path: Project
-         excludes:
+       ### Don't link info.plist
+       - path: ProjectTests
+         includes:
            - OtherResources/Info.plist
+         buildPhase: none
+         
+#       - path: Project
+#         excludes:
+#           - OtherResources/Info.plist
            
      ## Settings
      settings:

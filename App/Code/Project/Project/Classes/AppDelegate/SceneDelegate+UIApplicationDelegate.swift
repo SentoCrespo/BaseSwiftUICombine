@@ -7,12 +7,6 @@ extension SceneDelegate: UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         
-        // Bypass for testing purposes
-        if BuildType.isTest {
-            // Call the composite delegate
-            sceneDelegate = SceneDelegateFactory.makeTest()
-        }
-        
         // Call the composite delegate
         let result = sceneDelegate.application?(
             application,

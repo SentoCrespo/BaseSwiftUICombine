@@ -2,13 +2,20 @@ import Foundation
 import Combine
 
 /// Binding between UI and business logic
-class MainViewModel: BaseViewModel<MainModel>, ObservableObject {
+class MainViewModel: BaseViewModel<MainConfigurator, MainModel, MainRender>, ObservableObject {
     
-    required init(configurator: SceneConfigurator) {
-        super.init(configurator: configurator)
+    // MARK: - Properties
+    
+    // MARK: - Life Cycle
+    required init(render: MainRender, configurator: MainConfigurator) {
+        super.init(render: render, configurator: configurator)
         
     }
-     
+    
+    deinit {
+        self.disposeBag.removeAll()
+    } 
+    
     // MARK: - Handle effect
     override func handle(effect: MainModel.Effect) {
         Logger.shared.debug("Processing effect: \(effect)")
@@ -26,15 +33,27 @@ class MainViewModel: BaseViewModel<MainModel>, ObservableObject {
     
     override func handle(event: MainModel.Event) {
         Logger.shared.debug("Processing event: \(event)")
-//        switch event {
-//            case .onAppear:
-//                break
-//        }
+        switch event {
+            case .start:
+                break
+            case .onAppear:
+                break
+            case .onLoadingFailed(let error):
+                break
+            case .onLoadingSuccess(let data):
+                break
+            case .onReload:
+                break
+            case .onSelect(let item):
+                break
+            case .onSwipe(let item):
+                break
+        }
     }
     
 }
 
 // MARK: - Public Methods
 extension MainViewModel {
-
+    
 }

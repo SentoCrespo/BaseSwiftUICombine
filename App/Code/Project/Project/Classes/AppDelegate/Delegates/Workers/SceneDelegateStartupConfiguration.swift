@@ -38,11 +38,19 @@ private extension SceneDelegateStartup {
     
     func showMain(in window: UIWindow) {
         // Instantiate SwiftUI Container with root View
-        let configurator = MainConfigurator()
-        let render = MainRender(configurator: configurator)
-        let initialView = render.view()
-        let vc = UIHostingController(rootView: initialView)
-        window.rootViewController = vc
+        let configurator = MainConfigurator.default
+        let navigationController = UINavigationController()
+        var render = MainRender(
+            configurator: configurator
+        )
+        let initialView = render.view(navigationController: navigationController)
+        
+        navigationController.pushViewController(
+            UIHostingController(rootView: initialView),
+            animated: true
+        )
+        
+        window.rootViewController = navigationController
         
         // Make the window become active
         window.makeKeyAndVisible()

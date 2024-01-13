@@ -3,7 +3,6 @@ import XCTest
 import Combine
 
 /// Utilities to ease combine methods with XCTest
-
 extension XCTestCase {
     
     // MARK: - Properties

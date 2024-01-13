@@ -19,18 +19,18 @@ public class StateMachineSystem<State: StateType, Event: EventType, Effect: Effe
 public extension StateMachineSystem {
     
     func apply(event: Event) {
-        let transitionResult = stateMachine.apply(event: event)
+        let transitionResult = self.stateMachine.apply(event: event)
         
         switch transitionResult {
-        case .failure(let error):
+            case .failure(let error):
                 Logger.shared.debug("\n\(error) - (\(self.stateMachine.state) --> \(event)")
-        case .success(let result):
-            var debugString = "\n\(result.from) --\(result.event)--> \(result.to)"
-            if let effect = result.effect {
-                debugString.append(" + \(effect)")
-            }
+            case .success(let result):
+                var debugString = "\n\(result.from) --\(result.event)--> \(result.to)"
+                if let effect = result.effect {
+                    debugString.append(" + \(effect)")
+                }
                 Logger.shared.debug(debugString)
-            system.send(result)
+                system.send(result)
         }
         
     }
