@@ -6,11 +6,9 @@ struct MainUIView: View {
     
     // MARK: - Properties
     @ObservedObject private var viewModel: MainViewModel
-    let render: MainRender?
     
     // MARK: Life Cycle
-    init(render: MainRender, viewModel: MainViewModel) {
-        self.render = render
+    init(viewModel: MainViewModel) {
         self.viewModel = viewModel
     }
 
@@ -85,9 +83,7 @@ private extension MainUIView {
 struct MainUIView_Previews: PreviewProvider {
     
     static var previews: some View {
-        let configurator = MainConfigurator()
-        let render = MainRender(configurator: configurator)
-        return render.view()
+        self.createPreview()
     }
     
 }

@@ -1,14 +1,16 @@
 import Foundation
 import Combine
 
-class BaseViewModel<Model: SceneModel>: SceneViewModel {
+class BaseViewModel<Configurator: SceneConfigurator, Model: SceneModel, Render: SceneRender>: SceneViewModel {
     
     @Published var output: TransitionOutput
     let stateMachineSystem: StateMachineSystem<Model.State, Model.Event, Model.Effect>
     var disposeBag: Set<AnyCancellable>
-    let configurator: SceneConfigurator
+    let render: SceneRender
+    var configurator: SceneConfigurator
     
-    required init(configurator: SceneConfigurator) {
+    required init(render: Render, configurator: Configurator) {
+        self.render = render
         self.configurator = configurator
         
         self.disposeBag = []
