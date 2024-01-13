@@ -1239,18 +1239,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		"TEMP_848B7E9A-165E-48E7-A0F2-E2ACD21B35AC" /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		"TEMP_DDCEA4A4-87CF-4191-BC6E-C3F79E03DE72" /* SharedUtils */ = {
+		"TEMP_B1F7D058-227B-4135-A5A4-9BD4F20B82EA" /* SharedUtils */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = SharedUtils;
+			sourceTree = "<group>";
+		};
+		"TEMP_D71870C8-D2A9-44BB-BC47-62BC24986E81" /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2036,6 +2036,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/ProjectTests/OtherResources/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sento.project.tests;
 				PRODUCT_NAME = ProjectTests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -2074,6 +2075,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/ProjectTests/OtherResources/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sento.project.tests;
 				PRODUCT_NAME = ProjectTests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;

@@ -17,8 +17,10 @@ class SceneDelegateTests: XCTestCase {
         super.setUp()
         
         delegate = SceneDelegate.shared
-        compositeDelegate = SceneDelegate.shared.sceneDelegate as? CompositeSceneDelegate
-        mockDelegate = compositeDelegate?.delegate(type: SceneDelegateMock.self)
+        compositeDelegate = delegate?.sceneDelegate as? CompositeSceneDelegate
+        mockDelegate = compositeDelegate?.delegate(
+            type: SceneDelegateMock.self
+        )
     }
     
     override func tearDown() {

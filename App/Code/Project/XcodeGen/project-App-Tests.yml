@@ -41,6 +41,7 @@
          PRODUCT_NAME: ProjectTests
          BUNDLE_LOADER: "$(TEST_HOST)"
          TEST_HOST: "$(BUILT_PRODUCTS_DIR)/Project.app/Project"
+         PRODUCT_BUNDLE_IDENTIFIER: com.sento.project.tests
          INFOPLIST_FILE: $(SRCROOT)/ProjectTests/OtherResources/Info.plist
          CLANG_ENABLE_MODULES: YES
          USER_HEADER_SEARCH_PATHS: ../AppSpecialisation/ExternSource

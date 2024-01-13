@@ -1,13 +1,13 @@
 import Foundation
 import UIKit
 
-@UIApplicationMain
+ @UIApplicationMain
 class SceneDelegate: UIResponder {
     
     // MARK: - Properties
     var window: UIWindow?
     // swiftlint:disable:next weak_delegate
-    var sceneDelegate = SceneDelegateFactory.makeDefault()
+    var sceneDelegate = SceneDelegateFactory.makeDefault() 
     
 }
 
@@ -17,7 +17,16 @@ class SceneDelegate: UIResponder {
 extension SceneDelegate {
     
     static var shared: SceneDelegate {
-        return UIApplication.shared.delegate as? SceneDelegate ?? SceneDelegate()
+        guard let result = UIApplication.shared.delegate as? SceneDelegate else {
+            // For tests if App is not ready yet
+            let sceneDelegate = SceneDelegate()
+            _ = sceneDelegate.application(
+                UIApplication.shared,
+                didFinishLaunchingWithOptions: [:]
+            )
+            return sceneDelegate
+        }
+        return result
     }
     
     var compositeDelegate: CompositeSceneDelegate? {

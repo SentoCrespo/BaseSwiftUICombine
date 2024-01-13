@@ -31,7 +31,6 @@ extension SubState1ReducerTests {
             reducer: AppReducer.reducer,
             middlewares: []
         )
-        let newValue: String = "asd"
         
         // When
         let action = SubState1Action.myAction
@@ -39,7 +38,7 @@ extension SubState1ReducerTests {
         
         // Then
         XCTAssertEqual(
-            store.state.subState1.myGlobalVar, "newValue")
+            store.state.subState1.myGlobalVar, "Changed")
     }
     
 }
