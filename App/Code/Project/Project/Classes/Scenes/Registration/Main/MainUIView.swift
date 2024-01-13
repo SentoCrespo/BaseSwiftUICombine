@@ -35,7 +35,7 @@ extension MainUIView {
 private extension MainUIView {
     
     private var content: some View {
-        let oldState = self.viewModel.output.from
+//        let oldState = self.viewModel.output.from
         let newState = self.viewModel.output.to
 //        guard newState != oldState else {
 //            return AnyView(self)

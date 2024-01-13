@@ -16,12 +16,7 @@ class MainViewModelTests: BaseTest {
     override func setUp() {
         super.setUp()
         
-        let initialState = AppReduxState.initial
-        let store = AppReduxStore(
-            initialState: initialState,
-            reducer: AppReducer.reducer,
-            middlewares: []
-        )
+        let store = AppReduxStore.mock()
         self.store = store
         let configurator = MainConfigurator(mainStore: store)
         self.setupScene(configurator: configurator)
@@ -69,17 +64,6 @@ extension MainViewModelTests {
         
         // Then
         XCTAssert(true)
-    }
-    
-}
-
-private extension MainViewModel {
- 
-    func applyBlocking(event: MainModel.Event) -> MainViewModel.TransitionOutput {
-        self.apply(event: event)
-        // Run one cycle to get the output as it's asynchronous
-        RunLoop.main.run(mode: .default, before: .distantPast)
-        return self.output
     }
     
 }

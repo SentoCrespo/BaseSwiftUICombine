@@ -38,15 +38,15 @@ class MainViewModel: BaseViewModel<MainConfigurator, MainModel, MainRender>, Obs
                 break
             case .onAppear:
                 break
-            case .onLoadingFailed(_):
+            case .onLoadingFailed(let error):
                 break
-            case .onLoadingSuccess(_):
+            case .onLoadingSuccess(let data):
                 break
             case .onReload:
                 break
-            case .onSelect(_):
+            case .onSelect(let item):
                 break
-            case .onSwipe(_):
+            case .onSwipe(let item):
                 break
         }
     }
