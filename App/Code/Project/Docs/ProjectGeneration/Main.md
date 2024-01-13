@@ -25,34 +25,20 @@ bundle update
 
 ### Run the scripts
 
-Prepare the project bundle using `prepare.py`:
+Python3 is needed
 
-- Prepares bundle
-- Installs bundle
-- Updates bundle
-
-Sample Use
-```
-./prepare.py
-```
-
-Setup the project using `setup.py`:
+Setup the project using `generateProject.py`:
 
 - Generates the .xcodeproj file using XcodeGen
-- Updates dependencies via CocoaPods
-- Adds an enterprise parameter (if needed)
 - Adds a verbose parameter (if needed)
-- Sets the given client (assets & configuration)
 
 Sample Use
 ```
-./setup.py\
-	--client mobile\
-    --enterprise
+./generateProject.py\
     --verbose
 ```
 
-Make sure the file has execute permissions:
+Make sure the file has execution permissions:
 ```
 chmod +x setup.py
 ```

@@ -609,7 +609,7 @@
 			children = (
 				029797D6D1B463CBF65ED9FA /* createNewModule.py */,
 				7C1C498CF38DB014CB18B154 /* Base */,
-				EACA1C7E050E2548AA3F0C8D /* Registration */,
+				1394B83B8F1B74E36EE4D91B /* Main */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1082,14 +1082,6 @@
 				B5366426BCD8DE8B25238CEB /* Random */,
 			);
 			path = Foundation;
-			sourceTree = "<group>";
-		};
-		EACA1C7E050E2548AA3F0C8D /* Registration */ = {
-			isa = PBXGroup;
-			children = (
-				1394B83B8F1B74E36EE4D91B /* Main */,
-			);
-			path = Registration;
 			sourceTree = "<group>";
 		};
 		EEC8B6343B83ECF37684EC82 /* Codable */ = {
