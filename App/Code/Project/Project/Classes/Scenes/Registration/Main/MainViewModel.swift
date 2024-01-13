@@ -10,13 +10,11 @@ class MainViewModel: BaseViewModel<MainConfigurator, MainModel, MainRender>, Obs
     required init(render: MainRender, configurator: MainConfigurator) {
         super.init(render: render, configurator: configurator)
         
-        self.configurator = configurator
-        self.disposeBag = []
     }
     
     deinit {
         self.disposeBag.removeAll()
-    }
+    } 
     
     // MARK: - Handle effect
     override func handle(effect: MainModel.Effect) {
@@ -57,5 +55,5 @@ class MainViewModel: BaseViewModel<MainConfigurator, MainModel, MainRender>, Obs
 
 // MARK: - Public Methods
 extension MainViewModel {
-
+    
 }

@@ -19,7 +19,7 @@ public class StateMachineSystem<State: StateType, Event: EventType, Effect: Effe
 public extension StateMachineSystem {
     
     func apply(event: Event) {
-        let transitionResult = stateMachine.apply(event: event)
+        let transitionResult = self.stateMachine.apply(event: event)
         
         switch transitionResult {
             case .failure(let error):

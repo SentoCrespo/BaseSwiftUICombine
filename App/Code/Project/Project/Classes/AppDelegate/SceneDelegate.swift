@@ -7,7 +7,9 @@ class SceneDelegate: UIResponder {
     // MARK: - Properties
     var window: UIWindow?
     // swiftlint:disable:next weak_delegate
-    var sceneDelegate = SceneDelegateFactory.makeDefault() 
+    var sceneDelegate = BuildType.isTest ?
+    SceneDelegateFactory.makeTest() :
+    SceneDelegateFactory.makeDefault()
     
 }
 
