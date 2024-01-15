@@ -1,7 +1,6 @@
 // swiftlint:disable line_length
 import Foundation
 import UIKit
-import OSLog
 
 /// Performs debugging info
 class SceneDelegateDebug: SceneDelegateType {

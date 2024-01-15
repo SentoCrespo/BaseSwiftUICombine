@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
- @UIApplicationMain
+@UIApplicationMain
 class SceneDelegate: UIResponder {
     
     // MARK: - Properties

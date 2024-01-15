@@ -12,7 +12,7 @@ class Logger: BaseLogger {
             return ConsoleLogger()
         } else {
             // Release
-            return ConsoleLogger()
+            return ConsoleLogger(level: .none)
         }
     }()
  
