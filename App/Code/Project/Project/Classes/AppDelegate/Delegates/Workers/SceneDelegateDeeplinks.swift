@@ -29,8 +29,7 @@ extension SceneDelegateConfigurations {
                 
             }),
             let webpageURL = userActivity.webpageURL {
-            Logger.shared.debug("Deeplink: \(webpageURL.absoluteString)")
-            
+            Logger.navigation.debug("Deeplink: \(webpageURL.absoluteString)")
             // Handle Deeplink
         }
         
@@ -43,7 +42,7 @@ extension SceneDelegateConfigurations {
         guard let webpageURL = userActivity.webpageURL else {
             return
         }
-        Logger.shared.debug("Deeplink: \(webpageURL.absoluteString)")
+        Logger.navigation.debug("Deeplink: \(webpageURL.absoluteString)")
         // Handle Deeplink
     }
     

@@ -23,13 +23,9 @@ public extension StateMachineSystem {
         
         switch transitionResult {
             case .failure(let error):
-                Logger.shared.debug("\n\(error) - (\(self.stateMachine.state) --> \(event)")
+                break
+                
             case .success(let result):
-                var debugString = "\n\(result.from) --\(result.event)--> \(result.to)"
-                if let effect = result.effect {
-                    debugString.append(" + \(effect)")
-                }
-                Logger.shared.debug(debugString)
                 system.send(result)
         }
         

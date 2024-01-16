@@ -42,16 +42,15 @@ private extension SceneDelegateDebug {
             .first!
             .absoluteString
             .replacingOccurrences(of: "file://", with: "")
-        Logger.shared.debug("Bundle path: \(bundlePath)")
-        Logger.shared.debug("Documents path: \(documentsPath)")
+        Logger.app.debug("Bundle path: \(bundlePath)")
+        Logger.app.debug("Documents path: \(documentsPath)")
     }
     
     func printAvailableFonts() {
         UIFont.familyNames.forEach { familyName in
-            Logger.shared.debug(familyName)
-            
+            Logger.app.debug("\(familyName)")
             UIFont.fontNames(forFamilyName: familyName).forEach { fontName in
-                print("\tFont: \(fontName)")
+                Logger.app.debug("\t\(fontName)")
             }
         }
     }

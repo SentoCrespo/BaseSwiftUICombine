@@ -47,10 +47,14 @@ class BaseViewModel<Configurator: SceneConfigurator, Model: SceneModel, Render: 
                 self?.handle(event: output.event)
                 return output
             }
+            // Print debug information
+            .map { (output) -> TransitionOutput in
+                Logger.stateMachine.debug("\(output)")
+                return output
+            }
             // Propagate the changes to published var
             .assign(to: \.output, on: self)
             .store(in: &disposeBag)
-        
     }
     
     deinit {
