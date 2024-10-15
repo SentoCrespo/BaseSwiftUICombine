@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -161,6 +161,8 @@
 		CDFF87C0B64067B7C5FEAADB /* UseCaseHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213D5C321C6FBEDF4C139ED5 /* UseCaseHero.swift */; };
 		CEF5842D74CE4E5B2D320E45 /* UINavigationController+Pop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2700D6A27B75F19119B093BC /* UINavigationController+Pop.swift */; };
 		CF0E9021A9C0BDC827AC33B1 /* Decodable+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F189998E65E6D7D31292E4C0 /* Decodable+Utils.swift */; };
+		CFCAC1522CBEA59100598E21 /* UseCaseHero_SPEC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCAC1512CBEA59100598E21 /* UseCaseHero_SPEC.swift */; };
+		CFCAC1552CBEA72F00598E21 /* Heroes_invalid.json in Resources */ = {isa = PBXBuildFile; fileRef = CFCAC1542CBEA72F00598E21 /* Heroes_invalid.json */; };
 		CFEA1D1AEF73CEE5542FAB3E /* UIBarButtonItem+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A760F83A7D21F39F8AF8F /* UIBarButtonItem+Creation.swift */; };
 		D10E36F6E6F47B61BC02F49B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 591BA651E97353B3CC20ECE5 /* UIKit.framework */; };
 		D17456F39453AF8600F1DFE6 /* Main.gv in Resources */ = {isa = PBXBuildFile; fileRef = B879E64F7A76B9614634C103 /* Main.gv */; };
@@ -291,7 +293,7 @@
 		262533CD7D39EB00A4104CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		26EB1215FCA4395D36EBDA96 /* project-SharedUtils-Tests.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "project-SharedUtils-Tests.yml"; sourceTree = "<group>"; };
 		2700D6A27B75F19119B093BC /* UINavigationController+Pop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Pop.swift"; sourceTree = "<group>"; };
-		276720F2CAB4A36F45254132 /* Autogeneration.config */ = {isa = PBXFileReference; path = Autogeneration.config; sourceTree = "<group>"; };
+		276720F2CAB4A36F45254132 /* Autogeneration.config */ = {isa = PBXFileReference; lastKnownFileType = text; path = Autogeneration.config; sourceTree = "<group>"; };
 		27923A74226D80C4D63452F7 /* AppSuState1Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSuState1Actions.swift; sourceTree = "<group>"; };
 		29DAEEF698B14D8BD68F5316 /* AutoInit.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoInit.generated.swift; sourceTree = "<group>"; };
 		2AC83D67D071A0DD5A05A124 /* AccessibilityId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityId.swift; sourceTree = "<group>"; };
@@ -342,7 +344,7 @@
 		6FB7C3778DB776F80D6C9F4D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		738EB20D4EC20DD3917C2A55 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
 		739992C21F30BCCC759F8F94 /* LogMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMiddleware.swift; sourceTree = "<group>"; };
-		7418DD4D0F7C9DA4700A11E8 /* Autogeneration.config */ = {isa = PBXFileReference; path = Autogeneration.config; sourceTree = "<group>"; };
+		7418DD4D0F7C9DA4700A11E8 /* Autogeneration.config */ = {isa = PBXFileReference; lastKnownFileType = text; path = Autogeneration.config; sourceTree = "<group>"; };
 		76E7B0DB895206FFCB789129 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7A131BF2F1A1368CA0CD5EB5 /* String+Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Version.swift"; sourceTree = "<group>"; };
 		7ED1B747844570ECCC699E88 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -386,7 +388,7 @@
 		B17E5AE05B5A896ABF91CDD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B459F8929DF840BA11C35B27 /* AnyNeverPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyNeverPublisher.swift; sourceTree = "<group>"; };
 		B466F033B9C3D7105C80944D /* SceneDelegate_SPEC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate_SPEC.swift; sourceTree = "<group>"; };
-		B879E64F7A76B9614634C103 /* Main.gv */ = {isa = PBXFileReference; path = Main.gv; sourceTree = "<group>"; };
+		B879E64F7A76B9614634C103 /* Main.gv */ = {isa = PBXFileReference; lastKnownFileType = text; path = Main.gv; sourceTree = "<group>"; };
 		B8A85B2B8F47E54656A80592 /* TextPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPreview.swift; sourceTree = "<group>"; };
 		B90E4B771B0249C845022E30 /* UIImageView+Tint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Tint.swift"; sourceTree = "<group>"; };
 		B9D3D7884694F3ECEFA47C61 /* ScaledFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledFont.swift; sourceTree = "<group>"; };
@@ -410,6 +412,8 @@
 		CD247CF73B61A33AE6153477 /* MainUIView+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainUIView+Preview.swift"; sourceTree = "<group>"; };
 		CDA5E749B5D006E43DF22C1E /* AutoEquatable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoEquatable.generated.swift; sourceTree = "<group>"; };
 		CFB80F48785A2297A6F55BF8 /* SceneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneConfigurator.swift; sourceTree = "<group>"; };
+		CFCAC1512CBEA59100598E21 /* UseCaseHero_SPEC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseHero_SPEC.swift; sourceTree = "<group>"; };
+		CFCAC1542CBEA72F00598E21 /* Heroes_invalid.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Heroes_invalid.json; sourceTree = "<group>"; };
 		D06C67D011BDDF45BDB5C89C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D1316B61992F7C40BE828635 /* UIViewController+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationBar.swift"; sourceTree = "<group>"; };
 		D221FDFCDA4DBDD63779F94A /* Heroes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Heroes.json; sourceTree = "<group>"; };
@@ -727,9 +731,10 @@
 			isa = PBXGroup;
 			children = (
 				D221FDFCDA4DBDD63779F94A /* Heroes.json */,
+				CFCAC1542CBEA72F00598E21 /* Heroes_invalid.json */,
+				50ABD1A53366AE06A94A8347 /* UseCaseHeroDataSourceRemote.swift */,
 				A77E74DF49C6ADA7DAA703ED /* UseCaseHeroDataSourceLocal.swift */,
 				97B15A6E961835E0229891D4 /* UseCaseHeroDataSourceMock.swift */,
-				50ABD1A53366AE06A94A8347 /* UseCaseHeroDataSourceRemote.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -1160,6 +1165,7 @@
 			children = (
 				876B3F9A088E6290B97E3D04 /* UseCaseDataSourceHero.swift */,
 				213D5C321C6FBEDF4C139ED5 /* UseCaseHero.swift */,
+				CFCAC1512CBEA59100598E21 /* UseCaseHero_SPEC.swift */,
 				74F14CCA7770AB702F1C3949 /* DataSource */,
 			);
 			path = Hero;
@@ -1412,7 +1418,7 @@
 			packageReferences = (
 				ED963C3D43CE43A78E0477CC /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				33634BDFBF7E6ED867837092 /* XCRemoteSwiftPackageReference "log-ios" */,
-				81CB75A22FE410C26CA3C408 /* XCRemoteSwiftPackageReference "R.swift.Library" */,
+				81CB75A22FE410C26CA3C408 /* XCRemoteSwiftPackageReference "R.swift" */,
 			);
 			projectDirPath = "";
 			projectRoot = "";
@@ -1433,6 +1439,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFCAC1552CBEA72F00598E21 /* Heroes_invalid.json in Resources */,
 				00A23DB6B0F5D11FDA20992B /* Autogeneration.config in Resources */,
 				F9DF421B9404999BC09603FD /* Heroes.json in Resources */,
 			);
@@ -1756,6 +1763,7 @@
 				C60B4F2DCBEA6E5EFDC62346 /* ErrorResponse.swift in Sources */,
 				85EA54BCB71FE406EA8685FB /* Hero.swift in Sources */,
 				AFB81F86203C90A5DFAD3A9E /* SuccessResponse.swift in Sources */,
+				CFCAC1522CBEA59100598E21 /* UseCaseHero_SPEC.swift in Sources */,
 				DE56BFBB545DCBF0154AD91B /* UseCaseDataSourceHero.swift in Sources */,
 				CDFF87C0B64067B7C5FEAADB /* UseCaseHero.swift in Sources */,
 				255C32431CBC88D95B1220FF /* UseCaseHeroDataSourceLocal.swift in Sources */,
@@ -1980,7 +1988,10 @@
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "Project/OtherResources/Project-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Project/OtherResources/Info.plist";
-				OTHER_LDFLAGS = "$(inherited) -ObjC";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sento.project;
 				PRODUCT_NAME = Project;
 				SDKROOT = iphoneos;
@@ -2156,7 +2167,10 @@
 				"EXCLUDED_SOURCE_FILE_NAMES[sdk=iphonesimulator*]" = "";
 				GCC_PREFIX_HEADER = "Project/OtherResources/Project-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Project/OtherResources/Info.plist";
-				OTHER_LDFLAGS = "$(inherited) -ObjC";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sento.project;
 				PRODUCT_NAME = Project;
@@ -2254,7 +2268,7 @@
 				version = 1.1.0;
 			};
 		};
-		81CB75A22FE410C26CA3C408 /* XCRemoteSwiftPackageReference "R.swift.Library" */ = {
+		81CB75A22FE410C26CA3C408 /* XCRemoteSwiftPackageReference "R.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
 			requirement = {
@@ -2285,7 +2299,7 @@
 		};
 		945130D29E9CC25B1D56C1C6 /* Rswift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 81CB75A22FE410C26CA3C408 /* XCRemoteSwiftPackageReference "R.swift.Library" */;
+			package = 81CB75A22FE410C26CA3C408 /* XCRemoteSwiftPackageReference "R.swift" */;
 			productName = Rswift;
 		};
 /* End XCSwiftPackageProductDependency section */

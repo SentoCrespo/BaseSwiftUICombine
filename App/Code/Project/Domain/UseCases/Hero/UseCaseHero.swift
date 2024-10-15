@@ -58,6 +58,7 @@ public extension HeroesUseCase {
         - Display better information to the user
         - Easier debugging
     2.3. Use more complex data set, with different types, not just strings
+    2.4. Refactor repeated/boilerplate bits of code to make it cleaner
  
  4. Improve the UI/UX:
     - Although the scene/module architecture is well-defined

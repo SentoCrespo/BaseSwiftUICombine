@@ -3,7 +3,7 @@ import Foundation
 public struct Hero {
 
     public var name: String
-    public var photoUrl: String
+    public var photo: String
     public var realName: String
     public var height: String
     public var power: String
