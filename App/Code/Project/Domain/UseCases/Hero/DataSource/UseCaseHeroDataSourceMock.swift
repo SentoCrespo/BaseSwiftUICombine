@@ -1,0 +1,23 @@
+import Foundation
+import Combine
+
+class UseCaseHeroDataSourceMock: UseCaseHeroDataSource {
+    
+    func getHeroes() -> AnyPublisher<[Hero], Error> {
+        let heroes = [
+            Hero(
+                name: "Spiderman",
+                photoUrl: "https://i.annihil.us/u/prod/marvel/i/mg/9/30/538cd33e15ab7/standard_xlarge.jpg",
+                realName: "Peter Benjamin Parker",
+                height: "1.77m",
+                power: "Peter can cling to most surfaces, has superhuman strength (able to lift 10 tons optimally) and is roughly 15 times more agile than a regular human.",
+                abilities: "Peter is an accomplished scientist, inventor and photographer.",
+                groups: "Avengers, formerly the Secret Defenders, \"New Fantastic Four\", the Outlaws"
+            )
+        ]
+        return Just(heroes)
+            .setFailureType(to: Error.self)
+            .eraseToAnyPublisher()
+    }
+    
+}
