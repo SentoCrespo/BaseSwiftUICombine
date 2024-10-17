@@ -4,10 +4,12 @@ import Combine
 public class UseCaseHeroDataSourceLocal: UseCaseHeroDataSource {
     
     // MARK: - Properties
+    private let bundle: Bundle
     private let filename: String
     
     // MARK: - Life Cycle
-    public init(filename: String) {
+    public init(bundle: Bundle = Bundle(for: UseCaseHeroDataSourceLocal.self), filename: String) {
+        self.bundle = bundle
         self.filename = filename
     }
     
@@ -22,7 +24,7 @@ public extension UseCaseHeroDataSourceLocal {
     
     func getHeroes() -> AnyPublisher<[Hero], Error> {
         Future { promise in
-            guard let url = Bundle(for: UseCaseHeroDataSourceLocal.self).url(forResource: self.filename, withExtension: "json") else {
+            guard let url = self.bundle.url(forResource: self.filename, withExtension: "json") else {
                 promise(.failure(NSError(domain: "File not found", code: -1, userInfo: nil)))
                 return
             }

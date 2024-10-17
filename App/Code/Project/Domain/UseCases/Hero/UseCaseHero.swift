@@ -1,10 +1,10 @@
 import Foundation
 import Combine
 
-public enum HeroesUseCase {}
+public enum UseCaseHeroes {}
 
 // MARK: - Public Methods
-public extension HeroesUseCase {
+public extension UseCaseHeroes {
     
     static func heroes(dataSource: UseCaseHeroDataSource) -> AnyPublisher<[Hero], Error> {
         // Do any additional logic / validation if needed
@@ -12,37 +12,7 @@ public extension HeroesUseCase {
     }
 
 }
-
-//class HeroRepository {
-//    private var cancellables = Set<AnyCancellable>()
-//    
-//    func fetchHeroes(from dataSource: UseCaseHeroDataSource) {
-//        dataSource.getHeroes()
-//            .sink(receiveCompletion: { completion in
-//                switch completion {
-//                case .finished:
-//                    print("Success")
-//                case .failure(let error):
-//                    print("Error: \(error)")
-//                }
-//            }, receiveValue: { heroes in
-//                print(heroes)
-//            })
-//            .store(in: &cancellables)
-//    }
-//}
-//
-//// Uso con fichero local
-//let localDataSource = LocalHeroDataSource(filename: "Heroes")
-//let heroRepository = HeroRepository()
-//heroRepository.fetchHeroes(from: localDataSource)
-//
-//// Uso con API remota
-//let remoteDataSource = RemoteHeroDataSource(url: URL(string: "https://miapi.com/heroes")!)
-//heroRepository.fetchHeroes(from: remoteDataSource)
-
 /*
- 
  This is a sample app, not production-ready code.There are lots of room for improvement like:
  
  1. Improve the architecture
@@ -50,7 +20,9 @@ public extension HeroesUseCase {
         - DataSource ~> API
         - DataSource ~> Static/Mock
     1.2. Define a class/framework for dealing with data requests in a common way
-    1.3. Include a Changelog for releases
+    1.3. Create UI components to be reused (Primary Button, Secondary Button, color scheme, ...)
+    1.4. Include a Changelog for releases
+    1.5. Make structures conform to Identifiable (specially "Hero")
  
  2 Improve the code
     2.1. Use async/await

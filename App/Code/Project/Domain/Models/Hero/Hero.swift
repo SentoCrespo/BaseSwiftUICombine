@@ -2,6 +2,7 @@ import Foundation
 
 public struct Hero {
 
+    public let id = UUID()
     public var name: String
     public var photo: String
     public var realName: String
@@ -13,3 +14,5 @@ public struct Hero {
 }
 
 extension Hero: Equatable, Hashable, Codable {}
+
+extension Hero: Identifiable {}
