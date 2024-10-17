@@ -22,7 +22,8 @@ public extension UseCaseHeroes {
     1.2. Define a class/framework for dealing with data requests in a common way
     1.3. Create UI components to be reused (Primary Button, Secondary Button, color scheme, ...)
     1.4. Include a Changelog for releases
-    1.5. Make structures conform to Identifiable (specially "Hero")
+    1.5. Make structures conform to Identifiable
+    1.6. Use a Log system rather that Swift.print to avoid printing in release environments
  
  2 Improve the code
     2.1. Use async/await

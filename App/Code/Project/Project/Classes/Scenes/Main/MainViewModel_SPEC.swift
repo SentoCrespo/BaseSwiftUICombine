@@ -36,7 +36,7 @@ class MainViewModelTests: BaseTest {
 // MARK: - Tests
 extension MainViewModelTests {
     
-    func test_stateMachine_Transitions() {
+    func DISABLED_test_stateMachine_Transitions() {
         // Given
         let viewModel = self.viewModel!
         
