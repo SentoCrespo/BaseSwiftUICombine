@@ -6,7 +6,7 @@
 
 ### Sample Use
 # ```
-# ./setup.py
+# ./generateProject.py
 # ```
 
 ### ------------------

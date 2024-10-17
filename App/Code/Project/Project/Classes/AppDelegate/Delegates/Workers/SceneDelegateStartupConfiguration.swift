@@ -38,9 +38,17 @@ private extension SceneDelegateStartup {
     
     func showMain(in window: UIWindow) {
         // Instantiate SwiftUI Container with root View
-        let configurator = MainConfigurator.default
         let navigationController = UINavigationController()
-        var render = MainRender(
+        
+        // Main scene
+//        let configurator = MainConfigurator.default
+//        var render = MainRender(
+//            configurator: configurator
+//        )
+        
+        // HeroList
+        let configurator = HeroListConfigurator.default
+        var render = HeroListRender(
             configurator: configurator
         )
         let initialView = render.view(navigationController: navigationController)
