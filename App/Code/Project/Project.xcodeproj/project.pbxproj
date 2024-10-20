@@ -757,8 +757,8 @@
 				B9075C7A4C04B0E99302A39D /* HeroListRenderMock_SPEC.swift */,
 				662F928E0391A3AB854A05AA /* HeroListUIView.swift */,
 				AB84217BB2FCA698D092BAB9 /* HeroListUIView+Preview.swift */,
-				790081AB650EC5EBCC5B809F /* HeroListViewModel_SPEC.swift */,
 				DF5D6EDD9A86FD1D1E490D56 /* HeroListViewModel.swift */,
+				790081AB650EC5EBCC5B809F /* HeroListViewModel_SPEC.swift */,
 			);
 			path = HeroList;
 			sourceTree = "<group>";
