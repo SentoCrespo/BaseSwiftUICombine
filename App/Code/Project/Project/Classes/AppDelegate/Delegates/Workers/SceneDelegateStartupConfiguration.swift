@@ -48,7 +48,7 @@ private extension SceneDelegateStartup {
         
         // HeroList
         let configurator = HeroListConfigurator.default
-        var render = HeroListRender(
+        let render = HeroListRender(
             configurator: configurator
         )
         let initialView = render.view(navigationController: navigationController)

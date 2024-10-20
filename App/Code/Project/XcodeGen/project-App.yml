@@ -193,10 +193,6 @@ targets:
       # - target: OneSignalNotificationServiceExtension
 
       ### Swift Package Manager
-      - package: Log
-      
-      - package: Kingfisher
-
       - package: R.swift.Library
         product: Rswift
         # product: RswiftDynamic         

@@ -1,23 +1,6 @@
 {
+  "originHash" : "ec59edaeaf899461da4a1b3ca1c741a647c0cb1edc8ea6a5603d71cc70a9f014",
   "pins" : [
-    {
-      "identity" : "kingfisher",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/onevcat/Kingfisher",
-      "state" : {
-        "revision" : "af4be924ad984cf4d16f4ae4df424e79a443d435",
-        "version" : "7.6.2"
-      }
-    },
-    {
-      "identity" : "log-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/wundercar/log-ios.git",
-      "state" : {
-        "revision" : "186e99b84cd62944f6c1ad34a69ff6713aa4d5a0",
-        "version" : "1.1.0"
-      }
-    },
     {
       "identity" : "r.swift.library",
       "kind" : "remoteSourceControl",
@@ -28,5 +11,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

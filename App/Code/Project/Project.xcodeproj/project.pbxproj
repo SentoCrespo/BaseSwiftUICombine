@@ -41,7 +41,6 @@
 		25D54EDC488058F86E9D9D70 /* ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E807B68B34BB4AD82CCD7359 /* ViewStyle.swift */; };
 		2820416B42FFE342A42E07E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE49EA766275A91FE876168 /* Foundation.framework */; };
 		28AECAEA2D098367999AF48C /* SceneDelegateDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CAA8CCDC6770A35F2E67D /* SceneDelegateDebug.swift */; };
-		29D6858F0E0F860D2177E4F9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 87635E357410C7E33CE290BB /* Kingfisher */; };
 		2D1205AD6C6BF0892CA0B510 /* SceneDelegateConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E1A2061D063670CAF87D08 /* SceneDelegateConfigurations.swift */; };
 		2DFEF791AF8CB5C9BED773F7 /* MainModel_Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB56349211A6FA20E5AF34E /* MainModel_Generated.swift */; };
 		2F7CBB5070A38F4A0D05BC5B /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1B6739805F7350B1DCE6A7 /* EventType.swift */; };
@@ -56,7 +55,6 @@
 		3C714D5A5BC4B9D877415354 /* AutoHashable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805BFAACB46715C9A7C95872 /* AutoHashable.generated.swift */; };
 		3E5931B9CB3AEAE84210E16E /* SceneDelegate+Imports.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C02F695086145561E3D028 /* SceneDelegate+Imports.swift */; };
 		3F901A3EED2FFB3FA8B095E8 /* HeroDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7398E2B7FA2C9084A2CB96E5 /* HeroDetailsViewModel.swift */; };
-		409518DC4A8742293A4FEE13 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 945130D29E9CC25B1D56C1C6 /* Rswift */; };
 		41ECAACEB7DC2BB08AB3D7A8 /* UseCaseHero_SPEC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4E35CBE597DB7D6E8E960C /* UseCaseHero_SPEC.swift */; };
 		46103E06F43D68E5860DBB4F /* AnyNeverPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459F8929DF840BA11C35B27 /* AnyNeverPublisher.swift */; };
 		465703F2B3059298182D49A1 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E86640A84786C0E319AA708 /* Store.swift */; };
@@ -169,7 +167,6 @@
 		D48D00B0BDDB4F58A8EA5BEB /* UIImage+Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA99E78E76AAD771B6743E /* UIImage+Tint.swift */; };
 		D54DD0D476F7AE84BE1153CA /* HeroListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34601BD7278F6DC5D4C847BF /* HeroListConfigurator.swift */; };
 		D6FADDD4800034BAA9C678FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAEB0CB85760E6A3B133276C /* Preview Assets.xcassets */; };
-		D75F34C59B09991BE94EC513 /* UIImage+Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409A7E15BAB04F006BEAB69B /* UIImage+Url.swift */; };
 		DB1710B018EEDD3D9C130575 /* Bundle+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FCC09CFA9DE0448C365BE4 /* Bundle+Utils.swift */; };
 		DFC7227F5C380EF097FB88E8 /* UIView+Arrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A77FD819FEE6224D1D339C8 /* UIView+Arrow.swift */; };
 		DFFD7410879421D33C4A8F20 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 140CFCBC1D7515D65DF0825A /* Images.xcassets */; };
@@ -178,7 +175,7 @@
 		E37FF12DBB55F8FD00C661BD /* Heroes_invalid.json in Resources */ = {isa = PBXBuildFile; fileRef = 8EFDD972A9A973452DF5DF0F /* Heroes_invalid.json */; };
 		E4C7D1DDEAC1C9190B03C5EB /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC17107056E0441E5C6A9D /* Users.swift */; };
 		E4FE1340D96D0FCE7ACE5526 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88DC02B33F48825336F599F /* BaseTest.swift */; };
-		E69AB4BA4A2996185DA28927 /* Log in Frameworks */ = {isa = PBXBuildFile; productRef = 1AA10E77A6F622F88ED06317 /* Log */; };
+		E69AB4BA4A2996185DA28927 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 945130D29E9CC25B1D56C1C6 /* Rswift */; };
 		E6E5996250DDFB1DB1C7650A /* SceneRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C1F043AAB697FB361ABA3C /* SceneRender.swift */; };
 		E8F5273184E979F70029F3DF /* StateMachineError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE178E1F427E51A57742672 /* StateMachineError.swift */; };
 		E932E423B923DFE17FAF0386 /* SceneDelegate+UIApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CF2BF8E6847273E32E82D /* SceneDelegate+UIApplicationDelegate.swift */; };
@@ -312,7 +309,6 @@
 		3C0EE1EC0A0C7C47685BEEE9 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		3EFA5CDD25ADD81DE3D50272 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
 		3F4B63FF06D9B9BA133AB9E2 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
-		409A7E15BAB04F006BEAB69B /* UIImage+Url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Url.swift"; sourceTree = "<group>"; };
 		415BA89B485A1CA0F29DA2B6 /* project-Packages.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "project-Packages.yml"; sourceTree = "<group>"; };
 		4365F6B4CC7A3D0825AF0066 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		439643BA3D42636C4BB89E66 /* SceneDelegate+UISceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneDelegate+UISceneDelegate.swift"; sourceTree = "<group>"; };
@@ -477,9 +473,7 @@
 				5C5499299C26593CF86C06E2 /* UIKit.framework in Frameworks */,
 				C1114C20FB3FDCD759E234A5 /* Domain.framework in Frameworks */,
 				80579B699A8600E6B304CBA2 /* SharedUtils.framework in Frameworks */,
-				E69AB4BA4A2996185DA28927 /* Log in Frameworks */,
-				29D6858F0E0F860D2177E4F9 /* Kingfisher in Frameworks */,
-				409518DC4A8742293A4FEE13 /* Rswift in Frameworks */,
+				E69AB4BA4A2996185DA28927 /* Rswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,7 +692,6 @@
 				E3F43C0FAAC69A1A21090B41 /* BuildType.swift */,
 				7ED1B747844570ECCC699E88 /* Logger.swift */,
 				7A131BF2F1A1368CA0CD5EB5 /* String+Version.swift */,
-				409A7E15BAB04F006BEAB69B /* UIImage+Url.swift */,
 				9A77FD819FEE6224D1D339C8 /* UIView+Arrow.swift */,
 			);
 			path = Extensions;
@@ -1373,8 +1366,6 @@
 			);
 			name = Project;
 			packageProductDependencies = (
-				1AA10E77A6F622F88ED06317 /* Log */,
-				87635E357410C7E33CE290BB /* Kingfisher */,
 				945130D29E9CC25B1D56C1C6 /* Rswift */,
 			);
 			productName = Project;
@@ -1460,8 +1451,6 @@
 			);
 			mainGroup = 293D0FF827366B513839236A;
 			packageReferences = (
-				ED963C3D43CE43A78E0477CC /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				33634BDFBF7E6ED867837092 /* XCRemoteSwiftPackageReference "log-ios" */,
 				81CB75A22FE410C26CA3C408 /* XCRemoteSwiftPackageReference "R.swift.Library" */,
 			);
 			projectDirPath = "";
@@ -1759,7 +1748,6 @@
 				92A5AA3221B883B2974838F0 /* TransitionResult.swift in Sources */,
 				7F89360465A404203648E372 /* Typography.swift in Sources */,
 				08734B3243F4964803888FA8 /* UIImage+Render.swift in Sources */,
-				D75F34C59B09991BE94EC513 /* UIImage+Url.swift in Sources */,
 				DFC7227F5C380EF097FB88E8 /* UIView+Arrow.swift in Sources */,
 				8B6F0318730D2FE9B7AEB3DD /* UIViewController+NavigationBar.swift in Sources */,
 				25D54EDC488058F86E9D9D70 /* ViewStyle.swift in Sources */,
@@ -2288,14 +2276,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		33634BDFBF7E6ED867837092 /* XCRemoteSwiftPackageReference "log-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/wundercar/log-ios.git";
-			requirement = {
-				kind = exactVersion;
-				version = 1.1.0;
-			};
-		};
 		81CB75A22FE410C26CA3C408 /* XCRemoteSwiftPackageReference "R.swift.Library" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
@@ -2304,27 +2284,9 @@
 				version = 5.4.0;
 			};
 		};
-		ED963C3D43CE43A78E0477CC /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher";
-			requirement = {
-				kind = exactVersion;
-				version = 7.6.2;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1AA10E77A6F622F88ED06317 /* Log */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 33634BDFBF7E6ED867837092 /* XCRemoteSwiftPackageReference "log-ios" */;
-			productName = Log;
-		};
-		87635E357410C7E33CE290BB /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = ED963C3D43CE43A78E0477CC /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
-		};
 		945130D29E9CC25B1D56C1C6 /* Rswift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 81CB75A22FE410C26CA3C408 /* XCRemoteSwiftPackageReference "R.swift.Library" */;

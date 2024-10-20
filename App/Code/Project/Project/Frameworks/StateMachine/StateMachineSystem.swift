@@ -23,7 +23,7 @@ public extension StateMachineSystem {
         
         switch transitionResult {
             case .failure(let error):
-                break
+                print("Transition error: \(error)")
                 
             case .success(let result):
                 system.send(result)
