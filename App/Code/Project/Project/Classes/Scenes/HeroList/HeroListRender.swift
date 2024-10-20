@@ -25,7 +25,7 @@ class HeroListRender: SceneRender {
     
     func toDetails(hero: Hero) {
         let configurator = HeroDetailsConfigurator.default
-        var render = HeroDetailsRender(configurator: configurator)
+        let render = HeroDetailsRender(configurator: configurator)
         guard let navigationController = self.navigationController else {
             print("Navigation controller is not available")
             return

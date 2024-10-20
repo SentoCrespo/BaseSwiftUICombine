@@ -79,7 +79,6 @@ extension HeroListViewModelTests {
         wait(for: [expectation], timeout: timeout)
     }
     
-    
     /// GIVEN: A list of heroes
     /// WHEN: Filtering by something that does NOT match anything
     /// THEN: The list should be empty

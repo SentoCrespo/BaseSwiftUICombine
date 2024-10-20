@@ -2,6 +2,7 @@ import Foundation
 
 public struct Hero {
 
+    // Not decoding the id
     public let id = UUID()
     public var name: String
     public var photo: String

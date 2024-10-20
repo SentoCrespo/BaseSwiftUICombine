@@ -24,6 +24,8 @@ public extension UseCaseHeroes {
     1.4. Include a Changelog for releases
     1.5. Make structures conform to Identifiable
     1.6. Use a Log system rather that Swift.print to avoid printing in release environments
+    1.7. If using assets, use a compile-safe tool like R.swift
+    1.8. Caché images (Kingfisher)
  
  2 Improve the code
     2.1. Use async/await

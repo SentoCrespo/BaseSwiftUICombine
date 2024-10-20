@@ -37,9 +37,9 @@ class MainViewModel: BaseViewModel<MainConfigurator, MainModel, MainRender>, Obs
             case .onAppear:
                 break
             case .onLoadingFailed(let error):
-                break
+                Logger.app.error("\(error)")
             case .onLoadingSuccess(let data):
-                break
+                Logger.app.debug("Loading success")
             case .onReload:
                 break
             case .onSelect(let item):
