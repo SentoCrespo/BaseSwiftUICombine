@@ -1,23 +1,39 @@
 import Foundation
 import Combine
 
-class UseCaseHeroDataSourceMock: UseCaseHeroDataSource {
+public class UseCaseHeroDataSourceMock {
     
-    func getHeroes() -> AnyPublisher<[Hero], Error> {
-        let heroes = [
-            Hero(
-                name: "Spiderman",
-                photo: "https://i.annihil.us/u/prod/marvel/i/mg/9/30/538cd33e15ab7/standard_xlarge.jpg",
-                realName: "Peter Benjamin Parker",
-                height: "1.77m",
-                power: "Peter can cling to most surfaces, has superhuman strength (able to lift 10 tons optimally) and is roughly 15 times more agile than a regular human.",
-                abilities: "Peter is an accomplished scientist, inventor and photographer.",
-                groups: "Avengers, formerly the Secret Defenders, \"New Fantastic Four\", the Outlaws"
-            )
-        ]
-        return Just(heroes)
-            .setFailureType(to: Error.self)
-            .eraseToAnyPublisher()
+    // MARK: - Properties
+    private var resultGetHeroes: Result<[Hero], Error>!
+    
+    // MARK: - Life Cycle
+    public init() {}
+    
+}
+
+// MARK: - Public Methods
+public extension UseCaseHeroDataSourceMock {
+    
+    func withGetHeroes(_ result: Result<[Hero], Error>) -> Self {
+        self.resultGetHeroes = result
+        return self
+    }
+    
+}
+
+extension UseCaseHeroDataSourceMock: UseCaseHeroDataSource {
+    
+    public func getHeroes() -> AnyPublisher<[Hero], Error> {
+        switch resultGetHeroes! {
+            case .success(let heroes):
+                return Just(heroes)
+                    .setFailureType(to: Error.self)
+                    .eraseToAnyPublisher()
+                
+            case .failure(let error):
+                return Fail(error: error)
+                    .eraseToAnyPublisher()
+        }
     }
     
 }

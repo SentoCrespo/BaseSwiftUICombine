@@ -3,7 +3,7 @@ import SwiftUI
 import Domain
 
 /// Scene constructor with dependencies and View<>ViewModel binding
-struct HeroListRender: SceneRender {
+class HeroListRender: SceneRender {
     
     // MARK: - Properties
     private let configurator: HeroListConfigurator
@@ -13,12 +13,8 @@ struct HeroListRender: SceneRender {
     init(configurator: HeroListConfigurator) {
         self.configurator = configurator
     }
-    
-}
- 
-extension HeroListRender {
-    
-    mutating func view(navigationController: UINavigationController) -> some View {
+
+    func view(navigationController: UINavigationController) -> some View {
         self.navigationController = navigationController
         let viewModel = HeroListViewModel(
             render: self,
@@ -28,18 +24,18 @@ extension HeroListRender {
     }
     
     func toDetails(hero: Hero) {
-//        let configurator = AnotherConfigurator.default
-//        var render = AnotherRender(configurator: configurator)
-//        let view = render
-//            .view(
-//                navigationController: self.navigationController
-//            )
-//        
-//        self.navigationController?
-//            .pushViewController(
-//                UIHostingController(rootView: view),
-//                animated: true
-//            )
+        let configurator = HeroDetailsConfigurator.default
+        var render = HeroDetailsRender(configurator: configurator)
+        guard let navigationController = self.navigationController else {
+            print("Navigation controller is not available")
+            return
+        }
+        let view = render.view(hero: hero, navigationController: navigationController)
+        
+        self.navigationController?.pushViewController(
+            UIHostingController(rootView: view),
+            animated: true
+        )
     }
     
 }
