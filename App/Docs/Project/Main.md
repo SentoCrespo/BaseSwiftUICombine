@@ -49,7 +49,7 @@ This structure clearly separates concerns, ensuring code is modular, testable, a
 All using SwiftUI & Combine
 
 #### Redux
-![alt text](images/ArchitectureRedux.jpg)
+![alt text](Images/ArchitectureRedux.jpg)
 
 This app employs a Redux-like pattern for managing state in a predictable way:
 
@@ -115,8 +115,8 @@ This project is a sample app and not intended for being production-ready. Howeve
    - If using assets, use a compile-safe tool like R.swift
    
    - Caché images for decreasing the loading time
- 
-### Code
+
+### Code
 
 - Use async/await
 
