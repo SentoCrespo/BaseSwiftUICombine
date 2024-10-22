@@ -33,12 +33,12 @@ The project includes a `App > Code > Project > .swiftlint.yml` configuration fil
 This project demonstrates multiple architectural patterns to reflect my adaptability and understanding of different paradigms.
 
 #### Clean architecture
-![alt text](images/ArchitectureClean.png)
+![alt text](Images/ArchitectureClean.png)
 
 This structure clearly separates concerns, ensuring code is modular, testable, and scalable.
 
 #### MVVM + Navigator + Configurator
-![alt text](images/ArchitectureMVVM.png)
+![alt text](Images/ArchitectureMVVM.png)
 
 - Configurator: Holds explicit dependencies
 - View: UI/UX
