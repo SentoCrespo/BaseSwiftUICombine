@@ -373,7 +373,6 @@
 		9DC91A0C024A3DB41F8FDB74 /* Numbers+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numbers+Format.swift"; sourceTree = "<group>"; };
 		A062BFA6775663526E4EC3E1 /* Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
 		A173BAECF48517FE58297309 /* UserType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserType.swift; sourceTree = "<group>"; };
-		A25A3D3C843C5D4C7946E044 /* Docs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Docs; sourceTree = SOURCE_ROOT; };
 		A2E97FDC0D14616BCC49B826 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		A374BCBAAB16CAE1B89BA0D8 /* project-Domain-Tests.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "project-Domain-Tests.yml"; sourceTree = "<group>"; };
 		A3F56408B94AFBDD6C117DAB /* SceneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneModel.swift; sourceTree = "<group>"; };
@@ -440,7 +439,6 @@
 		DEA8CB00F0F4B4788DC0195F /* SnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTests.swift; sourceTree = "<group>"; };
 		DF5D6EDD9A86FD1D1E490D56 /* HeroListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListViewModel.swift; sourceTree = "<group>"; };
 		E04A3E51A7DD24DB50A2DE33 /* StateMachineSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachineSystem.swift; sourceTree = "<group>"; };
-		E2DA47E03981CC0E60940DF1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E3F43C0FAAC69A1A21090B41 /* BuildType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildType.swift; sourceTree = "<group>"; };
 		E435BFC73EF1E9521311626F /* SceneDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegateMock.swift; sourceTree = "<group>"; };
 		E49E8ECAEA44CF4F7DF1DD2A /* ButtonPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPreview.swift; sourceTree = "<group>"; };
@@ -602,8 +600,6 @@
 			children = (
 				62A6D8D4860D6E27E04D51E2 /* .swiftlint.yml */,
 				2E7EE8574E86847DFB0D7E9B /* CHANGELOG.md */,
-				A25A3D3C843C5D4C7946E044 /* Docs */,
-				E2DA47E03981CC0E60940DF1 /* README.md */,
 				35D6132F5376BC5F35918158 /* Domain */,
 				777238CBD051E0D0DAC23C20 /* Project */,
 				4A1ABBECE6E697A2024F44E4 /* ProjectTests */,

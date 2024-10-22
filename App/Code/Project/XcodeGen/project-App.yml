@@ -75,16 +75,9 @@ targets:
         group: XcodeGen
         buildPhase: none
           
-      - path: Docs
-        type: folder
-        buildPhase: none
-
       ### Root single files 
       - path: CHANGELOG.md 
         buildPhase: none  
-
-      - path: README.md
-        buildPhase: none
 
       - path: ./.swiftlint.yml
         buildPhase: none  
