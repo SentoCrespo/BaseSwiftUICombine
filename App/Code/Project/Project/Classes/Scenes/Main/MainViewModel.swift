@@ -39,13 +39,13 @@ class MainViewModel: BaseViewModel<MainConfigurator, MainModel, MainRender>, Obs
             case .onLoadingFailed(let error):
                 Logger.app.error("\(error)")
             case .onLoadingSuccess(let data):
-                Logger.app.debug("Loading success")
+                Logger.app.debug("Loading success: \(data)")
             case .onReload:
                 break
             case .onSelect(let item):
-                break
+                Logger.app.debug("On Select: \(item)")
             case .onSwipe(let item):
-                break
+                Logger.app.debug("On Swipe: \(item)")
         }
     }
     
