@@ -5,6 +5,6 @@
 packages:
 
    ### Third Party
-   R.swift.Library:
-      url: https://github.com/mac-cain13/R.swift.Library
-      exactVersion: 5.4.0
+   R.swift:
+      url: https://github.com/mac-cain13/R.swift
+      exactVersion: 7.7.0

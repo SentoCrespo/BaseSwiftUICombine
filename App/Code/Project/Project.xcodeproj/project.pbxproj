@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -175,7 +175,7 @@
 		E37FF12DBB55F8FD00C661BD /* Heroes_invalid.json in Resources */ = {isa = PBXBuildFile; fileRef = 8EFDD972A9A973452DF5DF0F /* Heroes_invalid.json */; };
 		E4C7D1DDEAC1C9190B03C5EB /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC17107056E0441E5C6A9D /* Users.swift */; };
 		E4FE1340D96D0FCE7ACE5526 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88DC02B33F48825336F599F /* BaseTest.swift */; };
-		E69AB4BA4A2996185DA28927 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 945130D29E9CC25B1D56C1C6 /* Rswift */; };
+		E69AB4BA4A2996185DA28927 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 8F33D6BF9C8DC49860718A38 /* RswiftLibrary */; };
 		E6E5996250DDFB1DB1C7650A /* SceneRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C1F043AAB697FB361ABA3C /* SceneRender.swift */; };
 		E8F5273184E979F70029F3DF /* StateMachineError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE178E1F427E51A57742672 /* StateMachineError.swift */; };
 		E932E423B923DFE17FAF0386 /* SceneDelegate+UIApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CF2BF8E6847273E32E82D /* SceneDelegate+UIApplicationDelegate.swift */; };
@@ -289,7 +289,7 @@
 		262533CD7D39EB00A4104CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		26EB1215FCA4395D36EBDA96 /* project-SharedUtils-Tests.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "project-SharedUtils-Tests.yml"; sourceTree = "<group>"; };
 		2700D6A27B75F19119B093BC /* UINavigationController+Pop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Pop.swift"; sourceTree = "<group>"; };
-		276720F2CAB4A36F45254132 /* Autogeneration.config */ = {isa = PBXFileReference; path = Autogeneration.config; sourceTree = "<group>"; };
+		276720F2CAB4A36F45254132 /* Autogeneration.config */ = {isa = PBXFileReference; lastKnownFileType = text; path = Autogeneration.config; sourceTree = "<group>"; };
 		27923A74226D80C4D63452F7 /* AppSuState1Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSuState1Actions.swift; sourceTree = "<group>"; };
 		29DAEEF698B14D8BD68F5316 /* AutoInit.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoInit.generated.swift; sourceTree = "<group>"; };
 		2AC83D67D071A0DD5A05A124 /* AccessibilityId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityId.swift; sourceTree = "<group>"; };
@@ -344,7 +344,7 @@
 		738EB20D4EC20DD3917C2A55 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
 		7398E2B7FA2C9084A2CB96E5 /* HeroDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailsViewModel.swift; sourceTree = "<group>"; };
 		739992C21F30BCCC759F8F94 /* LogMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMiddleware.swift; sourceTree = "<group>"; };
-		7418DD4D0F7C9DA4700A11E8 /* Autogeneration.config */ = {isa = PBXFileReference; path = Autogeneration.config; sourceTree = "<group>"; };
+		7418DD4D0F7C9DA4700A11E8 /* Autogeneration.config */ = {isa = PBXFileReference; lastKnownFileType = text; path = Autogeneration.config; sourceTree = "<group>"; };
 		76E7B0DB895206FFCB789129 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		790081AB650EC5EBCC5B809F /* HeroListViewModel_SPEC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListViewModel_SPEC.swift; sourceTree = "<group>"; };
 		7A131BF2F1A1368CA0CD5EB5 /* String+Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Version.swift"; sourceTree = "<group>"; };
@@ -392,7 +392,7 @@
 		B459F8929DF840BA11C35B27 /* AnyNeverPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyNeverPublisher.swift; sourceTree = "<group>"; };
 		B466F033B9C3D7105C80944D /* SceneDelegate_SPEC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate_SPEC.swift; sourceTree = "<group>"; };
 		B6452767237EDC2FE4FAADF4 /* HeroDetailsViewModel_SPEC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailsViewModel_SPEC.swift; sourceTree = "<group>"; };
-		B879E64F7A76B9614634C103 /* Main.gv */ = {isa = PBXFileReference; path = Main.gv; sourceTree = "<group>"; };
+		B879E64F7A76B9614634C103 /* Main.gv */ = {isa = PBXFileReference; lastKnownFileType = text; path = Main.gv; sourceTree = "<group>"; };
 		B8A85B2B8F47E54656A80592 /* TextPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPreview.swift; sourceTree = "<group>"; };
 		B9075C7A4C04B0E99302A39D /* HeroListRenderMock_SPEC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListRenderMock_SPEC.swift; sourceTree = "<group>"; };
 		B90E4B771B0249C845022E30 /* UIImageView+Tint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Tint.swift"; sourceTree = "<group>"; };
@@ -471,7 +471,7 @@
 				5C5499299C26593CF86C06E2 /* UIKit.framework in Frameworks */,
 				C1114C20FB3FDCD759E234A5 /* Domain.framework in Frameworks */,
 				80579B699A8600E6B304CBA2 /* SharedUtils.framework in Frameworks */,
-				E69AB4BA4A2996185DA28927 /* Rswift in Frameworks */,
+				E69AB4BA4A2996185DA28927 /* RswiftLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1362,7 +1362,7 @@
 			);
 			name = Project;
 			packageProductDependencies = (
-				945130D29E9CC25B1D56C1C6 /* Rswift */,
+				8F33D6BF9C8DC49860718A38 /* RswiftLibrary */,
 			);
 			productName = Project;
 			productReference = 372547DE6EBC4C348EA5B814 /* Project.app */;
@@ -1447,7 +1447,7 @@
 			);
 			mainGroup = 293D0FF827366B513839236A;
 			packageReferences = (
-				81CB75A22FE410C26CA3C408 /* XCRemoteSwiftPackageReference "R.swift.Library" */,
+				2C915912C020A45602497EE6 /* XCRemoteSwiftPackageReference "R" */,
 			);
 			projectDirPath = "";
 			projectRoot = "";
@@ -2006,7 +2006,10 @@
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "Project/OtherResources/Project-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Project/OtherResources/Info.plist";
-				OTHER_LDFLAGS = "$(inherited) -ObjC";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sento.project;
 				PRODUCT_NAME = Project;
 				SDKROOT = iphoneos;
@@ -2182,7 +2185,10 @@
 				"EXCLUDED_SOURCE_FILE_NAMES[sdk=iphonesimulator*]" = "";
 				GCC_PREFIX_HEADER = "Project/OtherResources/Project-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Project/OtherResources/Info.plist";
-				OTHER_LDFLAGS = "$(inherited) -ObjC";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sento.project;
 				PRODUCT_NAME = Project;
@@ -2272,21 +2278,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		81CB75A22FE410C26CA3C408 /* XCRemoteSwiftPackageReference "R.swift.Library" */ = {
+		2C915912C020A45602497EE6 /* XCRemoteSwiftPackageReference "R" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
+			repositoryURL = "https://github.com/mac-cain13/R.swift";
 			requirement = {
 				kind = exactVersion;
-				version = 5.4.0;
+				version = 7.7.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		945130D29E9CC25B1D56C1C6 /* Rswift */ = {
+		8F33D6BF9C8DC49860718A38 /* RswiftLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 81CB75A22FE410C26CA3C408 /* XCRemoteSwiftPackageReference "R.swift.Library" */;
-			productName = Rswift;
+			package = 2C915912C020A45602497EE6 /* XCRemoteSwiftPackageReference "R" */;
+			productName = RswiftLibrary;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

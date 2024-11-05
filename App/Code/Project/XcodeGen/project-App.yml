@@ -186,6 +186,5 @@ targets:
       # - target: OneSignalNotificationServiceExtension
 
       ### Swift Package Manager
-      - package: R.swift.Library
-        product: Rswift
-        # product: RswiftDynamic         
+      - package: R.swift
+        product: RswiftLibrary
