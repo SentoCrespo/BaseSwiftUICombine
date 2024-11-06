@@ -1,4 +1,4 @@
-// Created by Vicente Crespo - 2020
+// Created by Sento Crespo - 2020
 {% for type in types.all|annotated:"AutoInit" %}{#
 #}{% set spacing %}{% if type.parentName %}    {% endif %}{% endset %}{#
 #}// sourcery:inline:auto:{{ type.name }}.AutoInit
