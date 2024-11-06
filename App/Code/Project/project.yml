@@ -26,6 +26,10 @@ include:
   - path: XcodeGen/project-Domain-Tests.yml
     relativePaths: false 
 
+  ### Design System
+  - path: XcodeGen/project-Design.yml
+    relativePaths: false
+      
   ### Widget
   - path: XcodeGen/project-AppWidget.yml
     relativePaths: false

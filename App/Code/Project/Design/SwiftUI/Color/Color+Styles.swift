@@ -3,7 +3,7 @@ import SwiftUI
 
 /// Dynamic color sets (Light & Dark Mode)
 /// Reference: https://airtable.com/shrHQdv9vQGz7UMQj/tblH3GqNwWSvZmrGX/viwKQnM5JrVAWzHIr
-extension Color {
+public extension Color {
     
     // Brand
     static let brandPrimary: Color = Color(R.color.brandPrimary.name)
@@ -19,7 +19,7 @@ extension Color {
 }
 
 /// Static color sets
-extension Color {
+public extension Color {
     
     static let darkPrimary: Color = Color(R.color.darkPrimary.name)
     static let gray: Color = Color(R.color.gray.name)

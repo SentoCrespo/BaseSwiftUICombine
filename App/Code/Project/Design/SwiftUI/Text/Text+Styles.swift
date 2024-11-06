@@ -1,7 +1,7 @@
 import Foundation
 import SwiftUI
 
-extension Text {
+public extension Text {
     
     static func largeTitle(_ text: String) -> some View {
         let result = Text(text)
