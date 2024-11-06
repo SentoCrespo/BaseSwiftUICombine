@@ -163,6 +163,7 @@ targets:
          
       ### Other targets
       - target: Domain
+      - target: ProjectWidget
       # - target: UseCases
       # - target: NetworkLayerRx
       - target: SharedUtils
