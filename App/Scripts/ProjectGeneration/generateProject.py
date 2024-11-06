@@ -75,7 +75,7 @@ if args.verbose:
 
 ## Generate the project based on configuration
 myPrint('Generating .xcodeproj file with XcodeGen')
-generateXcodeproj = './xcodegen-2.28.0 generate --project ' + args.projectPath + ' --spec ' + args.spec
+generateXcodeproj = './xcodegen-2.42.0 generate --project ' + args.projectPath + ' --spec ' + args.spec
 myPrint('Running: ' + generateXcodeproj)
 run(generateXcodeproj)
 
