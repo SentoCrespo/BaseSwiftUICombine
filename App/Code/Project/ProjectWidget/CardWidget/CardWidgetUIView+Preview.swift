@@ -4,7 +4,7 @@ import SwiftUI
 
 @available(iOS 17, *)
 #Preview(as: .systemSmall) {
-    ProjectWidget()
+    CardWidgetUIView()
 } timeline: {
     SimpleEntry(date: .now, emoji: "😀")
     SimpleEntry(date: .now, emoji: "🤩")

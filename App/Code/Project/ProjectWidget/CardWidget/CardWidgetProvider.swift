@@ -3,6 +3,7 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: TimelineProvider {
+    
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(), emoji: "😀")
     }
@@ -30,4 +31,5 @@ struct Provider: TimelineProvider {
 //    func relevances() async -> WidgetRelevances<Void> {
 //        // Generate a list containing the contexts this widget is relevant in.
 //    }
+    
 }
