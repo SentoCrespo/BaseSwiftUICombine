@@ -1,6 +1,6 @@
 import Foundation
-import XCTest
 import Combine
+import XCTest
 
 /// Utilities to ease combine methods with XCTest
 extension XCTestCase {

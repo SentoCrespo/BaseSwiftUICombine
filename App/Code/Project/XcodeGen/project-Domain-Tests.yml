@@ -37,8 +37,11 @@ targets:
 
       ### iOS SDKs
       - sdk: Foundation.framework
-      - sdk: XCTest.framework
+      - sdk: Testing.framework
 
       ### Other targets
       - target: Domain
+        embed: false
+      
+      - target: SharedUtilsTests
         embed: false
