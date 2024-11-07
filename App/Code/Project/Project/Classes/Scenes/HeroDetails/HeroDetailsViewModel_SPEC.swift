@@ -1,9 +1,9 @@
-import XCTest
+import Testing
 import Combine
 import Domain
 @testable import Project
 
-class HeroDetailsViewModelTests: XCTestCase {
+class HeroDetailsViewModelTests {
 
     // MARK: - Properties
     private var viewModel: HeroDetailsViewModel!
@@ -11,17 +11,13 @@ class HeroDetailsViewModelTests: XCTestCase {
     private let timeout: TimeInterval = 0.1
     
     // MARK: - Life Cycle
-    override func setUp() {
-        super.setUp()
-        
+    init() {
         cancellables = []
     }
 
-    override func tearDown() {
+    deinit {
         cancellables = nil
         viewModel = nil
-        
-        super.tearDown()
     }
 
 }
@@ -32,23 +28,23 @@ extension HeroDetailsViewModelTests {
     /// GIVEN: A hero
     /// WHEN: Presenting the view
     /// THEN: Data should be shown correctly
-    func test_displayHero_success() {
+    @Test
+    func displayHero_success() async {
         // Given
         let hero = Hero.sample
         viewModel = setupViewModel(hero: hero)
-
-        let expectation = XCTestExpectation(description: "Fetch heroes successfully")
-
-        // When
-        viewModel.$model
-            .sink { model in
-                // Then
-                XCTAssertNotNil(model.hero)
-                expectation.fulfill()
-            }
-            .store(in: &cancellables)
-
-        wait(for: [expectation], timeout: timeout)
+        let comment: Comment? = "Successfully fetched heroes"
+        await confirmation(comment) { confirmation in
+            // When
+            viewModel
+                .$model
+                .sink(receiveValue: { model in
+                    // Then
+                    #expect(model.hero != nil)
+                    confirmation()
+                })
+                .store(in: &cancellables)
+        }
     }
     
 }

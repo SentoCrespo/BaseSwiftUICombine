@@ -1,6 +1,5 @@
 @testable import Project
 import Foundation
-import XCTest
 
 extension BaseViewModel {
     

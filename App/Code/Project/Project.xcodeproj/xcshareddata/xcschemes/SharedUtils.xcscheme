@@ -44,7 +44,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "95836979A1DE67BB9E61AEC5"
-               BuildableName = "SharedUtilsTests.xctest"
+               BuildableName = "SharedUtilsTests.framework"
                BlueprintName = "SharedUtilsTests"
                ReferencedContainer = "container:Project.xcodeproj">
             </BuildableReference>

@@ -1,9 +1,10 @@
 @testable import Project
 import Foundation
-import XCTest
+import Testing
 import Combine
+import SwiftUI
 
-class MainViewModelTests: BaseTest {
+class MainViewModelTests {
     
     // MARK: - Properties
     private var store: AppReduxStore?
@@ -13,22 +14,18 @@ class MainViewModelTests: BaseTest {
     private var viewModel: MainViewModel?
     
     // MARK: - Life Cycle
-    override func setUp() {
-        super.setUp()
-        
+    init() {
         let store = AppReduxStore.mock()
         self.store = store
         let configurator = MainConfigurator(mainStore: store)
         self.setupScene(configurator: configurator)
     }
     
-    override func tearDown() {
+    deinit {
         self.configurator = nil
         self.render = nil
         self.view = nil
         self.viewModel = nil
-        
-        super.tearDown()
     }
     
 }
@@ -36,34 +33,34 @@ class MainViewModelTests: BaseTest {
 // MARK: - Tests
 extension MainViewModelTests {
     
-    func DISABLED_test_stateMachine_Transitions() {
+    @Test(
+        .disabled("Generated state machine doesn't need to be tested")
+    )
+    func stateMachine_Transitions() {
         // Given
         let viewModel = self.viewModel!
         
         // When
         // Initial state
-        XCTAssertEqual(viewModel.output.to, .idle)
+        #expect(viewModel.output.to == .idle)
         
         // Transition with 'none'
         let output1 = viewModel.applyBlocking(event: .start)
-        XCTAssertEqual(output1.to, .idle)
+        #expect(output1.to == .idle)
         
         // Transition with 'onAppear'
         let output2 = viewModel.applyBlocking(event: .onAppear)
-        XCTAssertEqual(output2.to, .loading)
+        #expect(output2.to == .loading)
         
         // Transition with 'onLoadingSuccess'
         let resultOnLoad = "Result"
         let output3 = viewModel.applyBlocking(event: .onLoadingSuccess(resultOnLoad))
-        XCTAssertEqual(output3.to, .loaded)
+        #expect(output3.to == .loaded)
         
         // Transition with 'onSelect'
         let resultOnSuccess = "Select"
         let output4 = viewModel.applyBlocking(event: .onSelect(resultOnSuccess))
-        XCTAssertEqual(output4.to, .loaded)
-        
-        // Then
-        XCTAssert(true)
+        #expect(output4.to == .loaded)
     }
     
 }

@@ -7,7 +7,7 @@ targets:
 
     ## Properties
     platform: iOS
-    type: bundle.unit-test
+    type: framework
     gatherCoverageData: false 
 
     ## Sources
@@ -35,6 +35,8 @@ targets:
       ### iOS SDKs
       - sdk: Foundation.framework
       - sdk: XCTest.framework
+      - sdk: Testing.framework
+      - sdk: Combine.framework
 
       ### Other targets
       - target: SharedUtils
