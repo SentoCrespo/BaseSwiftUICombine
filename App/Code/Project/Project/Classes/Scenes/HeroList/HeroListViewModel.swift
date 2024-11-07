@@ -31,6 +31,10 @@ class HeroListViewModel: ObservableObject {
 // MARK: - Public Methods
 extension HeroListViewModel {
 
+    func onReloadData() {
+        fetchHeroes()
+    }
+    
     func onSelect(hero: Hero) {
         render.toDetails(hero: hero)
     }

@@ -1,8 +1,10 @@
 @testable import Project
 import Foundation
-import XCTest
+import Testing
+import SwiftUI
 
-class SceneDelegateTests: XCTestCase {
+@Suite(.serialized)
+class SceneDelegateTests {
     
     // MARK: - Properties
     // swiftlint:disable:next weak_delegate
@@ -13,9 +15,7 @@ class SceneDelegateTests: XCTestCase {
     private var mockDelegate: SceneDelegateMock?
     
     // MARK: - Life Cycle
-    override func setUp() {
-        super.setUp()
-        
+    init() {
         delegate = SceneDelegate.shared
         compositeDelegate = delegate?.sceneDelegate as? CompositeSceneDelegate
         mockDelegate = compositeDelegate?.delegate(
@@ -23,12 +23,10 @@ class SceneDelegateTests: XCTestCase {
         )
     }
     
-    override func tearDown() {
+    deinit {
         delegate = nil
         compositeDelegate = nil
         mockDelegate = nil
-        
-        super.tearDown()
     }
     
 }
@@ -36,24 +34,22 @@ class SceneDelegateTests: XCTestCase {
 // MARK: - App Delegate
 extension SceneDelegateTests {
     
-    func test_applicationDidFinishLaunchingWithOptions() {
-        
+    @Test
+    func applicationDidFinishLaunchingWithOptions() {
         // Given
         let application = UIApplication.shared
         let launchingOptions: [UIApplication.LaunchOptionsKey: Any] = [:]
-            
+       
         // When
         _ = delegate?.application(application, didFinishLaunchingWithOptions: launchingOptions)
         
         // Then
         let method = "didFinishLaunchingWithOptions"
-        let result = mockDelegate!.methodCalled[method]!
-        XCTAssertTrue(result)
-        
+        #expect(mockDelegate!.methodCalled[method]!)
     }
     
-    func test_applicationWillResignActive() {
-        
+    @Test
+    func applicationWillResignActive() {
         // Given
         let application = UIApplication.shared
             
@@ -62,12 +58,11 @@ extension SceneDelegateTests {
         
         // Then
         let method = "applicationWillResignActive"
-        XCTAssertNotNil(mockDelegate!.methodCalled[method])
-        
+        #expect(mockDelegate!.methodCalled[method]!)
     }
     
-    func test_applicationDidEnterBackground() {
-        
+    @Test
+    func applicationDidEnterBackground() {
         // Given
         let application = UIApplication.shared
             
@@ -76,12 +71,11 @@ extension SceneDelegateTests {
         
         // Then
         let method = "applicationDidEnterBackground"
-        XCTAssertNotNil(mockDelegate!.methodCalled[method])
-        
+        #expect(mockDelegate!.methodCalled[method]!)
     }
     
-    func test_applicationWillEnterForeground() {
-        
+    @Test
+    func applicationWillEnterForeground() {
         // Given
         let application = UIApplication.shared
         
@@ -90,12 +84,11 @@ extension SceneDelegateTests {
         
         // Then
         let method = "applicationWillEnterForeground"
-        XCTAssertNotNil(mockDelegate!.methodCalled[method])
-        
+        #expect(mockDelegate!.methodCalled[method]!)
     }
     
-    func test_applicationWillTerminate() {
-        
+    @Test
+    func applicationWillTerminate() {
         // Given
         let application = UIApplication.shared
         
@@ -104,17 +97,16 @@ extension SceneDelegateTests {
         
         // Then
         let method = "applicationWillTerminate"
-        XCTAssertNotNil(mockDelegate!.methodCalled[method])
-        
+        #expect(mockDelegate!.methodCalled[method]!)
     }
     
-    func test_openUrlOptions() {
-        
+    @Test
+    func openUrlOptions() {
         // Given
         let application = UIApplication.shared
         let url = URL(string: "https://my.test.com")!
         let options: [UIApplication.OpenURLOptionsKey: Any] = [:]
-            
+        
         // When
         _ = delegate?.application(
             application,
@@ -124,16 +116,15 @@ extension SceneDelegateTests {
         
         // Then
         let method = "openUrlOptions"
-        XCTAssertNotNil(mockDelegate!.methodCalled[method])
-        
+        #expect(mockDelegate!.methodCalled[method]!)
     }
     
-    func test_didRegisterForRemoteNotificationsWithDeviceToken() {
-        
+    @Test
+    func didRegisterForRemoteNotificationsWithDeviceToken() {
         // Given
         let application = UIApplication.shared
         let deviceToken = "MyToken".data(using: .utf8)!
-            
+        
         // When
         delegate?.application(
             application,
@@ -142,16 +133,15 @@ extension SceneDelegateTests {
         
         // Then
         let method = "didRegisterForRemoteNotificationsWithDeviceToken"
-        XCTAssertNotNil(mockDelegate!.methodCalled[method])
-        
+        #expect(mockDelegate!.methodCalled[method]!)
     }
 
-    func test_didFailToRegisterForRemoteNotificationsWithError() {
-        
+    @Test
+    func didFailToRegisterForRemoteNotificationsWithError() {
         // Given
         let application = UIApplication.shared
         let error: Error = NSError(domain: "Fail", code: 500, userInfo: [:]) as Error
-            
+       
         // When
         delegate?.application(
             application,
@@ -160,12 +150,11 @@ extension SceneDelegateTests {
         
         // Then
         let method = "didFailToRegisterForRemoteNotificationsWithError"
-        XCTAssertNotNil(mockDelegate!.methodCalled[method])
-        
+        #expect(mockDelegate!.methodCalled[method]!)
     }
     
-    func test_didReceiveRemoteNotification() {
-        
+    @Test
+    func didReceiveRemoteNotification() {
         // Given
         let application = UIApplication.shared
         let userInfo: [AnyHashable: Any] = [:]
@@ -180,8 +169,7 @@ extension SceneDelegateTests {
         
         // Then
         let method = "didReceiveRemoteNotification"
-        XCTAssertNotNil(mockDelegate!.methodCalled[method])
-     
+        #expect(mockDelegate!.methodCalled[method]!)
     }
     
 }
@@ -189,8 +177,8 @@ extension SceneDelegateTests {
 // MARK: - Scene Delegate
 extension SceneDelegateTests {
     
-    func test_sceneDidDisconnect() {
-
+    @Test
+    func sceneDidDisconnect() {
         // Given
         let session = UIApplication.shared.openSessions.first!
         let scene = session.scene!
@@ -200,10 +188,11 @@ extension SceneDelegateTests {
 
         // Then
         let method = "sceneDidDisconnect"
-        XCTAssertNotNil(mockDelegate!.methodCalled[method])
+        #expect(mockDelegate!.methodCalled[method]!)
     }
 
-    func test_sceneDidBecomeActive() {
+    @Test
+    func sceneDidBecomeActive() {
 
         // Given
         let session = UIApplication.shared.openSessions.first!
@@ -214,11 +203,11 @@ extension SceneDelegateTests {
 
         // Then
         let method = "sceneDidBecomeActive"
-        XCTAssertNotNil(mockDelegate!.methodCalled[method])
+        #expect(mockDelegate!.methodCalled[method]!)
     }
-
-    func test_sceneWillResignActive() {
-
+    
+    @Test
+    func sceneWillResignActive() {
         // Given
         let session = UIApplication.shared.openSessions.first!
         let scene = session.scene!
@@ -228,11 +217,11 @@ extension SceneDelegateTests {
 
         // Then
         let method = "sceneWillResignActive"
-        XCTAssertNotNil(mockDelegate!.methodCalled[method])
+        #expect(mockDelegate!.methodCalled[method]!)
     }
 
-    func test_sceneWillEnterForeground() {
-
+    @Test
+    func sceneWillEnterForeground() {
         // Given
         let session = UIApplication.shared.openSessions.first!
         let scene = session.scene!
@@ -242,10 +231,11 @@ extension SceneDelegateTests {
 
         // Then
         let method = "sceneWillEnterForeground"
-        XCTAssertNotNil(mockDelegate!.methodCalled[method])
+        #expect(mockDelegate!.methodCalled[method]!)
     }
 
-    func test_sceneDidEnterBackground() {
+    @Test
+    func sceneDidEnterBackground() {
         // Given
         let session = UIApplication.shared.openSessions.first!
         let scene = session.scene!
@@ -255,10 +245,11 @@ extension SceneDelegateTests {
 
         // Then
         let method = "sceneDidEnterBackground"
-        XCTAssertNotNil(mockDelegate!.methodCalled[method])
+        #expect(mockDelegate!.methodCalled[method]!)
     }
 
-    func test_SceneOpenURLContexts() {
+    @Test
+    func sceneOpenURLContexts() {
         // Given
         let session = UIApplication.shared.openSessions.first!
         let scene = session.scene!
@@ -269,10 +260,11 @@ extension SceneDelegateTests {
 
         // Then
         let method = "openURLContexts"
-        XCTAssertNotNil(mockDelegate!.methodCalled[method])
+        #expect(mockDelegate!.methodCalled[method]!)
     }
 
-    func test_stateRestorationActivity() {
+    @Test
+    func stateRestorationActivity() {
         // Given
         let session = UIApplication.shared.openSessions.first!
         let scene = session.scene!
@@ -282,10 +274,11 @@ extension SceneDelegateTests {
 
         // Then
         let method = "stateRestorationActivity"
-        XCTAssertNotNil(mockDelegate!.methodCalled[method])
+        #expect(mockDelegate!.methodCalled[method]!)
     }
 
-    func test_willContinueUserActivityWithType() {
+    @Test
+    func willContinueUserActivityWithType() {
         // Given
         let session = UIApplication.shared.openSessions.first!
         let scene = session.scene!
@@ -296,10 +289,11 @@ extension SceneDelegateTests {
 
         // Then
         let method = "willContinueUserActivityWithType"
-        XCTAssertNotNil(mockDelegate!.methodCalled[method])
+        #expect(mockDelegate!.methodCalled[method]!)
     }
 
-    func test_continueUserActivity() {
+    @Test
+    func continueUserActivity() {
         // Given
         let session = UIApplication.shared.openSessions.first!
         let scene = session.scene!
@@ -311,10 +305,11 @@ extension SceneDelegateTests {
 
         // Then
         let method = "continueUserActivity"
-        XCTAssertNotNil(mockDelegate!.methodCalled[method])
+        #expect(mockDelegate!.methodCalled[method]!)
     }
 
-    func test_didFailToContinueUserActivityWithType() {
+    @Test
+    func didFailToContinueUserActivityWithType() {
         // Given
         let session = UIApplication.shared.openSessions.first!
         let scene = session.scene!
@@ -326,10 +321,11 @@ extension SceneDelegateTests {
 
         // Then
         let method = "didFailToContinueUserActivityWithType"
-        XCTAssertNotNil(mockDelegate!.methodCalled[method])
+        #expect(mockDelegate!.methodCalled[method]!)
     }
     
-    func test_didUpdateUserActivity() {
+    @Test
+    func didUpdateUserActivity() {
         // Given
         let session = UIApplication.shared.openSessions.first!
         let scene = session.scene!
@@ -341,7 +337,7 @@ extension SceneDelegateTests {
 
         // Then
         let method = "didUpdateUserActivity"
-        XCTAssertNotNil(mockDelegate!.methodCalled[method])
+        #expect(mockDelegate!.methodCalled[method]!)
     }
     
 }

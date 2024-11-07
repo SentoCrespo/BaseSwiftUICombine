@@ -51,7 +51,5 @@
        ### Other targets
        - target: Project
 
-#       - target: Mocks
-#         codeSign: false
-#         embed: false
-
+       - target: SharedUtilsTests
+         embed: false

@@ -1,17 +1,13 @@
 import Foundation
-import XCTest
+import Testing
 
 @testable import Project
 
-final class SubState1ReducerTests: XCTestCase {
+final class SubState1ReducerTests {
     
-    override func setUpWithError() throws {
-        
-    }
+    init() {}
     
-    override func tearDownWithError() throws {
-        
-    }
+    deinit {}
     
 }
 
@@ -23,8 +19,8 @@ extension SubState1ReducerTests {
     ///  -
     ///  THEN:
     ///  -
-    func test_sample() {
-        
+    @Test
+    func sample() {
         // Given
         let store: AppReduxStore = .init(
             initialState: .initial,
@@ -37,8 +33,7 @@ extension SubState1ReducerTests {
         store.dispatch(action)
         
         // Then
-        XCTAssertEqual(
-            store.state.subState1.myGlobalVar, "Changed")
+        #expect(store.state.subState1.myGlobalVar == "Changed")
     }
     
 }
