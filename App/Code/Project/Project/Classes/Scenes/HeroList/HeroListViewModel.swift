@@ -60,16 +60,13 @@ private extension HeroListViewModel {
             .heroes(dataSource: configurator.heroDataSource)
             .receive(on: DispatchQueue.main)
             .sink(
-                receiveCompletion: { completion in
-                    if case .failure(let error) = completion {
-                        print("Error fetching heroes: \(error)")
-                    }
-                },
                 receiveValue: { [weak self] heroes in
                     self?.model.heroes = heroes
                     self?.model.heroesFiltered = heroes
-                }
-            )
+                },
+                receiveError: { error in
+                    Logger.app.error("Error fetching heroes: \(error)")
+                })
             .store(in: &cancellables)
     }
     
