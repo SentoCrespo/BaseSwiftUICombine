@@ -35,6 +35,9 @@ targets:
       base:
         SDKROOT: iphoneos
         PRODUCT_NAME: SharedUtils
+        SUPPORTED_PLATFORMS: "appletvos appletvsimulator iphoneos iphonesimulator"
+        TARGETED_DEVICE_FAMILY: "1,3"
+        TVOS_DEPLOYMENT_TARGET: 16.0
         INFOPLIST_FILE: $(SRCROOT)/SharedUtils/Info.plist
         PRODUCT_BUNDLE_IDENTIFIER: com.sento.project.shareUtils
         ENABLE_BITCODE: NO

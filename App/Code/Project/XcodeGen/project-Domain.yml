@@ -12,7 +12,7 @@ targets:
 
     ## Properties
     type: framework
-    platform: [iOS]
+    platform: [iOS, tvOS]
     platformSuffix: ''
         
     ## Sources
@@ -43,6 +43,9 @@ targets:
       base:
         SDKROOT: iphoneos
         PRODUCT_NAME: Domain
+        SUPPORTED_PLATFORMS: "appletvos appletvsimulator iphoneos iphonesimulator"
+        TARGETED_DEVICE_FAMILY: "1,3"
+        TVOS_DEPLOYMENT_TARGET: 16.0
         INFOPLIST_FILE: $(SRCROOT)/Domain/Info.plist
         PRODUCT_BUNDLE_IDENTIFIER: com.sento.project.domain
         ENABLE_BITCODE: NO

@@ -1,0 +1,61 @@
+ # ---------------------------------
+ # Project Test target
+ # ---------------------------------
+
+ targets: 
+   ProjectTVTests:
+     
+     ## Properties
+     platform: tvOS
+     type: bundle.unit-test
+     
+     ## Sources
+     sources:
+       ### Target files
+       - path: ProjectTV
+         includes:
+           - "**/*_SPEC*.swift"
+           
+       - path: ProjectTVTests
+         includes:
+           - "**/*.swift"
+       
+       ### Don't link info.plist
+       - path: ProjectTVTests
+         includes:
+           - OtherResources/Info.plist
+         buildPhase: none
+         
+#       - path: ProjectTV
+#         excludes:
+#           - OtherResources/Info.plist
+           
+     ## Settings
+     settings:
+       base:
+         PRODUCT_NAME: ProjectTVTests
+         SDKROOT: appletvos
+         TARGETED_DEVICE_FAMILY: 3
+         SUPPORTED_PLATFORMS: "appletvos appletvsimulator"
+         BUNDLE_LOADER: "$(TEST_HOST)"
+         TEST_HOST: "$(BUILT_PRODUCTS_DIR)/ProjectTV.app/ProjectTV"
+         PRODUCT_BUNDLE_IDENTIFIER: com.sento.project.tv.tests
+         INFOPLIST_FILE: $(SRCROOT)/ProjectTVTests/OtherResources/Info.plist
+         CLANG_ENABLE_MODULES: YES
+         USER_HEADER_SEARCH_PATHS: ../AppSpecialisation/ExternSource
+         SKIP_INSTALL: YES
+        
+     ## Dependencies
+     dependencies:
+       
+       ### iOS SDKs
+       - sdk: Foundation.framework
+       - sdk: Testing.framework
+       
+       ### Local Swift Packages
+       
+       ### Other targets
+       - target: ProjectTV
+
+       #- target: SharedUtilsTests
+         #embed: false

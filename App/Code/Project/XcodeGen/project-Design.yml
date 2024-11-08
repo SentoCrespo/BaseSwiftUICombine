@@ -42,6 +42,9 @@ targets:
       base:
         SDKROOT: iphoneos
         PRODUCT_NAME: Design
+        SUPPORTED_PLATFORMS: "appletvos appletvsimulator iphoneos iphonesimulator"
+        TARGETED_DEVICE_FAMILY: "1,3"
+        TVOS_DEPLOYMENT_TARGET: 16.0
         INFOPLIST_FILE: $(SRCROOT)/Design/Info.plist
         PRODUCT_BUNDLE_IDENTIFIER: com.sento.project.design
         ENABLE_BITCODE: NO

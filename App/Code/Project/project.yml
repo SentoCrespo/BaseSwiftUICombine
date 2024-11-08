@@ -33,6 +33,16 @@ include:
   ### Widget
   - path: XcodeGen/project-AppWidget.yml
     relativePaths: false
+    
+  ### TV Target
+  - path: XcodeGen/project-AppTV.yml
+    relativePaths: false
+
+  - path: XcodeGen/project-AppTV-Tests.yml
+    relativePaths: false
+
+  - path: XcodeGen/project-AppTV-UITests.yml
+    relativePaths: false
 
   ### Shared Utils
   - path: XcodeGen/project-SharedUtils.yml

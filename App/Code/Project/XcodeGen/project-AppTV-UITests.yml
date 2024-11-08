@@ -3,27 +3,27 @@
  # ---------------------------------
 
  targets: 
-   ProjectUITests:
+   ProjectTVUITests:
 
      ## Scheme
      scheme:
        testTargets:
-         - ProjectUITests
+         - ProjectTVUITests
 
      ## Properties
-     platform: iOS
+     platform: tvOS
      type: bundle.ui-testing
      gatherCoverageData: true
 
      ## Sources
      sources: 
-       - ProjectUITests
+       - ProjectTVUITests
 
        ### Don't link info.plist
-       - path: ProjectTests
+       - path: ProjectTVUITests
          excludes:
            - OtherResources/Info.plist
-       - path: ProjectTests
+       - path: ProjectTVTests
          includes:
            - OtherResources/Info.plist
          buildPhase: none
@@ -31,10 +31,13 @@
      ## Settings
      settings:
        base:
-         SDKROOT: iphoneos
-         PRODUCT_NAME: ProjectUITests
-         TEST_HOST: "$(BUILT_PRODUCTS_DIR)/ProjectSharing.app/Project"
-         INFOPLIST_FILE: $(SRCROOT)/ProjectUITests/Info.plist
+         SDKROOT: appletvos
+         SDKROOT: appletvos
+         TARGETED_DEVICE_FAMILY: 3
+         SUPPORTED_PLATFORMS: "appletvos appletvsimulator"
+         PRODUCT_NAME: ProjectTVUITests
+         TEST_HOST: "$(BUILT_PRODUCTS_DIR)/ProjectTV.app/ProjectTV"
+         INFOPLIST_FILE: $(SRCROOT)/ProjectTVUITests/Info.plist
          CLANG_ENABLE_MODULES: YES
          USER_HEADER_SEARCH_PATHS: ../AppSpecialisation/ExternSource
          SKIP_INSTALL: YES
@@ -43,4 +46,4 @@
      dependencies:
 
        ### Other targets
-       - target: Project     
+       - target: ProjectTV
