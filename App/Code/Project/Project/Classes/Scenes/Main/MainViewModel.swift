@@ -20,9 +20,7 @@ class MainViewModel: BaseViewModel<MainConfigurator, MainModel, MainRender>, Obs
     override func handle(effect: MainModel.Effect) {
         switch effect {
         case .loadItems:
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.apply(event: .onLoadingSuccess("Result"))
-            }
         case .removeItem:
             Logger.app.debug("Remove Item")
         case .navigateToProfile:

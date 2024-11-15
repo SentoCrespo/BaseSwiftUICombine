@@ -11,6 +11,7 @@ enum SceneDelegateFactory {
 // MARK: - Public Methods
 extension SceneDelegateFactory {
     
+    @MainActor
     static func makeDefault() -> SceneDelegateType {
         return CompositeSceneDelegate(
             sceneDelegates: [
@@ -24,6 +25,7 @@ extension SceneDelegateFactory {
         )
     }
     
+    @MainActor
     static func makeTest() -> SceneDelegateType {
         return CompositeSceneDelegate(
             sceneDelegates: [

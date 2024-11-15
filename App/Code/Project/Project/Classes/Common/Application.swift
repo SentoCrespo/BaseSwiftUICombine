@@ -3,6 +3,7 @@ import Foundation
 class Application: ObservableObject {
     
     // MARK: - Variables
+    @MainActor
     static let shared = Application()
     
     // MARK: Redux

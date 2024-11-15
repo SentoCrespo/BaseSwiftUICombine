@@ -15,6 +15,7 @@ struct MainConfigurator: SceneConfigurator {
 
 extension MainConfigurator {
     
+    @MainActor
     static var `default`: MainConfigurator {
         let result = MainConfigurator(
             mainStore: Application.shared.store

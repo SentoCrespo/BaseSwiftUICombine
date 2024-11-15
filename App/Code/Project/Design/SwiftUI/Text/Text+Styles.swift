@@ -1,6 +1,7 @@
 import Foundation
 import SwiftUI
 
+@MainActor
 public extension Text {
     
     static func largeTitle(_ text: String) -> some View {

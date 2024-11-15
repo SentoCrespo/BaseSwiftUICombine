@@ -11,6 +11,8 @@ public struct BorderModel {
 }
 
 extension BorderModel {
+    
+    @MainActor
     func apply(view: UIView) {
         self.apply(layer: view.layer)
     }

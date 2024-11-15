@@ -14,6 +14,7 @@ struct HeroDetailsConfigurator: SceneConfigurator {
 
 extension HeroDetailsConfigurator {
     
+    @MainActor
     static var `default`: HeroDetailsConfigurator {
         let result = HeroDetailsConfigurator(
             mainStore: Application.shared.store

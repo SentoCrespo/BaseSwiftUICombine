@@ -17,6 +17,7 @@ struct MainRender: SceneRender {
  
 extension MainRender {
     
+    @MainActor
     mutating func view(navigationController: UINavigationController) -> some View {
         self.navigationController = navigationController
         let viewModel = MainViewModel(

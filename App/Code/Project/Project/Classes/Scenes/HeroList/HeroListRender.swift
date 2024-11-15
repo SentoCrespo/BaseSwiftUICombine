@@ -14,6 +14,7 @@ class HeroListRender: SceneRender {
         self.configurator = configurator
     }
 
+    @MainActor
     func view(navigationController: UINavigationController) -> some View {
         self.navigationController = navigationController
         let viewModel = HeroListViewModel(
@@ -23,6 +24,7 @@ class HeroListRender: SceneRender {
         return HeroListUIView(viewModel: viewModel)
     }
     
+    @MainActor
     func toDetails(hero: Hero) {
         let configurator = HeroDetailsConfigurator.default
         let render = HeroDetailsRender(configurator: configurator)

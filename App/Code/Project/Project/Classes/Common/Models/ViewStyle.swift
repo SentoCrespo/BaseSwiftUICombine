@@ -23,6 +23,8 @@ extension ViewStyle {
 }
 
 extension ViewStyle {
+    
+    @MainActor
     func apply(_ view: UIView) {
         view.layer.borderColor = borderColor.cgColor
         view.layer.borderWidth = borderWidth

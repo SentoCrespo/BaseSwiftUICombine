@@ -18,6 +18,7 @@ class HeroDetailsRender: SceneRender {
  
 extension HeroDetailsRender {
     
+    @MainActor
     func view(hero: Hero, navigationController: UINavigationController) -> some View {
         self.navigationController = navigationController
         let viewModel = HeroDetailsViewModel(

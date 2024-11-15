@@ -35,6 +35,7 @@ extension HeroListViewModel {
         fetchHeroes()
     }
     
+    @MainActor
     func onSelect(hero: Hero) {
         render.toDetails(hero: hero)
     }

@@ -13,6 +13,8 @@ public struct ShadowModel {
 }
 
 extension ShadowModel {
+    
+    @MainActor
     func apply(view: UIView) {
         self.apply(layer: view.layer)
     }
