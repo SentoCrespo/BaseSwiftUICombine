@@ -1472,18 +1472,18 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
-		"TEMP_DC1B2DC6-2D17-4DCC-9C4B-0412545DD13B" /* SharedUtils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SharedUtils;
-			sourceTree = "<group>";
-		};
-		"TEMP_F5DF2E19-10E7-4347-9313-255119FF9B2F" /* UIClasses */ = {
+		"TEMP_23706278-2B39-48DA-80A0-DE15DDAF6E70" /* UIClasses */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = UIClasses;
+			sourceTree = "<group>";
+		};
+		"TEMP_813A3EEE-CB9E-4C0C-A61A-638545CD3B14" /* SharedUtils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SharedUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
