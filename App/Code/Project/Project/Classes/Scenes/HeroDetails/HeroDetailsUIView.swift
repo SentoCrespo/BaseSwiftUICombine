@@ -86,13 +86,3 @@ private extension HeroDetailsUIView {
         .padding(.vertical, 8)
     }
 }
-
-#if DEBUG
-struct HeroDetailsUIView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        self.createPreview()
-    }
-    
-}
-#endif

@@ -79,13 +79,3 @@ private extension HeroListUIView {
     }
     
 }
-
-#if DEBUG
-struct HeroListUIView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        self.createPreview()
-    }
-    
-}
-#endif

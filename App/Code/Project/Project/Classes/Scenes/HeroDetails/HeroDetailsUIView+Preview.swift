@@ -3,7 +3,11 @@ import SwiftUI
 import Domain
 
 #if DEBUG
-extension HeroDetailsUIView_Previews {
+#Preview("HeroDetailsUIView") {
+    HeroDetailsUIView.createPreview()
+}
+
+private extension HeroDetailsUIView {
     
     static func createPreview() -> some View {
         let configurator = HeroDetailsConfigurator.default

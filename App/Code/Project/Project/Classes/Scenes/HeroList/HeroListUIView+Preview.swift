@@ -2,7 +2,11 @@ import Foundation
 import SwiftUI
 
 #if DEBUG
-extension HeroListUIView_Previews {
+#Preview("HeroListUIView") {
+    HeroListUIView.createPreview()
+}
+
+private extension HeroListUIView {
     
     static func createPreview() -> some View {
         let configurator = HeroListConfigurator.default
