@@ -55,7 +55,7 @@ options:
 settings:
   base:
     CODE_SIGN_STYLE: Manual
-    SWIFT_VERSION: 5.5
+    SWIFT_VERSION: 6
     SUPPORTS_MACCATALYST: NO
     SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: NO
     SUPPORTED_PLATFORMS: "iphoneos iphonesimulator"
